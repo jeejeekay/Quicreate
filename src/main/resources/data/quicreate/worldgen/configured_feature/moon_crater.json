@@ -1,0 +1,70 @@
+{
+  "type": "quicreate:crater",
+  "config": {
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 7.0,
+        "max_exclusive": 14.0
+      }
+    },
+    "depth": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 3.0,
+        "max_exclusive": 7.0
+      }
+    },
+    "rim_height": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1.0,
+        "max_exclusive": 3.0
+      }
+    },
+    "rim_width": 0.4,
+    "floor_depth": 2,
+    "floor": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:moon_deepslate"
+          },
+          "weight": 5
+        },
+        {
+          "data": {
+            "Name": "ad_astra:moon_sand"
+          },
+          "weight": 2
+        }
+      ]
+    },
+    "rim": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:moon_sand"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "ad_astra:moon_cobblestone"
+          },
+          "weight": 1
+        }
+      ]
+    },
+    "core": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "ad_astra:moon_ice_shard_ore"
+      }
+    },
+    "core_chance": 0.12,
+    "core_radius": 0.35
+  }
+}

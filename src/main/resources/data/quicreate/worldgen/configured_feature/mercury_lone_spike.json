@@ -1,0 +1,52 @@
+{
+  "type": "quicreate:prism_spike",
+  "config": {
+    "length": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 22,
+        "max_inclusive": 34
+      }
+    },
+    "width": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 4.0,
+        "max_exclusive": 6.0
+      }
+    },
+    "taper": 0.8,
+    "tilt": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 10.0,
+        "max_exclusive": 40.0
+      }
+    },
+    "sink": 0.25,
+    "count": 1,
+    "blocks": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:mercury_stone"
+          },
+          "weight": 6
+        },
+        {
+          "data": {
+            "Name": "ad_astra:mercury_cobblestone"
+          },
+          "weight": 2
+        },
+        {
+          "data": {
+            "Name": "minecraft:magma_block"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

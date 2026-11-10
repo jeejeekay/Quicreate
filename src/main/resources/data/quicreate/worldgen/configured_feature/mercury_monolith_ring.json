@@ -1,0 +1,54 @@
+{
+  "type": "quicreate:prism_spike",
+  "config": {
+    "length": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 10,
+        "max_inclusive": 16
+      }
+    },
+    "width": 3.0,
+    "taper": 0.35,
+    "tilt": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 0.0,
+        "max_exclusive": 6.0
+      }
+    },
+    "sink": 0.2,
+    "count": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 5,
+        "max_inclusive": 7
+      }
+    },
+    "spread": 8.0,
+    "arrangement": "ring",
+    "blocks": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:mercury_stone_bricks"
+          },
+          "weight": 5
+        },
+        {
+          "data": {
+            "Name": "ad_astra:cracked_mercury_stone_bricks"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "ad_astra:chiseled_mercury_stone_bricks"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

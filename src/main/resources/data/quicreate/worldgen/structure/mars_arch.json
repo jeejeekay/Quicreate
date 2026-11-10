@@ -1,0 +1,10 @@
+{
+  "type": "quicreate:shape",
+  "biomes": [
+    "ad_astra:martian_canyon_creek"
+  ],
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "feature": "quicreate:mars_arch"
+}

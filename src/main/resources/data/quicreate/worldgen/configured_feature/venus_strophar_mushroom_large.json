@@ -1,0 +1,55 @@
+{
+  "type": "quicreate:giant_mushroom",
+  "config": {
+    "stem_height": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 9,
+        "max_inclusive": 15
+      }
+    },
+    "stem_radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1.2,
+        "max_exclusive": 1.8
+      }
+    },
+    "bend": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 0.0,
+        "max_exclusive": 2.0
+      }
+    },
+    "cap_radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 6.0,
+        "max_exclusive": 9.0
+      }
+    },
+    "cap_height": 3.0,
+    "cap_shape": "flat",
+    "stem": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "ad_astra:strophar_stem"
+      }
+    },
+    "cap": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "ad_astra:strophar_cap"
+      }
+    },
+    "underside": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:shroomlight"
+      }
+    },
+    "underside_chance": 0.04,
+    "sink": 2
+  }
+}

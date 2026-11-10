@@ -1,0 +1,266 @@
+# Quicreate Skyblock walkthrough: the hand-written part.
+#
+# The builder (build_guide.py) reads the quest book and every recipe, loot table and worldgen
+# file itself. This file only holds prose and layout: chapter order and colours, intros, tips,
+# per-quest notes and a few settings. Change progression in the quest book / datapack / scripts,
+# then rebuild: steps, recipes and sources update on their own. Only edit this file when you
+# want different words, a different chapter order, or an extra note on a step.
+#
+# Text fields understand **bold**, *italic*, [[namespace:item]] (item chip with icon) and
+# [[#quest_id]] (link to that quest's step). Blank lines start new paragraphs.
+
+meta:
+  title: Quicreate Skyblock RFA
+  subtitle: "Walkthrough · pack version 0.9.0 · Minecraft 1.20.1 Forge"
+  cover_items: [createsifter:sifter, create_new_age:generator_coil, quicreate:emerald_circuit,
+                ad_astra:launch_pad, ad_astra:desh_ingot, ad_astra:ostrum_ingot, ad_astra:calorite_ingot,
+                cataclysm:ignitium_ingot, quicreate:creative_alloy]
+  cover_text: >
+    A step-by-step route from a tree in the ocean to creative-tier Create parts on five worlds.
+    Every recipe, drop chance and ore in this book was read from the pack's own files when it was built.
+
+how_to_use: |
+  The guide follows the in-game quest book (Heracles) chapter by chapter, in the order you will play it.
+  Each quest is one **step**, numbered **#1** onwards. A step shows what the quest asks for, the quest's own
+  hint, the recipe (with the machine it needs), and for every ingredient *where it comes from*: an earlier
+  step, a sifting table, an ore, a mob drop, fishing, or a short recipe.
+
+  Recipes shown are the ones that exist in this pack after the CraftTweaker scripts and the Quicreate
+  datapack have changed them, so they can differ from the wiki. When an item has several recipes the guide
+  shows the one that fits the route best and says how many others JEI will show you.
+
+  Worlds have a **what is here** box at the start of their chapter: terrain, ores (with heights), mobs and
+  their drops, and the structures with the mobs and chest loot inside them. The appendices at the back hold
+  the full sifting tables, the Mechanical Extruder list, fishing, card packs and spawn eggs, boss drops, and
+  a list of anything the builder could not find a source for.
+
+route_text: >
+  Island → Sifting → New Age (solar heat, brass, electricity) → Improvements (circuits, nuclear heat, steel)
+  → Space (your first rocket) → the Moon (stronghold and the Ender Dragon: the soft ending) → Mars → Venus and
+  Mercury → Glacio → the creative parts (the true ending). The Cards & Mobs side chapter can be done any time
+  after you have a sifter.
+
+chapters:
+  - group: "Chapter 1: The Sky"
+    title: The Island
+    color: "#3f7d3a"
+    icon: minecraft:oak_sapling
+    route_items: [minecraft:oak_log, minecraft:crafting_table, minecraft:charcoal, create:andesite_alloy, create:andesite_casing]
+    summary: "Wood, cobblestone, andesite alloy and your first Create parts."
+    intro: |
+      You start on a small island in an endless ocean. The island template in
+      `config/easy_skyblock_island/islands/default.nbt` is grass and dirt with one oak tree, and a chest holding a
+      single [[minecraft:lava_bucket]]. Keep that lava: with water it is your first cobblestone generator.
+    tips:
+      - Your inventory is kept on death (see [[#about_this_modpack]]).
+      - Vein mining (the `~` key, Ore Excavation) takes whole trees and their leaves at once.
+      - Andesite alloy in this pack is made with charcoal, so get a furnace and burn logs early.
+  - group: "1.1: Sifting"
+    title: Sifting
+    color: "#9a7432"
+    icon: createsifter:sifter
+    route_items: [create:millstone, createsifter:sifter, createsifter:string_mesh, createsifter:andesite_mesh, createsifter:zinc_mesh, createsifter:brass_mesh]
+    summary: "Mill cobblestone down to gravel, sand and dust, then sift them for metals, redstone and more."
+    intro: |
+      Sifting is how you get almost every raw material on the island. Mill cobblestone into gravel, gravel into
+      sand and sand into dust, then put them through a Sifter with a mesh. Better meshes give better drops, and a
+      **waterlogged** sifter has its own drop table. The full tables are in Appendix A.
+    tips:
+      - Meshes go in the sifter; the block you sift is the input. String mesh → andesite → zinc → brass → advanced brass.
+      - Card packs drop from many sifting tables at low chances. See the Cards & Mobs chapter.
+  - group: "1.2: New Age"
+    title: New Age
+    color: "#b0581e"
+    icon: create_new_age:generator_coil
+    route_items: [create:mechanical_press, create_new_age:basic_solar_heating_plate, create_new_age:heater, create:brass_ingot, create_new_age:generator_coil, create_new_age:basic_energiser]
+    summary: "Sheets and wires, solar heat instead of blaze burners, brass, and your first electricity."
+    intro: |
+      Blaze burners are out of reach, so heat comes from Create: New Age solar heating plates and heaters.
+      Heated mixing makes brass; a Generator Coil spun next to magnetite makes electricity for the Energiser.
+      The Mechanical Extruder turns lava and water into stone types, and the block you put under it changes
+      what it makes (Appendix B).
+  - group: "1.3: Improvements"
+    title: Improvements
+    color: "#2c8466"
+    icon: quicreate:emerald_circuit
+    route_items: [create_new_age:copper_circuit, quicreate:emerald_circuit, create_new_age:nuclear_fuel, ad_astra:steel_ingot, create_new_age:basic_motor]
+    summary: "Circuits, motors, nuclear heat and steel."
+    intro: |
+      Circuits are the backbone of the rest of the pack. Superheated heat (from strong solar or a reactor)
+      unlocks steel, which the rocket needs.
+  - group: "1.4: Space"
+    title: Space
+    color: "#3d5f8f"
+    icon: ad_astra:launch_pad
+    route_items: [ad_astra:steel_plate, ad_astra:nasa_workbench, ad_astra:steel_engine, ad_astra:space_suit, ad_astra:fuel_bucket, ad_astra:launch_pad]
+    summary: "Steel plates, a space suit, rocket fuel and your first rocket."
+    intro: |
+      Everything for the tier 1 rocket. The rocket itself is assembled in the NASA Workbench.
+  - group: "Chapter 2: The Moon"
+    title: The Moon
+    color: "#5d6280"
+    icon: ad_astra:moon_sand
+    planet: moon
+    route_items: [ad_astra:desh_ingot, minecraft:diamond, minecraft:ender_eye, cataclysm:void_core, quicreate:amethyst_circuit, ad_astra:desh_engine]
+    summary: "Desh, diamonds and amethyst, the only stronghold, and the Ender Dragon (soft ending)."
+    intro: |
+      The only stronghold in the pack is on the Moon (the stronghold biome tag is set to the lunar wastelands).
+      Kill the Ender Dragon to finish the soft ending, then build a tier 2 rocket for Mars.
+  - group: "Chapter 3: Mars"
+    title: Mars
+    color: "#a23a28"
+    icon: ad_astra:mars_sand
+    planet: mars
+    route_items: [ad_astra:ostrum_ingot, minecraft:netherite_ingot, cataclysm:ancient_metal_ingot, quicreate:ancient_metal_circuit, ad_astra:ostrum_engine]
+    summary: "Ostrum, netherite, the Cursed Pyramid and the Ancient Remnant."
+    intro: |
+      Ostrum only comes from Mars (ore, and sifting Mars sand or conglomerate with the advanced brass mesh).
+      Ancient debris is in the Mars rock: the worldgen places it at Y 90 to 130 and the conglomerate boulders can be
+      sifted for it. Beat the Ancient Remnant in the Cursed Pyramid for ancient metal, which leads to the ancient
+      metal circuit, the ostrum engine and the netherite space suit you need for the next two planets.
+  - group: "Chapter 4: Venus & Mercury"
+    title: Venus and Mercury
+    color: "#b26a14"
+    icon: ad_astra:venus_sand
+    planets: [venus, mercury]
+    route_items: [ad_astra:calorite_ingot, cards:platinum_ingot, cataclysm:witherite_ingot, cataclysm:ignitium_ingot, ad_astra:calorite_engine]
+    summary: "Calorite, the Harbinger and Umvuthi on Venus; platinum, Ignis and the Netherite Monstrosity on Mercury."
+    intro: |
+      Both planets need heat protection: the quest book asks for the netherite space suit before you land
+      (cursium armour also counts, see [[#netherite_space_suit]]). Venus has calorite, the Ancient Factory
+      (Harbinger) and the new Fungal Forest, the only biome with Umvuthana Groves. Mercury is the only planet with platinum
+      ore, the Burning Arena (Ignis) and the Soul Black Smith (Netherite Monstrosity).
+  - group: "Chapter 5: Glacio"
+    title: Glacio
+    color: "#2a7f9e"
+    icon: ad_astra:glacio_stone
+    planet: glacio
+    route_items: [cataclysm:black_steel_ingot, createutilities:void_steel_ingot, cataclysm:cursium_ingot, cataclysm:essence_of_the_storm, mowziesmobs:ice_crystal]
+    summary: "The last world, four structures and the materials for the creative parts."
+    intro: |
+      Glacio holds the last bosses. Maledictus (Frosted Prison) gives cursium, Scylla (Acropolis) gives the
+      essence of the storm, and the Frostmaw gives the ice crystal. All three feed the creative parts in the
+      next chapter. The Sunken City (Leviathan) and the Ferrous Wroughtnaut are optional.
+  - group: "Endgame: Creative"
+    title: The Creative Ending
+    color: "#7a3c9c"
+    icon: quicreate:creative_alloy
+    route_items: [quicreate:creative_alloy, quicreate:creative_sheet, create:creative_motor, create:creative_blaze_cake, quicreate:creative_casing]
+    summary: "Creative alloy, sheet, casing, motor and blaze cake: the true ending."
+    intro: |
+      Everything comes together: boss ingots go into the creative alloy, sixteen loops of sequenced assembly make
+      the creative sheet, and the Mechanical Fusion Anvil turns a speed controller and a blaze cake into their
+      creative versions. The three Quicreate swords at the end of the chapter are optional.
+  - group: "Side: Cards & Mobs"
+    title: "Side chapter: Cards and Mobs"
+    color: "#2a7a78"
+    icon: cards:common_card_pack
+    route_items: [cards:common_card_pack, cards:nether_card_pack, minecraft:sheep_spawn_egg, minecraft:nether_star, balancedflight:flight_anchor]
+    summary: "Card packs from sifting, spawn eggs from cards, the Wither and the Flight Anchor. Any time after the sifter."
+    intro: |
+      Many sifting tables drop card packs at small chances (Appendix A). Packs give cards, and the pack's
+      CraftTweaker scripts turn mob cards into spawn eggs (Appendix D). Smelting an uncommon pack gives a nether
+      pack, the way to wither skeletons and the Wither.
+
+planets:
+  moon:   {name: The Moon, dimension: "ad_astra:moon", tier: 1}
+  mars:   {name: Mars, dimension: "ad_astra:mars", tier: 2}
+  venus:  {name: Venus, dimension: "ad_astra:venus", tier: 3}
+  mercury: {name: Mercury, dimension: "ad_astra:mercury", tier: 3}
+  glacio: {name: Glacio, dimension: "ad_astra:glacio", tier: 4}
+
+steps:
+  umvuthi:
+    note: >
+      The datapack places Umvuthana Groves only in the Venus **Fungal Forest** biome
+      (`mowziesmobs/worldgen/structure/umvuthana_grove.json`), so look there rather than in the wastelands.
+  blaze_burner:
+    note: >
+      This quest exists to catch a blaze burner made outside the intended route. Heat for mixing comes from
+      New Age heaters and solar plates (the next steps).
+  ender_dragon:
+    note: The End is reached through the stronghold's portal on the Moon. This is the pack's soft ending.
+  void_core:
+    note: >
+      The Ender Golem's loot table drops a void core every kill. Golems are placed by the citadel's own code,
+      so their spawn does not show up in the structure files.
+
+# Items that the game draws in code (no texture file). Point them at a real texture from the files.
+icon_overrides:
+  ad_astra:tier_1_rocket: ad_astra:gui/sprites/overlay/rocket
+  ad_astra:tier_2_rocket: ad_astra:gui/sprites/overlay/rocket
+  ad_astra:tier_3_rocket: ad_astra:gui/sprites/overlay/rocket
+  ad_astra:tier_4_rocket: ad_astra:gui/sprites/overlay/rocket
+  ad_astra:moon_globe: ad_astra:environment/moon
+  ad_astra:mars_globe: ad_astra:environment/mars
+  ad_astra:venus_globe: ad_astra:environment/venus
+  ad_astra:mercury_globe: ad_astra:environment/mercury
+  ad_astra:glacio_globe: ad_astra:environment/glacio
+
+sifting_order: [minecraft:dirt, minecraft:gravel, minecraft:sand, createsifter:dust, minecraft:soul_sand,
+                ad_astra:moon_sand, ad_astra:mars_sand, ad_astra:conglomerate, ad_astra:venus_sand, createsifter:crushed_end_stone]
+
+progression_notes:
+  - >
+    **Umvuthi.** The quest subtitle says "Optional boss in the Venus wastelands", but the datapack's
+    `mowziesmobs/worldgen/structure/umvuthana_grove.json` only allows the grove in `quicreate:venus_fungal_forest`.
+    (`config/mowziesmobs-common.toml` still whitelists `ad_astra:venus_wastelands` for Umvuthi.)
+  - >
+    **Card packs on a Deployer.** Quicreate replaces each pack-content recipe in `data/cards/recipes/` with a
+    Deployer + Shears recipe on the pack. All cards of one pack share the same two inputs, so the files do not say
+    which card a deployer will give.
+  - >
+    **Quests without arrows.** Several 1.2 quests have no dependencies in the quest book (Electricity, Crushing Wheels,
+    Mechanical Crafters, Carbon Brush, Wires, Mechanical Extruder). The guide places them after the quests that make
+    their ingredients.
+  - >
+    **Planet mobs without drops.** Ad Astra's mobs (Pygro, Mogler, Martian Raptor, Glacian Ram, Corrupted Lunarian...)
+    have no entity loot tables in any jar, so the guide lists them with no drops.
+
+appendix_text:
+  audit: "Common skyblock bottlenecks, with every source found in the pack files."
+
+  sifting: "Every `createsifter:sifting` recipe in the pack. Chances are per sifted block."
+  extruder: "The Mechanical Extruder makes a block forever. The block below it is a catalyst and is not used up."
+  fishing: "The fishing rod's tier decides which kelpy balls you can catch. The modifier first rolls the rare extras, then the heavy, medium and light ball, each with the chance shown; if nothing hits you get the normal fishing catch."
+  cards: "Packs give random cards when opened. The pack-to-card lists below come from the pack-content recipe files."
+  bosses: "Chances are per kill and include every pool in the boss's loot table."
+  nosource: "Items that a quest or a shown recipe needs, but that have no recipe, ore, mob drop, loot or other source in the files the builder read."
+
+build_notes:
+  vanilla: >
+    Jake's PrismLauncher libraries folder (with the vanilla client jar and Forge) was not shared with this build,
+    so vanilla 1.20.1 recipes, loot tables, tags, models, textures and names were taken from the misode/mcmeta
+    1.20.1 data and assets branches (extracted from the official client jar), and Forge's own item tags
+    (forge:ingots/iron and friends) from the MinecraftForge 1.20.1 branch's generated resources. On Jake's PC
+    the builder finds the real client jar and Forge universal jar in the libraries folder by itself.
+  limits: >
+    The builder only knows what is in data files. Things done by game code are not in this book unless a
+    quest or this guide's mechanics list mentions them: villager trades, the odds of opening card packs, the
+    Ender Dragon and Wither drops, bucket filling, axe stripping, mobs that structures spawn from code, and
+    spawn-egg colours (spawn eggs are drawn untinted). Drop chances are worked out from the loot tables
+    without looting or fortune.
+
+# In-game mechanics that are hard-coded (so no data file describes them). Item id patterns (* = anything).
+mechanics:
+  "minecraft:stripped_*": Strip a log or wood block by right-clicking it with an axe.
+  "minecraft:water": Infinite water source (two source blocks) or a bucket from the ocean.
+  "minecraft:water_bucket": Fill a bucket from the ocean.
+  "minecraft:nether_star": "Dropped by the Wither when you kill it (handled by the game code, see [[#wither]])."
+  "minecraft:honeycomb": Bees (from a Bee card → Bee Spawn Egg) fill a beehive or nest; shear a full one.
+  "minecraft:cobblestone": Cobblestone generator, lava flowing next to water (the starting chest has a lava bucket).
+
+# When a recipe accepts a tag (any log, any planks...), show these items first if they are in the tag.
+prefer_items: [minecraft:oak_log, minecraft:stripped_oak_log, minecraft:oak_planks, minecraft:cobblestone,
+               minecraft:iron_ingot, minecraft:coal, minecraft:charcoal, create:iron_sheet, create:copper_sheet]
+
+settings:
+  recipe_score_cutoff: 7   # higher shows more (worse) alternative recipes on a step
+
+# Items people ask about. Appendix F lists every source the builder finds for them (or none).
+audit_items: [minecraft:nether_wart, minecraft:sponge, minecraft:wet_sponge, minecraft:honeycomb, minecraft:totem_of_undying,
+              minecraft:lava_bucket, minecraft:blaze_rod, minecraft:obsidian, minecraft:slime_ball, minecraft:leather,
+              minecraft:wither_skeleton_skull, minecraft:nether_star, minecraft:ender_pearl, minecraft:glowstone_dust,
+              minecraft:diamond, minecraft:emerald, minecraft:lapis_lazuli, minecraft:ancient_debris, cards:platinum_ingot,
+              ad_astra:desh_ingot, ad_astra:ostrum_ingot, ad_astra:calorite_ingot, minecraft:bone_meal, minecraft:sugar_cane,
+              minecraft:prismarine_shard, minecraft:shulker_shell]

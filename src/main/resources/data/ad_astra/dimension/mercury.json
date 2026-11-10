@@ -17,6 +17,18 @@
             "depth": 0,
             "offset": 0
           }
+        },
+        {
+          "biome": "quicreate:mercury_shattered_rift",
+          "parameters": {
+            "temperature": 0.6,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
         }
       ]
     }

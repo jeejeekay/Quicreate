@@ -1,0 +1,68 @@
+{
+  "type": "quicreate:fissure",
+  "config": {
+    "length": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 18,
+        "max_inclusive": 40
+      }
+    },
+    "width": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 3.0,
+        "max_exclusive": 6.0
+      }
+    },
+    "depth": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 3,
+        "max_inclusive": 14
+      }
+    },
+    "lava_depth": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 2,
+        "max_inclusive": 5
+      }
+    },
+    "wander": 0.4,
+    "bridge_chance": 0.06,
+    "lining_chance": 0.65,
+    "lava": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:lava",
+        "Properties": {
+          "level": "0"
+        }
+      }
+    },
+    "lining": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "minecraft:blackstone"
+          },
+          "weight": 4
+        },
+        {
+          "data": {
+            "Name": "minecraft:basalt"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "minecraft:magma_block"
+          },
+          "weight": 2
+        }
+      ]
+    }
+  }
+}

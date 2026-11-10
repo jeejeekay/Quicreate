@@ -37,6 +37,12 @@
       "minecraft:large_dripstone",
       "minecraft:dripstone_cluster",
       "minecraft:pointed_dripstone"
+    ],
+    [],
+    [
+      "quicreate:moon_crater_rare",
+      "quicreate:moon_aeronos_cave_mushroom",
+      "quicreate:moon_aeronos_cave_patch"
     ]
   ],
   "has_precipitation": false,
@@ -52,14 +58,14 @@
     "cataclysm:amethyst_crab": {
       "charge": 0.2,
       "energy_budget": 0.015
-   }
- },
+    }
+  },
   "spawners": {
     "ambient": [
       {
         "type": "cataclysm:amethyst_crab",
         "maxCount": 1,
-        "minCount": 0,
+        "minCount": 1,
         "weight": 1
       }
     ],

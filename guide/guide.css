@@ -1,0 +1,150 @@
+/* Quicreate Skyblock guide: print stylesheet for WeasyPrint (A4). */
+@page {
+  size: A4;
+  margin: 15mm 13mm 16mm 13mm;
+  @bottom-center { content: counter(page); font: 8pt Inter, sans-serif; color: #7a8290; }
+  @top-left { content: string(chapter); font: 7.5pt Inter, sans-serif; color: #7a8290; }
+  @top-right { content: "Quicreate Skyblock RFA · walkthrough"; font: 7.5pt Inter, sans-serif; color: #a0a6b0; }
+}
+@page cover { margin: 0; @bottom-center { content: none; } @top-left { content: none; } @top-right { content: none; } }
+
+html { font-family: Inter, "DejaVu Sans", sans-serif; font-size: 8.6pt; color: #1d2330; line-height: 1.35; }
+body { margin: 0; }
+h1, h2, h3, h4 { font-family: "Inter Display", Inter, sans-serif; margin: 0; }
+h2 { font-size: 17pt; font-weight: 800; letter-spacing: -0.2pt; }
+h3 { font-size: 11pt; font-weight: 700; margin: 4mm 0 1.5mm; }
+h4 { font-size: 9.5pt; font-weight: 700; margin: 3mm 0 1mm; }
+p { margin: 0 0 1.6mm; }
+a { color: inherit; text-decoration: none; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 7.4pt; color: #445; }
+.small { font-size: 7.4pt; color: #556070; }
+.warn { color: #b3261e; font-weight: 600; }
+.num { text-align: right; white-space: nowrap; }
+
+/* icons: textures are pre-scaled with nearest-neighbour, keep them crisp */
+.ic { image-rendering: pixelated; image-rendering: crisp-edges; vertical-align: middle; display: inline-block; }
+.ic-xs { width: 11pt; height: 11pt; margin-right: 1.5pt; vertical-align: -2.5pt; }
+.ic-s { width: 18pt; height: 18pt; }
+.ic-m { width: 22pt; height: 22pt; }
+.ic-l { width: 30pt; height: 30pt; }
+.ic-xl { width: 46pt; height: 46pt; }
+.ic-none { background: #dde2ea; border-radius: 3pt; color: #6a7484; font-size: 6pt; text-align: center; line-height: 11pt; overflow: hidden; }
+.ic-s.ic-none { line-height: 18pt; } .ic-l.ic-none { line-height: 30pt; } .ic-xl.ic-none { line-height: 46pt; }
+
+/* cover */
+.cover { page: cover; height: 297mm; background: #11161f; color: #eef2f7; text-align: center; padding-top: 52mm; box-sizing: border-box;
+  background-image: linear-gradient(180deg, #0d1724 0%, #172235 55%, #2a1f37 100%); }
+.cover .packicon { width: 64mm; height: 64mm; image-rendering: pixelated; border-radius: 6mm; box-shadow: 0 0 0 1.2mm #ffffff22; }
+.cover h1 { font-size: 34pt; font-weight: 900; margin-top: 10mm; letter-spacing: -0.6pt; }
+.cover .ver { font-size: 13pt; color: #b8c4d6; margin-top: 2mm; }
+.cover .strip { margin: 12mm auto 0; }
+.cover .strip .ic { margin: 0 1.6mm; width: 26pt; height: 26pt; }
+.cover .coverbl { width: 130mm; margin: 12mm auto 0; font-size: 9.5pt; color: #ccd5e2; line-height: 1.5; }
+.cover .built { position: absolute; bottom: 14mm; width: 210mm; font-size: 7.5pt; color: #8590a3; }
+
+/* how to + route */
+.howto, .route { page-break-before: always; }
+.howto h2, .route h2 { margin-bottom: 3mm; }
+.howto p { font-size: 9pt; max-width: 165mm; }
+.legend { margin-top: 4mm; border: 0.6pt solid #d4dae3; border-radius: 3pt; padding: 3mm; width: 120mm; }
+.route .rt { display: flex; align-items: center; border-left: 2.2mm solid var(--acc); background: #f5f7fa; margin: 1.6mm 0; padding: 1.8mm 3mm; border-radius: 0 3pt 3pt 0; page-break-inside: avoid; }
+.route .rt > .ic { margin-right: 3mm; }
+.route .rtx { flex: 1; }
+.route .rtx b { font-size: 10pt; }
+.route .rti .ic { margin: 1pt 1.5pt 0 0; }
+.route .pg::after { content: "p. " target-counter(attr(href), page); font-size: 8pt; color: #556070; white-space: nowrap; }
+
+/* chapter */
+.chapter { page-break-before: always; }
+.chhead { display: flex; align-items: center; background: var(--acc); color: #fff; padding: 4mm 5mm; border-radius: 4pt; margin-bottom: 3mm; }
+.chhead > .ic { margin-right: 4mm; background: #ffffff26; border-radius: 4pt; padding: 1.5mm; }
+.chhead h2 { color: #fff; }
+.chgroup { font-size: 7.6pt; text-transform: uppercase; letter-spacing: 0.6pt; opacity: 0.85; }
+.chsub { font-size: 9pt; opacity: 0.9; }
+.intro { font-size: 9pt; margin: 0 0 2mm; }
+.tips { background: #fff8e6; border: 0.6pt solid #f1d58a; border-radius: 3pt; padding: 2mm 3mm; margin: 2mm 0 3mm; font-size: 8.2pt; }
+.tips ul { margin: 1mm 0 0 4mm; padding: 0; }
+.tips li { margin-bottom: 0.8mm; }
+
+/* planet boxes and tables */
+.planet { border: 0.8pt solid var(--acc); border-radius: 4pt; padding: 2.5mm 3.5mm; margin: 2mm 0 3mm; background: #fbfcfd; }
+.planet h3 { margin-top: 0; color: var(--acc); }
+.pintro p { font-size: 8.4pt; }
+.ptab { width: 100%; border-collapse: collapse; margin: 1.5mm 0 2.5mm; font-size: 7.6pt; }
+.ptab th { text-align: left; background: #eef1f5; color: #3c4656; font-weight: 700; padding: 1mm 1.5mm; border-bottom: 0.6pt solid #cfd6df; }
+.ptab td { padding: 0.9mm 1.5mm; border-bottom: 0.4pt solid #e4e8ee; vertical-align: top; }
+.ptab tr { page-break-inside: avoid; }
+.bosses th { background: #fbe9e9; }
+ul.feat { margin: 0 0 2mm 4mm; padding: 0; font-size: 7.4pt; }
+.chip { white-space: nowrap; display: inline-block; margin: 0.3pt 2.5pt 0.3pt 0; }
+
+/* steps */
+.step { border: 0.6pt solid #d7dde6; border-radius: 4pt; padding: 2.2mm 3mm 2mm; margin: 0 0 2.6mm; page-break-inside: avoid; background: #fff; }
+.step.read { background: #f7f8fb; }
+.shead { display: flex; align-items: center; }
+.shead > .ic { margin-right: 2.5mm; }
+.stitle { font-size: 11pt; font-weight: 700; }
+.sno { color: var(--acc); font-weight: 800; margin-right: 1mm; }
+.ssub { font-size: 8pt; font-weight: 400; color: #556070; font-style: italic; }
+.deps { font-size: 7.2pt; color: #6a7484; margin: 0.8mm 0 0; }
+.sref { color: #2c5ea8; font-weight: 600; }
+ul.tasks { margin: 1.2mm 0 1mm; padding-left: 4mm; }
+ul.tasks li { margin: 0.4mm 0; }
+.qdesc { font-size: 7.9pt; color: #3c4656; border-left: 1.4pt solid #c7cfda; padding: 0.4mm 0 0.4mm 2mm; margin: 1.2mm 0; }
+.note { font-size: 8pt; background: #eef6ff; border-radius: 2.5pt; padding: 1.2mm 2mm; margin: 1.2mm 0; }
+.note p { margin: 0; }
+.more { font-size: 7pt; color: #6a7484; margin: -0.6mm 0 1mm; }
+
+/* recipe card */
+.recipe { border: 0.5pt solid #d4dae3; border-radius: 3pt; margin: 1.4mm 0; display: inline-block; vertical-align: top; margin-right: 2mm; background: #f9fafc; }
+.rhead { background: #eef1f5; padding: 0.7mm 2mm; font-size: 7.6pt; border-radius: 3pt 3pt 0 0; }
+.rhead .tagx { color: #b35a00; font-weight: 600; }
+.rsrc { float: right; color: #8a93a3; font-size: 6.6pt; margin-left: 4mm; margin-top: 0.5pt; }
+.rbody { display: flex; align-items: center; padding: 1.4mm 2mm; }
+.ins, .outs { display: flex; flex-wrap: wrap; max-width: 95mm; }
+.arrow { font-size: 13pt; color: #8a93a3; margin: 0 2mm; }
+.grid { display: block; }
+.grow { display: flex; }
+.slot { position: relative; display: inline-block; width: 21pt; height: 21pt; background: #8b8b8b; border: 1pt solid; border-color: #373737 #ffffff #ffffff #373737; margin: 0 1pt 1pt 0; text-align: center; }
+.slot .ic { margin-top: 1.5pt; }
+.slot.empty { background: #8b8b8b; }
+.slot .cnt { position: absolute; right: 0.5pt; bottom: -1pt; font-size: 7pt; color: #fff; font-weight: 800; text-shadow: 0.6pt 0.6pt 0 #3f3f3f; }
+.slot .cnt.fl { color: #c8e6ff; font-size: 6pt; }
+.slot .ch { position: absolute; left: 0; right: 0; top: -1pt; font-size: 5.6pt; font-style: normal; color: #fff; background: #2c5ea8cc; line-height: 7pt; }
+.slot .tg { position: absolute; left: 1pt; bottom: -0.5pt; font-size: 6.4pt; color: #ffe08a; font-style: normal; font-weight: 800; text-shadow: 0.6pt 0.6pt 0 #3f3f3f; }
+.seq { display: flex; align-items: center; flex-wrap: wrap; margin-left: 1.5mm; }
+.seq .sq { display: inline-flex; align-items: center; background: #e6ebf2; border-radius: 2pt; padding: 0.4mm 1mm; }
+.seq .arr { margin: 0 1mm; color: #8a93a3; }
+.seq .loops { font-size: 7pt; color: #b35a00; margin-left: 1.5mm; font-weight: 700; }
+
+/* sources table */
+.srcs { width: 100%; border-collapse: collapse; margin: 1.2mm 0 0.4mm; font-size: 7.5pt; }
+.srcs th { text-align: left; font-size: 6.8pt; color: #6a7484; font-weight: 600; border-bottom: 0.5pt solid #d4dae3; padding: 0.4mm 1mm; }
+.srcs td { border-bottom: 0.4pt solid #edf0f4; padding: 0.6mm 1mm; vertical-align: middle; }
+.srcs td.ii { width: 20pt; }
+.srcs td.in { width: 34mm; font-weight: 600; }
+.srcs td.iw { color: #3c4656; }
+
+/* boss drops */
+.boss { margin: 1.2mm 0; }
+.boss .bh { font-size: 7.4pt; font-weight: 700; color: #8b2a2a; margin-bottom: 0.6mm; }
+.drops { display: flex; flex-wrap: wrap; }
+.drop { display: inline-flex; align-items: center; background: #fdf3f3; border-radius: 2.5pt; padding: 0.6mm 1.4mm; margin: 0 1.2mm 1.2mm 0; font-size: 7.4pt; }
+.drop .ic { margin-right: 1.2mm; }
+.drop i { color: #6a7484; font-style: normal; font-size: 6.8pt; }
+
+/* appendices */
+.appendix { page-break-before: always; string-set: chapter "Appendix"; }
+.appendix h2 { margin-bottom: 2mm; border-bottom: 1.5pt solid #1d2330; padding-bottom: 1mm; }
+.siftblock { page-break-inside: avoid; margin-bottom: 2.5mm; }
+.siftblock h4 { display: flex; align-items: center; }
+.siftblock h4 .ic { margin-right: 2mm; }
+table.sift { width: 100%; border-collapse: collapse; font-size: 7.4pt; }
+table.sift td { border-bottom: 0.4pt solid #e4e8ee; padding: 0.6mm 1mm; vertical-align: middle; }
+table.sift td.mesh { width: 30mm; font-weight: 600; }
+.water { color: #2c5ea8; font-weight: 600; font-size: 6.8pt; }
+.so { display: inline-block; white-space: nowrap; margin: 0.4mm 2.6mm 0.4mm 0; }
+.so b { color: #2c5ea8; }
+.notes h4 { margin-top: 4mm; }
+.eggs td { font-size: 7.2pt; }
+.chtitle { string-set: chapter content(text); }

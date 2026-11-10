@@ -1,19 +1,34 @@
 {
-  "replace": true,
-  "type": "cataclysm:burning_arena",
-  "biomes": "#cataclysm:has_structure/burning_arena_biomes",
+  "type": "quicreate:repositioned",
+  "biomes": [
+    "ad_astra:mercury_deltas",
+    "quicreate:mercury_shattered_rift"
+  ],
   "step": "underground_decoration",
-
-  "start_height": {
-    "absolute": 130
-  },
-  "use_expansion_hack": false,
-  "terrain_adaptation": "beard_thin",
   "spawn_overrides": {
     "monster": {
       "bounding_box": "piece",
-      "spawns": [
-      ]
+      "spawns": []
     }
-  }
+  },
+  "terrain_adaptation": "none",
+  "structure": {
+    "type": "cataclysm:burning_arena",
+    "biomes": [
+      "ad_astra:mercury_deltas",
+      "quicreate:mercury_shattered_rift"
+    ],
+    "step": "surface_structures",
+    "start_height": {
+      "absolute": 0
+    },
+    "use_expansion_hack": false,
+    "spawn_overrides": {
+      "monster": {
+        "bounding_box": "piece",
+        "spawns": []
+      }
+    }
+  },
+  "bottom_y": 130
 }

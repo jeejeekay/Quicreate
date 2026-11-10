@@ -29,6 +29,30 @@
             "depth": 0,
             "offset": 0
           }
+        },
+        {
+          "biome": "quicreate:venus_sandstone_dunes",
+          "parameters": {
+            "temperature": 1,
+            "humidity": -1,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0.8,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "quicreate:venus_fungal_forest",
+          "parameters": {
+            "temperature": 1,
+            "humidity": 0.6,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
         }
       ]
     }

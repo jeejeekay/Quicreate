@@ -1,0 +1,51 @@
+{
+  "type": "quicreate:arch",
+  "config": {
+    "span": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 36,
+        "max_inclusive": 60
+      }
+    },
+    "height": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 30,
+        "max_inclusive": 48
+      }
+    },
+    "thickness": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 4.5,
+        "max_exclusive": 7.5
+      }
+    },
+    "roughness": 0.3,
+    "sink": 5,
+    "blocks": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:mars_stone"
+          },
+          "weight": 5
+        },
+        {
+          "data": {
+            "Name": "ad_astra:conglomerate"
+          },
+          "weight": 2
+        },
+        {
+          "data": {
+            "Name": "ad_astra:mars_cobblestone"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "type": "quicreate:boulder",
+  "config": {
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1.5,
+        "max_exclusive": 3.5
+      }
+    },
+    "squash": 0.8,
+    "sink": 0.35,
+    "count": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1,
+        "max_inclusive": 3
+      }
+    },
+    "spread": 4.0,
+    "blocks": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:sky_stone"
+          },
+          "weight": 5
+        },
+        {
+          "data": {
+            "Name": "ad_astra:moon_cobblestone"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

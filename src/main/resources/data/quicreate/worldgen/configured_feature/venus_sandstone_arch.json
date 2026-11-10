@@ -1,0 +1,45 @@
+{
+  "type": "quicreate:arch",
+  "config": {
+    "span": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 10,
+        "max_inclusive": 22
+      }
+    },
+    "height": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 7,
+        "max_inclusive": 14
+      }
+    },
+    "thickness": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1.5,
+        "max_exclusive": 3.0
+      }
+    },
+    "roughness": 0.35,
+    "sink": 3,
+    "blocks": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:venus_sandstone"
+          },
+          "weight": 6
+        },
+        {
+          "data": {
+            "Name": "ad_astra:venus_stone"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

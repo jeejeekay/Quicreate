@@ -1,0 +1,39 @@
+{
+  "type": "quicreate:boulder",
+  "config": {
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1.5,
+        "max_exclusive": 3.0
+      }
+    },
+    "squash": 0.6,
+    "sink": 0.4,
+    "count": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1,
+        "max_inclusive": 3
+      }
+    },
+    "spread": 4.0,
+    "blocks": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:venus_sandstone"
+          },
+          "weight": 4
+        },
+        {
+          "data": {
+            "Name": "ad_astra:venus_stone"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

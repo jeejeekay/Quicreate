@@ -15,10 +15,6 @@
       "item": "minecraft:quartz"
     },
     {
-      "chance": 0.1,
-      "item": "create:experience_nugget"
-    },
-    {
       "chance": 0.05,
       "item": "minecraft:nether_wart"
     }

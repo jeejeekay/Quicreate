@@ -21,10 +21,6 @@
     {
       "chance": 0.05,
       "item": "minecraft:ghast_tear"
-    },
-    {
-      "chance": 0.2,
-      "item": "create:experience_nugget"
     }
   ]
 }

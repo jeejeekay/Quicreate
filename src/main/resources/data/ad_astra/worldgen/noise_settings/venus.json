@@ -304,7 +304,9 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "ad_astra:venus_wastelands"
+            "ad_astra:venus_wastelands",
+            "quicreate:venus_sandstone_dunes",
+            "quicreate:venus_fungal_forest"
           ]
         },
         "then_run": {

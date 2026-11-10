@@ -3,7 +3,9 @@
   "type": "mowziesmobs:wrought_chamber",
   "biomes": [
     "ad_astra:glacio_ice_peaks",
-    "ad_astra:glacio_snowy_barrens"
+    "quicreate:glacio_helix_spires",
+    "ad_astra:glacio_snowy_barrens",
+    "quicreate:glacian_woods"
   ],
   "spawn_overrides": {},
   "step": "surface_structures",

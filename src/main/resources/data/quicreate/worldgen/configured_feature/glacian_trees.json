@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.5,
+        "feature": {
+          "feature": "quicreate:glacian_spruce",
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": "quicreate:glacian_tree",
+      "placement": []
+    }
+  }
+}
