@@ -1,0 +1,33 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "S": {
+      "item": "create_new_age:overcharged_iron_sheet"
+    },
+    "D": {
+      "item": "create_new_age:overcharged_diamond"
+    },
+    "M": {
+      "item": "create_new_age:fluxuated_magnetite"
+    },
+    "C": {
+      "item": "create:railway_casing"
+    },
+    "A": {
+      "item": "quicreate:amethyst_circuit"
+    },
+    "Z": {
+      "item": "create:shaft"
+    }
+  },
+  "pattern": [
+    "SSDS",
+    "CAMZ",
+    "SSDS"
+  ],
+  "result": {
+    "count": 1,
+    "item": "create_new_age:reinforced_motor"
+  }
+}

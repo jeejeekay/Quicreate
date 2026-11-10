@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "cataclysm:ancient_metal_nugget"
+    },
+    {
+      "item": "cards:platinum_ingot"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "item": "cataclysm:ancient_metal_ingot"
+    }
+  ]
+}

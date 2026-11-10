@@ -1,0 +1,16 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "cataclysm:black_steel_nugget"
+    },
+    {
+      "item": "cards:platinum_ingot"
+    }
+  ],
+  "results":[ {
+    "count": 1,
+    "item": "cataclysm:black_steel_ingot"
+  }]
+}

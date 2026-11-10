@@ -1,0 +1,12 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "tag": "cards:card_packs"
+    }
+      , {"item": "minecraft:shears"}], "keepHeldItem": true,
+  "results":[ {
+    "item": "cards:downloads_card",
+    "count": 1
+  }]
+}

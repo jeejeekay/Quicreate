@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:christmas_creeper"
+    }
+  ],
+  "result": {
+    "item": "minecraft:creeper_spawn_egg"
+  }
+}

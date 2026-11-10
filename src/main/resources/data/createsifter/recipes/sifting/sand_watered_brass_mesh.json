@@ -1,0 +1,47 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "createsifter:brass_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.20,
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "chance": 0.05,
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "chance": 0.6,
+      "item": "cards:rubber_ball"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "chance": 0.025,
+      "item": "minecraft:prismarine_shard"
+    },
+    {
+      "chance": 0.001,
+      "item": "minecraft:heart_of_the_sea"
+    },
+    {
+      "chance": 0.01,
+      "item": "minecraft:nautilus_shell"
+    },
+    {
+      "chance": 0.01,
+      "item": "cards:water_card_pack"
+    }
+  ],
+  "waterlogged": true
+}

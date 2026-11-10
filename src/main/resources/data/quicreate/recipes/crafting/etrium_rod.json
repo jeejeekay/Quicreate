@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "ad_astra:etrium_nugget"
+    },
+    "B": {
+      "item": "ad_astra:steel_rod"
+    }
+  },
+  "result": {
+    "item": "ad_astra:etrium_rod",
+    "count": 2
+  }
+}

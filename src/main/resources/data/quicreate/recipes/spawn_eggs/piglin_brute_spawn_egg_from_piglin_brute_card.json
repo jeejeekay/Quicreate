@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:piglin_brute_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:piglin_brute_spawn_egg"
+  }
+}

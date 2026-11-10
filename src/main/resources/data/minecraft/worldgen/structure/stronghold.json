@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stronghold",
+  "biomes": "#minecraft:has_structure/stronghold",
+  "spawn_overrides": {},
+  "step": "underground_decoration",
+  "terrain_adaptation": "beard_thin",
+  "start_height": {
+    "absolute": 216
+  }
+}

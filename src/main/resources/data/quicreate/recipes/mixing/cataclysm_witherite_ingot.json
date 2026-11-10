@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "ad_astra:calorite_ingot"
+    },
+    {
+      "item": "cataclysm:witherite_ingot"
+    }
+  ],
+  "results":[ {
+    "count": 2,
+    "item": "cataclysm:witherite_ingot"
+  }]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:pufferfish_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:pufferfish_spawn_egg"
+  }
+}

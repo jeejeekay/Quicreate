@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:silverfish_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:silverfish_spawn_egg"
+  }
+}

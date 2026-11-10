@@ -1,0 +1,49 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create_new_age:overcharged_golden_sheet"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "item": "create_new_age:blank_circuit"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_blank_circuit"
+        },
+        {
+          "item": "create_new_age:copper_wire"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_blank_circuit"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_blank_circuit"
+        },
+        {
+          "item": "cards:plastic"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_blank_circuit"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "quicreate:incomplete_blank_circuit"
+  }
+}

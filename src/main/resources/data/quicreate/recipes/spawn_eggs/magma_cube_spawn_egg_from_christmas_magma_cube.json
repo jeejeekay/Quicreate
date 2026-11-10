@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:christmas_magma_cube"
+    }
+  ],
+  "result": {
+    "item": "minecraft:magma_cube_spawn_egg"
+  }
+}

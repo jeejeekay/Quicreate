@@ -1,0 +1,28 @@
+{
+    "replace": true,
+    "type": "create:mechanical_crafting",
+    "acceptMirrored": true,
+    "key": {
+        "P": {
+            "item": "ad_astra:steel_plate"
+        },
+        "I": {
+            "item": "cataclysm:witherite_ingot"
+        },
+        "W": {
+            "item": "minecraft:wither_skeleton_skull"
+        },
+        "C": {
+            "item": "ad_astra:calorite_plate"
+        }
+    },
+    "pattern": [
+        "PPII",
+        "WCCC",
+        "PPII"
+    ],
+    "result": {
+        "item": "cataclysm:wither_assault_shoulder_weapon",
+        "count": 1
+    }
+}

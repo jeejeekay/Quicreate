@@ -1,0 +1,26 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "createsifter:dust"
+    },
+    {
+      "item": "createsifter:string_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.25,
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "chance": 0.25,
+      "item": "minecraft:stick"
+    },
+    {
+      "chance": 0.001,
+      "item": "cards:common_card_pack"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:chicken_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:chicken_spawn_egg"
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "replace": true,
+    "type": "create:mechanical_crafting",
+    "acceptMirrored": true,
+    "key": {
+        "B": {
+            "item": "minecraft:nether_bricks"
+        },
+        "I": {
+            "item": "cataclysm:ignitium_ingot"
+        },
+        "R": {
+            "item": "minecraft:blaze_rod"
+        },
+        "N": {
+            "item": "minecraft:netherite_ingot"
+        }
+    },
+    "pattern": [
+        "BBB",
+        "RNR",
+        "RIR",
+        "BBB"
+    ],
+    "result": {
+        "item": "cataclysm:bulwark_of_the_flame",
+        "count": 1
+    }
+}

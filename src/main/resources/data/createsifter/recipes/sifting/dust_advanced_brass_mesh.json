@@ -1,0 +1,30 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "createsifter:dust"
+    },
+    {
+      "item": "createsifter:advanced_brass_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.2,
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:redstone"
+    },
+    {
+      "chance": 0.5,
+      "item": "create:powdered_obsidian"
+    },
+    {
+      "chance": 0.001,
+      "item": "cards:ultimate_card_pack"
+    }
+  ]
+}

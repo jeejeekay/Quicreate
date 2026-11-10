@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:glow_squid_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:glow_squid_spawn_egg"
+  }
+}

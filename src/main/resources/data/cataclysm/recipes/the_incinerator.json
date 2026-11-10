@@ -1,0 +1,32 @@
+{
+    "replace": true,
+    "type": "create:mechanical_crafting",
+    "acceptMirrored": true,
+    "key": {
+        "B": {
+            "item": "minecraft:nether_bricks"
+        },
+        "I": {
+            "item": "cataclysm:ignitium_ingot"
+        },
+        "R": {
+            "item": "minecraft:blaze_rod"
+        },
+        "N": {
+            "item": "minecraft:netherite_ingot"
+        },
+        "S": {
+            "item": "quicreate:ancient_gilded_sword"
+        }
+    },
+    "pattern": [
+        "RNR",
+        "RNR",
+        "ISI",
+        "RBR"
+    ],
+    "result": {
+        "item": "cataclysm:the_incinerator",
+        "count": 1
+    }
+}

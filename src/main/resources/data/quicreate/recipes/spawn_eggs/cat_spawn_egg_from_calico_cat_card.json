@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:calico_cat_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cat_spawn_egg"
+  }
+}

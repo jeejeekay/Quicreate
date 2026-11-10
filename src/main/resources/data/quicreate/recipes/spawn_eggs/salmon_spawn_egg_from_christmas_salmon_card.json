@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:christmas_salmon_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:salmon_spawn_egg"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "cataclysm:black_steel_ingot"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    }
+  ],
+  "results": [
+    {
+      "item": "createutilities:void_steel_ingot"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:dirt"
+    },
+    {
+      "item": "createsifter:string_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.1,
+      "item": "minecraft:beetroot_seeds"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:wheat_seeds"
+    },
+    {
+      "chance": 0.001,
+      "item": "cards:common_card_pack"
+    }
+  ]
+}

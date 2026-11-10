@@ -1,0 +1,49 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "quicreate:incomplete_amethyst_circuit"
+  },
+  "loops": 3,
+  "results": [
+    {
+      "item": "quicreate:amethyst_circuit"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_amethyst_circuit"
+        },
+        {
+          "item": "create_new_age:overcharged_diamond_wire"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_amethyst_circuit"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_amethyst_circuit"
+        },
+        {
+          "item": "quicreate:emerald_circuit"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_amethyst_circuit"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "quicreate:incomplete_amethyst_circuit"
+  }
+}

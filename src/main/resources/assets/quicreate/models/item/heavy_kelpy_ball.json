@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "quicreate:item/heavy_kelpy_ball"
+  }
+}

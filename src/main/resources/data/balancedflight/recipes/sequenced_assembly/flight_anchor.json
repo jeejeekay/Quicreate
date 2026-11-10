@@ -1,0 +1,29 @@
+{
+  "replace": true,
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "D": {
+      "item": "create_new_age:overcharged_diamond"
+    },
+    "B": {
+      "item": "minecraft:beacon"
+    },
+    "A": {
+      "item": "create:railway_casing"
+    },
+    "C": {
+      "item": "quicreate:ancient_metal_circuit"
+    }
+
+  },
+  "pattern": [
+    "ADA",
+    "ADA",
+    "CBC",
+    "AAA"
+  ],
+  "result": {
+    "item": "balancedflight:flight_anchor"
+  }
+}

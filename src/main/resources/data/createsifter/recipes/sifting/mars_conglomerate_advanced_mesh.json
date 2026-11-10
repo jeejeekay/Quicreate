@@ -1,0 +1,38 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "ad_astra:conglomerate"
+    },
+    {
+      "item": "createsifter:advanced_brass_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.2,
+      "item": "ad_astra:mars_sand"
+    },
+    {
+      "chance": 0.2,
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "chance": 0.1,
+      "item": "ad_astra:ice_shard"
+    },
+    {
+      "chance": 0.05,
+      "item": "ad_astra:ostrum_nugget"
+    },
+    {
+      "chance": 0.005,
+      "item": "minecraft:ancient_debris"
+    },
+    {
+      "chance": 0.001,
+      "item": "cards:ultimate_card_pack"
+    }
+  ]
+}

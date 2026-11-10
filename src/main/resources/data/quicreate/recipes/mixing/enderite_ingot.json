@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "cataclysm:void_core"
+    },
+    {
+      "item": "createutilities:void_steel_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "quicreate:enderite_ingot",
+      "count": 1
+    }
+  ],
+  "heatRequirement": "superheated"
+}

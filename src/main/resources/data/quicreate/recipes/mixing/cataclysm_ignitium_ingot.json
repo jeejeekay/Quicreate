@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "cataclysm:ignitium_ingot"
+    },
+    {
+      "item": "cards:platinum_ingot"
+    },
+    {
+      "item": "cataclysm:burning_ashes"
+    }
+  ],
+  "results":[ {
+    "count": 2,
+    "item": "cataclysm:ignitium_ingot"
+  }]
+}

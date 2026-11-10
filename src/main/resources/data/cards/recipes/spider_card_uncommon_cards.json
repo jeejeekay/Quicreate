@@ -1,0 +1,12 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "tag": "cards:uncommon_mob"
+    }
+      , {"item": "minecraft:shears"}], "keepHeldItem": true,
+  "results":[ {
+    "item": "cards:spider_card",
+    "count": 1
+  }]
+}

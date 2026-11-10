@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:husk_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:husk_spawn_egg"
+  }
+}

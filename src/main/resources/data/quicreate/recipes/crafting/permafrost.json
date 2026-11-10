@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "ad_astra:ice_shard"
+    }
+  },
+  "result": {
+    "item": "ad_astra:permafrost",
+    "count": 1
+  }
+}

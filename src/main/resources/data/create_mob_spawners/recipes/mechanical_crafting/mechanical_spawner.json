@@ -1,0 +1,29 @@
+{
+  "replace": true,
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "B": {
+      "item": "create:railway_casing"
+    },
+    "C": {
+      "item": "minecraft:iron_bars"
+    },
+    "P": {
+      "item": "quicreate:ancient_metal_circuit"
+    },
+    "V": {
+      "item": "cataclysm:void_core"
+    }
+  },
+  "pattern": [
+    " BPB ",
+    "BCCCB",
+    "PCVCP",
+    "BCCCB",
+    " BPB "
+  ],
+  "result": {
+    "item": "create_mob_spawners:mechanical_spawner"
+  }
+}

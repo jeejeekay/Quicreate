@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "quicreate:emerald_circuit"
+    },
+    "G": {
+      "item": "create:filter"
+    },
+    "I": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "pattern": [
+    "III",
+    "CGC",
+    "III"
+  ],
+  "result": {
+    "item": "toms_storage:ts.storage_terminal"
+  },
+  "show_notification": true
+}

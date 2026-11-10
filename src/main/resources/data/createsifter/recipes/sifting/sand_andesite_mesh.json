@@ -1,0 +1,30 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "createsifter:andesite_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.5,
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "chance": 0.25,
+      "item": "create:zinc_nugget"
+    },
+    {
+      "chance": 0.0025,
+      "item": "cards:uncommon_card_pack"
+    },
+    {
+      "chance": 0.005,
+      "item": "cards:common_card_pack"
+    }
+  ]
+}

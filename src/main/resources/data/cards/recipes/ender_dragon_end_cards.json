@@ -1,0 +1,12 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "tag": "cards:end_mob"
+    }
+      , {"item": "minecraft:shears"}], "keepHeldItem": true,
+  "results":[ {
+    "item": "cards:ender_dragon_card",
+    "count": 1
+  }]
+}

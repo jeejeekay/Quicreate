@@ -1,0 +1,29 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "A": {
+      "item": "create:zinc_ingot"
+    },
+    "P": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "create:zinc_block"
+    },
+    "X": {
+      "item": "create_new_age:copper_wire"
+    }
+  },
+  "pattern": [
+    " AXA ",
+    "AXPXA",
+    "XPSPX",
+    "AXPXA",
+    " AXA "
+  ],
+  "result": {
+    "count": 1,
+    "item": "create_new_age:generator_coil"
+  }
+}

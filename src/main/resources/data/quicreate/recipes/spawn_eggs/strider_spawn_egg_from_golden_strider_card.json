@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:golden_strider_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:strider_spawn_egg"
+  }
+}

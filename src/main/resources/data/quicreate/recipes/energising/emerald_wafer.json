@@ -1,0 +1,45 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "minecraft:emerald"
+  },
+  "results": [
+    {
+      "count": 1,
+      "item": "quicreate:emerald_wafer"
+    }
+  ],
+  "loops": 1,
+  "sequence": [
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_emerald_wafer"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_emerald_wafer"
+        }
+      ]
+    },
+    {
+      "type": "create_new_age:energising",
+      "energy_needed": 5000,
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_emerald_wafer"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_emerald_wafer"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "quicreate:incomplete_emerald_wafer"
+  }
+}

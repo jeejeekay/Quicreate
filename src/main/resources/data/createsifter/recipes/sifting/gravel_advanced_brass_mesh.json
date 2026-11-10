@@ -1,0 +1,42 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "createsifter:advanced_brass_mesh"
+    },
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.4,
+      "item": "minecraft:raw_copper"
+    },
+    {
+      "chance": 0.4,
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "chance": 0.2,
+      "item": "minecraft:quartz"
+    },
+    {
+      "chance": 0.01,
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "chance": 0.1,
+      "item": "create_new_age:thorium"
+    },
+    {
+      "chance": 0.001,
+      "item": "cards:ultimate_card_pack"
+    }
+  ]
+}

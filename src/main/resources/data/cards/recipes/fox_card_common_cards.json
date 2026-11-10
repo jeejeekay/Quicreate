@@ -1,0 +1,12 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "tag": "cards:common_mob"
+    }
+      , {"item": "minecraft:shears"}], "keepHeldItem": true,
+  "results":[ {
+    "item": "cards:fox_card",
+    "count": 1
+  }]
+}

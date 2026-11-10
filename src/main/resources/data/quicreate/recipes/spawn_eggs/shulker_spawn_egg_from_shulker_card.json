@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:shulker_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:shulker_spawn_egg"
+  }
+}

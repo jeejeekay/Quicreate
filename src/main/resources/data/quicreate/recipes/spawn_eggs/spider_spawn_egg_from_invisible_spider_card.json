@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:invisible_spider_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:spider_spawn_egg"
+  }
+}

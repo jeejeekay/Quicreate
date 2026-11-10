@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "ad_astra:steel_plates"
+    },
+    "T": {
+      "item": "ad_astra:gas_tank"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "C": {
+      "item": "quicreate:emerald_circuit"
+    }
+  },
+  "pattern": [
+    "W W",
+    "CTC",
+    "###"
+  ],
+  "result": {
+    "item": "ad_astra:space_suit"
+  },
+  "show_notification": true
+}

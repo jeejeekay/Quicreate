@@ -1,0 +1,18 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "exclusion_zone": {
+      "chunk_count": 10,
+      "other_set": "minecraft:villages"
+    },
+    "salt": 23311138,
+    "separation": 3,
+    "spacing": 15
+  },
+  "structures": [
+    {
+      "structure": "mowziesmobs:umvuthana_grove",
+      "weight": 1
+    }
+  ]
+}

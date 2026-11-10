@@ -1,0 +1,16 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "create_new_age:blank_circuit"
+    },
+    {
+      "item": "quicreate:ancient_metal_wafer"
+    }
+  ],
+  "results": [
+    {
+      "item": "quicreate:incomplete_ancient_metal_circuit"
+    }
+  ]
+}

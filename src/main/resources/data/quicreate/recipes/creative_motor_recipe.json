@@ -1,0 +1,12 @@
+{
+    "type": "cataclysm:weapon_fusion",
+    "base": {
+        "item": "create:rotation_speed_controller"
+    },
+    "addition": {
+        "item": "quicreate:creative_alloy"
+    },
+    "result": {
+        "item": "create:creative_motor"
+    }
+}

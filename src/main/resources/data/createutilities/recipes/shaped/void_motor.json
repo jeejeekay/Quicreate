@@ -1,0 +1,33 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "S": {
+      "item": "createutilities:void_steel_sheet"
+    },
+    "D": {
+      "item": "createutilities:graviton_tube"
+    },
+    "M": {
+      "item": "create_new_age:fluxuated_magnetite"
+    },
+    "C": {
+      "item": "createutilities:void_casing"
+    },
+    "G": {
+      "item": "create_new_age:overcharged_iron_sheet"
+    },
+    "Z": {
+      "item": "create:shaft"
+    }
+  },
+  "pattern": [
+    "SGDS",
+    "GCMZ",
+    "SGDS"
+  ],
+  "result": {
+    "count": 1,
+    "item": "createutilities:void_motor"
+  }
+}

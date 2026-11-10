@@ -1,0 +1,12 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "tag": "cards:rare_mob"
+    }
+      , {"item": "minecraft:shears"}], "keepHeldItem": true,
+  "results":[ {
+    "item": "cards:card_trader_villager_card",
+    "count": 1
+  }]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "cataclysm:enderite_block"
+    },
+    {
+      "item": "quicreate:creative_sheet"
+    }
+  ],
+  "results": [
+    {
+      "item": "quicreate:creative_casing"
+    }
+  ]
+}

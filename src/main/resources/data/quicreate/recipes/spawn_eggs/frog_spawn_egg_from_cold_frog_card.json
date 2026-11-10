@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:cold_frog_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:frog_spawn_egg"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "createsifter:brass_mesh"
+    },
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.125,
+      "item": "create:crushed_raw_copper"
+    },
+    {
+      "chance": 0.025,
+      "item": "create_new_age:thorium"
+    },
+    {
+      "chance": 0.075,
+      "item": "minecraft:quartz"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:coal"
+    },
+    {
+      "chance": 0.05,
+      "item": "minecraft:flint"
+    },
+    {
+      "chance": 0.005,
+      "item": "cards:rare_card_pack"
+    },
+    {
+      "chance": 0.01,
+      "item": "cards:uncommon_card_pack"
+    },
+    {
+      "chance": 0.025,
+      "item": "cards:common_card_pack"
+    }
+  ]
+}

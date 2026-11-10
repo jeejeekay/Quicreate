@@ -1,0 +1,21 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "quicreate:enderite_ingot"
+    },    {
+      "item": "quicreate:enderite_ingot"
+    },    {
+      "item": "quicreate:enderite_ingot"
+    },    {
+      "item": "quicreate:enderite_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "cataclysm:enderite_block",
+      "count": 1
+    }
+  ],
+  "heatRequirement": "superheated"
+}

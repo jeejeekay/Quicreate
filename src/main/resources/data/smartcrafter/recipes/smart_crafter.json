@@ -1,0 +1,25 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "B": {
+      "item": "create:cogwheel"
+    },
+    "C": {
+      "item": "create:mechanical_crafter"
+    },
+    "P": {
+      "item": "quicreate:amethyst_circuit"
+    }
+  },
+    "pattern": [
+      " BPB ",
+      "BCCCB",
+      "PCCCP",
+      "BCCCB",
+      " BPB "
+    ],
+    "result": {
+      "item": "smartcrafter:smart_crafter"
+    }
+  }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "quicreate:emerald_circuit"
+    },
+    "T": {
+      "item": "create:transmitter"
+    },
+    "I": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "pattern": [
+    "T",
+    "C",
+    "I"
+  ],
+  "result": {
+    "item": "toms_storage:ts.wireless_terminal"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "ABA",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "ad_astra:steel_plate"
+    },
+    "B": {
+      "item": "ad_astra:etrium_rod"
+    }
+  },
+  "result": {
+    "item": "ad_astra:etrionic_core",
+    "count": 1
+  }
+}

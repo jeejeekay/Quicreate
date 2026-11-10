@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:cave_spider_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cave_spider_spawn_egg"
+  }
+}

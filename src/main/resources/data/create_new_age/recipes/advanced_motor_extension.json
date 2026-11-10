@@ -1,0 +1,27 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "S": {
+      "item": "create_new_age:overcharged_iron_sheet"
+    },
+    "D": {
+      "item": "create_new_age:overcharged_golden_sheet"
+    },
+    "M": {
+      "item": "create_new_age:layered_magnet"
+    },
+    "C": {
+      "item": "quicreate:emerald_circuit"
+    }
+  },
+  "pattern": [
+    "SDDS",
+    "CMMC",
+    "SDDS"
+  ],
+  "result": {
+    "count": 1,
+    "item": "create_new_age:advanced_motor_extension"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:stray_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stray_spawn_egg"
+  }
+}

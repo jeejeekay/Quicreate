@@ -1,0 +1,12 @@
+{
+  "type": "ad_astra:compressing",
+  "cookingtime": 160,
+  "energy": 20,
+  "ingredient": {
+    "item": "minecraft:iron_block"
+  },
+  "result": {
+    "count": 9,
+    "id": "create:iron_sheet"
+  }
+}

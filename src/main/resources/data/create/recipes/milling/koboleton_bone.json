@@ -1,0 +1,24 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "cataclysm:koboleton_bone"
+    }
+  ],
+  "processingTime": 100,
+  "results": [
+    {
+      "count": 4,
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "chance": 0.05,
+      "item": "cataclysm:ancient_metal_nugget"
+    },
+    {
+      "chance": 0.25,
+      "count": 4,
+      "item": "minecraft:bone_meal"
+    }
+  ]
+}

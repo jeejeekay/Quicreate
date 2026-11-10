@@ -1,0 +1,36 @@
+{
+  "type": "quicreate:helix",
+  "config": {
+    "height": 40,
+    "radius": 3,
+    "turns": 4,
+    "strand_thickness": 1,
+    "strands": 3,
+    "taper": 0.9,
+    "rung_spacing": 0,
+    "blocks": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 4,
+          "data": {
+            "Name": "minecraft:packed_ice"
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:blue_ice"
+          }
+        }
+      ]
+    },
+    "rung_block": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:snow_block"
+      }
+    },
+    "sink": 2
+  }
+}

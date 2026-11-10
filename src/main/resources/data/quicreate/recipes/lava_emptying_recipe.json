@@ -1,0 +1,17 @@
+{
+    "type": "create:emptying",
+    "ingredients": [
+      {
+        "item": "cataclysm:lava_power_cell"
+      }
+    ],
+    "results": [
+      {
+        "item": "cataclysm:lava_power_cell"
+      },
+      {
+        "amount": 1000,
+        "fluid": "minecraft:lava"
+      }
+    ]
+  }

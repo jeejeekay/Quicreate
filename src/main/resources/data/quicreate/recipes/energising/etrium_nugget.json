@@ -1,0 +1,14 @@
+{
+  "type": "create_new_age:energising",
+  "energy_needed": 10000,
+  "ingredients": [
+    {
+      "item": "ad_astra:ice_shard"
+    }
+  ],
+  "results": [
+    {
+      "item": "ad_astra:etrium_nugget"
+    }
+  ]
+}

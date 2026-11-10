@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "quicreate:brass_fishing_rod"
+    },
+    {
+      "item": "ad_astra:desh_plate"
+    },
+    {
+      "item": "ad_astra:desh_plate"
+    }
+  ],
+  "result": {
+    "item": "quicreate:desh_fishing_rod"
+  }
+}

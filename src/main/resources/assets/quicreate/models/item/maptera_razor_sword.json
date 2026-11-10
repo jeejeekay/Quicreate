@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "quicreate:item/maptera_razor_sword"
+  }
+}

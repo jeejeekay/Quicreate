@@ -1,0 +1,38 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "quicreate:item/platinum_master_sword"
+  },
+  "display": {
+    "ground": {
+      "rotation": [ 0, 180, 0 ],
+      "translation": [ 0, 3, 0],
+      "scale":[ 0.625, 0.625, 0.5 ]
+    },
+    "fixed": {
+      "rotation": [ 0, 0, 45 ],
+      "translation": [ 0, 0, 0],
+      "scale":[ 0.875, 0.875, 0.5 ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [ 0, -90, 45 ],
+      "translation": [ 0, 8, 2 ],
+      "scale": [ 1.2, 1.2, 1.0 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ 0, -90, -45 ],
+      "translation": [ 0, 8, 2 ],
+      "scale": [ 1.2, 1.2, 1.0 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, -90, 30 ],
+      "translation": [ 0, 5, 2 ],
+      "scale": [ 0.825, 0.825, 0.5 ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [ 0, -90, -60 ],
+      "translation": [ 0, 5, 2 ],
+      "scale": [ 0.825, 0.825, 0.5 ]
+    }
+  }
+}

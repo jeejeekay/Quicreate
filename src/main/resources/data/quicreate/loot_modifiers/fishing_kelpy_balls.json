@@ -1,0 +1,47 @@
+{
+  "type": "quicreate:fishing_kelpy_balls",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:gameplay/fishing"
+    }
+  ],
+  "tiers": [
+    {
+      "light_item": "quicreate:light_kelpy_ball",
+      "light": 0.05
+    },
+    {
+      "light_item": "quicreate:light_kelpy_ball",
+      "medium_item": "quicreate:medium_kelpy_ball",
+      "light": 0.07,
+      "medium": 0.03
+    },
+    {
+      "light_item": "quicreate:light_kelpy_ball",
+      "medium_item": "quicreate:medium_kelpy_ball",
+      "heavy_item": "quicreate:heavy_kelpy_ball",
+      "light": 0.06,
+      "medium": 0.05,
+      "heavy": 0.015
+    },
+    {
+      "light_item": "quicreate:light_kelpy_ball",
+      "medium_item": "quicreate:medium_kelpy_ball",
+      "heavy_item": "quicreate:heavy_kelpy_ball",
+      "light": 0.05,
+      "medium": 0.06,
+      "heavy": 0.03,
+      "extras": [
+        {
+          "item": "minecraft:ancient_debris",
+          "chance": 0.01
+        },
+        {
+          "item": "minecraft:budding_amethyst",
+          "chance": 0.005
+        }
+      ]
+    }
+  ]
+}

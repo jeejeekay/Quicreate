@@ -1,0 +1,32 @@
+{
+  "replace": true,
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "B": {
+      "item": "cataclysm:sandstorm_in_a_bottle"
+    },
+    "I": {
+      "item": "cataclysm:ancient_metal_ingot"
+    },
+    "N": {
+      "item": "cataclysm:ancient_metal_nugget"
+    },
+    "R": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "ad_astra:steel_rod"
+    }
+  },
+  "pattern": [
+    "IRI",
+    "NBN",
+    "NSN",
+    "NSN"
+  ],
+  "result": {
+    "count" : 1,
+    "item": "cataclysm:ancient_spear"
+  }
+}

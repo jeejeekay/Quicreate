@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 23217347,
+    "separation": 3,
+    "spacing": 5
+  },
+  "structures": [
+    {
+      "structure": "mowziesmobs:wrought_chamber",
+      "weight": 1
+    }
+  ]
+}

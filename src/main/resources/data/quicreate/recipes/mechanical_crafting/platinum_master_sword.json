@@ -1,0 +1,35 @@
+{
+  "replace": true,
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "A": {
+      "item": "createutilities:polished_amethyst"
+    },
+    "S": {
+      "item": "cards:platinum_ingot"
+    },
+    "C": {
+      "item": "ad_astra:calorite_plate"
+    },
+    "M": {
+      "item": "ad_astra:etrium_ingot"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "R": {
+      "item": "ad_astra:etrium_rod"
+    }
+  },
+  "pattern": [
+    "SMS",
+    "SMS",
+    "CAC",
+    "NRN"
+  ],
+  "result": {
+    "count": 1,
+    "item": "quicreate:platinum_master_sword"
+  }
+}

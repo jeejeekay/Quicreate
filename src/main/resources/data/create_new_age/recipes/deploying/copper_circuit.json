@@ -1,0 +1,49 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "quicreate:incomplete_copper_circuit"
+  },
+  "loops": 3,
+  "results": [
+    {
+      "item": "create_new_age:copper_circuit"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_copper_circuit"
+        },
+        {
+          "item": "create_new_age:overcharged_iron_wire"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_copper_circuit"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_copper_circuit"
+        },
+        {
+          "item": "minecraft:quartz"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_copper_circuit"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "quicreate:incomplete_copper_circuit"
+  }
+}

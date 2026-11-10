@@ -1,0 +1,23 @@
+{
+    "type": "create:mixing",
+    "heatRequirement": "superheated",
+    "ingredients": [
+      {
+        "item": "cataclysm:cursium_ingot"
+      },
+      {
+        "item": "cataclysm:ignitium_ingot"
+      },
+      {
+        "item": "cataclysm:witherite_ingot"
+      },
+      {
+        "item": "cataclysm:essence_of_the_storm"
+      }
+    ],
+    "results": [
+      {
+        "item": "quicreate:creative_alloy"
+      }
+    ]
+  }

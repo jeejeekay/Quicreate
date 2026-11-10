@@ -1,0 +1,49 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "quicreate:incomplete_emerald_circuit"
+  },
+  "loops": 3,
+  "results": [
+    {
+      "item": "quicreate:emerald_circuit"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_emerald_circuit"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_emerald_circuit"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_emerald_circuit"
+        },
+        {
+          "item": "create_new_age:copper_circuit"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_emerald_circuit"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "quicreate:incomplete_emerald_circuit"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:golden_sheep_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:sheep_spawn_egg"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:iron_golem_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:iron_golem_spawn_egg"
+  }
+}

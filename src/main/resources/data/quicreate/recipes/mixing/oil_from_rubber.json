@@ -1,0 +1,15 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "cards:rubber_ball"
+    }
+  ],
+  "results": [
+    {
+      "amount": 50,
+      "fluid": "ad_astra:oil"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": {
+    "item": "cards:uncommon_card_pack"
+  },
+  "result": "cards:nether_card_pack",
+  "experience": 0.5,
+  "cookingtime": 200
+}

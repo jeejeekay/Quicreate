@@ -1,0 +1,29 @@
+{
+    "replace": true,
+    "type": "create:mechanical_crafting",
+    "acceptMirrored": true,
+    "key": {
+        "P": {
+            "item": "ad_astra:calorite_plate"
+        },
+        "I": {
+            "item": "cataclysm:witherite_ingot"
+        },
+        "R": {
+            "item": "ad_astra:steel_rod"
+        },
+        "F": {
+            "item": "ad_astra:fan"
+        }
+    },
+    "pattern": [
+        "PFP",
+        "RIR",
+        "RIR",
+        "RIR"
+    ],
+    "result": {
+        "item": "cataclysm:meat_shredder",
+        "count": 1
+    }
+}

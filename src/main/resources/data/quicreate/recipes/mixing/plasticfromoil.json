@@ -1,0 +1,20 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "amount": 100,
+      "fluid": "ad_astra:oil",
+      "nbt": {}
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "results": [
+    {
+      "item": "cards:plastic",
+      "count": 1
+    }
+  ],
+  "heatRequirement": "superheated"
+}

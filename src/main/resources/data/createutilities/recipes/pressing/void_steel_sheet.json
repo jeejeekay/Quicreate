@@ -1,0 +1,14 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "createutilities:void_steel_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "createutilities:void_steel_sheet"
+    }
+  ],
+  "heatRequirement": "superheated"
+}

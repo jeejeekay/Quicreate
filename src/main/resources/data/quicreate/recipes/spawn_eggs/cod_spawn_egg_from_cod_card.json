@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:cod_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cod_spawn_egg"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "createsifter:andesite_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.2,
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "chance": 0.4,
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "chance": 0.2,
+      "item": "cards:rubber_ball"
+    },
+    {
+      "chance": 0.0025,
+      "item": "cards:water_card_pack"
+    }
+  ],
+  "waterlogged": true
+}

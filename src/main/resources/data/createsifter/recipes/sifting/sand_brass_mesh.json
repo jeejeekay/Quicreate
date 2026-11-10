@@ -1,0 +1,42 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "createsifter:brass_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.1,
+      "item": "create:crushed_raw_zinc"
+    },
+    {
+      "chance": 0.3,
+      "item": "create:crushed_raw_iron"
+    },
+    {
+      "chance": 0.5,
+      "item": "minecraft:gold_nugget"
+    },
+    {
+      "chance": 0.01,
+      "item": "minecraft:emerald"
+    },
+    {
+      "chance": 0.005,
+      "item": "cards:rare_card_pack"
+    },
+    {
+      "chance": 0.01,
+      "item": "cards:uncommon_card_pack"
+    },
+    {
+      "chance": 0.025,
+      "item": "cards:common_card_pack"
+    }
+  ]
+}

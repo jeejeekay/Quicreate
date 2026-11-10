@@ -1,0 +1,32 @@
+{
+  "replace": true,
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "D": {
+      "item": "cataclysm:void_core"
+    },
+    "S": {
+      "item": "cataclysm:void_jaw"
+    },
+    "G": {
+      "item": "create_new_age:overcharged_golden_sheet"
+    },
+    "M": {
+      "item": "minecraft:diamond"
+    },
+    "R": {
+      "item": "ad_astra:steel_rod"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SMM",
+    "SDM",
+    "GRG"
+  ],
+  "result": {
+    "count": 1,
+    "item": "quicreate:maptera_razor_sword"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "ad_astra:venus_sand"
+    },
+    {
+      "item": "createsifter:advanced_brass_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.25,
+      "item": "minecraft:coal"
+    },
+    {
+      "chance": 0.05,
+      "item": "minecraft:diamond"
+    },
+    {
+      "chance": 0.05,
+      "item": "ad_astra:calorite_nugget"
+    },
+    {
+      "chance": 0.25,
+      "item": "minecraft:raw_gold"
+    },
+    {
+      "chance": 0.001,
+      "item": "cards:ultimate_card_pack"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+    "type": "create:mixing",
+    "ingredients": [
+        {
+            "item": "cataclysm:sandstorm_in_a_bottle"
+        },
+        {
+            "item": "minecraft:paper"
+        }
+    ],
+    "results": [
+        {
+            "item": "minecraft:glass_bottle"
+        },
+        {
+            "item": "create:sand_paper",
+            "nbt": {
+                "Unbreakable": 1
+            }
+        }
+    ]
+}

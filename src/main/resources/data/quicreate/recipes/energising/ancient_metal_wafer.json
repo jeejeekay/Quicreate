@@ -1,0 +1,45 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "cataclysm:ancient_metal_ingot"
+  },
+  "results": [
+    {
+      "count": 1,
+      "item": "quicreate:ancient_metal_wafer"
+    }
+  ],
+  "loops": 1,
+  "sequence": [
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_ancient_metal_wafer"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_ancient_metal_wafer"
+        }
+      ]
+    },
+    {
+      "type": "create_new_age:energising",
+      "energy_needed": 50000,
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_ancient_metal_wafer"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_ancient_metal_wafer"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "quicreate:incomplete_ancient_metal_wafer"
+  }
+}

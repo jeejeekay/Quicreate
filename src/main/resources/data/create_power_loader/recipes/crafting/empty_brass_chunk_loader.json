@@ -1,0 +1,31 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "G": {
+      "item": "minecraft:tinted_glass"
+    },
+    "B": {
+      "item": "create_power_loader:empty_andesite_chunk_loader"
+    },
+    "S": {
+      "item": "create:shaft"
+    },
+    "A": {
+      "item": "create:railway_casing"
+    },
+    "C": {
+      "item": "quicreate:ancient_metal_circuit"
+    }
+
+  },
+  "pattern": [
+    "GGG",
+    "GBG",
+    "CBC",
+    "ASA"
+  ],
+  "result": {
+    "item": "create_power_loader:empty_brass_chunk_loader"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "quicreate:creative_alloy"
+  },
+  "loops": 16,
+  "results": [
+    {
+      "item": "quicreate:creative_sheet"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_creative_sheet"
+        },
+        {
+          "amount": 250,
+          "fluid": "ad_astra:cryo_fuel",
+          "nbt": {}
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_creative_sheet"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_creative_sheet"
+        },
+        {
+          "item": "mowziesmobs:ice_crystal"
+        }
+      ], "keepHeldItem": true,
+      "results": [
+        {
+          "item": "quicreate:incomplete_creative_sheet"
+        }
+      ]
+    },
+    {
+    "type": "create_new_age:energising",
+    "energy_needed": 100000,
+    "ingredients": [
+      {
+        "item": "quicreate:incomplete_creative_sheet"
+      }
+    ],
+    "results": [
+      {
+        "item": "quicreate:incomplete_creative_sheet"
+      }
+    ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_creative_sheet"
+        },
+        {
+          "item": "create:sturdy_sheet"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_creative_sheet"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "quicreate:incomplete_creative_sheet"
+        }
+      ],
+      "results": [
+        {
+          "item": "quicreate:incomplete_creative_sheet"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "quicreate:incomplete_creative_sheet"
+  }
+}

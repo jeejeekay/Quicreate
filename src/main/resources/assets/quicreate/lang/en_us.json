@@ -1,0 +1,16 @@
+{
+  "biome.quicreate.glacio_helix_spires": "Glacio Helix Spires",
+  "item.quicreate.light_kelpy_ball": "Light Kelpy Ball",
+  "item.quicreate.medium_kelpy_ball": "Medium Kelpy Ball",
+  "item.quicreate.heavy_kelpy_ball": "Heavy Kelpy Ball",
+  "item.quicreate.kelpy_ball.tooltip.open": "Right-click to open",
+  "item.quicreate.kelpy_ball.tooltip.stack": "Sneak to open the whole stack. Deployers can open them too.",
+  "item.quicreate.brass_fishing_rod": "Brass Fishing Rod",
+  "item.quicreate.desh_fishing_rod": "Desh Fishing Rod",
+  "item.quicreate.ostrum_fishing_rod": "Ostrum Fishing Rod",
+  "entity.quicreate.sword_beam": "Sword Beam",
+  "jei.quicreate.kelpy_ball": "Kelpy Ball Contents",
+  "jei.quicreate.kelpy_ball.rolls": "Rolls: %s",
+  "jei.quicreate.kelpy_ball.chance": "%s%% chance per roll",
+  "jei.quicreate.kelpy_ball.count": "Count: %s"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "item": "cataclysm:cursium_ingot"
+    },
+    {
+      "item": "createutilities:void_steel_ingot"
+    },
+    {
+      "item": "cards:platinum_ingot"
+    }
+  ],
+  "results":[ {
+    "count": 2,
+    "item": "cataclysm:cursium_ingot"
+  }]
+}

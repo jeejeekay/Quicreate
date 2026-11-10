@@ -1,0 +1,30 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "createsifter:string_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.25,
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "chance": 0.025,
+      "item": "minecraft:sugar_cane"
+    },
+    {
+      "chance": 0.025,
+      "item": "minecraft:cactus"
+    },
+    {
+      "chance": 0.001,
+      "item": "cards:common_card_pack"
+    }
+  ]
+}

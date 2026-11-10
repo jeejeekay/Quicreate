@@ -1,0 +1,28 @@
+{
+    "replace": true,
+    "type": "create:mechanical_crafting",
+    "acceptMirrored": true,
+    "key": {
+        "P": {
+            "item": "ad_astra:steel_plate"
+        },
+        "I": {
+            "item": "cataclysm:witherite_ingot"
+        },
+        "R": {
+            "item": "ad_astra:steel_rod"
+        },
+        "C": {
+            "item": "ad_astra:calorite_ingot"
+        }
+    },
+    "pattern": [
+        "RRRR",
+        "CIII",
+        "PPPP"
+    ],
+    "result": {
+        "item": "cataclysm:laser_gatling",
+        "count": 1
+    }
+}

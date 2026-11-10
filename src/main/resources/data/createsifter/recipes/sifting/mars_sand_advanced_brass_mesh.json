@@ -1,0 +1,34 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "ad_astra:mars_sand"
+    },
+    {
+      "item": "createsifter:advanced_brass_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.2,
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "chance": 0.025,
+      "item": "minecraft:diamond"
+    },
+    {
+      "chance": 0.075,
+      "item": "ad_astra:ostrum_nugget"
+    },
+    {
+      "chance": 0.2,
+      "item": "ad_astra:ice_shard"
+    },
+    {
+      "chance": 0.001,
+      "item": "cards:ultimate_card_pack"
+    }
+  ]
+}

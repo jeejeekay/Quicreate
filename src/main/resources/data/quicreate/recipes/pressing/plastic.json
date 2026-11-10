@@ -1,0 +1,18 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "cards:card_bits"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "results": [
+    {
+      "item": "cards:plastic",
+      "count": 1
+    }
+  ],
+  "heatRequirement": "heated"
+}

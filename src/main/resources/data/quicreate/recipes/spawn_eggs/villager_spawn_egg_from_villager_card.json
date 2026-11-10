@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:villager_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:villager_spawn_egg"
+  }
+}

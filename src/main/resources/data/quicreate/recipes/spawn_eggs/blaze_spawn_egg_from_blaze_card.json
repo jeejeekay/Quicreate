@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cards:blaze_card"
+    }
+  ],
+  "result": {
+    "item": "minecraft:blaze_spawn_egg"
+  }
+}

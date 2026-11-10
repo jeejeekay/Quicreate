@@ -1,0 +1,14 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "ad_astra:mars_cobblestone"
+    }
+  ],
+  "processingTime": 250,
+  "results": [
+    {
+      "item": "ad_astra:mars_sand"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AA",
+    "BB"
+  ],
+  "key": {
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "B": {
+      "item": "cards:rubber_ball"
+    }
+  },
+  "result": {
+    "item": "create:andesite_tunnel",
+    "count": 2
+  }
+}

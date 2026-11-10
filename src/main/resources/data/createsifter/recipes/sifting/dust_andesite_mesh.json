@@ -1,0 +1,34 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "createsifter:dust"
+    },
+    {
+      "item": "createsifter:andesite_mesh"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.2,
+      "item": "minecraft:redstone"
+    },
+    {
+      "chance": 0.15,
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "chance": 0.15,
+      "item": "minecraft:stick"
+    },
+    {
+      "chance": 0.0025,
+      "item": "cards:uncommon_card_pack"
+    },
+    {
+      "chance": 0.005,
+      "item": "cards:common_card_pack"
+    }
+  ]
+}

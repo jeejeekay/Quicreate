@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "superheated",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/iron"
+    },
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "item": "ad_astra:steel_ingot"
+    }
+  ]
+}

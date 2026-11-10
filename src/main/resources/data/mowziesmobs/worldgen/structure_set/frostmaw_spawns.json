@@ -1,0 +1,18 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "exclusion_zone": {
+      "chunk_count": 10,
+      "other_set": "minecraft:villages"
+    },
+    "salt": 23317578,
+    "separation": 5,
+    "spacing": 15
+  },
+  "structures": [
+    {
+      "structure": "mowziesmobs:frostmaw_spawn",
+      "weight": 1
+    }
+  ]
+}

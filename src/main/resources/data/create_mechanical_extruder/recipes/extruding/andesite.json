@@ -1,0 +1,21 @@
+{
+  "type": "create_mechanical_extruder:extruding",
+  "catalyst": {
+    "item": "create:andesite_alloy_block"
+  },
+  "ingredients": [
+    {
+      "amount": 1000,
+      "fluid": "minecraft:lava",
+      "nbt": {}
+    },
+    {
+      "amount": 1000,
+      "fluid": "minecraft:water",
+      "nbt": {}
+    }
+  ],
+  "result": {
+    "item": "minecraft:andesite"
+  }
+}

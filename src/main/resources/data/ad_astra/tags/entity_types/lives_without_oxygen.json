@@ -1,0 +1,187 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "cataclysm:amethyst_crab",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ancient_ancient_remnant",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ancient_remnant",
+      "required": false
+    },
+    {
+      "id": "cataclysm:aptrgangr",
+      "required": false
+    },
+    {
+      "id": "cataclysm:coral_golem",
+      "required": false
+    },
+    {
+      "id": "cataclysm:coralssus",
+      "required": false
+    },
+    {
+      "id": "cataclysm:deepling",
+      "required": false
+    },
+    {
+      "id": "cataclysm:deepling_angler",
+      "required": false
+    },
+    {
+      "id": "cataclysm:deepling_brute",
+      "required": false
+    },
+    {
+      "id": "cataclysm:deepling_priest",
+      "required": false
+    },
+    {
+      "id": "cataclysm:deepling_warlock",
+      "required": false
+    },
+    {
+      "id": "cataclysm:draugr",
+      "required": false
+    },
+    {
+      "id": "cataclysm:elite_draugr",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ender_golem",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ender_guardian",
+      "required": false
+    },
+    {
+      "id": "cataclysm:endermaptera",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ignis",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ignited_revenant",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ignited_berserker",
+      "required": false
+    },
+    {
+      "id": "cataclysm:kobolediator",
+      "required": false
+    },
+    {
+      "id": "cataclysm:koboleton",
+      "required": false
+    },
+    {
+      "id": "cataclysm:lionfish",
+      "required": false
+    },
+    {
+      "id": "cataclysm:maledictus",
+      "required": false
+    },
+    {
+      "id": "cataclysm:modern_remnant",
+      "required": false
+    },
+    {
+      "id": "cataclysm:nameless_sorcerer",
+      "required": false
+    },
+    {
+      "id": "cataclysm:netherite_ministrosity",
+      "required": false
+    },
+    {
+      "id": "cataclysm:netherite_monstrosity",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_baby_leviathan",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_leviathan",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_prowler",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_watcher",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_harbinger",
+      "required": false
+    },
+    {
+      "id": "cataclysm:wadjet",
+      "required": false
+    },
+    {
+      "id": "ad_astra:corrupted_lunarian",
+      "required": false
+    },
+    {
+      "id": "ad_astra:star_crawler",
+      "required": false
+    },
+    {
+      "id": "ad_astra:martian_raptor",
+      "required": false
+    },
+    {
+      "id": "ad_astra:lunarian",
+      "required": false
+    },
+    "minecraft:enderman",
+    "minecraft:shulker",
+    {
+      "id": "mowziesmobs:umvuthana_crane",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:umvuthana_raptor",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:umvuthana",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:umvuthi",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:bluff",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:sculptor",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:elokosa_follower_howler",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:elokosa_howler",
+      "required": false
+    }
+  ]
+}

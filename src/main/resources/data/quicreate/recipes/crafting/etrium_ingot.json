@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "ad_astra:etrium_nugget"
+    }
+  },
+  "result": {
+    "item": "ad_astra:etrium_ingot",
+    "count": 1
+  }
+}

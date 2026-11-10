@@ -1,0 +1,32 @@
+{
+  "replace": true,
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "D": {
+      "item": "quicreate:ancient_metal_wafer"
+    },
+    "S": {
+      "item": "ad_astra:ostrum_plate"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "G": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "R": {
+      "item": "ad_astra:steel_rod"
+    }
+  },
+  "pattern": [
+    "SDS",
+    "DND",
+    "SDS",
+    "GRG"
+  ],
+  "result": {
+    "count": 1,
+    "item": "quicreate:ancient_gilded_sword"
+  }
+}

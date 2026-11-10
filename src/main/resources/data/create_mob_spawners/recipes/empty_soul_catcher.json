@@ -1,0 +1,26 @@
+{
+  "replace": true,
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "create:railway_casing"
+    },
+    "B": {
+      "item": "quicreate:ancient_metal_circuit"
+    },
+    "C": {
+      "item": "cataclysm:void_core"
+    },
+    "D": {
+      "item": "minecraft:shulker_shell"
+    }
+  },
+  "pattern": [
+    "ADA",
+    "BCB",
+    "ADA"
+  ],
+  "result": {
+    "item": "create_mob_spawners:empty_soul_catcher"
+  }
+}

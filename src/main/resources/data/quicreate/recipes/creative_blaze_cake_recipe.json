@@ -1,0 +1,12 @@
+{
+    "type": "cataclysm:weapon_fusion",
+    "base": {
+        "item": "create:blaze_cake"
+    },
+    "addition": {
+        "item":  "quicreate:creative_alloy"
+    },
+    "result": {
+        "item": "create:creative_blaze_cake"
+    }
+}
