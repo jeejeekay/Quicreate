@@ -1,0 +1,29 @@
+{
+  "category": "quicreate:kitchen",
+  "name": "book.quicreate.skyblock.side.kitchen.stage2",
+  "icon": "ad_astra:moon_globe",
+  "x": -1,
+  "y": -5,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.stage2.p.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.stage2.p.title"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/moon_landing",
+    "tooltip": "book.quicreate.skyblock.stage.2"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:kitchen/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

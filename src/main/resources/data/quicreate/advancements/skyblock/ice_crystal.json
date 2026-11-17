@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/frostmaw",
+  "display": {
+    "icon": {
+      "item": "mowziesmobs:ice_crystal"
+    },
+    "title": {
+      "text": "Ice Crystal"
+    },
+    "description": {
+      "text": "1 Ice Crystal"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "mowziesmobs:ice_crystal"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

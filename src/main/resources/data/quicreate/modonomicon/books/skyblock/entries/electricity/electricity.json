@@ -1,0 +1,30 @@
+{
+  "category": "quicreate:electricity",
+  "name": "book.quicreate.skyblock.electricity.electricity.name",
+  "description": "book.quicreate.skyblock.electricity.electricity.desc",
+  "icon": "ad_astra:etrium_nugget",
+  "x": 5,
+  "y": -9,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.electricity.read.p0",
+      "title": "book.quicreate.skyblock.electricity.electricity.read.title"
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:electricity/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/magnetite",
+    "tooltip": "book.quicreate.skyblock.tooltip.magnetite"
+  },
+  "show_when_any_parent_unlocked": true
+}

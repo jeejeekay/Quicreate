@@ -1,0 +1,41 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.sifting.name",
+  "icon": "createsifter:sifter",
+  "x": -1,
+  "y": -5,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.sifting.a.p0",
+      "title": "book.quicreate.skyblock.field.sifting.a.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.sifting.a.p1"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "createsifter:dust"
+      },
+      "title": "book.quicreate.skyblock.field.sifting.dust.title",
+      "text": "book.quicreate.skyblock.field.sifting.dust.text"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mill",
+    "tooltip": "book.quicreate.skyblock.field.sifting.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

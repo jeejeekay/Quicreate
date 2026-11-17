@@ -1,0 +1,57 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "  G",
+      "   ",
+      " 0 "
+    ],
+    [
+      "ADB",
+      " E ",
+      " C "
+    ]
+  ],
+  "mapping": {
+    "A": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:basic_solar_heating_plate",
+      "block": "create_new_age:basic_solar_heating_plate"
+    },
+    "B": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heat_pipe[down=false,east=false,north=false,south=false,up=true,west=true]",
+      "block": "create_new_age:heat_pipe[down=false,east=false,north=false,south=false,up=true,west=true]"
+    },
+    "C": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heat_pipe[down=false,east=false,north=true,south=false,up=true,west=false]",
+      "block": "create_new_age:heat_pipe[down=false,east=false,north=true,south=false,up=true,west=false]"
+    },
+    "D": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heat_pipe[down=false,east=true,north=false,south=true,up=false,west=true]",
+      "block": "create_new_age:heat_pipe[down=false,east=true,north=false,south=true,up=false,west=true]"
+    },
+    "E": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heat_pump[down=false,east=false,facing=south,north=true,south=true,up=false,west=false]",
+      "block": "create_new_age:heat_pump[down=false,east=false,facing=south,north=true,south=true,up=false,west=false]"
+    },
+    "F": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:stirling_engine[axis=x]",
+      "block": "create_new_age:stirling_engine[axis=x]"
+    },
+    "G": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:stirling_engine[axis=z]",
+      "block": "create_new_age:stirling_engine[axis=z]"
+    },
+    "0": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:stirling_engine[axis=x]",
+      "block": "create_new_age:stirling_engine[axis=x]"
+    }
+  }
+}

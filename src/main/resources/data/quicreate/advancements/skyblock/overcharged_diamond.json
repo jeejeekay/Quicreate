@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/diamonds",
+  "display": {
+    "icon": {
+      "item": "create_new_age:overcharged_diamond"
+    },
+    "title": {
+      "text": "Overcharged Diamond"
+    },
+    "description": {
+      "text": "4 Overcharged Diamond"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "create_new_age:overcharged_diamond"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

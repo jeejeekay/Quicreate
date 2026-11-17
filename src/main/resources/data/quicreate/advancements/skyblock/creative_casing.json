@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/creative_sheet",
+  "display": {
+    "icon": {
+      "item": "quicreate:creative_casing"
+    },
+    "title": {
+      "text": "Creative Casing"
+    },
+    "description": {
+      "text": "A creative sheet on a block of enderite"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "quicreate:creative_casing"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

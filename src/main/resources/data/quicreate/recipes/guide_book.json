@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    }
+  ],
+  "result": {
+    "item": "modonomicon:modonomicon",
+    "count": 1,
+    "nbt": "{\"modonomicon:book_id\":\"quicreate:skyblock\"}"
+  }
+}

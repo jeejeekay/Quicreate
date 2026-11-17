@@ -1,0 +1,6 @@
+{
+  "name": "book.quicreate.skyblock.cat.side_paths",
+  "icon": "minecraft:compass",
+  "sort_number": 20,
+  "background": "quicreate:textures/gui/book/tiled/dark_oak_planks.png"
+}

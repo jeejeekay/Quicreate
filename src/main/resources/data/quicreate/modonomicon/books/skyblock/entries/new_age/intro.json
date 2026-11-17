@@ -1,0 +1,109 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.intro.name",
+  "description": "book.quicreate.skyblock.new_age.intro.desc",
+  "icon": "minecraft:writable_book",
+  "x": -14,
+  "y": -7,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.overview.p0",
+      "title": "book.quicreate.skyblock.new_age.intro.overview.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.overview.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.overview.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.tips.p0",
+      "title": "book.quicreate.skyblock.new_age.intro.tips.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.mat.p0",
+      "title": "book.quicreate.skyblock.new_age.intro.mat.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.mat.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.mat.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s0.p0",
+      "title": "book.quicreate.skyblock.new_age.intro.s0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s0.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s1.p0",
+      "title": "book.quicreate.skyblock.new_age.intro.s1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s1.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s1.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s2.p0",
+      "title": "book.quicreate.skyblock.new_age.intro.s2.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s2.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s3.p0",
+      "title": "book.quicreate.skyblock.new_age.intro.s3.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s3.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s3.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s4.p0",
+      "title": "book.quicreate.skyblock.new_age.intro.s4.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s4.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s4.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s5.p0",
+      "title": "book.quicreate.skyblock.new_age.intro.s5.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.intro.s5.p1"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "category": "quicreate:mars",
+  "name": "book.quicreate.skyblock.mars.mars_landing.name",
+  "description": "book.quicreate.skyblock.mars.mars_landing.desc",
+  "icon": "ad_astra:mars_globe",
+  "x": -2,
+  "y": -6,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:image",
+      "images": [
+        "quicreate:textures/gui/book/planet/mars.png"
+      ],
+      "title": "book.quicreate.skyblock.mars.mars_landing.ititle",
+      "text": "book.quicreate.skyblock.mars.mars_landing.itext",
+      "border": true
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.mars_landing.how.p0",
+      "title": "book.quicreate.skyblock.mars.mars_landing.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.mars_landing.done.p0",
+      "title": "book.quicreate.skyblock.mars.mars_landing.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mars_landing",
+        "tooltip": "book.quicreate.skyblock.mars.mars_landing.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/tier_2_rocket",
+    "tooltip": "book.quicreate.skyblock.tooltip.tier_2_rocket"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:mars/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

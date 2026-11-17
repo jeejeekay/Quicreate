@@ -1,0 +1,31 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.create_new_age.name",
+  "icon": "create_new_age:overcharged_diamond_wire",
+  "x": -4,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.create_new_age.read.p0",
+      "title": "book.quicreate.skyblock.field.create_new_age.read.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.create_new_age.read.p1"
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/about_this_modpack"
+    },
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

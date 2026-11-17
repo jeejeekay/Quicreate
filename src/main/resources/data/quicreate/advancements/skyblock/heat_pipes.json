@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/heater",
+  "display": {
+    "icon": {
+      "item": "create_new_age:heat_pipe"
+    },
+    "title": {
+      "text": "Heat Pipes"
+    },
+    "description": {
+      "text": "Evenly move your heat"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "create_new_age:heat_pipe"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

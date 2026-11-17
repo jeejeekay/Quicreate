@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "create:deployer"
+    },
+    "title": {
+      "text": "Circuit line"
+    },
+    "description": {
+      "text": "Four deployers on a belt run a circuit recipe on their own."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "have": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "item": "create:deployer",
+        "count": 4
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/workshop/circuit_line"
+  }
+}

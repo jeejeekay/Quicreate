@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/cobblestone",
+  "display": {
+    "icon": {
+      "item": "minecraft:andesite"
+    },
+    "title": {
+      "text": "andesite"
+    },
+    "description": {
+      "text": "Crafted from 4 Cobblestone"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "minecraft:andesite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

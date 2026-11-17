@@ -1,0 +1,24 @@
+{
+  "category": "quicreate:workshop",
+  "name": "book.quicreate.skyblock.side.workshop.stage0",
+  "icon": "minecraft:grass_block",
+  "x": -7,
+  "y": -5,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.workshop.stage0.p.p0",
+      "title": "book.quicreate.skyblock.side.workshop.stage0.p.title"
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:workshop/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,66 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.nuclear_fuel.name",
+  "description": "book.quicreate.skyblock.improvements.nuclear_fuel.desc",
+  "icon": "create_new_age:nuclear_fuel",
+  "x": 7,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:nuclear_fuel"
+      },
+      "title": "book.quicreate.skyblock.improvements.nuclear_fuel.spot.title",
+      "text": "book.quicreate.skyblock.improvements.nuclear_fuel.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.nuclear_fuel.how.p0",
+      "title": "book.quicreate.skyblock.improvements.nuclear_fuel.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.nuclear_fuel.done.p0",
+      "title": "book.quicreate.skyblock.improvements.nuclear_fuel.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/nuclear_fuel",
+        "tooltip": "book.quicreate.skyblock.improvements.nuclear_fuel.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/radioactive_thorium"
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/radioactive_thorium",
+        "tooltip": "book.quicreate.skyblock.tooltip.radioactive_thorium"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/press",
+        "tooltip": "book.quicreate.skyblock.tooltip.press"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/deployer",
+        "tooltip": "book.quicreate.skyblock.tooltip.deployer"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

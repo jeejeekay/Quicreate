@@ -1,0 +1,85 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:cod"
+    },
+    "title": {
+      "text": "Angler"
+    },
+    "description": {
+      "text": "Fish in the ocean around your island."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "cod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cod"
+            ]
+          }
+        ]
+      }
+    },
+    "salmon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:salmon"
+            ]
+          }
+        ]
+      }
+    },
+    "tropical_fish": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:tropical_fish"
+            ]
+          }
+        ]
+      }
+    },
+    "pufferfish": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:pufferfish"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cod"
+    ],
+    [
+      "salmon"
+    ],
+    [
+      "tropical_fish"
+    ],
+    [
+      "pufferfish"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/angler"
+  }
+}

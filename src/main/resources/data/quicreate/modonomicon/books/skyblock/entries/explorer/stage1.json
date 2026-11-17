@@ -1,0 +1,29 @@
+{
+  "category": "quicreate:explorer",
+  "name": "book.quicreate.skyblock.side.explorer.stage1",
+  "icon": "create:cogwheel",
+  "x": -4,
+  "y": -5,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.stage1.p.p0",
+      "title": "book.quicreate.skyblock.side.explorer.stage1.p.title"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/sifter",
+    "tooltip": "book.quicreate.skyblock.stage.1"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:explorer/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

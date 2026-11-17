@@ -1,0 +1,30 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      " MMM "
+    ],
+    [
+      "MMMMM"
+    ],
+    [
+      "MM0MM"
+    ],
+    [
+      "MMMMM"
+    ],
+    [
+      " MMM "
+    ]
+  ],
+  "mapping": {
+    "M": {
+      "type": "modonomicon:block",
+      "block": "create:mechanical_crafter"
+    },
+    "0": {
+      "type": "modonomicon:block",
+      "block": "create:mechanical_crafter"
+    }
+  }
+}

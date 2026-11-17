@@ -1,0 +1,62 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.etrionic_capacitor.name",
+  "description": "book.quicreate.skyblock.moon.etrionic_capacitor.desc",
+  "icon": "ad_astra:etrionic_capacitor",
+  "x": 4,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:etrionic_capacitor"
+      },
+      "title": "book.quicreate.skyblock.moon.etrionic_capacitor.spot.title",
+      "text": "book.quicreate.skyblock.moon.etrionic_capacitor.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.etrionic_capacitor.how.p0",
+      "title": "book.quicreate.skyblock.moon.etrionic_capacitor.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.etrionic_capacitor.done.p0",
+      "title": "book.quicreate.skyblock.moon.etrionic_capacitor.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/etrionic_capacitor",
+        "tooltip": "book.quicreate.skyblock.moon.etrionic_capacitor.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/etrium",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/emerald_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.emerald_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/etrium",
+        "tooltip": "book.quicreate.skyblock.tooltip.etrium"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

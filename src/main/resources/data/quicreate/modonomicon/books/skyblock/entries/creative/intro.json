@@ -1,0 +1,66 @@
+{
+  "category": "quicreate:creative",
+  "name": "book.quicreate.skyblock.creative.intro.name",
+  "description": "book.quicreate.skyblock.creative.intro.desc",
+  "icon": "minecraft:writable_book",
+  "x": 1,
+  "y": -6,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.overview.p0",
+      "title": "book.quicreate.skyblock.creative.intro.overview.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.overview.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.overview.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.tips.p0",
+      "title": "book.quicreate.skyblock.creative.intro.tips.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.mat.p0",
+      "title": "book.quicreate.skyblock.creative.intro.mat.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.mat.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.mat.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.s0.p0",
+      "title": "book.quicreate.skyblock.creative.intro.s0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.s0.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.s1.p0",
+      "title": "book.quicreate.skyblock.creative.intro.s1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.s1.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.intro.s2.p0",
+      "title": "book.quicreate.skyblock.creative.intro.s2.title"
+    }
+  ]
+}

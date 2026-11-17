@@ -1,0 +1,70 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_carrot"
+    },
+    "title": {
+      "text": "Golden food"
+    },
+    "description": {
+      "text": "Gold from the brass mesh makes the best food for boss fights."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "golden_carrot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:golden_carrot"
+            ]
+          }
+        ]
+      }
+    },
+    "golden_apple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:golden_apple"
+            ]
+          }
+        ]
+      }
+    },
+    "glistering_melon_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:glistering_melon_slice"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "golden_carrot"
+    ],
+    [
+      "golden_apple"
+    ],
+    [
+      "glistering_melon_slice"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/golden_food"
+  }
+}

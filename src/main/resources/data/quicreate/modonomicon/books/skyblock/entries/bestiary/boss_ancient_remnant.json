@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:bestiary",
+  "name": "book.quicreate.skyblock.side.bestiary.boss_ancient_remnant.name",
+  "description": "book.quicreate.skyblock.side.bestiary.boss_ancient_remnant.desc",
+  "icon": "cataclysm:remnant_skull",
+  "x": 2,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:ancient_remnant",
+      "name": "book.quicreate.skyblock.side.bestiary.boss_ancient_remnant.n",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_ancient_remnant.t",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_ancient_remnant.d.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.boss_ancient_remnant.d.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_ancient_remnant.done.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.boss_ancient_remnant.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/bestiary/boss_ancient_remnant",
+        "tooltip": "book.quicreate.skyblock.side.bestiary.boss_ancient_remnant.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:bestiary/stage3",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:bestiary/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mars_landing",
+    "tooltip": "book.quicreate.skyblock.stage.3"
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -28,11 +28,16 @@ public final class QuicreateClient {
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         // The sword beam is drawn entirely with particles.
         event.registerEntityRenderer(QuicreateContent.SWORD_BEAM.get(), NoopRenderer::new);
+        // Field Guide build previews: draws blocks Create animates (e.g. the generator coil) from their item model.
+        event.registerBlockEntityRenderer(QuicreateContent.PREVIEW_ITEM_BE.get(), PreviewItemRenderer::new);
     }
 
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
+            // Old-combat sword block: while the gilded sword is raised, its model turns the blade sideways.
+            ItemProperties.register(ModRegistry.ANCIENT_GILDED_SWORD.get(), new ResourceLocation(Quicreate.MODID, "blocking"),
+                    (stack, level, entity, seed) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F);
             // Same "cast" switch vanilla gives its fishing rod, so the line disappears while fishing.
             for (RegistryObject<Item> rod : List.of(ModRegistry.BRASS_FISHING_ROD, ModRegistry.DESH_FISHING_ROD, ModRegistry.OSTRUM_FISHING_ROD)) {
                 ItemProperties.register(rod.get(), new ResourceLocation("cast"), (stack, level, entity, seed) -> {

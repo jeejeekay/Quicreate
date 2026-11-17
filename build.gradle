@@ -119,6 +119,12 @@ repositories {
     maven { url = "https://maven.blamejared.com/" }
     maven { url = "https://modmaven.dev" }
 
+    // Mod jars copied from the pack (Create, its bundled Flywheel/Ponder/Registrate, Create: Mechanical Extruder).
+    // The Andesite Extruder compiles against them. See libs/README.md.
+    flatDir {
+        dir 'libs'
+    }
+
     // If you have mod jar dependencies in ./libs, you can declare them as a repository like so.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:flat_dir_resolver
     // flatDir {
@@ -138,6 +144,14 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.20.1-common-api:15.20.0.130")
     compileOnly fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.20.0.130")
     runtimeOnly fg.deobf("mezz.jei:jei-1.20.1-forge:15.20.0.130")
+
+    // Andesite Extruder: compile against the exact jars the pack runs (libs/, see libs/README.md).
+    // compileOnly: the pack provides these mods at runtime.
+    compileOnly fg.deobf("blank:create-${minecraft_version}:${create_version}")
+    compileOnly fg.deobf("blank:flywheel-forge-${minecraft_version}:${flywheel_version}")
+    compileOnly fg.deobf("blank:Ponder-Forge-${minecraft_version}:${ponder_version}")
+    compileOnly fg.deobf("blank:Registrate:${registrate_version}")
+    compileOnly fg.deobf("blank:create_mecanical_extruder-${minecraft_version}:${extruder_version}")
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

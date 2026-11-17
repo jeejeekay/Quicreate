@@ -1,0 +1,115 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "ad_astra:aeronos_stem"
+    },
+    "title": {
+      "text": "Alien woods"
+    },
+    "description": {
+      "text": "Venus grows tall aeronos mushrooms; the Moon's deep pits grow strophar. Their..."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "aeronos_stem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:aeronos_stem"
+            ]
+          }
+        ]
+      }
+    },
+    "aeronos_cap": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:aeronos_cap"
+            ]
+          }
+        ]
+      }
+    },
+    "strophar_stem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:strophar_stem"
+            ]
+          }
+        ]
+      }
+    },
+    "strophar_cap": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:strophar_cap"
+            ]
+          }
+        ]
+      }
+    },
+    "aeronos_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:aeronos_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "strophar_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:strophar_planks"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "aeronos_stem"
+    ],
+    [
+      "aeronos_cap"
+    ],
+    [
+      "strophar_stem"
+    ],
+    [
+      "strophar_cap"
+    ],
+    [
+      "aeronos_planks"
+    ],
+    [
+      "strophar_planks"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/builders/alien_woods"
+  }
+}

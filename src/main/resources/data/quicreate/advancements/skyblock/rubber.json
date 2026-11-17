@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/andesite_mesh",
+  "display": {
+    "icon": {
+      "item": "cards:rubber_ball"
+    },
+    "title": {
+      "text": "Rubber"
+    },
+    "description": {
+      "text": "Rubber is a substitute for kelp in create recipes!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "cards:rubber_ball"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

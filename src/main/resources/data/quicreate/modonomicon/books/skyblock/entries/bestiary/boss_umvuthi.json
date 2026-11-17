@@ -1,0 +1,61 @@
+{
+  "category": "quicreate:bestiary",
+  "name": "book.quicreate.skyblock.side.bestiary.boss_umvuthi.name",
+  "description": "book.quicreate.skyblock.side.bestiary.boss_umvuthi.desc",
+  "icon": "mowziesmobs:sol_visage",
+  "x": 5,
+  "y": 3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "mowziesmobs:umvuthi",
+      "name": "book.quicreate.skyblock.side.bestiary.boss_umvuthi.n",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_umvuthi.t",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_umvuthi.d.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.boss_umvuthi.d.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_umvuthi.done.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.boss_umvuthi.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/bestiary/boss_umvuthi",
+        "tooltip": "book.quicreate.skyblock.side.bestiary.boss_umvuthi.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:bestiary/stage4",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:bestiary/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:or",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/venus_landing",
+        "tooltip": "book.quicreate.skyblock.stage.4.venus_landing"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mercury_landing",
+        "tooltip": "book.quicreate.skyblock.stage.4.mercury_landing"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,48 @@
+{
+  "category": "quicreate:cards",
+  "name": "book.quicreate.skyblock.cards.intro.name",
+  "description": "book.quicreate.skyblock.cards.intro.desc",
+  "icon": "minecraft:writable_book",
+  "x": -8,
+  "y": -4,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.intro.overview.p0",
+      "title": "book.quicreate.skyblock.cards.intro.overview.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.intro.overview.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.intro.overview.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.intro.tips.p0",
+      "title": "book.quicreate.skyblock.cards.intro.tips.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.intro.mat.p0",
+      "title": "book.quicreate.skyblock.cards.intro.mat.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.intro.mat.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.intro.mat.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.intro.s0.p0",
+      "title": "book.quicreate.skyblock.cards.intro.s0.title"
+    }
+  ]
+}

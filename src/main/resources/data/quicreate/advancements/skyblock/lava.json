@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mixer",
+  "display": {
+    "icon": {
+      "item": "minecraft:lava_bucket"
+    },
+    "title": {
+      "text": "Lava"
+    },
+    "description": {
+      "text": "Superheated mixing turns cobble into lava"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "minecraft:lava_bucket"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "parent": "quicreate:skyblock/andesitealloy",
+  "display": {
+    "icon": {
+      "item": "create:cogwheel"
+    },
+    "title": {
+      "text": "Shafts & Cogwheels"
+    },
+    "description": {
+      "text": "The bones of every Create machine"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "create:shaft"
+      }
+    },
+    "task1": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "create:cogwheel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ],
+    [
+      "task1"
+    ]
+  ]
+}

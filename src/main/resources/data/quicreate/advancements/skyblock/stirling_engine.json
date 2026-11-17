@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/heater",
+  "display": {
+    "icon": {
+      "item": "create_new_age:stirling_engine"
+    },
+    "title": {
+      "text": "Stirling Engine"
+    },
+    "description": {
+      "text": "Convert Heat, into rotation!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create_new_age:stirling_engine"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

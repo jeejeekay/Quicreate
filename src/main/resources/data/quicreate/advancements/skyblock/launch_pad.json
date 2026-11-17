@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/steel_plates",
+  "display": {
+    "icon": {
+      "item": "ad_astra:launch_pad"
+    },
+    "title": {
+      "text": "Launch Pad"
+    },
+    "description": {
+      "text": "1 Launch Pad"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:launch_pad"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.ruined_citadel.name",
+  "description": "book.quicreate.skyblock.moon.ruined_citadel.desc",
+  "icon": "cataclysm:void_eye",
+  "x": -11,
+  "y": -4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:void_eye"
+      },
+      "title": "book.quicreate.skyblock.moon.ruined_citadel.spot.title",
+      "text": "book.quicreate.skyblock.moon.ruined_citadel.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.ruined_citadel.how.p0",
+      "title": "book.quicreate.skyblock.moon.ruined_citadel.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.ruined_citadel.done.p0",
+      "title": "book.quicreate.skyblock.moon.ruined_citadel.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ruined_citadel",
+        "tooltip": "book.quicreate.skyblock.moon.ruined_citadel.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/moon_landing"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/moon_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.moon_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,54 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.harbinger.name",
+  "description": "book.quicreate.skyblock.venus_mercury.harbinger.desc",
+  "icon": "cataclysm:witherite_block",
+  "x": -7,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:the_harbinger",
+      "name": "book.quicreate.skyblock.venus_mercury.harbinger.ename",
+      "text": "book.quicreate.skyblock.venus_mercury.harbinger.etext",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.harbinger.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.harbinger.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.harbinger.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.harbinger.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.harbinger.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/harbinger",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.harbinger.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/ancient_factory"
+    },
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/ancient_factory",
+    "tooltip": "book.quicreate.skyblock.tooltip.ancient_factory"
+  },
+  "show_when_any_parent_unlocked": true
+}

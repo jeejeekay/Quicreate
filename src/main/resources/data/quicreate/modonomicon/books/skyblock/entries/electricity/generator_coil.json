@@ -1,0 +1,73 @@
+{
+  "category": "quicreate:electricity",
+  "name": "book.quicreate.skyblock.electricity.generator_coil.name",
+  "description": "book.quicreate.skyblock.electricity.generator_coil.desc",
+  "icon": "create_new_age:generator_coil",
+  "x": 0,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:generator_coil"
+      },
+      "title": "book.quicreate.skyblock.electricity.generator_coil.spot.title",
+      "text": "book.quicreate.skyblock.electricity.generator_coil.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.generator_coil.how.p0",
+      "title": "book.quicreate.skyblock.electricity.generator_coil.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.generator_coil.how.p1"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "quicreate:cna_generation",
+      "multiblock_name": "book.quicreate.skyblock.electricity.generator_coil.mbname",
+      "text": "book.quicreate.skyblock.electricity.generator_coil.mbtext",
+      "show_visualize_button": true
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.generator_coil.done.p0",
+      "title": "book.quicreate.skyblock.electricity.generator_coil.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/generator_coil",
+        "tooltip": "book.quicreate.skyblock.electricity.generator_coil.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:electricity/wires",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:electricity/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mechanical_crafters",
+        "tooltip": "book.quicreate.skyblock.tooltip.mechanical_crafters"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/wires",
+        "tooltip": "book.quicreate.skyblock.tooltip.wires"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

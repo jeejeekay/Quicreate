@@ -1,0 +1,22 @@
+{
+  "structures": [
+    {
+      "structure": "quicreate:mars_quake_wedges",
+      "weight": 9
+    },
+    {
+      "structure": "quicreate:mars_meteor_crater",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 20,
+    "separation": 16,
+    "salt": 190477353,
+    "exclusion_zone": {
+      "other_set": "cataclysm:cursed_pyramid",
+      "chunk_count": 6
+    }
+  }
+}

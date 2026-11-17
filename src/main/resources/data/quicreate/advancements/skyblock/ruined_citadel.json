@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:skyblock/moon_landing",
+  "display": {
+    "icon": {
+      "item": "cataclysm:void_eye"
+    },
+    "title": {
+      "text": "Ruined Citadel"
+    },
+    "description": {
+      "text": "A fortress on the lunar wastelands"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:ruined_citadel"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

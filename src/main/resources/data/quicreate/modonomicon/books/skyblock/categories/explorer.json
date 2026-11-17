@@ -1,0 +1,7 @@
+{
+  "name": "book.quicreate.skyblock.cat.explorer",
+  "icon": "minecraft:compass",
+  "sort_number": 30,
+  "show_category_button": false,
+  "background": "quicreate:textures/gui/book/tiled/moss_block.png"
+}

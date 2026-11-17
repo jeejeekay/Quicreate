@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/sheets",
+  "display": {
+    "icon": {
+      "item": "ad_astra:gas_tank"
+    },
+    "title": {
+      "text": "Gas Tanks"
+    },
+    "description": {
+      "text": "Iron plates and an iron rod"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 6,
+        "item": "ad_astra:gas_tank"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

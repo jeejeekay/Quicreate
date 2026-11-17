@@ -43,9 +43,9 @@
     ],
     [],
     [
-      "quicreate:venus_strophar_mushroom_large",
-      "quicreate:venus_strophar_mushroom",
-      "quicreate:venus_strophar_patch"
+      "quicreate:venus_aeronos_mushroom_large",
+      "quicreate:venus_aeronos_mushroom",
+      "quicreate:venus_aeronos_patch"
     ]
   ],
   "has_precipitation": true,

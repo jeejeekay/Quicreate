@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/platinum",
+  "display": {
+    "icon": {
+      "item": "quicreate:platinum_master_sword"
+    },
+    "title": {
+      "text": "Platinum Master Sword"
+    },
+    "description": {
+      "text": "Optional Quicreate weapon"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "quicreate:platinum_master_sword"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

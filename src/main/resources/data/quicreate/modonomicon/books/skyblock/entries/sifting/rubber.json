@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.rubber.name",
+  "description": "book.quicreate.skyblock.sifting.rubber.desc",
+  "icon": "cards:rubber_ball",
+  "x": -1,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cards:rubber_ball"
+      },
+      "title": "book.quicreate.skyblock.sifting.rubber.spot.title",
+      "text": "book.quicreate.skyblock.sifting.rubber.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.rubber.how.p0",
+      "title": "book.quicreate.skyblock.sifting.rubber.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.rubber.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.rubber.done.p0",
+      "title": "book.quicreate.skyblock.sifting.rubber.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/rubber",
+        "tooltip": "book.quicreate.skyblock.sifting.rubber.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/andesite_mesh",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true,
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/andesite_mesh",
+    "tooltip": "book.quicreate.skyblock.tooltip.andesite_mesh"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/creative_alloy",
+  "display": {
+    "icon": {
+      "item": "quicreate:creative_sheet"
+    },
+    "title": {
+      "text": "Creative Sheet"
+    },
+    "description": {
+      "text": "16 loops of cryo fuel, ice crystals, energy, sturdy sheets and pressing"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "quicreate:creative_sheet"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:electricity",
+  "name": "book.quicreate.skyblock.electricity.overcharged_iron.name",
+  "description": "book.quicreate.skyblock.electricity.overcharged_iron.desc",
+  "icon": "create_new_age:overcharged_iron",
+  "x": -2,
+  "y": 4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:overcharged_iron"
+      },
+      "title": "book.quicreate.skyblock.electricity.overcharged_iron.spot.title",
+      "text": "book.quicreate.skyblock.electricity.overcharged_iron.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.overcharged_iron.how.p0",
+      "title": "book.quicreate.skyblock.electricity.overcharged_iron.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.overcharged_iron.done.p0",
+      "title": "book.quicreate.skyblock.electricity.overcharged_iron.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/overcharged_iron",
+        "tooltip": "book.quicreate.skyblock.electricity.overcharged_iron.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:electricity/energizer"
+    },
+    {
+      "entry": "quicreate:electricity/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/energizer",
+    "tooltip": "book.quicreate.skyblock.tooltip.energizer"
+  },
+  "show_when_any_parent_unlocked": true
+}

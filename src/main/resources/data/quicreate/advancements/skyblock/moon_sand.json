@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/moon_cobblestone",
+  "display": {
+    "icon": {
+      "item": "ad_astra:moon_sand"
+    },
+    "title": {
+      "text": "Moon Sand"
+    },
+    "description": {
+      "text": "Moon sand can be seived too!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "item": "ad_astra:moon_sand"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

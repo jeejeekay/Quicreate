@@ -6,8 +6,8 @@
       "other_set": "minecraft:pillager_outposts"
     },
     "salt": 37312139,
-    "separation": 1,
-    "spacing": 10
+    "separation": 5,
+    "spacing": 30
   },
   "structures": [
     {

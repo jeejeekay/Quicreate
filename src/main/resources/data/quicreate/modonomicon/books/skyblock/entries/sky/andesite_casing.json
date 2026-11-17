@@ -1,0 +1,52 @@
+{
+  "category": "quicreate:sky",
+  "name": "book.quicreate.skyblock.sky.andesite_casing.name",
+  "description": "book.quicreate.skyblock.sky.andesite_casing.desc",
+  "icon": "create:andesite_casing",
+  "x": 5,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:andesite_casing"
+      },
+      "title": "book.quicreate.skyblock.sky.andesite_casing.spot.title",
+      "text": "book.quicreate.skyblock.sky.andesite_casing.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sky.andesite_casing.how.p0",
+      "title": "book.quicreate.skyblock.sky.andesite_casing.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sky.andesite_casing.done.p0",
+      "title": "book.quicreate.skyblock.sky.andesite_casing.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/andesite_casing",
+        "tooltip": "book.quicreate.skyblock.sky.andesite_casing.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sky/andesitealloy",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:sky/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/andesitealloy",
+    "tooltip": "book.quicreate.skyblock.tooltip.andesitealloy"
+  },
+  "show_when_any_parent_unlocked": true
+}

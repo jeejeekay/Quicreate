@@ -1,0 +1,61 @@
+{
+  "category": "quicreate:mars",
+  "name": "book.quicreate.skyblock.mars.brass_chunk_loader.name",
+  "description": "book.quicreate.skyblock.mars.brass_chunk_loader.desc",
+  "icon": "create_power_loader:empty_brass_chunk_loader",
+  "x": 3,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_power_loader:empty_brass_chunk_loader"
+      },
+      "title": "book.quicreate.skyblock.mars.brass_chunk_loader.spot.title",
+      "text": "book.quicreate.skyblock.mars.brass_chunk_loader.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.brass_chunk_loader.how.p0",
+      "title": "book.quicreate.skyblock.mars.brass_chunk_loader.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.brass_chunk_loader.done.p0",
+      "title": "book.quicreate.skyblock.mars.brass_chunk_loader.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/brass_chunk_loader",
+        "tooltip": "book.quicreate.skyblock.mars.brass_chunk_loader.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:mars/ancient_metal_circuit"
+    },
+    {
+      "entry": "quicreate:mars/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ancient_metal_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.ancient_metal_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/chunk_loader",
+        "tooltip": "book.quicreate.skyblock.tooltip.chunk_loader"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

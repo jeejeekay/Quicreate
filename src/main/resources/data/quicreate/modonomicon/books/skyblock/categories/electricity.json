@@ -1,0 +1,6 @@
+{
+  "name": "book.quicreate.skyblock.cat.electricity",
+  "icon": "create_new_age:generator_coil",
+  "sort_number": 4,
+  "background": "quicreate:textures/gui/book/tiled/copper_block.png"
+}

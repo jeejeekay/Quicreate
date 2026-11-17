@@ -1,0 +1,81 @@
+{
+  "category": "quicreate:mars",
+  "name": "book.quicreate.skyblock.mars.netherite_space_suit.name",
+  "description": "book.quicreate.skyblock.mars.netherite_space_suit.desc",
+  "icon": "ad_astra:netherite_space_suit",
+  "x": -2,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:netherite_space_helmet"
+      },
+      "title": "book.quicreate.skyblock.mars.netherite_space_suit.spot.title",
+      "text": "book.quicreate.skyblock.mars.netherite_space_suit.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.netherite_space_suit.how.p0",
+      "title": "book.quicreate.skyblock.mars.netherite_space_suit.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.netherite_space_suit.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.netherite_space_suit.how.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.netherite_space_suit.how.p3"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "ad_astra:netherite_space_helmet",
+      "text": "book.quicreate.skyblock.mars.netherite_space_suit.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.netherite_space_suit.done.p0",
+      "title": "book.quicreate.skyblock.mars.netherite_space_suit.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/netherite_space_suit",
+        "tooltip": "book.quicreate.skyblock.mars.netherite_space_suit.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:mars/netherite"
+    },
+    {
+      "entry": "quicreate:mars/ancient_metal_circuit"
+    },
+    {
+      "entry": "quicreate:mars/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/netherite",
+        "tooltip": "book.quicreate.skyblock.tooltip.netherite"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ancient_metal_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.ancient_metal_circuit"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

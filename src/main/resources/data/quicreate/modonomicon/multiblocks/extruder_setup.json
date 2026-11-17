@@ -1,0 +1,29 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "L0W"
+    ],
+    [
+      " C "
+    ]
+  ],
+  "mapping": {
+    "0": {
+      "type": "modonomicon:block",
+      "block": "create_mechanical_extruder:mechanical_extruder"
+    },
+    "L": {
+      "type": "modonomicon:display",
+      "display": "minecraft:lava"
+    },
+    "W": {
+      "type": "modonomicon:display",
+      "display": "minecraft:water"
+    },
+    "C": {
+      "type": "modonomicon:block",
+      "block": "minecraft:iron_block"
+    }
+  }
+}

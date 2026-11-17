@@ -1,0 +1,7 @@
+{
+  "name": "book.quicreate.skyblock.cat.kitchen",
+  "icon": "minecraft:bread",
+  "sort_number": 30,
+  "show_category_button": false,
+  "background": "quicreate:textures/gui/book/tiled/hay_block.png"
+}

@@ -1,0 +1,67 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.platinum_master_sword.name",
+  "description": "book.quicreate.skyblock.venus_mercury.platinum_master_sword.desc",
+  "icon": "quicreate:platinum_master_sword",
+  "x": -1,
+  "y": -4,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "quicreate:platinum_master_sword"
+      },
+      "title": "book.quicreate.skyblock.venus_mercury.platinum_master_sword.spot.title",
+      "text": "book.quicreate.skyblock.venus_mercury.platinum_master_sword.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.platinum_master_sword.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.platinum_master_sword.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.platinum_master_sword.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.platinum_master_sword.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/platinum_master_sword",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.platinum_master_sword.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/platinum",
+      "line_enabled": false
+    },
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/platinum",
+        "tooltip": "book.quicreate.skyblock.tooltip.platinum"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/etrium",
+        "tooltip": "book.quicreate.skyblock.tooltip.etrium"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/netherite",
+        "tooltip": "book.quicreate.skyblock.tooltip.netherite"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

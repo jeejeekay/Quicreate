@@ -1,0 +1,51 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:map"
+    },
+    "title": {
+      "text": "Landmarks of Mercury"
+    },
+    "description": {
+      "text": "Find every landmark on Mercury."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "burning_arena": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:burning_arena"
+          }
+        }
+      }
+    },
+    "soul_black_smith": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:soul_black_smith"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "burning_arena"
+    ],
+    [
+      "soul_black_smith"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/mercury_landmarks"
+  }
+}

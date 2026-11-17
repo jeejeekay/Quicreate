@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/copper_circuit",
+  "display": {
+    "icon": {
+      "item": "create_new_age:advanced_solar_heating_plate"
+    },
+    "title": {
+      "text": "Advanced Solar Plate"
+    },
+    "description": {
+      "text": "2 Advanced Solar Heating Plate"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "create_new_age:advanced_solar_heating_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

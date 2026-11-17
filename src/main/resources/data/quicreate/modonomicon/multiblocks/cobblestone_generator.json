@@ -1,0 +1,29 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "W0L"
+    ],
+    [
+      "SSS"
+    ]
+  ],
+  "mapping": {
+    "W": {
+      "type": "modonomicon:display",
+      "display": "minecraft:water"
+    },
+    "L": {
+      "type": "modonomicon:display",
+      "display": "minecraft:lava"
+    },
+    "0": {
+      "type": "modonomicon:block",
+      "block": "minecraft:cobblestone"
+    },
+    "S": {
+      "type": "modonomicon:display",
+      "display": "minecraft:stone"
+    }
+  }
+}

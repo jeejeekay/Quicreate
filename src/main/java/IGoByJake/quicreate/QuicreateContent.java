@@ -1,9 +1,15 @@
 package IGoByJake.quicreate;
 
+import IGoByJake.quicreate.book.PreviewItemBlock;
 import IGoByJake.quicreate.entity.SwordBeamEntity;
 import IGoByJake.quicreate.loot.KelpyFishingModifier;
 import com.mojang.serialization.Codec;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -11,7 +17,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-/** Entities and loot modifiers (items and blocks stay in ModRegistry). */
+/** Entities, loot modifiers and the Field Guide's preview stand-in blocks (items and real blocks stay in ModRegistry). */
 public final class QuicreateContent {
 
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Quicreate.MODID);
@@ -25,6 +31,18 @@ public final class QuicreateContent {
                     .updateInterval(2)
                     .build("sword_beam"));
 
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Quicreate.MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Quicreate.MODID);
+
+    /** Book-preview stand-in for Create: New Age's generator coil (see PreviewItemBlock). Has no item. */
+    public static final RegistryObject<Block> PREVIEW_GENERATOR_COIL = BLOCKS.register("preview_generator_coil",
+            () -> new PreviewItemBlock(BlockBehaviour.Properties.of().noCollission().noOcclusion().noLootTable()
+                    .instabreak().pushReaction(PushReaction.DESTROY), new ResourceLocation("create_new_age", "generator_coil")));
+
+    @SuppressWarnings("DataFlowIssue")
+    public static final RegistryObject<BlockEntityType<PreviewItemBlock.PreviewItemBlockEntity>> PREVIEW_ITEM_BE = BLOCK_ENTITIES.register("preview_item",
+            () -> BlockEntityType.Builder.of(PreviewItemBlock.PreviewItemBlockEntity::new, PREVIEW_GENERATOR_COIL.get()).build(null));
+
     public static final RegistryObject<Codec<KelpyFishingModifier>> KELPY_FISHING = LOOT_MODIFIERS.register("fishing_kelpy_balls", KelpyFishingModifier.CODEC);
 
     private QuicreateContent() {
@@ -33,5 +51,7 @@ public final class QuicreateContent {
     public static void register(IEventBus modBus) {
         ENTITIES.register(modBus);
         LOOT_MODIFIERS.register(modBus);
+        BLOCKS.register(modBus);
+        BLOCK_ENTITIES.register(modBus);
     }
 }

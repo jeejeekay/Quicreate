@@ -1,0 +1,115 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:wheat"
+    },
+    "title": {
+      "text": "First harvest"
+    },
+    "description": {
+      "text": "Seeds and crops come from sifting dirt. Plant one of each."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "wheat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:wheat"
+            ]
+          }
+        ]
+      }
+    },
+    "potato": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:potato"
+            ]
+          }
+        ]
+      }
+    },
+    "carrot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:carrot"
+            ]
+          }
+        ]
+      }
+    },
+    "beetroot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:beetroot"
+            ]
+          }
+        ]
+      }
+    },
+    "pumpkin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:pumpkin"
+            ]
+          }
+        ]
+      }
+    },
+    "sugar_cane": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sugar_cane"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "wheat"
+    ],
+    [
+      "potato"
+    ],
+    [
+      "carrot"
+    ],
+    [
+      "beetroot"
+    ],
+    [
+      "pumpkin"
+    ],
+    [
+      "sugar_cane"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/first_harvest"
+  }
+}

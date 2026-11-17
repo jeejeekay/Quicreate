@@ -1,0 +1,69 @@
+{
+  "category": "quicreate:creative",
+  "name": "book.quicreate.skyblock.creative.creative_sheet.name",
+  "description": "book.quicreate.skyblock.creative.creative_sheet.desc",
+  "icon": "quicreate:creative_sheet",
+  "x": 4,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "quicreate:creative_sheet"
+      },
+      "title": "book.quicreate.skyblock.creative.creative_sheet.spot.title",
+      "text": "book.quicreate.skyblock.creative.creative_sheet.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.creative_sheet.how.p0",
+      "title": "book.quicreate.skyblock.creative.creative_sheet.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.creative_sheet.done.p0",
+      "title": "book.quicreate.skyblock.creative.creative_sheet.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/creative_sheet",
+        "tooltip": "book.quicreate.skyblock.creative.creative_sheet.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:creative/creative_alloy"
+    },
+    {
+      "entry": "quicreate:creative/sturdy_sheets"
+    },
+    {
+      "entry": "quicreate:creative/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/creative_alloy",
+        "tooltip": "book.quicreate.skyblock.tooltip.creative_alloy"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ice_crystal",
+        "tooltip": "book.quicreate.skyblock.tooltip.ice_crystal"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/sturdy_sheets",
+        "tooltip": "book.quicreate.skyblock.tooltip.sturdy_sheets"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,29 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.island_tips.name",
+  "icon": "minecraft:oak_sapling",
+  "x": -7,
+  "y": -3,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.island_tips.c0.p0",
+      "title": "book.quicreate.skyblock.field.island_tips.c0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.island_tips.c1.p0",
+      "title": "book.quicreate.skyblock.field.island_tips.c1.title"
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

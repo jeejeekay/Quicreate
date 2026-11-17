@@ -1,0 +1,60 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.witherite.name",
+  "description": "book.quicreate.skyblock.venus_mercury.witherite.desc",
+  "icon": "cataclysm:witherite_ingot",
+  "x": -7,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:witherite_ingot"
+      },
+      "title": "book.quicreate.skyblock.venus_mercury.witherite.spot.title",
+      "text": "book.quicreate.skyblock.venus_mercury.witherite.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.witherite.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.witherite.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.witherite.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "cataclysm:witherite_ingot",
+      "text": "book.quicreate.skyblock.venus_mercury.witherite.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.witherite.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.witherite.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/witherite",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.witherite.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/harbinger"
+    },
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/harbinger",
+    "tooltip": "book.quicreate.skyblock.tooltip.harbinger"
+  },
+  "show_when_any_parent_unlocked": true
+}

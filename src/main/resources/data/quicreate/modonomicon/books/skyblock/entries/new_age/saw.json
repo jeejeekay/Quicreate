@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.saw.name",
+  "description": "book.quicreate.skyblock.new_age.saw.desc",
+  "icon": "create:mechanical_saw",
+  "x": -13,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:mechanical_saw"
+      },
+      "title": "book.quicreate.skyblock.new_age.saw.spot.title",
+      "text": "book.quicreate.skyblock.new_age.saw.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.saw.how.p0",
+      "title": "book.quicreate.skyblock.new_age.saw.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "create:crafting/kinetics/mechanical_saw",
+      "text": "book.quicreate.skyblock.new_age.saw.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.saw.done.p0",
+      "title": "book.quicreate.skyblock.new_age.saw.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/saw",
+        "tooltip": "book.quicreate.skyblock.new_age.saw.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/press"
+    },
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/press",
+    "tooltip": "book.quicreate.skyblock.tooltip.press"
+  },
+  "show_when_any_parent_unlocked": true
+}

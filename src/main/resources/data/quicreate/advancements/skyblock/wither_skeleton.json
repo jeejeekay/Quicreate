@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/nether_pack",
+  "display": {
+    "icon": {
+      "item": "minecraft:wither_skeleton_spawn_egg"
+    },
+    "title": {
+      "text": "Wither Skeletons"
+    },
+    "description": {
+      "text": "Skulls for a Wither"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 3,
+        "item": "minecraft:wither_skeleton_skull"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

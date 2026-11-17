@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/electron_tube",
+  "display": {
+    "icon": {
+      "item": "create:mechanical_crafter"
+    },
+    "title": {
+      "text": "Mechanical Crafters"
+    },
+    "description": {
+      "text": "The Generator Coil needs a 5x5 grid (21 crafters)"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 21,
+        "item": "create:mechanical_crafter"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

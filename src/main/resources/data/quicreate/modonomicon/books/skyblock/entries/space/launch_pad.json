@@ -1,0 +1,60 @@
+{
+  "category": "quicreate:space",
+  "name": "book.quicreate.skyblock.space.launch_pad.name",
+  "description": "book.quicreate.skyblock.space.launch_pad.desc",
+  "icon": "ad_astra:launch_pad",
+  "x": 3,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:launch_pad"
+      },
+      "title": "book.quicreate.skyblock.space.launch_pad.spot.title",
+      "text": "book.quicreate.skyblock.space.launch_pad.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.launch_pad.how.p0",
+      "title": "book.quicreate.skyblock.space.launch_pad.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.launch_pad.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "ad_astra:launch_pad",
+      "text": "book.quicreate.skyblock.space.launch_pad.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.launch_pad.done.p0",
+      "title": "book.quicreate.skyblock.space.launch_pad.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/launch_pad",
+        "tooltip": "book.quicreate.skyblock.space.launch_pad.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:space/steel_plates"
+    },
+    {
+      "entry": "quicreate:space/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/steel_plates",
+    "tooltip": "book.quicreate.skyblock.tooltip.steel_plates"
+  },
+  "show_when_any_parent_unlocked": true
+}

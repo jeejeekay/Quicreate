@@ -1,0 +1,67 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.etrionic_core.name",
+  "description": "book.quicreate.skyblock.moon.etrionic_core.desc",
+  "icon": "ad_astra:etrionic_core",
+  "x": 2,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:etrionic_core"
+      },
+      "title": "book.quicreate.skyblock.moon.etrionic_core.spot.title",
+      "text": "book.quicreate.skyblock.moon.etrionic_core.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.etrionic_core.how.p0",
+      "title": "book.quicreate.skyblock.moon.etrionic_core.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "quicreate:crafting/etrionic_core",
+      "text": "book.quicreate.skyblock.moon.etrionic_core.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.etrionic_core.done.p0",
+      "title": "book.quicreate.skyblock.moon.etrionic_core.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/etrionic_core",
+        "tooltip": "book.quicreate.skyblock.moon.etrionic_core.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/etrium",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/steel_plates",
+        "tooltip": "book.quicreate.skyblock.tooltip.steel_plates"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/etrium",
+        "tooltip": "book.quicreate.skyblock.tooltip.etrium"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

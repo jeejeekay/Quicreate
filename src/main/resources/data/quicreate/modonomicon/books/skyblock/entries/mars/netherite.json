@@ -1,0 +1,61 @@
+{
+  "category": "quicreate:mars",
+  "name": "book.quicreate.skyblock.mars.netherite.name",
+  "description": "book.quicreate.skyblock.mars.netherite.desc",
+  "icon": "minecraft:netherite_ingot",
+  "x": -2,
+  "y": -4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:netherite_ingot"
+      },
+      "title": "book.quicreate.skyblock.mars.netherite.spot.title",
+      "text": "book.quicreate.skyblock.mars.netherite.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.netherite.how.p0",
+      "title": "book.quicreate.skyblock.mars.netherite.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.netherite.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "minecraft:netherite_ingot",
+      "text": "book.quicreate.skyblock.mars.netherite.rtext",
+      "recipe_id_2": "minecraft:netherite_ingot_from_netherite_block"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.netherite.done.p0",
+      "title": "book.quicreate.skyblock.mars.netherite.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/netherite",
+        "tooltip": "book.quicreate.skyblock.mars.netherite.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:mars/ancient_debris"
+    },
+    {
+      "entry": "quicreate:mars/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/ancient_debris",
+    "tooltip": "book.quicreate.skyblock.tooltip.ancient_debris"
+  },
+  "show_when_any_parent_unlocked": true
+}

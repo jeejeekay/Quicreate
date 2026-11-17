@@ -1,0 +1,54 @@
+{
+  "category": "quicreate:kitchen",
+  "name": "book.quicreate.skyblock.side.kitchen.stews.name",
+  "description": "book.quicreate.skyblock.side.kitchen.stews.desc",
+  "icon": "minecraft:rabbit_stew",
+  "x": 5,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.stews.p.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.stews.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.stews.done.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.stews.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/kitchen/stews",
+        "tooltip": "book.quicreate.skyblock.side.kitchen.stews.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:kitchen/stage4",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:kitchen/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:or",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/venus_landing",
+        "tooltip": "book.quicreate.skyblock.stage.4.venus_landing"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mercury_landing",
+        "tooltip": "book.quicreate.skyblock.stage.4.mercury_landing"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

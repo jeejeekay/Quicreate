@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mechnanical_extruder",
+  "display": {
+    "icon": {
+      "item": "create:veridium"
+    },
+    "title": {
+      "text": "Veridium"
+    },
+    "description": {
+      "text": "Consistent Copper (and clay)"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 32,
+        "item": "create:veridium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

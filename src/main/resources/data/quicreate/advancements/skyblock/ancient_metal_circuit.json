@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/ancient_metal",
+  "display": {
+    "icon": {
+      "item": "quicreate:ancient_metal_circuit"
+    },
+    "title": {
+      "text": "Ancient Metal Circuit"
+    },
+    "description": {
+      "text": "Etrionic capacitors and amethyst circuits"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "quicreate:ancient_metal_circuit"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

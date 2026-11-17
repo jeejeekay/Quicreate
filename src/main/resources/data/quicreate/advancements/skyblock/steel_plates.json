@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/steel",
+  "display": {
+    "icon": {
+      "item": "ad_astra:steel_plate"
+    },
+    "title": {
+      "text": "Steel Plates"
+    },
+    "description": {
+      "text": "Press steel ingots"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 32,
+        "item": "ad_astra:steel_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

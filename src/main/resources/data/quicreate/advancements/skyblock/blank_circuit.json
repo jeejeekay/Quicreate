@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/plastic",
+  "display": {
+    "icon": {
+      "item": "create_new_age:blank_circuit"
+    },
+    "title": {
+      "text": "Blank Circuit"
+    },
+    "description": {
+      "text": "Overcharged golden sheet + copper wire + plastic"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "create_new_age:blank_circuit"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

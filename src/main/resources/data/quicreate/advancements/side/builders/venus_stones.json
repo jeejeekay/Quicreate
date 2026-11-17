@@ -1,0 +1,115 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "ad_astra:venus_sandstone_bricks"
+    },
+    "title": {
+      "text": "Venusian masonry"
+    },
+    "description": {
+      "text": "Golden sandstone from the acid world."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "venus_stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:venus_stone"
+            ]
+          }
+        ]
+      }
+    },
+    "venus_cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:venus_cobblestone"
+            ]
+          }
+        ]
+      }
+    },
+    "venus_sand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:venus_sand"
+            ]
+          }
+        ]
+      }
+    },
+    "venus_sandstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:venus_sandstone"
+            ]
+          }
+        ]
+      }
+    },
+    "venus_sandstone_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:venus_sandstone_bricks"
+            ]
+          }
+        ]
+      }
+    },
+    "venus_stone_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ad_astra:venus_stone_bricks"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "venus_stone"
+    ],
+    [
+      "venus_cobblestone"
+    ],
+    [
+      "venus_sand"
+    ],
+    [
+      "venus_sandstone"
+    ],
+    [
+      "venus_sandstone_bricks"
+    ],
+    [
+      "venus_stone_bricks"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/builders/venus_stones"
+  }
+}

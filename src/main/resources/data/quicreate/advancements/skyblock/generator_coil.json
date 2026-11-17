@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mechanical_crafters",
+  "display": {
+    "icon": {
+      "item": "create_new_age:generator_coil"
+    },
+    "title": {
+      "text": "Generator Coil"
+    },
+    "description": {
+      "text": "Generates power when it spins near a magnet"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create_new_age:generator_coil"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

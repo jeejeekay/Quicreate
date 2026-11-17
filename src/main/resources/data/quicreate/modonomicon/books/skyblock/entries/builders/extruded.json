@@ -1,0 +1,39 @@
+{
+  "category": "quicreate:builders",
+  "name": "book.quicreate.skyblock.side.builders.extruded.name",
+  "description": "book.quicreate.skyblock.side.builders.extruded.desc",
+  "icon": "quicreate:andesite_extruder",
+  "x": -7,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.builders.extruded.p.p0",
+      "title": "book.quicreate.skyblock.side.builders.extruded.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.builders.extruded.done.p0",
+      "title": "book.quicreate.skyblock.side.builders.extruded.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/builders/extruded",
+        "tooltip": "book.quicreate.skyblock.side.builders.extruded.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:builders/stage0",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:builders/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/calorite",
+  "display": {
+    "icon": {
+      "item": "ad_astra:calorite_engine"
+    },
+    "title": {
+      "text": "Calorite Engine"
+    },
+    "description": {
+      "text": "Ignitium drives the last engine"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:calorite_engine"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

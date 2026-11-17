@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "create_power_loader:empty_brass_chunk_loader"
+    },
+    "title": {
+      "text": "Brass Chunk Loader"
+    },
+    "description": {
+      "text": "Optional automation"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create_power_loader:empty_brass_chunk_loader"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/workshop/brass_chunk_loader"
+  }
+}

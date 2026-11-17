@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:sky",
+  "name": "book.quicreate.skyblock.sky.saplings.name",
+  "description": "book.quicreate.skyblock.sky.saplings.desc",
+  "icon": "minecraft:oak_sapling",
+  "x": -3,
+  "y": -5,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "tag": "minecraft:saplings"
+      },
+      "title": "book.quicreate.skyblock.sky.saplings.spot.title",
+      "text": "book.quicreate.skyblock.sky.saplings.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sky.saplings.how.p0",
+      "title": "book.quicreate.skyblock.sky.saplings.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sky.saplings.done.p0",
+      "title": "book.quicreate.skyblock.sky.saplings.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/saplings",
+        "tooltip": "book.quicreate.skyblock.sky.saplings.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sky/vein_mine_logs"
+    },
+    {
+      "entry": "quicreate:sky/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/vein_mine_logs",
+    "tooltip": "book.quicreate.skyblock.tooltip.vein_mine_logs"
+  },
+  "show_when_any_parent_unlocked": true
+}

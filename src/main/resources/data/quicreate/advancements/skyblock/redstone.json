@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/andesite_mesh",
+  "display": {
+    "icon": {
+      "item": "minecraft:redstone"
+    },
+    "title": {
+      "text": "Redstone"
+    },
+    "description": {
+      "text": "Sift dust with an andesite mesh"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "item": "minecraft:redstone"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

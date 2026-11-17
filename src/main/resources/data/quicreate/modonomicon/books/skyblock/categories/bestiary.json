@@ -1,0 +1,7 @@
+{
+  "name": "book.quicreate.skyblock.cat.bestiary",
+  "icon": "minecraft:skeleton_skull",
+  "sort_number": 30,
+  "show_category_button": false,
+  "background": "quicreate:textures/gui/book/tiled/mud_bricks.png"
+}

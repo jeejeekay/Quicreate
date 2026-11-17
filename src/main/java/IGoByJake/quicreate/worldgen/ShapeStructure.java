@@ -56,11 +56,26 @@ public class ShapeStructure extends Structure {
         }));
     }
 
-    /** Ground from the terrain noise alone, so it's the same however much of the world exists yet. */
+    /** Ground samples are taken this far apart and blended in between: working out the terrain height is slow. */
+    private static final int GROUND_STEP = 4;
+
+    /**
+     * Ground from the terrain noise alone, so it's the same however much of the world exists yet,
+     * and the same in every chunk (sampled on a fixed world grid and blended).
+     */
     static ShapedFeature.Ground ground(ChunkGenerator generator, LevelHeightAccessor heights, RandomState randomState, BlockPos origin) {
-        java.util.Map<Long, Integer> cache = new java.util.HashMap<>();
-        return (dx, dz) -> cache.computeIfAbsent(((long) dx << 32) ^ (dz & 0xFFFFFFFFL), key ->
-                generator.getBaseHeight(origin.getX() + dx, origin.getZ() + dz, Heightmap.Types.WORLD_SURFACE_WG, heights, randomState) - 1 - origin.getY());
+        java.util.Map<Long, Integer> samples = new java.util.HashMap<>();
+        java.util.function.BiFunction<Integer, Integer, Integer> sample = (wx, wz) -> samples.computeIfAbsent(((long) wx << 32) ^ (wz & 0xFFFFFFFFL),
+                key -> generator.getBaseHeight(wx, wz, Heightmap.Types.WORLD_SURFACE_WG, heights, randomState));
+        return (dx, dz) -> {
+            int wx = origin.getX() + dx, wz = origin.getZ() + dz;
+            int gx = Math.floorDiv(wx, GROUND_STEP) * GROUND_STEP, gz = Math.floorDiv(wz, GROUND_STEP) * GROUND_STEP;
+            double fx = (wx - gx) / (double) GROUND_STEP, fz = (wz - gz) / (double) GROUND_STEP;
+            double h00 = sample.apply(gx, gz), h10 = sample.apply(gx + GROUND_STEP, gz);
+            double h01 = sample.apply(gx, gz + GROUND_STEP), h11 = sample.apply(gx + GROUND_STEP, gz + GROUND_STEP);
+            double h = (h00 * (1 - fx) + h10 * fx) * (1 - fz) + (h01 * (1 - fx) + h11 * fx) * fz;
+            return (int) Math.round(h) - 1 - origin.getY();
+        };
     }
 
     @Override

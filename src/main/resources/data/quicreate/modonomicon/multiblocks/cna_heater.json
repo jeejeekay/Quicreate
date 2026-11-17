@@ -1,0 +1,33 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "B",
+      "0",
+      " ",
+      "A"
+    ]
+  ],
+  "mapping": {
+    "A": {
+      "type": "modonomicon:blockstate",
+      "display": "create:blaze_burner[blaze=smouldering,facing=west]",
+      "block": "create:blaze_burner[blaze=smouldering,facing=west]"
+    },
+    "B": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heat_pipe[down=false,east=false,north=true,south=true,up=false,west=false]",
+      "block": "create_new_age:heat_pipe[down=false,east=false,north=true,south=true,up=false,west=false]"
+    },
+    "C": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heater[blaze=kindled]",
+      "block": "create_new_age:heater[blaze=kindled]"
+    },
+    "0": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heater[blaze=kindled]",
+      "block": "create_new_age:heater[blaze=kindled]"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.jet_suit.name",
+  "description": "book.quicreate.skyblock.venus_mercury.jet_suit.desc",
+  "icon": "ad_astra:jet_suit",
+  "x": 0,
+  "y": 3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:jet_suit_helmet"
+      },
+      "title": "book.quicreate.skyblock.venus_mercury.jet_suit.spot.title",
+      "text": "book.quicreate.skyblock.venus_mercury.jet_suit.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.jet_suit.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.jet_suit.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.jet_suit.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.jet_suit.how.p2"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "ad_astra:jet_suit_helmet",
+      "text": "book.quicreate.skyblock.venus_mercury.jet_suit.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.jet_suit.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.jet_suit.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/jet_suit",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.jet_suit.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/calorite_engine",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/etrionic_capacitor",
+        "tooltip": "book.quicreate.skyblock.tooltip.etrionic_capacitor"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/netherite_space_suit",
+        "tooltip": "book.quicreate.skyblock.tooltip.netherite_space_suit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/calorite_engine",
+        "tooltip": "book.quicreate.skyblock.tooltip.calorite_engine"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

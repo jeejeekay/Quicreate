@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/card_packs",
+  "display": {
+    "icon": {
+      "item": "cards:nether_card_pack"
+    },
+    "title": {
+      "text": "Nether Pack"
+    },
+    "description": {
+      "text": "Smelt an uncommon pack"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "cards:nether_card_pack"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.moon_cobblestone.name",
+  "description": "book.quicreate.skyblock.moon.moon_cobblestone.desc",
+  "icon": "ad_astra:moon_cobblestone",
+  "x": -15,
+  "y": -4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:moon_cobblestone"
+      },
+      "title": "book.quicreate.skyblock.moon.moon_cobblestone.spot.title",
+      "text": "book.quicreate.skyblock.moon.moon_cobblestone.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.moon_cobblestone.how.p0",
+      "title": "book.quicreate.skyblock.moon.moon_cobblestone.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.moon_cobblestone.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.moon_cobblestone.done.p0",
+      "title": "book.quicreate.skyblock.moon.moon_cobblestone.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/moon_cobblestone",
+        "tooltip": "book.quicreate.skyblock.moon.moon_cobblestone.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/moon_landing"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/moon_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.moon_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

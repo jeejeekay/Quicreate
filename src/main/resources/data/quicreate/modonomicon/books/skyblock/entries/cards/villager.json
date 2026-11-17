@@ -1,0 +1,52 @@
+{
+  "category": "quicreate:cards",
+  "name": "book.quicreate.skyblock.cards.villager.name",
+  "description": "book.quicreate.skyblock.cards.villager.desc",
+  "icon": "minecraft:villager_spawn_egg",
+  "x": -3,
+  "y": 3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:villager_spawn_egg"
+      },
+      "title": "book.quicreate.skyblock.cards.villager.spot.title",
+      "text": "book.quicreate.skyblock.cards.villager.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.villager.how.p0",
+      "title": "book.quicreate.skyblock.cards.villager.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.villager.done.p0",
+      "title": "book.quicreate.skyblock.cards.villager.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/villager",
+        "tooltip": "book.quicreate.skyblock.cards.villager.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:cards/card_packs",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:cards/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/card_packs",
+    "tooltip": "book.quicreate.skyblock.tooltip.card_packs"
+  },
+  "show_when_any_parent_unlocked": true
+}

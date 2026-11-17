@@ -1,0 +1,10 @@
+{
+  "category": "quicreate:workshop",
+  "name": "book.quicreate.skyblock.side.back.workshop",
+  "icon": "minecraft:compass",
+  "x": -10,
+  "y": -5,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category_to_open": "quicreate:side_paths"
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/desh",
+  "display": {
+    "icon": {
+      "item": "createsifter:advanced_brass_mesh"
+    },
+    "title": {
+      "text": "Advanced Brass Mesh"
+    },
+    "description": {
+      "text": "Desh and steel around a brass mesh"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "createsifter:advanced_brass_mesh"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

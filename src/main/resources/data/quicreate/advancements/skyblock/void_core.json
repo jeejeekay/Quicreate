@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/ruined_citadel",
+  "display": {
+    "icon": {
+      "item": "cataclysm:void_core"
+    },
+    "title": {
+      "text": "Void Core"
+    },
+    "description": {
+      "text": "Dropped by Ender Golems in the citadel"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "cataclysm:void_core"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

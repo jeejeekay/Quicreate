@@ -1,0 +1,44 @@
+{
+  "category": "quicreate:kitchen",
+  "name": "book.quicreate.skyblock.side.kitchen.golden_food.name",
+  "description": "book.quicreate.skyblock.side.kitchen.golden_food.desc",
+  "icon": "minecraft:golden_carrot",
+  "x": 2,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.golden_food.p.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.golden_food.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.golden_food.done.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.golden_food.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/kitchen/golden_food",
+        "tooltip": "book.quicreate.skyblock.side.kitchen.golden_food.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:kitchen/stage3",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:kitchen/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mars_landing",
+    "tooltip": "book.quicreate.skyblock.stage.3"
+  },
+  "show_when_any_parent_unlocked": true
+}

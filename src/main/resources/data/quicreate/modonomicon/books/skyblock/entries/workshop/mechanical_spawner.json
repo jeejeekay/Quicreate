@@ -1,0 +1,52 @@
+{
+  "category": "quicreate:workshop",
+  "name": "book.quicreate.skyblock.side.workshop.mechanical_spawner.name",
+  "description": "book.quicreate.skyblock.side.workshop.mechanical_spawner.desc",
+  "icon": "create_mob_spawners:mechanical_spawner",
+  "x": 2,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_mob_spawners:mechanical_spawner"
+      },
+      "title": "book.quicreate.skyblock.side.workshop.mechanical_spawner.s.title",
+      "text": "book.quicreate.skyblock.side.workshop.mechanical_spawner.s.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.workshop.mechanical_spawner.l.p0",
+      "title": "book.quicreate.skyblock.side.workshop.mechanical_spawner.l.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.workshop.mechanical_spawner.done.p0",
+      "title": "book.quicreate.skyblock.side.workshop.mechanical_spawner.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/workshop/mechanical_spawner",
+        "tooltip": "book.quicreate.skyblock.side.workshop.mechanical_spawner.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:workshop/stage3",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:workshop/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mars_landing",
+    "tooltip": "book.quicreate.skyblock.stage.3"
+  },
+  "show_when_any_parent_unlocked": true
+}

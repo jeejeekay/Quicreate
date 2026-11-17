@@ -1,0 +1,57 @@
+{
+  "category": "quicreate:space",
+  "name": "book.quicreate.skyblock.space.gas_tanks.name",
+  "description": "book.quicreate.skyblock.space.gas_tanks.desc",
+  "icon": "ad_astra:gas_tank",
+  "x": -6,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:gas_tank"
+      },
+      "title": "book.quicreate.skyblock.space.gas_tanks.spot.title",
+      "text": "book.quicreate.skyblock.space.gas_tanks.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.gas_tanks.how.p0",
+      "title": "book.quicreate.skyblock.space.gas_tanks.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.gas_tanks.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "ad_astra:gas_tank",
+      "text": "book.quicreate.skyblock.space.gas_tanks.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.gas_tanks.done.p0",
+      "title": "book.quicreate.skyblock.space.gas_tanks.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/gas_tanks",
+        "tooltip": "book.quicreate.skyblock.space.gas_tanks.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/sheets",
+    "tooltip": "book.quicreate.skyblock.tooltip.sheets"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:space/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

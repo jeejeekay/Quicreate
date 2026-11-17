@@ -1,0 +1,68 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.diamonds.name",
+  "description": "book.quicreate.skyblock.moon.diamonds.desc",
+  "icon": "minecraft:diamond",
+  "x": 0,
+  "y": -4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:diamond"
+      },
+      "title": "book.quicreate.skyblock.moon.diamonds.spot.title",
+      "text": "book.quicreate.skyblock.moon.diamonds.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.diamonds.how.p0",
+      "title": "book.quicreate.skyblock.moon.diamonds.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.diamonds.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.diamonds.how.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.diamonds.how.p3"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "minecraft:diamond",
+      "text": "book.quicreate.skyblock.moon.diamonds.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.diamonds.done.p0",
+      "title": "book.quicreate.skyblock.moon.diamonds.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/diamonds",
+        "tooltip": "book.quicreate.skyblock.moon.diamonds.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/moon_landing"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/moon_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.moon_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/emerald_circuit",
+  "display": {
+    "icon": {
+      "item": "ad_astra:etrionic_capacitor"
+    },
+    "title": {
+      "text": "Etrionic Capacitor"
+    },
+    "description": {
+      "text": "2 Etrionic Capacitor"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "ad_astra:etrionic_capacitor"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

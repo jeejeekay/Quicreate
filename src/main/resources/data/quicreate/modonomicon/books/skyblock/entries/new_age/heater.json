@@ -1,0 +1,58 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.heater.name",
+  "description": "book.quicreate.skyblock.new_age.heater.desc",
+  "icon": "create_new_age:heater",
+  "x": -2,
+  "y": -4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:heater"
+      },
+      "title": "book.quicreate.skyblock.new_age.heater.spot.title",
+      "text": "book.quicreate.skyblock.new_age.heater.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.heater.how.p0",
+      "title": "book.quicreate.skyblock.new_age.heater.how.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "quicreate:cna_heater",
+      "multiblock_name": "book.quicreate.skyblock.new_age.heater.mbname",
+      "text": "book.quicreate.skyblock.new_age.heater.mbtext",
+      "show_visualize_button": true
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.heater.done.p0",
+      "title": "book.quicreate.skyblock.new_age.heater.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/heater",
+        "tooltip": "book.quicreate.skyblock.new_age.heater.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/boiler"
+    },
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/boiler",
+    "tooltip": "book.quicreate.skyblock.tooltip.boiler"
+  },
+  "show_when_any_parent_unlocked": true
+}

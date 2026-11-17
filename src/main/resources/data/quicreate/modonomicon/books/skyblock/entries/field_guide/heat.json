@@ -1,0 +1,44 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.heat.name",
+  "icon": "create_new_age:heater",
+  "x": 2,
+  "y": -5,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.heat.c0.p0",
+      "title": "book.quicreate.skyblock.field.heat.c0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.heat.c1.p0",
+      "title": "book.quicreate.skyblock.field.heat.c1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.heat.c2.p0",
+      "title": "book.quicreate.skyblock.field.heat.c2.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.heat.c3.p0",
+      "title": "book.quicreate.skyblock.field.heat.c3.title"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/copper",
+    "tooltip": "book.quicreate.skyblock.field.heat.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

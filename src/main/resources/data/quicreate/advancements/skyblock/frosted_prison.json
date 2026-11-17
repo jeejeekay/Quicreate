@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:skyblock/glacio_landing",
+  "display": {
+    "icon": {
+      "item": "cataclysm:cursed_eye"
+    },
+    "title": {
+      "text": "Frosted Prison"
+    },
+    "description": {
+      "text": "Find the Frosted Prison"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:frosted_prison"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

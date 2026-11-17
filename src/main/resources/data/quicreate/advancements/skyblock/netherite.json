@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/ancient_debris",
+  "display": {
+    "icon": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "title": {
+      "text": "Netherite"
+    },
+    "description": {
+      "text": "2 Netherite Ingot"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "minecraft:netherite_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

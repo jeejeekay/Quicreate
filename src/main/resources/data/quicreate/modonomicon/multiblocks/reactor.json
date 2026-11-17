@@ -1,0 +1,99 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "     ",
+      "  HHH",
+      "  JJJ",
+      "  JJJ",
+      "  JJJ",
+      "  HHH",
+      "     "
+    ],
+    [
+      "   A ",
+      "  HIH",
+      "  JLJ",
+      "  JLJ",
+      "  JLJ",
+      "  HKH",
+      "   F "
+    ],
+    [
+      "     ",
+      "  HHH",
+      "0 HHH",
+      "G HHH",
+      "G HHH",
+      "C HHH",
+      "EDDB "
+    ]
+  ],
+  "mapping": {
+    "A": {
+      "type": "modonomicon:blockstate",
+      "display": "create:andesite_funnel[extracting=true,facing=north,powered=false,waterlogged=false]",
+      "block": "create:andesite_funnel[extracting=true,facing=north,powered=false,waterlogged=false]"
+    },
+    "B": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heat_pipe[down=false,east=false,north=false,south=false,up=true,west=true]",
+      "block": "create_new_age:heat_pipe[down=false,east=false,north=false,south=false,up=true,west=true]"
+    },
+    "C": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heat_pipe[down=false,east=false,north=true,south=true,up=false,west=false]",
+      "block": "create_new_age:heat_pipe[down=false,east=false,north=true,south=true,up=false,west=false]"
+    },
+    "D": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heat_pipe[down=false,east=true,north=false,south=false,up=false,west=true]",
+      "block": "create_new_age:heat_pipe[down=false,east=true,north=false,south=false,up=false,west=true]"
+    },
+    "E": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heat_pipe[down=false,east=true,north=true,south=false,up=false,west=false]",
+      "block": "create_new_age:heat_pipe[down=false,east=true,north=true,south=false,up=false,west=false]"
+    },
+    "F": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heat_pipe[down=true,east=false,north=true,south=false,up=false,west=false]",
+      "block": "create_new_age:heat_pipe[down=true,east=false,north=true,south=false,up=false,west=false]"
+    },
+    "G": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heater[blaze=none]",
+      "block": "create_new_age:heater[blaze=none]"
+    },
+    "H": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:reactor_casing",
+      "block": "create_new_age:reactor_casing"
+    },
+    "I": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:reactor_fuel_acceptor",
+      "block": "create_new_age:reactor_fuel_acceptor"
+    },
+    "J": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:reactor_glass",
+      "block": "create_new_age:reactor_glass"
+    },
+    "K": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:reactor_heat_vent[facing=south]",
+      "block": "create_new_age:reactor_heat_vent[facing=south]"
+    },
+    "L": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:reactor_rod[axis=z,lit=false]",
+      "block": "create_new_age:reactor_rod[axis=z,lit=false]"
+    },
+    "0": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:heater[blaze=none]",
+      "block": "create_new_age:heater[blaze=none]"
+    }
+  }
+}

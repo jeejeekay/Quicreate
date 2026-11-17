@@ -1,0 +1,33 @@
+{
+  "parent": "quicreate:skyblock/the_end",
+  "display": {
+    "icon": {
+      "item": "minecraft:dragon_head"
+    },
+    "title": {
+      "text": "Free the End"
+    },
+    "description": {
+      "text": "The soft ending"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:ender_dragon"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

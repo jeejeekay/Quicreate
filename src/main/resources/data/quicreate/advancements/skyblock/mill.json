@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/hand_crank",
+  "display": {
+    "icon": {
+      "item": "create:millstone"
+    },
+    "title": {
+      "text": "Mill"
+    },
+    "description": {
+      "text": "1 Millstone"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create:millstone"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

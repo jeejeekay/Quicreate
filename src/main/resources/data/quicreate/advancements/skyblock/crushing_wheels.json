@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mechnanical_extruder",
+  "display": {
+    "icon": {
+      "item": "create:crushing_wheel"
+    },
+    "title": {
+      "text": "Crushing is The New Sifting"
+    },
+    "description": {
+      "text": "2 Crushing Wheel"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "create:crushing_wheel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

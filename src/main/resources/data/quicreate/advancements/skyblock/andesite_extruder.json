@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mill",
+  "display": {
+    "icon": {
+      "item": "quicreate:andesite_extruder"
+    },
+    "title": {
+      "text": "Andesite Extruder"
+    },
+    "description": {
+      "text": "Random stone, forever"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "quicreate:andesite_extruder"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

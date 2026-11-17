@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:creative",
+  "name": "book.quicreate.skyblock.creative.enderite_block.name",
+  "description": "book.quicreate.skyblock.creative.enderite_block.desc",
+  "icon": "cataclysm:enderite_block",
+  "x": 6,
+  "y": 3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:enderite_block"
+      },
+      "title": "book.quicreate.skyblock.creative.enderite_block.spot.title",
+      "text": "book.quicreate.skyblock.creative.enderite_block.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.enderite_block.how.p0",
+      "title": "book.quicreate.skyblock.creative.enderite_block.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.enderite_block.done.p0",
+      "title": "book.quicreate.skyblock.creative.enderite_block.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/enderite_block",
+        "tooltip": "book.quicreate.skyblock.creative.enderite_block.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:creative/enderite"
+    },
+    {
+      "entry": "quicreate:creative/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/enderite",
+    "tooltip": "book.quicreate.skyblock.tooltip.enderite"
+  },
+  "show_when_any_parent_unlocked": true
+}

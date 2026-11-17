@@ -1,0 +1,69 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.reinforced_motor.name",
+  "description": "book.quicreate.skyblock.moon.reinforced_motor.desc",
+  "icon": "create_new_age:reinforced_motor",
+  "x": 0,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:reinforced_motor"
+      },
+      "title": "book.quicreate.skyblock.moon.reinforced_motor.spot.title",
+      "text": "book.quicreate.skyblock.moon.reinforced_motor.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.reinforced_motor.how.p0",
+      "title": "book.quicreate.skyblock.moon.reinforced_motor.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.reinforced_motor.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.reinforced_motor.done.p0",
+      "title": "book.quicreate.skyblock.moon.reinforced_motor.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/reinforced_motor",
+        "tooltip": "book.quicreate.skyblock.moon.reinforced_motor.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/amethyst_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.amethyst_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/fluxuated_magnetite",
+        "tooltip": "book.quicreate.skyblock.tooltip.fluxuated_magnetite"
+      }
+    ]
+  },
+  "parents": [
+    {
+      "entry": "quicreate:moon/fluxuated_magnetite"
+    },
+    {
+      "entry": "quicreate:moon/amethyst_circuit",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

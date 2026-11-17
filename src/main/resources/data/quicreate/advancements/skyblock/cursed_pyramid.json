@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:skyblock/mars_landing",
+  "display": {
+    "icon": {
+      "item": "cataclysm:desert_eye"
+    },
+    "title": {
+      "text": "Cursed Pyramid"
+    },
+    "description": {
+      "text": "Find the Cursed Pyramid"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:cursed_pyramid"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

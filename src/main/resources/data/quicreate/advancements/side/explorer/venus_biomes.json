@@ -1,0 +1,77 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "ad_astra:venus_globe"
+    },
+    "title": {
+      "text": "Biomes of Venus"
+    },
+    "description": {
+      "text": "Set foot in every biome on Venus."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "venus_wastelands": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "ad_astra:venus_wastelands"
+          }
+        }
+      }
+    },
+    "infernal_venus_barrens": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "ad_astra:infernal_venus_barrens"
+          }
+        }
+      }
+    },
+    "venus_sandstone_dunes": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "quicreate:venus_sandstone_dunes"
+          }
+        }
+      }
+    },
+    "venus_fungal_forest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "quicreate:venus_fungal_forest"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "venus_wastelands"
+    ],
+    [
+      "infernal_venus_barrens"
+    ],
+    [
+      "venus_sandstone_dunes"
+    ],
+    [
+      "venus_fungal_forest"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/venus_biomes"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.cards.name",
+  "icon": "cards:common_card_pack",
+  "x": -1,
+  "y": 1,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.cards.a.p0",
+      "title": "book.quicreate.skyblock.field.cards.a.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.cards.a.p1"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/sifter",
+    "tooltip": "book.quicreate.skyblock.field.cards.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

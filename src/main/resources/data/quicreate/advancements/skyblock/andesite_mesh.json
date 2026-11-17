@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mesh",
+  "display": {
+    "icon": {
+      "item": "createsifter:andesite_mesh"
+    },
+    "title": {
+      "text": "Andesite Mesh"
+    },
+    "description": {
+      "text": "Different meshes get more materials!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "createsifter:andesite_mesh"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

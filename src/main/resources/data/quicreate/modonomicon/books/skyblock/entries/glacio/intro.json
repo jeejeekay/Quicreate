@@ -1,0 +1,70 @@
+{
+  "category": "quicreate:glacio",
+  "name": "book.quicreate.skyblock.glacio.intro.name",
+  "description": "book.quicreate.skyblock.glacio.intro.desc",
+  "icon": "minecraft:writable_book",
+  "x": 0,
+  "y": -7,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.overview.p0",
+      "title": "book.quicreate.skyblock.glacio.intro.overview.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.overview.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.overview.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.tips.p0",
+      "title": "book.quicreate.skyblock.glacio.intro.tips.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.tips.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.mat.p0",
+      "title": "book.quicreate.skyblock.glacio.intro.mat.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.mat.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.mat.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.s0.p0",
+      "title": "book.quicreate.skyblock.glacio.intro.s0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.s0.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.s1.p0",
+      "title": "book.quicreate.skyblock.glacio.intro.s1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.s1.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.intro.s2.p0",
+      "title": "book.quicreate.skyblock.glacio.intro.s2.title"
+    }
+  ]
+}

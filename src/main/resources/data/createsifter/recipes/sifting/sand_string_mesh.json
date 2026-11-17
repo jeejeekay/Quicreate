@@ -23,7 +23,7 @@
       "item": "minecraft:cactus"
     },
     {
-      "chance": 0.001,
+      "chance": 0.002,
       "item": "cards:common_card_pack"
     }
   ]

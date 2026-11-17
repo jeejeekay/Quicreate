@@ -1,0 +1,55 @@
+{
+  "category": "quicreate:sky",
+  "name": "book.quicreate.skyblock.sifting.andesite_extruder.name",
+  "description": "book.quicreate.skyblock.sifting.andesite_extruder.desc",
+  "icon": "quicreate:andesite_extruder",
+  "x": 7,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "quicreate:andesite_extruder"
+      },
+      "title": "book.quicreate.skyblock.sifting.andesite_extruder.spot.title",
+      "text": "book.quicreate.skyblock.sifting.andesite_extruder.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.andesite_extruder.how.p0",
+      "title": "book.quicreate.skyblock.sifting.andesite_extruder.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.andesite_extruder.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.andesite_extruder.done.p0",
+      "title": "book.quicreate.skyblock.sifting.andesite_extruder.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/andesite_extruder",
+        "tooltip": "book.quicreate.skyblock.sifting.andesite_extruder.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sky/andesite_casing"
+    },
+    {
+      "entry": "quicreate:sky/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true,
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/andesite_casing",
+    "tooltip": "book.quicreate.skyblock.tooltip.andesite_casing"
+  }
+}

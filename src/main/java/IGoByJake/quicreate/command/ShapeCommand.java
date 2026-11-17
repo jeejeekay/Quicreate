@@ -84,13 +84,15 @@ public final class ShapeCommand {
             new ShapeType("fissure", QuicreateWorldgen.FISSURE, "quicreate:mercury_fissure",
                     List.of("length", "width", "depth", "lava_depth", "wander", "bridge_chance", "lining_chance", "lava", "lining")),
             new ShapeType("crater", QuicreateWorldgen.CRATER, "quicreate:moon_crater",
-                    List.of("radius", "depth", "rim_height", "rim_width", "floor_depth", "floor", "rim", "core", "core_chance", "core_radius")),
-            new ShapeType("giant_mushroom", QuicreateWorldgen.GIANT_MUSHROOM, "quicreate:mars_aeronos_mushroom",
+                    List.of("radius", "depth", "rim_height", "rim_width", "floor_depth", "floor", "rim", "core", "core_chance", "core_radius", "meteorite", "meteorite_radius")),
+            new ShapeType("giant_mushroom", QuicreateWorldgen.GIANT_MUSHROOM, "quicreate:venus_aeronos_mushroom_large",
                     List.of("stem_height", "stem_radius", "bend", "cap_radius", "cap_height", "cap_shape", "stem", "cap", "underside", "underside_chance", "sink")),
             new ShapeType("arch", QuicreateWorldgen.ARCH, "quicreate:mars_arch",
                     List.of("span", "height", "thickness", "roughness", "sink", "blocks")),
             new ShapeType("boulder", QuicreateWorldgen.BOULDER, "quicreate:moon_boulder",
-                    List.of("radius", "squash", "sink", "count", "spread", "blocks")));
+                    List.of("radius", "squash", "sink", "count", "spread", "blocks")),
+            new ShapeType("wedge", QuicreateWorldgen.WEDGE, "quicreate:mars_quake_wedges",
+                    List.of("length", "width", "thickness", "rise", "taper", "ridge", "sweep", "lip", "roughness", "rift_depth", "chasm", "count", "blocks", "top", "top_depth")));
 
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         LiteralArgumentBuilder<CommandSourceStack> root = Commands.literal("qshape")

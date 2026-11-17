@@ -1,0 +1,91 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_sword"
+    },
+    "title": {
+      "text": "Hunter: Venus"
+    },
+    "description": {
+      "text": "Defeat one of every creature on Venus."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "mogler": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "ad_astra:mogler"
+        }
+      }
+    },
+    "sulfur_creeper": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "ad_astra:sulfur_creeper"
+        }
+      }
+    },
+    "zombified_pygro": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "ad_astra:zombified_pygro"
+        }
+      }
+    },
+    "pygro": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "ad_astra:pygro"
+        }
+      }
+    },
+    "the_prowler": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:the_prowler"
+        }
+      }
+    },
+    "the_watcher": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:the_watcher"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mogler"
+    ],
+    [
+      "sulfur_creeper"
+    ],
+    [
+      "zombified_pygro"
+    ],
+    [
+      "pygro"
+    ],
+    [
+      "the_prowler"
+    ],
+    [
+      "the_watcher"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/bestiary/venus_hunter"
+  }
+}

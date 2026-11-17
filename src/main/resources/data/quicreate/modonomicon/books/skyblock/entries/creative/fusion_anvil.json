@@ -1,0 +1,53 @@
+{
+  "category": "quicreate:creative",
+  "name": "book.quicreate.skyblock.creative.fusion_anvil.name",
+  "description": "book.quicreate.skyblock.creative.fusion_anvil.desc",
+  "icon": "cataclysm:mechanical_fusion_anvil",
+  "x": -3,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:mechanical_fusion_anvil"
+      },
+      "title": "book.quicreate.skyblock.creative.fusion_anvil.spot.title",
+      "text": "book.quicreate.skyblock.creative.fusion_anvil.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.fusion_anvil.how.p0",
+      "title": "book.quicreate.skyblock.creative.fusion_anvil.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "cataclysm:mechanical_fusion_anvil",
+      "text": "book.quicreate.skyblock.creative.fusion_anvil.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.fusion_anvil.done.p0",
+      "title": "book.quicreate.skyblock.creative.fusion_anvil.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/fusion_anvil",
+        "tooltip": "book.quicreate.skyblock.creative.fusion_anvil.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/witherite",
+    "tooltip": "book.quicreate.skyblock.tooltip.witherite"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:creative/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

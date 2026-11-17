@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/sheets",
+  "display": {
+    "icon": {
+      "item": "create_new_age:copper_wire"
+    },
+    "title": {
+      "text": "Wires"
+    },
+    "description": {
+      "text": "Cut copper sheets with a saw"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "item": "create_new_age:copper_wire"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

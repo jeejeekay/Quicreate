@@ -10,7 +10,7 @@
           "biome": "ad_astra:venus_wastelands",
           "parameters": {
             "temperature": 1,
-            "humidity": -1,
+            "humidity": -0.5,
             "continentalness": 0,
             "erosion": 0,
             "weirdness": -0.5,
@@ -23,7 +23,7 @@
           "parameters": {
             "temperature": 0,
             "humidity": 0,
-            "continentalness": -0.65,
+            "continentalness": -0.45,
             "erosion": 0,
             "weirdness": -1.5,
             "depth": 0,
@@ -34,7 +34,7 @@
           "biome": "quicreate:venus_sandstone_dunes",
           "parameters": {
             "temperature": 1,
-            "humidity": -1,
+            "humidity": -0.5,
             "continentalness": 0,
             "erosion": 0,
             "weirdness": 0.8,
@@ -46,7 +46,7 @@
           "biome": "quicreate:venus_fungal_forest",
           "parameters": {
             "temperature": 1,
-            "humidity": 0.6,
+            "humidity": 0.7,
             "continentalness": 0,
             "erosion": 0,
             "weirdness": 0,

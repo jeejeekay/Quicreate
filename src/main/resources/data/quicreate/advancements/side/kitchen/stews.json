@@ -1,0 +1,85 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:rabbit_stew"
+    },
+    "title": {
+      "text": "Stew pot"
+    },
+    "description": {
+      "text": "Every stew in a bowl."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "mushroom_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:mushroom_stew"
+            ]
+          }
+        ]
+      }
+    },
+    "beetroot_soup": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:beetroot_soup"
+            ]
+          }
+        ]
+      }
+    },
+    "rabbit_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:rabbit_stew"
+            ]
+          }
+        ]
+      }
+    },
+    "suspicious_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:suspicious_stew"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mushroom_stew"
+    ],
+    [
+      "beetroot_soup"
+    ],
+    [
+      "rabbit_stew"
+    ],
+    [
+      "suspicious_stew"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/stews"
+  }
+}

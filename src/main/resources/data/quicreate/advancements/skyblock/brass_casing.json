@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/brass",
+  "display": {
+    "icon": {
+      "item": "create:brass_casing"
+    },
+    "title": {
+      "text": "Brass Casing"
+    },
+    "description": {
+      "text": "Brass on a stripped log"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "create:brass_casing"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

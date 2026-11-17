@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/carbon_brush",
+  "display": {
+    "icon": {
+      "item": "create_new_age:electrical_connector"
+    },
+    "title": {
+      "text": "Connector"
+    },
+    "description": {
+      "text": "8 Electrical Connector"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "create_new_age:electrical_connector"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

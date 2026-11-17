@@ -1,0 +1,39 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.ad_astra.name",
+  "icon": "ad_astra:tier_3_rocket",
+  "x": -4,
+  "y": 1,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.ad_astra.read.p0",
+      "title": "book.quicreate.skyblock.field.ad_astra.read.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.ad_astra.read.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.ad_astra.read.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.ad_astra.read.p3"
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/about_this_modpack"
+    },
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

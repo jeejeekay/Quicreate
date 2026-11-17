@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.basin.name",
+  "description": "book.quicreate.skyblock.new_age.basin.desc",
+  "icon": "create:basin",
+  "x": -6,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:basin"
+      },
+      "title": "book.quicreate.skyblock.new_age.basin.spot.title",
+      "text": "book.quicreate.skyblock.new_age.basin.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.basin.how.p0",
+      "title": "book.quicreate.skyblock.new_age.basin.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "create:crafting/kinetics/basin",
+      "text": "book.quicreate.skyblock.new_age.basin.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.basin.done.p0",
+      "title": "book.quicreate.skyblock.new_age.basin.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/basin",
+        "tooltip": "book.quicreate.skyblock.new_age.basin.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/heater"
+    },
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/heater",
+    "tooltip": "book.quicreate.skyblock.tooltip.heater"
+  },
+  "show_when_any_parent_unlocked": true
+}

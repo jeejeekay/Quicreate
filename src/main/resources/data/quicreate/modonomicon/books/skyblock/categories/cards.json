@@ -1,0 +1,7 @@
+{
+  "name": "book.quicreate.skyblock.cat.cards",
+  "icon": "cards:common_card_pack",
+  "sort_number": 31,
+  "background": "quicreate:textures/gui/book/tiled/green_wool.png",
+  "show_category_button": false
+}

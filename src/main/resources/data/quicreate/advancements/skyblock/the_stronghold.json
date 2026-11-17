@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:skyblock/eyes_of_ender",
+  "display": {
+    "icon": {
+      "item": "minecraft:end_portal_frame"
+    },
+    "title": {
+      "text": "The Stronghold"
+    },
+    "description": {
+      "text": "The only stronghold is on the Moon"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "minecraft:stronghold"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

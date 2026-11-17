@@ -1,0 +1,59 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.mercury_landing.name",
+  "description": "book.quicreate.skyblock.venus_mercury.mercury_landing.desc",
+  "icon": "ad_astra:mercury_globe",
+  "x": 4,
+  "y": -6,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:image",
+      "images": [
+        "quicreate:textures/gui/book/planet/mercury.png"
+      ],
+      "title": "book.quicreate.skyblock.venus_mercury.mercury_landing.ititle",
+      "text": "book.quicreate.skyblock.venus_mercury.mercury_landing.itext",
+      "border": true
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.mercury_landing.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.mercury_landing.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.mercury_landing.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.mercury_landing.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mercury_landing",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.mercury_landing.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/tier_3_rocket",
+        "tooltip": "book.quicreate.skyblock.tooltip.tier_3_rocket"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/netherite_space_suit",
+        "tooltip": "book.quicreate.skyblock.tooltip.netherite_space_suit"
+      }
+    ]
+  },
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

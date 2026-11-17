@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/desh_engine",
+  "display": {
+    "icon": {
+      "item": "ad_astra:tier_2_rocket"
+    },
+    "title": {
+      "text": "Tier 2 Rocket"
+    },
+    "description": {
+      "text": "Next stop: Mars"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:tier_2_rocket"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

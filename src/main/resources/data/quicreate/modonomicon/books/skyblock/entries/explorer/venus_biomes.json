@@ -1,0 +1,54 @@
+{
+  "category": "quicreate:explorer",
+  "name": "book.quicreate.skyblock.side.explorer.venus_biomes.name",
+  "description": "book.quicreate.skyblock.side.explorer.venus_biomes.desc",
+  "icon": "ad_astra:venus_globe",
+  "x": 5,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.venus_biomes.p.p0",
+      "title": "book.quicreate.skyblock.side.explorer.venus_biomes.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.venus_biomes.done.p0",
+      "title": "book.quicreate.skyblock.side.explorer.venus_biomes.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/explorer/venus_biomes",
+        "tooltip": "book.quicreate.skyblock.side.explorer.venus_biomes.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:explorer/stage4",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:explorer/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:or",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/venus_landing",
+        "tooltip": "book.quicreate.skyblock.stage.4.venus_landing"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mercury_landing",
+        "tooltip": "book.quicreate.skyblock.stage.4.mercury_landing"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

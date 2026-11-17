@@ -1,0 +1,64 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.desh_engine.name",
+  "description": "book.quicreate.skyblock.moon.desh_engine.desc",
+  "icon": "ad_astra:desh_engine",
+  "x": -5,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:desh_engine"
+      },
+      "title": "book.quicreate.skyblock.moon.desh_engine.spot.title",
+      "text": "book.quicreate.skyblock.moon.desh_engine.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.desh_engine.how.p0",
+      "title": "book.quicreate.skyblock.moon.desh_engine.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.desh_engine.done.p0",
+      "title": "book.quicreate.skyblock.moon.desh_engine.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/desh_engine",
+        "tooltip": "book.quicreate.skyblock.moon.desh_engine.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/desh"
+    },
+    {
+      "entry": "quicreate:moon/amethyst_circuit"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/amethyst_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.amethyst_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/desh",
+        "tooltip": "book.quicreate.skyblock.tooltip.desh"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

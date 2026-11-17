@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mercury_landing",
+  "display": {
+    "icon": {
+      "item": "cards:platinum_ingot"
+    },
+    "title": {
+      "text": "Platinum"
+    },
+    "description": {
+      "text": "Only found on Mercury"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "item": "cards:platinum_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

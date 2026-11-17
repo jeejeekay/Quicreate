@@ -13,6 +13,10 @@
       "heightmap": "WORLD_SURFACE_WG"
     },
     {
+      "type": "quicreate:avoid_structures",
+      "radius": 6
+    },
+    {
       "type": "minecraft:biome"
     }
   ]

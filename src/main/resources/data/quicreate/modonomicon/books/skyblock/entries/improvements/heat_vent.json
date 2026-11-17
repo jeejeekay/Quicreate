@@ -1,0 +1,70 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.heat_vent.name",
+  "description": "book.quicreate.skyblock.improvements.heat_vent.desc",
+  "icon": "create_new_age:reactor_heat_vent",
+  "x": 5,
+  "y": 5,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:reactor_heat_vent"
+      },
+      "title": "book.quicreate.skyblock.improvements.heat_vent.spot.title",
+      "text": "book.quicreate.skyblock.improvements.heat_vent.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.heat_vent.how.p0",
+      "title": "book.quicreate.skyblock.improvements.heat_vent.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.heat_vent.done.p0",
+      "title": "book.quicreate.skyblock.improvements.heat_vent.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/heat_vent",
+        "tooltip": "book.quicreate.skyblock.improvements.heat_vent.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/emerald_circuit",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:improvements/reactor_case"
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/emerald_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.emerald_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/reactor_case",
+        "tooltip": "book.quicreate.skyblock.tooltip.reactor_case"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/heat_pumps",
+        "tooltip": "book.quicreate.skyblock.tooltip.heat_pumps"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

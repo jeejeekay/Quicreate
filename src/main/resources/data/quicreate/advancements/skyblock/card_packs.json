@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/sifter",
+  "display": {
+    "icon": {
+      "item": "cards:common_card_pack"
+    },
+    "title": {
+      "text": "Card Packs"
+    },
+    "description": {
+      "text": "Rare drops from sifting"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "tag": "cards:card_packs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.intro.name",
+  "description": "book.quicreate.skyblock.moon.intro.desc",
+  "icon": "minecraft:writable_book",
+  "x": -6,
+  "y": -8,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.overview.p0",
+      "title": "book.quicreate.skyblock.moon.intro.overview.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.overview.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.overview.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.tips.p0",
+      "title": "book.quicreate.skyblock.moon.intro.tips.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.tips.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.mat.p0",
+      "title": "book.quicreate.skyblock.moon.intro.mat.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.mat.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.mat.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.s0.p0",
+      "title": "book.quicreate.skyblock.moon.intro.s0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.s0.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.s1.p0",
+      "title": "book.quicreate.skyblock.moon.intro.s1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.s1.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.s1.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.s2.p0",
+      "title": "book.quicreate.skyblock.moon.intro.s2.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.s2.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.intro.s2.p2"
+    }
+  ]
+}

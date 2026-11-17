@@ -1,0 +1,63 @@
+{
+  "parent": "quicreate:skyblock/creative_casing",
+  "display": {
+    "icon": {
+      "item": "quicreate:creative_alloy"
+    },
+    "title": {
+      "text": "Quicreate Complete"
+    },
+    "description": {
+      "text": "The true ending"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "casing": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "item": "quicreate:creative_casing",
+        "count": 1
+      }
+    },
+    "motor": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "item": "create:creative_motor",
+        "count": 1
+      }
+    },
+    "cake": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "item": "create:creative_blaze_cake",
+        "count": 1
+      }
+    },
+    "dragon": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:ender_dragon"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "casing"
+    ],
+    [
+      "motor"
+    ],
+    [
+      "cake"
+    ],
+    [
+      "dragon"
+    ]
+  ]
+}

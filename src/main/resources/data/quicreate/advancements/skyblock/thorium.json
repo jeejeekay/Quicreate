@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/brass_mesh",
+  "display": {
+    "icon": {
+      "item": "create_new_age:thorium"
+    },
+    "title": {
+      "text": "Thorium"
+    },
+    "description": {
+      "text": "Sift gravel with a brass mesh (2.5%)"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "create_new_age:thorium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

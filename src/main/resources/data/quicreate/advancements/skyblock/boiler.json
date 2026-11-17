@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/sheets",
+  "display": {
+    "icon": {
+      "item": "create_new_age:basic_solar_heating_plate"
+    },
+    "title": {
+      "text": "Solar Plate"
+    },
+    "description": {
+      "text": "Free heat energy! Sometimes..."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "create_new_age:basic_solar_heating_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

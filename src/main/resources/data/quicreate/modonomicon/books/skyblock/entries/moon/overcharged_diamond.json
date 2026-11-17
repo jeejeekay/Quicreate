@@ -1,0 +1,61 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.overcharged_diamond.name",
+  "description": "book.quicreate.skyblock.moon.overcharged_diamond.desc",
+  "icon": "create_new_age:overcharged_diamond",
+  "x": 0,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:overcharged_diamond"
+      },
+      "title": "book.quicreate.skyblock.moon.overcharged_diamond.spot.title",
+      "text": "book.quicreate.skyblock.moon.overcharged_diamond.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.overcharged_diamond.how.p0",
+      "title": "book.quicreate.skyblock.moon.overcharged_diamond.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.overcharged_diamond.done.p0",
+      "title": "book.quicreate.skyblock.moon.overcharged_diamond.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/overcharged_diamond",
+        "tooltip": "book.quicreate.skyblock.moon.overcharged_diamond.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/diamonds"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/diamonds",
+        "tooltip": "book.quicreate.skyblock.tooltip.diamonds"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/energizer",
+        "tooltip": "book.quicreate.skyblock.tooltip.energizer"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,100 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "create:sweet_roll"
+    },
+    "title": {
+      "text": "Create treats"
+    },
+    "description": {
+      "text": "Spouts and mixers make Create's sweets. Builder's tea gives haste."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "sweet_roll": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:sweet_roll"
+            ]
+          }
+        ]
+      }
+    },
+    "honeyed_apple": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:honeyed_apple"
+            ]
+          }
+        ]
+      }
+    },
+    "chocolate_glazed_berries": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:chocolate_glazed_berries"
+            ]
+          }
+        ]
+      }
+    },
+    "bar_of_chocolate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:bar_of_chocolate"
+            ]
+          }
+        ]
+      }
+    },
+    "builders_tea": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:builders_tea"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sweet_roll"
+    ],
+    [
+      "honeyed_apple"
+    ],
+    [
+      "chocolate_glazed_berries"
+    ],
+    [
+      "bar_of_chocolate"
+    ],
+    [
+      "builders_tea"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/create_treats"
+  }
+}

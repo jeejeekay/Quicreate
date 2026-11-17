@@ -1,0 +1,36 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "cataclysm:monstrous_horn"
+    },
+    "title": {
+      "text": "Netherite Monstrosity"
+    },
+    "description": {
+      "text": "Boss"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "kill": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:netherite_monstrosity"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/bestiary/boss_netherite_monstrosity"
+  }
+}

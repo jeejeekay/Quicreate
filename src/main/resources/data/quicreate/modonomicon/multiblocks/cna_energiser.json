@@ -1,0 +1,62 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "  0F  ",
+      "      ",
+      "  EF G"
+    ],
+    [
+      "      ",
+      "      ",
+      "      "
+    ],
+    [
+      "CBBBA ",
+      "      ",
+      "  D   "
+    ]
+  ],
+  "mapping": {
+    "A": {
+      "type": "modonomicon:blockstate",
+      "display": "create:belt[casing=false,facing=east,part=end,slope=horizontal,waterlogged=false]",
+      "block": "create:belt[casing=false,facing=east,part=end,slope=horizontal,waterlogged=false]"
+    },
+    "B": {
+      "type": "modonomicon:blockstate",
+      "display": "create:belt[casing=false,facing=east,part=middle,slope=horizontal,waterlogged=false]",
+      "block": "create:belt[casing=false,facing=east,part=middle,slope=horizontal,waterlogged=false]"
+    },
+    "C": {
+      "type": "modonomicon:blockstate",
+      "display": "create:belt[casing=false,facing=east,part=start,slope=horizontal,waterlogged=false]",
+      "block": "create:belt[casing=false,facing=east,part=start,slope=horizontal,waterlogged=false]"
+    },
+    "D": {
+      "type": "modonomicon:blockstate",
+      "display": "create:depot[waterlogged=false]",
+      "block": "create:depot[waterlogged=false]"
+    },
+    "E": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:basic_energiser[facing=north]",
+      "block": "create_new_age:basic_energiser[facing=north]"
+    },
+    "F": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:electrical_connector[facing=east,mode=inert]",
+      "block": "create_new_age:electrical_connector[facing=east,mode=inert]"
+    },
+    "G": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:electrical_connector[facing=west,mode=inert]",
+      "block": "create_new_age:electrical_connector[facing=west,mode=inert]"
+    },
+    "0": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:basic_energiser[facing=north]",
+      "block": "create_new_age:basic_energiser[facing=north]"
+    }
+  }
+}

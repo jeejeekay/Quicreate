@@ -1,0 +1,9 @@
+{
+  "parent": "create_mechanical_extruder:block/mechanical_extruder/block",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "3": "minecraft:block/polished_andesite",
+    "top": "minecraft:block/andesite",
+    "particle": "create:block/andesite_casing"
+  }
+}

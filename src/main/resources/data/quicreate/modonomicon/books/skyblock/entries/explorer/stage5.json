@@ -1,0 +1,29 @@
+{
+  "category": "quicreate:explorer",
+  "name": "book.quicreate.skyblock.side.explorer.stage5",
+  "icon": "ad_astra:glacio_globe",
+  "x": 8,
+  "y": -5,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.stage5.p.p0",
+      "title": "book.quicreate.skyblock.side.explorer.stage5.p.title"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/glacio_landing",
+    "tooltip": "book.quicreate.skyblock.stage.5"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:explorer/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

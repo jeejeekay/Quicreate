@@ -1,0 +1,64 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.quartz.name",
+  "description": "book.quicreate.skyblock.sifting.quartz.desc",
+  "icon": "minecraft:quartz",
+  "x": 3,
+  "y": -5,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:quartz"
+      },
+      "title": "book.quicreate.skyblock.sifting.quartz.spot.title",
+      "text": "book.quicreate.skyblock.sifting.quartz.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.quartz.how.p0",
+      "title": "book.quicreate.skyblock.sifting.quartz.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.quartz.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.quartz.how.p2"
+    },
+    {
+      "type": "modonomicon:smelting_recipe",
+      "recipe_id_1": "minecraft:quartz",
+      "text": "book.quicreate.skyblock.sifting.quartz.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.quartz.done.p0",
+      "title": "book.quicreate.skyblock.sifting.quartz.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/quartz",
+        "tooltip": "book.quicreate.skyblock.sifting.quartz.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/brass_mesh"
+    },
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/brass_mesh",
+    "tooltip": "book.quicreate.skyblock.tooltip.brass_mesh"
+  },
+  "show_when_any_parent_unlocked": true
+}

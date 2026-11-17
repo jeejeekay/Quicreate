@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/frosted_prison",
+  "display": {
+    "icon": {
+      "item": "cataclysm:black_steel_ingot"
+    },
+    "title": {
+      "text": "Black Steel"
+    },
+    "description": {
+      "text": "Draugr in the prison drop it"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "cataclysm:black_steel_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

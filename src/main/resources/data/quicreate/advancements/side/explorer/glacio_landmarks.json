@@ -1,0 +1,129 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:map"
+    },
+    "title": {
+      "text": "Landmarks of Glacio"
+    },
+    "description": {
+      "text": "Find every landmark on Glacio."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "abandoned_spire": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:abandoned_spire"
+          }
+        }
+      }
+    },
+    "abandoned_temple": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:abandoned_temple"
+          }
+        }
+      }
+    },
+    "abandoned_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:abandoned_village"
+          }
+        }
+      }
+    },
+    "acropolis": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:acropolis"
+          }
+        }
+      }
+    },
+    "frosted_prison": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:frosted_prison"
+          }
+        }
+      }
+    },
+    "sunken_city": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:sunken_city"
+          }
+        }
+      }
+    },
+    "frostmaw_spawn": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "mowziesmobs:frostmaw_spawn"
+          }
+        }
+      }
+    },
+    "wrought_chamber": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "mowziesmobs:wrought_chamber"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "abandoned_spire"
+    ],
+    [
+      "abandoned_temple"
+    ],
+    [
+      "abandoned_village"
+    ],
+    [
+      "acropolis"
+    ],
+    [
+      "frosted_prison"
+    ],
+    [
+      "sunken_city"
+    ],
+    [
+      "frostmaw_spawn"
+    ],
+    [
+      "wrought_chamber"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/glacio_landmarks"
+  }
+}

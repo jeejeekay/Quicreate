@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:glacio",
+  "name": "book.quicreate.skyblock.glacio.void_steel.name",
+  "description": "book.quicreate.skyblock.glacio.void_steel.desc",
+  "icon": "createutilities:void_steel_ingot",
+  "x": -4,
+  "y": 4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "createutilities:void_steel_ingot"
+      },
+      "title": "book.quicreate.skyblock.glacio.void_steel.spot.title",
+      "text": "book.quicreate.skyblock.glacio.void_steel.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.void_steel.how.p0",
+      "title": "book.quicreate.skyblock.glacio.void_steel.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "createutilities:shapeless/void_steel_ingot",
+      "text": "book.quicreate.skyblock.glacio.void_steel.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.void_steel.done.p0",
+      "title": "book.quicreate.skyblock.glacio.void_steel.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/void_steel",
+        "tooltip": "book.quicreate.skyblock.glacio.void_steel.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:glacio/black_steel"
+    },
+    {
+      "entry": "quicreate:glacio/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/black_steel",
+    "tooltip": "book.quicreate.skyblock.tooltip.black_steel"
+  },
+  "show_when_any_parent_unlocked": true
+}

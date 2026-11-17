@@ -1,0 +1,31 @@
+{
+  "parent": "quicreate:skyblock/the_stronghold",
+  "display": {
+    "icon": {
+      "item": "minecraft:end_stone"
+    },
+    "title": {
+      "text": "The End"
+    },
+    "description": {
+      "text": "Travel to The End"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_end"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

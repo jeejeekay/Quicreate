@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:electricity",
+  "name": "book.quicreate.skyblock.electricity.connector.name",
+  "description": "book.quicreate.skyblock.electricity.connector.desc",
+  "icon": "create_new_age:electrical_connector",
+  "x": 2,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:electrical_connector"
+      },
+      "title": "book.quicreate.skyblock.electricity.connector.spot.title",
+      "text": "book.quicreate.skyblock.electricity.connector.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.connector.how.p0",
+      "title": "book.quicreate.skyblock.electricity.connector.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.connector.done.p0",
+      "title": "book.quicreate.skyblock.electricity.connector.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/connector",
+        "tooltip": "book.quicreate.skyblock.electricity.connector.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:electricity/carbon_brush"
+    },
+    {
+      "entry": "quicreate:electricity/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/carbon_brush",
+    "tooltip": "book.quicreate.skyblock.tooltip.carbon_brush"
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,46 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.electricity.name",
+  "icon": "create_new_age:generator_coil",
+  "x": 2,
+  "y": -3,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.electricity.c0.p0",
+      "title": "book.quicreate.skyblock.field.electricity.c0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.electricity.c1.p0",
+      "title": "book.quicreate.skyblock.field.electricity.c1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.electricity.c2.p0",
+      "title": "book.quicreate.skyblock.field.electricity.c2.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "quicreate:mechanical_crafter_grid",
+      "multiblock_name": "book.quicreate.skyblock.field.electricity.c3.name",
+      "text": "book.quicreate.skyblock.field.electricity.c3.text",
+      "show_visualize_button": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/magnetite",
+    "tooltip": "book.quicreate.skyblock.field.electricity.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

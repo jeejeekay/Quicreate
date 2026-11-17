@@ -1,0 +1,135 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_sword"
+    },
+    "title": {
+      "text": "Hunter: Glacio"
+    },
+    "description": {
+      "text": "Defeat one of every creature on Glacio."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "glacian_ram": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "ad_astra:glacian_ram"
+        }
+      }
+    },
+    "elokosa_follower_howler": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "mowziesmobs:elokosa_follower_howler"
+        }
+      }
+    },
+    "aptrgangr": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:aptrgangr"
+        }
+      }
+    },
+    "draugr": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:draugr"
+        }
+      }
+    },
+    "elite_draugr": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:elite_draugr"
+        }
+      }
+    },
+    "royal_draugr": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:royal_draugr"
+        }
+      }
+    },
+    "cindaria": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:cindaria"
+        }
+      }
+    },
+    "clawdian": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:clawdian"
+        }
+      }
+    },
+    "drowned_host": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:drowned_host"
+        }
+      }
+    },
+    "hippocamtus": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:hippocamtus"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "glacian_ram"
+    ],
+    [
+      "elokosa_follower_howler"
+    ],
+    [
+      "aptrgangr"
+    ],
+    [
+      "draugr"
+    ],
+    [
+      "elite_draugr"
+    ],
+    [
+      "royal_draugr"
+    ],
+    [
+      "cindaria"
+    ],
+    [
+      "clawdian"
+    ],
+    [
+      "drowned_host"
+    ],
+    [
+      "hippocamtus"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/bestiary/glacio_hunter"
+  }
+}

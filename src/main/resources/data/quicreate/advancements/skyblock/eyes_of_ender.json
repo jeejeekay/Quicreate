@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/blaze_powder",
+  "display": {
+    "icon": {
+      "item": "minecraft:ender_eye"
+    },
+    "title": {
+      "text": "Eyes of Ender"
+    },
+    "description": {
+      "text": "12 Eye of Ender"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 12,
+        "item": "minecraft:ender_eye"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

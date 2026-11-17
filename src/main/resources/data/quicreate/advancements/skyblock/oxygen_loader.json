@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/gas_tanks",
+  "display": {
+    "icon": {
+      "item": "ad_astra:oxygen_loader"
+    },
+    "title": {
+      "text": "Oxygen Loader"
+    },
+    "description": {
+      "text": "Create Oxygen from Water"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:oxygen_loader"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

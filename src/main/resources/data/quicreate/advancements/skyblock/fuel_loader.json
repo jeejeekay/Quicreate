@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/oil",
+  "display": {
+    "icon": {
+      "item": "ad_astra:fuel_refinery"
+    },
+    "title": {
+      "text": "Fuel Refinery"
+    },
+    "description": {
+      "text": "Create Rocket Fuel From Oil"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:fuel_refinery"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

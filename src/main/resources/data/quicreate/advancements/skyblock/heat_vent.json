@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/emerald_circuit",
+  "display": {
+    "icon": {
+      "item": "create_new_age:reactor_heat_vent"
+    },
+    "title": {
+      "text": "Heat Vent"
+    },
+    "description": {
+      "text": "Export the Heat from the reaction, or else"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "create_new_age:reactor_heat_vent"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

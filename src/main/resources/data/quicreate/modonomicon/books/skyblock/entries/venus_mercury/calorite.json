@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.calorite.name",
+  "description": "book.quicreate.skyblock.venus_mercury.calorite.desc",
+  "icon": "ad_astra:calorite_ingot",
+  "x": -4,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:calorite_ingot"
+      },
+      "title": "book.quicreate.skyblock.venus_mercury.calorite.spot.title",
+      "text": "book.quicreate.skyblock.venus_mercury.calorite.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.calorite.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.calorite.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "ad_astra:calorite_ingot",
+      "text": "book.quicreate.skyblock.venus_mercury.calorite.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.calorite.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.calorite.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/calorite",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.calorite.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/venus_landing"
+    },
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/venus_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.venus_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

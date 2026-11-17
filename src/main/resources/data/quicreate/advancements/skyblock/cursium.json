@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/maledictus",
+  "display": {
+    "icon": {
+      "item": "cataclysm:cursium_ingot"
+    },
+    "title": {
+      "text": "Cursium"
+    },
+    "description": {
+      "text": "4 Cursium Ingot"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "cataclysm:cursium_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

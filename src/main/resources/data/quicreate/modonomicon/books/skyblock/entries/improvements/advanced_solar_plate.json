@@ -1,0 +1,65 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.advanced_solar_plate.name",
+  "description": "book.quicreate.skyblock.improvements.advanced_solar_plate.desc",
+  "icon": "create_new_age:advanced_solar_heating_plate",
+  "x": 1,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:advanced_solar_heating_plate"
+      },
+      "title": "book.quicreate.skyblock.improvements.advanced_solar_plate.spot.title",
+      "text": "book.quicreate.skyblock.improvements.advanced_solar_plate.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.advanced_solar_plate.how.p0",
+      "title": "book.quicreate.skyblock.improvements.advanced_solar_plate.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.advanced_solar_plate.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.advanced_solar_plate.done.p0",
+      "title": "book.quicreate.skyblock.improvements.advanced_solar_plate.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/advanced_solar_plate",
+        "tooltip": "book.quicreate.skyblock.improvements.advanced_solar_plate.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/copper_circuit"
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/copper_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.copper_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/overcharged_gold",
+        "tooltip": "book.quicreate.skyblock.tooltip.overcharged_gold"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

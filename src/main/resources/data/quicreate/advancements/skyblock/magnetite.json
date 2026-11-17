@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/redstone",
+  "display": {
+    "icon": {
+      "item": "create_new_age:magnetite_block"
+    },
+    "title": {
+      "text": "Magnetite"
+    },
+    "description": {
+      "text": "It's Magnetic!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "create_new_age:magnetite_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

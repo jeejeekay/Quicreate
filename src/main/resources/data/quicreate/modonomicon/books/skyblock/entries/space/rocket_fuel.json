@@ -1,0 +1,55 @@
+{
+  "category": "quicreate:space",
+  "name": "book.quicreate.skyblock.space.rocket_fuel.name",
+  "description": "book.quicreate.skyblock.space.rocket_fuel.desc",
+  "icon": "ad_astra:fuel_bucket",
+  "x": 5,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:fuel_bucket"
+      },
+      "title": "book.quicreate.skyblock.space.rocket_fuel.spot.title",
+      "text": "book.quicreate.skyblock.space.rocket_fuel.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.rocket_fuel.how.p0",
+      "title": "book.quicreate.skyblock.space.rocket_fuel.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.rocket_fuel.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.rocket_fuel.done.p0",
+      "title": "book.quicreate.skyblock.space.rocket_fuel.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/rocket_fuel",
+        "tooltip": "book.quicreate.skyblock.space.rocket_fuel.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:space/fuel_loader"
+    },
+    {
+      "entry": "quicreate:space/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/fuel_loader",
+    "tooltip": "book.quicreate.skyblock.tooltip.fuel_loader"
+  },
+  "show_when_any_parent_unlocked": true
+}

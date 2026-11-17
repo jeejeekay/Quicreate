@@ -1,0 +1,44 @@
+{
+  "category": "quicreate:explorer",
+  "name": "book.quicreate.skyblock.side.explorer.glacio_biomes.name",
+  "description": "book.quicreate.skyblock.side.explorer.glacio_biomes.desc",
+  "icon": "ad_astra:glacio_globe",
+  "x": 8,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.glacio_biomes.p.p0",
+      "title": "book.quicreate.skyblock.side.explorer.glacio_biomes.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.glacio_biomes.done.p0",
+      "title": "book.quicreate.skyblock.side.explorer.glacio_biomes.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/explorer/glacio_biomes",
+        "tooltip": "book.quicreate.skyblock.side.explorer.glacio_biomes.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:explorer/stage5",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:explorer/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/glacio_landing",
+    "tooltip": "book.quicreate.skyblock.stage.5"
+  },
+  "show_when_any_parent_unlocked": true
+}

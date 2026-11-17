@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:bestiary",
+  "name": "book.quicreate.skyblock.side.bestiary.boss_scylla.name",
+  "description": "book.quicreate.skyblock.side.bestiary.boss_scylla.desc",
+  "icon": "cataclysm:music_disc_scylla",
+  "x": 8,
+  "y": 7,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:scylla",
+      "name": "book.quicreate.skyblock.side.bestiary.boss_scylla.n",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_scylla.t",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_scylla.d.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.boss_scylla.d.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_scylla.done.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.boss_scylla.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/bestiary/boss_scylla",
+        "tooltip": "book.quicreate.skyblock.side.bestiary.boss_scylla.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:bestiary/stage5",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:bestiary/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/glacio_landing",
+    "tooltip": "book.quicreate.skyblock.stage.5"
+  },
+  "show_when_any_parent_unlocked": true
+}

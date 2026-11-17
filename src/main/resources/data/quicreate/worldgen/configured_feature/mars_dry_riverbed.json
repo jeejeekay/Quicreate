@@ -1,0 +1,59 @@
+{
+  "type": "quicreate:fissure",
+  "config": {
+    "length": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 20,
+        "max_inclusive": 40
+      }
+    },
+    "width": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 3,
+        "max_exclusive": 6.5
+      }
+    },
+    "depth": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 3,
+        "max_inclusive": 7
+      }
+    },
+    "lava_depth": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1,
+        "max_inclusive": 3
+      }
+    },
+    "wander": 0.45,
+    "bridge_chance": 0.08,
+    "lining_chance": 0.5,
+    "lava": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "ad_astra:mars_sand"
+      }
+    },
+    "lining": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:mars_stone"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "ad_astra:mars_cobblestone"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

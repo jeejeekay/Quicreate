@@ -1,0 +1,57 @@
+{
+  "category": "quicreate:electricity",
+  "name": "book.quicreate.skyblock.electricity.magnetite.name",
+  "description": "book.quicreate.skyblock.electricity.magnetite.desc",
+  "icon": "create_new_age:magnetite_block",
+  "x": -2,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:magnetite_block"
+      },
+      "title": "book.quicreate.skyblock.electricity.magnetite.spot.title",
+      "text": "book.quicreate.skyblock.electricity.magnetite.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.magnetite.how.p0",
+      "title": "book.quicreate.skyblock.electricity.magnetite.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.magnetite.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "quicreate:crafting/magnetite_block",
+      "text": "book.quicreate.skyblock.electricity.magnetite.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.magnetite.done.p0",
+      "title": "book.quicreate.skyblock.electricity.magnetite.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/magnetite",
+        "tooltip": "book.quicreate.skyblock.electricity.magnetite.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/redstone",
+    "tooltip": "book.quicreate.skyblock.tooltip.redstone"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:electricity/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,6 @@
+{
+  "name": "book.quicreate.skyblock.cat.sky",
+  "icon": "minecraft:oak_sapling",
+  "sort_number": 1,
+  "background": "quicreate:textures/gui/book/tiled/water.png"
+}

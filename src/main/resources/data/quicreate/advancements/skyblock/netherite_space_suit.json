@@ -1,0 +1,62 @@
+{
+  "parent": "quicreate:skyblock/netherite",
+  "display": {
+    "icon": {
+      "item": "ad_astra:netherite_space_suit"
+    },
+    "title": {
+      "text": "Netherite Space Suit"
+    },
+    "description": {
+      "text": "Heat protection for Venus and Mercury"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:netherite_space_helmet"
+      }
+    },
+    "task1": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:netherite_space_suit"
+      }
+    },
+    "task2": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:netherite_space_pants"
+      }
+    },
+    "task3": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:netherite_space_boots"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ],
+    [
+      "task1"
+    ],
+    [
+      "task2"
+    ],
+    [
+      "task3"
+    ]
+  ]
+}

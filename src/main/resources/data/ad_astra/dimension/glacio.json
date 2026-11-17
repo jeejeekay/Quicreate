@@ -10,7 +10,7 @@
           "biome": "ad_astra:glacio_snowy_barrens",
           "parameters": {
             "temperature": 1,
-            "humidity": -1,
+            "humidity": -0.6,
             "continentalness": 0,
             "erosion": 0,
             "weirdness": -0.5,
@@ -25,7 +25,7 @@
             "humidity": 0,
             "continentalness": 0,
             "erosion": 0,
-            "weirdness": -1.5,
+            "weirdness": -1.2,
             "depth": 0,
             "offset": 0
           }

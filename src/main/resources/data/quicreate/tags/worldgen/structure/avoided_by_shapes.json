@@ -1,0 +1,56 @@
+{
+  "values": [
+    {
+      "id": "mowziesmobs:umvuthana_grove",
+      "required": false
+    },
+    {
+      "id": "cataclysm:cursed_pyramid",
+      "required": false
+    },
+    {
+      "id": "quicreate:mars_quake_wedges",
+      "required": false
+    },
+    {
+      "id": "quicreate:mars_meteor_crater",
+      "required": false
+    },
+    {
+      "id": "ad_astra:lunarian_village",
+      "required": false
+    },
+    {
+      "id": "ad_astra:lunar_tower",
+      "required": false
+    },
+    {
+      "id": "ad_astra:moon_dungeon",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ruined_citadel",
+      "required": false
+    },
+    {
+      "id": "ad_astra:pygro_village",
+      "required": false
+    },
+    {
+      "id": "ad_astra:pygro_tower",
+      "required": false
+    },
+    {
+      "id": "ad_astra:mars_temple",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ancient_factory",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:monastery",
+      "required": false
+    }
+  ]
+}

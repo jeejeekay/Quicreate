@@ -1,0 +1,66 @@
+{
+  "category": "quicreate:mars",
+  "name": "book.quicreate.skyblock.mars.ostrum_engine.name",
+  "description": "book.quicreate.skyblock.mars.ostrum_engine.desc",
+  "icon": "ad_astra:ostrum_engine",
+  "x": -3,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:ostrum_engine"
+      },
+      "title": "book.quicreate.skyblock.mars.ostrum_engine.spot.title",
+      "text": "book.quicreate.skyblock.mars.ostrum_engine.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ostrum_engine.how.p0",
+      "title": "book.quicreate.skyblock.mars.ostrum_engine.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ostrum_engine.done.p0",
+      "title": "book.quicreate.skyblock.mars.ostrum_engine.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ostrum_engine",
+        "tooltip": "book.quicreate.skyblock.mars.ostrum_engine.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:mars/ostrum",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:mars/ancient_metal_circuit",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:mars/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ancient_metal_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.ancient_metal_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ostrum",
+        "tooltip": "book.quicreate.skyblock.tooltip.ostrum"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,52 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.plastic.name",
+  "description": "book.quicreate.skyblock.improvements.plastic.desc",
+  "icon": "cards:plastic",
+  "x": -5,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cards:plastic"
+      },
+      "title": "book.quicreate.skyblock.improvements.plastic.spot.title",
+      "text": "book.quicreate.skyblock.improvements.plastic.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.plastic.how.p0",
+      "title": "book.quicreate.skyblock.improvements.plastic.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.plastic.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.plastic.done.p0",
+      "title": "book.quicreate.skyblock.improvements.plastic.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/plastic",
+        "tooltip": "book.quicreate.skyblock.improvements.plastic.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/blaze_powder",
+    "tooltip": "book.quicreate.skyblock.tooltip.blaze_powder"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

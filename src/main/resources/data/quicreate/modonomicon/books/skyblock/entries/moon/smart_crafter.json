@@ -1,0 +1,52 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.smart_crafter.name",
+  "description": "book.quicreate.skyblock.moon.smart_crafter.desc",
+  "icon": "smartcrafter:smart_crafter",
+  "x": -2,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "smartcrafter:smart_crafter"
+      },
+      "title": "book.quicreate.skyblock.moon.smart_crafter.spot.title",
+      "text": "book.quicreate.skyblock.moon.smart_crafter.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.smart_crafter.how.p0",
+      "title": "book.quicreate.skyblock.moon.smart_crafter.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.smart_crafter.done.p0",
+      "title": "book.quicreate.skyblock.moon.smart_crafter.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/smart_crafter",
+        "tooltip": "book.quicreate.skyblock.moon.smart_crafter.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/amethyst_circuit",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/amethyst_circuit",
+    "tooltip": "book.quicreate.skyblock.tooltip.amethyst_circuit"
+  },
+  "show_when_any_parent_unlocked": true
+}

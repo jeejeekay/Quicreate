@@ -1,0 +1,67 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.steel.name",
+  "description": "book.quicreate.skyblock.improvements.steel.desc",
+  "icon": "ad_astra:steel_ingot",
+  "x": 0,
+  "y": -6,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:steel_ingot"
+      },
+      "title": "book.quicreate.skyblock.improvements.steel.spot.title",
+      "text": "book.quicreate.skyblock.improvements.steel.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.steel.how.p0",
+      "title": "book.quicreate.skyblock.improvements.steel.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.steel.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "ad_astra:steel_ingot",
+      "text": "book.quicreate.skyblock.improvements.steel.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.steel.done.p0",
+      "title": "book.quicreate.skyblock.improvements.steel.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/steel",
+        "tooltip": "book.quicreate.skyblock.improvements.steel.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/lava",
+        "tooltip": "book.quicreate.skyblock.tooltip.lava"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mixer",
+        "tooltip": "book.quicreate.skyblock.tooltip.mixer"
+      }
+    ]
+  },
+  "parents": [
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:bestiary",
+  "name": "book.quicreate.skyblock.side.bestiary.boss_the_leviathan.name",
+  "description": "book.quicreate.skyblock.side.bestiary.boss_the_leviathan.desc",
+  "icon": "cataclysm:abyssal_egg",
+  "x": 8,
+  "y": 5,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:the_leviathan",
+      "name": "book.quicreate.skyblock.side.bestiary.boss_the_leviathan.n",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_the_leviathan.t",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_the_leviathan.d.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.boss_the_leviathan.d.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_the_leviathan.done.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.boss_the_leviathan.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/bestiary/boss_the_leviathan",
+        "tooltip": "book.quicreate.skyblock.side.bestiary.boss_the_leviathan.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:bestiary/stage5",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:bestiary/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/glacio_landing",
+    "tooltip": "book.quicreate.skyblock.stage.5"
+  },
+  "show_when_any_parent_unlocked": true
+}

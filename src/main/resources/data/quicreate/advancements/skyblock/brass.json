@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mixer",
+  "display": {
+    "icon": {
+      "item": "create:brass_ingot"
+    },
+    "title": {
+      "text": "Brass"
+    },
+    "description": {
+      "text": "Copper + zinc in a heated mixer"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "item": "create:brass_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

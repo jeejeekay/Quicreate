@@ -1,0 +1,48 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.reactor_case.name",
+  "description": "book.quicreate.skyblock.improvements.reactor_case.desc",
+  "icon": "create_new_age:reactor_casing",
+  "x": 8,
+  "y": 5,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:reactor_casing"
+      },
+      "title": "book.quicreate.skyblock.improvements.reactor_case.spot.title",
+      "text": "book.quicreate.skyblock.improvements.reactor_case.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.reactor_case.how.p0",
+      "title": "book.quicreate.skyblock.improvements.reactor_case.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.reactor_case.done.p0",
+      "title": "book.quicreate.skyblock.improvements.reactor_case.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/reactor_case",
+        "tooltip": "book.quicreate.skyblock.improvements.reactor_case.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/energizer",
+    "tooltip": "book.quicreate.skyblock.tooltip.energizer"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

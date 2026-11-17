@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/zinc_mesh",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_nugget"
+    },
+    "title": {
+      "text": "Gold"
+    },
+    "description": {
+      "text": "Sift sand with a zinc mesh"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 27,
+        "item": "minecraft:gold_nugget"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

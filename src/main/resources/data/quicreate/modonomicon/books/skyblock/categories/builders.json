@@ -1,0 +1,7 @@
+{
+  "name": "book.quicreate.skyblock.cat.builders",
+  "icon": "minecraft:bricks",
+  "sort_number": 30,
+  "show_category_button": false,
+  "background": "quicreate:textures/gui/book/tiled/stone_bricks.png"
+}

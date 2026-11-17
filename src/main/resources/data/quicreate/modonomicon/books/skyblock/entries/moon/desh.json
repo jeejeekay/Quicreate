@@ -1,0 +1,64 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.desh.name",
+  "description": "book.quicreate.skyblock.moon.desh.desc",
+  "icon": "ad_astra:desh_ingot",
+  "x": -5,
+  "y": -4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:desh_ingot"
+      },
+      "title": "book.quicreate.skyblock.moon.desh.spot.title",
+      "text": "book.quicreate.skyblock.moon.desh.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.desh.how.p0",
+      "title": "book.quicreate.skyblock.moon.desh.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.desh.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.desh.how.p2"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "ad_astra:desh_ingot",
+      "text": "book.quicreate.skyblock.moon.desh.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.desh.done.p0",
+      "title": "book.quicreate.skyblock.moon.desh.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/desh",
+        "tooltip": "book.quicreate.skyblock.moon.desh.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/moon_landing"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/moon_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.moon_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,52 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.windmill_bearing.name",
+  "description": "book.quicreate.skyblock.sifting.windmill_bearing.desc",
+  "icon": "create:windmill_bearing",
+  "x": -5,
+  "y": -6,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:windmill_bearing"
+      },
+      "title": "book.quicreate.skyblock.sifting.windmill_bearing.spot.title",
+      "text": "book.quicreate.skyblock.sifting.windmill_bearing.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.windmill_bearing.how.p0",
+      "title": "book.quicreate.skyblock.sifting.windmill_bearing.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.windmill_bearing.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "create:crafting/kinetics/windmill_bearing",
+      "text": "book.quicreate.skyblock.sifting.windmill_bearing.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.windmill_bearing.done.p0",
+      "title": "book.quicreate.skyblock.sifting.windmill_bearing.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/windmill_bearing",
+        "tooltip": "book.quicreate.skyblock.sifting.windmill_bearing.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

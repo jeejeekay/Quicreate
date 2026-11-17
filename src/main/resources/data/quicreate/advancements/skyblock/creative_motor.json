@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/creative_alloy",
+  "display": {
+    "icon": {
+      "item": "create:creative_motor"
+    },
+    "title": {
+      "text": "Creative Motor"
+    },
+    "description": {
+      "text": "Speed controller + creative alloy in the fusion anvil"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create:creative_motor"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

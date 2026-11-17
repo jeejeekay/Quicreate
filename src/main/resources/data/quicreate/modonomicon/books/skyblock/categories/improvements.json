@@ -1,0 +1,6 @@
+{
+  "name": "book.quicreate.skyblock.cat.improvements",
+  "icon": "create_new_age:copper_circuit",
+  "sort_number": 5,
+  "background": "quicreate:textures/gui/book/tiled/steel_block.png"
+}

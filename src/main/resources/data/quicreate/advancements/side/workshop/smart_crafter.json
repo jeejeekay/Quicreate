@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "smartcrafter:smart_crafter"
+    },
+    "title": {
+      "text": "Smart Crafter"
+    },
+    "description": {
+      "text": "Optional automation"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "smartcrafter:smart_crafter"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/workshop/smart_crafter"
+  }
+}

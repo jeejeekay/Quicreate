@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/brass_mesh",
+  "display": {
+    "icon": {
+      "item": "minecraft:quartz"
+    },
+    "title": {
+      "text": "Quartz"
+    },
+    "description": {
+      "text": "Sift gravel with a brass mesh"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "item": "minecraft:quartz"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

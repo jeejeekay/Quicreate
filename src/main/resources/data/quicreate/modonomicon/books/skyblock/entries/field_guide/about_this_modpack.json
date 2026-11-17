@@ -1,0 +1,44 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.about_this_modpack.name",
+  "icon": "minecraft:end_portal_frame",
+  "x": -7,
+  "y": 1,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.about_this_modpack.read.p0",
+      "title": "book.quicreate.skyblock.field.about_this_modpack.read.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.about_this_modpack.read.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.about_this_modpack.read.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.about_this_modpack.read.p3"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.about_this_modpack.read.p4"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.about_this_modpack.read.p5"
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

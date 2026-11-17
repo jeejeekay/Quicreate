@@ -1,0 +1,51 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "ad_astra:mercury_globe"
+    },
+    "title": {
+      "text": "Biomes of Mercury"
+    },
+    "description": {
+      "text": "Set foot in every biome on Mercury."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "mercury_deltas": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "ad_astra:mercury_deltas"
+          }
+        }
+      }
+    },
+    "mercury_shattered_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "quicreate:mercury_shattered_rift"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mercury_deltas"
+    ],
+    [
+      "mercury_shattered_rift"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/mercury_biomes"
+  }
+}

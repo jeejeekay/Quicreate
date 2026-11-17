@@ -1,0 +1,7 @@
+{
+  "parent": "create_mechanical_extruder:block/mechanical_extruder/item",
+  "textures": {
+    "3": "minecraft:block/polished_andesite",
+    "top": "minecraft:block/andesite"
+  }
+}

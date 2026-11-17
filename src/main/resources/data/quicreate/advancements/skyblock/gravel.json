@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mill",
+  "display": {
+    "icon": {
+      "item": "minecraft:gravel"
+    },
+    "title": {
+      "text": "Gravel"
+    },
+    "description": {
+      "text": "Gravel comes from milled Cobblestone!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "item": "minecraft:gravel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

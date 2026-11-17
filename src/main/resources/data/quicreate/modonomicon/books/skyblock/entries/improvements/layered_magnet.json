@@ -1,0 +1,61 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.layered_magnet.name",
+  "description": "book.quicreate.skyblock.improvements.layered_magnet.desc",
+  "icon": "create_new_age:layered_magnet",
+  "x": -3,
+  "y": 2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:layered_magnet"
+      },
+      "title": "book.quicreate.skyblock.improvements.layered_magnet.spot.title",
+      "text": "book.quicreate.skyblock.improvements.layered_magnet.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.layered_magnet.how.p0",
+      "title": "book.quicreate.skyblock.improvements.layered_magnet.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.layered_magnet.done.p0",
+      "title": "book.quicreate.skyblock.improvements.layered_magnet.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/layered_magnet",
+        "tooltip": "book.quicreate.skyblock.improvements.layered_magnet.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/redstone_magnet"
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/redstone_magnet",
+        "tooltip": "book.quicreate.skyblock.tooltip.redstone_magnet"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/overcharged_gold",
+        "tooltip": "book.quicreate.skyblock.tooltip.overcharged_gold"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

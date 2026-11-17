@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "quicreate:block/andesite_extruder"},
+    "facing=east": {"model": "quicreate:block/andesite_extruder", "y": 90},
+    "facing=south": {"model": "quicreate:block/andesite_extruder", "y": 180},
+    "facing=west": {"model": "quicreate:block/andesite_extruder", "y": 270}
+  }
+}

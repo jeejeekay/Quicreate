@@ -1,0 +1,79 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.strong_motor.name",
+  "description": "book.quicreate.skyblock.improvements.strong_motor.desc",
+  "icon": "create_new_age:advanced_motor",
+  "x": 0,
+  "y": 3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:advanced_motor"
+      },
+      "title": "book.quicreate.skyblock.improvements.strong_motor.spot.title",
+      "text": "book.quicreate.skyblock.improvements.strong_motor.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.strong_motor.how.p0",
+      "title": "book.quicreate.skyblock.improvements.strong_motor.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.strong_motor.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.strong_motor.done.p0",
+      "title": "book.quicreate.skyblock.improvements.strong_motor.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/strong_motor",
+        "tooltip": "book.quicreate.skyblock.improvements.strong_motor.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/emerald_circuit"
+    },
+    {
+      "entry": "quicreate:improvements/layered_magnet",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/emerald_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.emerald_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/layered_magnet",
+        "tooltip": "book.quicreate.skyblock.tooltip.layered_magnet"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/brass_casing",
+        "tooltip": "book.quicreate.skyblock.tooltip.brass_casing"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mechanical_crafters",
+        "tooltip": "book.quicreate.skyblock.tooltip.mechanical_crafters"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/scylla",
+  "display": {
+    "icon": {
+      "item": "cataclysm:essence_of_the_storm"
+    },
+    "title": {
+      "text": "Essence of the Storm"
+    },
+    "description": {
+      "text": "One per kill: plan your creative items"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "cataclysm:essence_of_the_storm"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

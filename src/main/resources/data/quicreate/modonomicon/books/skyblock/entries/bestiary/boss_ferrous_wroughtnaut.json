@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:bestiary",
+  "name": "book.quicreate.skyblock.side.bestiary.boss_ferrous_wroughtnaut.name",
+  "description": "book.quicreate.skyblock.side.bestiary.boss_ferrous_wroughtnaut.desc",
+  "icon": "mowziesmobs:wrought_axe",
+  "x": 8,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "mowziesmobs:ferrous_wroughtnaut",
+      "name": "book.quicreate.skyblock.side.bestiary.boss_ferrous_wroughtnaut.n",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_ferrous_wroughtnaut.t",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_ferrous_wroughtnaut.d.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.boss_ferrous_wroughtnaut.d.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.boss_ferrous_wroughtnaut.done.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.boss_ferrous_wroughtnaut.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/bestiary/boss_ferrous_wroughtnaut",
+        "tooltip": "book.quicreate.skyblock.side.bestiary.boss_ferrous_wroughtnaut.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:bestiary/stage5",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:bestiary/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/glacio_landing",
+    "tooltip": "book.quicreate.skyblock.stage.5"
+  },
+  "show_when_any_parent_unlocked": true
+}

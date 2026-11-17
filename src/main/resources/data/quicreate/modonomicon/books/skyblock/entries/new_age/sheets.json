@@ -1,0 +1,70 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.sheets.name",
+  "description": "book.quicreate.skyblock.new_age.sheets.desc",
+  "icon": "create:copper_sheet",
+  "x": -10,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:iron_sheet"
+      },
+      "title": "book.quicreate.skyblock.new_age.sheets.spot.title",
+      "text": "book.quicreate.skyblock.new_age.sheets.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.sheets.how.p0",
+      "title": "book.quicreate.skyblock.new_age.sheets.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.sheets.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.sheets.done.p0",
+      "title": "book.quicreate.skyblock.new_age.sheets.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/sheets",
+        "tooltip": "book.quicreate.skyblock.new_age.sheets.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/press"
+    },
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/gold",
+        "tooltip": "book.quicreate.skyblock.tooltip.gold"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/copper",
+        "tooltip": "book.quicreate.skyblock.tooltip.copper"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/press",
+        "tooltip": "book.quicreate.skyblock.tooltip.press"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

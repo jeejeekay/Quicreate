@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:skyblock/glacio_landing",
+  "display": {
+    "icon": {
+      "item": "cataclysm:abyss_eye"
+    },
+    "title": {
+      "text": "Sunken City"
+    },
+    "description": {
+      "text": "Optional"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:sunken_city"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

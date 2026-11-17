@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/reactor_case",
+  "display": {
+    "icon": {
+      "item": "create_new_age:reactor_rod"
+    },
+    "title": {
+      "text": "Reactor Rod"
+    },
+    "description": {
+      "text": "Make sure this is covered on all sides with reactor parts!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "create_new_age:reactor_rod"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

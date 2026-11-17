@@ -1,0 +1,76 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.reactor_rod.name",
+  "description": "book.quicreate.skyblock.improvements.reactor_rod.desc",
+  "icon": "create_new_age:reactor_rod",
+  "x": 8,
+  "y": 3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:reactor_rod"
+      },
+      "title": "book.quicreate.skyblock.improvements.reactor_rod.spot.title",
+      "text": "book.quicreate.skyblock.improvements.reactor_rod.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.reactor_rod.how.p0",
+      "title": "book.quicreate.skyblock.improvements.reactor_rod.how.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "quicreate:reactor",
+      "multiblock_name": "book.quicreate.skyblock.improvements.reactor_rod.mbname",
+      "text": "book.quicreate.skyblock.improvements.reactor_rod.mbtext",
+      "show_visualize_button": true
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.reactor_rod.done.p0",
+      "title": "book.quicreate.skyblock.improvements.reactor_rod.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/reactor_rod",
+        "tooltip": "book.quicreate.skyblock.improvements.reactor_rod.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/reactor_case"
+    },
+    {
+      "entry": "quicreate:improvements/nuclear_fuel"
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/reactor_case",
+        "tooltip": "book.quicreate.skyblock.tooltip.reactor_case"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/nuclear_fuel",
+        "tooltip": "book.quicreate.skyblock.tooltip.nuclear_fuel"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mechanical_crafters",
+        "tooltip": "book.quicreate.skyblock.tooltip.mechanical_crafters"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

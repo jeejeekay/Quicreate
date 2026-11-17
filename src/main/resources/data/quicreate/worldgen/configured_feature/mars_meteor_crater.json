@@ -1,0 +1,98 @@
+{
+  "type": "quicreate:crater",
+  "config": {
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 22,
+        "max_exclusive": 31
+      }
+    },
+    "depth": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 10,
+        "max_exclusive": 16
+      }
+    },
+    "rim_height": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 4,
+        "max_exclusive": 7
+      }
+    },
+    "rim_width": 0.35,
+    "floor_depth": 2,
+    "floor": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:mars_sand"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "ad_astra:mars_stone"
+          },
+          "weight": 1
+        }
+      ]
+    },
+    "rim": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:mars_stone"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "ad_astra:mars_cobblestone"
+          },
+          "weight": 2
+        },
+        {
+          "data": {
+            "Name": "ad_astra:mars_sand"
+          },
+          "weight": 1
+        }
+      ]
+    },
+    "meteorite": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "minecraft:basalt"
+          },
+          "weight": 4
+        },
+        {
+          "data": {
+            "Name": "minecraft:blackstone"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "minecraft:smooth_basalt"
+          },
+          "weight": 2
+        }
+      ]
+    },
+    "meteorite_radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 4,
+        "max_exclusive": 6.5
+      }
+    }
+  }
+}

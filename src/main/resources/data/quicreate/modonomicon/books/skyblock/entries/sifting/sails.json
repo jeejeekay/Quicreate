@@ -1,0 +1,60 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.sails.name",
+  "description": "book.quicreate.skyblock.sifting.sails.desc",
+  "icon": "create:sail_frame",
+  "x": -3,
+  "y": -6,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:sail_frame"
+      },
+      "title": "book.quicreate.skyblock.sifting.sails.spot.title",
+      "text": "book.quicreate.skyblock.sifting.sails.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.sails.how.p0",
+      "title": "book.quicreate.skyblock.sifting.sails.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.sails.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "create:crafting/kinetics/sail_frame_from_conversion",
+      "text": "book.quicreate.skyblock.sifting.sails.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.sails.done.p0",
+      "title": "book.quicreate.skyblock.sifting.sails.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/sails",
+        "tooltip": "book.quicreate.skyblock.sifting.sails.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/windmill_bearing"
+    },
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/windmill_bearing",
+    "tooltip": "book.quicreate.skyblock.tooltip.windmill_bearing"
+  },
+  "show_when_any_parent_unlocked": true
+}

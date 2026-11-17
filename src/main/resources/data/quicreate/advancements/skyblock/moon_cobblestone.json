@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/moon_landing",
+  "display": {
+    "icon": {
+      "item": "ad_astra:moon_cobblestone"
+    },
+    "title": {
+      "text": "Moon Cobblestone"
+    },
+    "description": {
+      "text": "Moon cobblestone can be made in a mechanical extruder"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 32,
+        "item": "ad_astra:moon_cobblestone"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

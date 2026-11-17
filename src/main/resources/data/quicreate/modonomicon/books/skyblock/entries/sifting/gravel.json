@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.gravel.name",
+  "description": "book.quicreate.skyblock.sifting.gravel.desc",
+  "icon": "minecraft:gravel",
+  "x": -9,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:gravel"
+      },
+      "title": "book.quicreate.skyblock.sifting.gravel.spot.title",
+      "text": "book.quicreate.skyblock.sifting.gravel.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.gravel.how.p0",
+      "title": "book.quicreate.skyblock.sifting.gravel.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "minecraft:craft_gravel",
+      "text": "book.quicreate.skyblock.sifting.gravel.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.gravel.done.p0",
+      "title": "book.quicreate.skyblock.sifting.gravel.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/gravel",
+        "tooltip": "book.quicreate.skyblock.sifting.gravel.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/mill"
+    },
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mill",
+    "tooltip": "book.quicreate.skyblock.tooltip.mill"
+  },
+  "show_when_any_parent_unlocked": true
+}

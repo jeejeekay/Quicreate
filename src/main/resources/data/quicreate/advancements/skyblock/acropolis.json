@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:skyblock/glacio_landing",
+  "display": {
+    "icon": {
+      "item": "cataclysm:storm_eye"
+    },
+    "title": {
+      "text": "Acropolis"
+    },
+    "description": {
+      "text": "Find the Acropolis"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:acropolis"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

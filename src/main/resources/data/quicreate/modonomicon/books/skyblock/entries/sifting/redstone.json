@@ -1,0 +1,69 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.redstone.name",
+  "description": "book.quicreate.skyblock.sifting.redstone.desc",
+  "icon": "minecraft:redstone",
+  "x": -3,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:redstone"
+      },
+      "title": "book.quicreate.skyblock.sifting.redstone.spot.title",
+      "text": "book.quicreate.skyblock.sifting.redstone.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.redstone.how.p0",
+      "title": "book.quicreate.skyblock.sifting.redstone.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.redstone.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.redstone.how.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.redstone.how.p3"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "minecraft:redstone",
+      "text": "book.quicreate.skyblock.sifting.redstone.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.redstone.done.p0",
+      "title": "book.quicreate.skyblock.sifting.redstone.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/redstone",
+        "tooltip": "book.quicreate.skyblock.sifting.redstone.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/andesite_mesh",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true,
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/andesite_mesh",
+    "tooltip": "book.quicreate.skyblock.tooltip.andesite_mesh"
+  }
+}

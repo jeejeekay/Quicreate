@@ -1,6 +1,17 @@
 package IGoByJake.quicreate.worldgen;
 
+import IGoByJake.quicreate.Quicreate;
 import com.mojang.serialization.Codec;
+import it.unimi.dsi.fastutil.longs.LongSet;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.chunk.ChunkAccess;
+import net.minecraft.world.level.chunk.ChunkStatus;
+import net.minecraft.world.level.levelgen.structure.BoundingBox;
+import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.level.levelgen.structure.StructureStart;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.WorldGenRegion;
 import net.minecraft.util.RandomSource;
@@ -31,6 +42,10 @@ public abstract class ShapedFeature<C extends FeatureConfiguration> extends Feat
 
     /** Widest a shape should be built so it can always be shifted into the writable area. */
     public static final int MAX_SPAN = 44;
+
+    /** Structures shapes keep clear of (data tag), with this many blocks of space around them. */
+    public static final TagKey<Structure> AVOIDED = TagKey.create(Registries.STRUCTURE, new ResourceLocation(Quicreate.MODID, "avoided_by_shapes"));
+    private static final int STRUCTURE_MARGIN = 6;
 
     private final Codec<C> configCodec;
 
@@ -81,7 +96,54 @@ public abstract class ShapedFeature<C extends FeatureConfiguration> extends Feat
                 shape = make(config, seed, level, origin);
             }
         }
+        if (bounds != null && nearAvoidedStructure(level, shape, origin)) {
+            return false; // e.g. no giant mushrooms growing through Umvuthi's throne
+        }
         return write(shape, level, origin, bounds, random);
+    }
+
+    /** True if the shape (plus a margin) would touch a structure in {@link #AVOIDED}. */
+    private static boolean nearAvoidedStructure(WorldGenLevel level, Shape shape, BlockPos origin) {
+        int m = STRUCTURE_MARGIN;
+        return touchesAvoided(level, new BoundingBox(origin.getX() + shape.minX() - m, origin.getY() + shape.minY() - m, origin.getZ() + shape.minZ() - m,
+                origin.getX() + shape.maxX() + m, origin.getY() + shape.maxY() + m, origin.getZ() + shape.maxZ() + m));
+    }
+
+    /** True if {@code box} touches a structure in {@link #AVOIDED} (only known while generating). */
+    public static boolean touchesAvoided(WorldGenLevel level, BoundingBox box) {
+        if (!(level instanceof WorldGenRegion region)) {
+            return false;
+        }
+        Registry<Structure> registry = region.registryAccess().registryOrThrow(Registries.STRUCTURE);
+        for (int cx = box.minX() >> 4; cx <= box.maxX() >> 4; cx++) {
+            for (int cz = box.minZ() >> 4; cz <= box.maxZ() >> 4; cz++) {
+                if (!region.hasChunk(cx, cz)) {
+                    continue;
+                }
+                ChunkAccess chunk = region.getChunk(cx, cz);
+                for (Map.Entry<Structure, LongSet> reference : chunk.getAllReferences().entrySet()) {
+                    boolean avoided = registry.getResourceKey(reference.getKey())
+                            .flatMap(registry::getHolder)
+                            .map(holder -> holder.is(AVOIDED))
+                            .orElse(false);
+                    if (!avoided) {
+                        continue;
+                    }
+                    for (long packed : reference.getValue()) {
+                        int sx = ChunkPos.getX(packed);
+                        int sz = ChunkPos.getZ(packed);
+                        if (!region.hasChunk(sx, sz)) {
+                            return true; // can't look at it from here, so stay away
+                        }
+                        StructureStart start = region.getChunk(sx, sz, ChunkStatus.STRUCTURE_STARTS).getStartForStructure(reference.getKey());
+                        if (start != null && start.isValid() && start.getBoundingBox().intersects(box)) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     private Shape make(C config, long seed, WorldGenLevel level, BlockPos origin) {
@@ -90,9 +152,22 @@ public abstract class ShapedFeature<C extends FeatureConfiguration> extends Feat
 
     /** Builds the shape with a fixed seed, so the same seed and ground always give the same blocks. */
     public Shape buildShape(C config, long seed, Ground ground) {
-        Shape shape = new Shape();
+        return buildInto(config, seed, ground, new Shape());
+    }
+
+    /** Same as {@link #buildShape}, into a measuring or clipped shape. */
+    public Shape buildInto(C config, long seed, Ground ground, Shape shape) {
         build(config, RandomSource.create(seed), ground, shape);
         return shape;
+    }
+
+    /**
+     * True if this shape comes out the same however it is clipped: it never reads back its own
+     * blocks and draws the same random numbers whichever blocks are kept. Giant structures of such
+     * shapes are built one chunk at a time instead of whole.
+     */
+    public boolean clipSafe() {
+        return false;
     }
 
     private static boolean write(Shape shape, WorldGenLevel level, BlockPos origin, Bounds bounds, RandomSource random) {
@@ -124,6 +199,31 @@ public abstract class ShapedFeature<C extends FeatureConfiguration> extends Feat
                 level.setBlock(pos, state, Block.UPDATE_CLIENTS);
                 placed = true;
             }
+            if (entry.getValue().mode() == Shape.Mode.FOUNDATION) {
+                placed |= fillUnder(shape, level, origin, pos.immutable(), entry.getValue(), random);
+            }
+        }
+        return placed;
+    }
+
+    /** Fills air (or plants, water...) under a FOUNDATION block down to solid ground, at most 48 blocks. */
+    private static boolean fillUnder(Shape shape, WorldGenLevel level, BlockPos origin, BlockPos from, Shape.Put put, RandomSource random) {
+        boolean placed = false;
+        BlockPos.MutableBlockPos below = from.mutable();
+        for (int i = 0; i < 48; i++) {
+            below.move(0, -1, 0);
+            if (below.getY() <= level.getMinBuildHeight() || !level.ensureCanWrite(below)) {
+                break;
+            }
+            if (shape.has(below.getX() - origin.getX(), below.getY() - origin.getY(), below.getZ() - origin.getZ())) {
+                break; // the shape has its own plans for this block
+            }
+            BlockState existing = level.getBlockState(below);
+            if (!existing.isAir() && !existing.canBeReplaced()) {
+                break;
+            }
+            level.setBlock(below, put.block().getState(random, below), Block.UPDATE_CLIENTS);
+            placed = true;
         }
         return placed;
     }
@@ -164,7 +264,37 @@ public abstract class ShapedFeature<C extends FeatureConfiguration> extends Feat
         int oy = origin.getY();
         int oz = origin.getZ();
         return (dx, dz) -> cache.computeIfAbsent(((long) dx << 32) ^ (dz & 0xFFFFFFFFL),
-                key -> level.getHeight(type, ox + dx, oz + dz) - 1 - oy);
+                key -> surface(level, type, ox + dx, oz + dz) - oy);
+    }
+
+    /**
+     * The top solid block of a column as it is now. The worldgen heightmap isn't updated while
+     * features are placed, so on its own it misses what earlier shapes did (a crater dug into another
+     * crater would put its rim over the old bowl, floating). Columns outside the generating area use
+     * the heightmap as it is.
+     */
+    private static int surface(WorldGenLevel level, Heightmap.Types type, int x, int z) {
+        int y = level.getHeight(type, x, z) - 1;
+        if (!(level instanceof WorldGenRegion region) || !region.hasChunk(x >> 4, z >> 4)) {
+            return y;
+        }
+        BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos(x, y, z);
+        if (solid(level, pos)) {
+            for (int i = 0; i < 24 && solid(level, pos.move(0, 1, 0)); i++) {
+                y++;
+            }
+        } else {
+            for (int i = 0; i < 64 && y > level.getMinBuildHeight() && !solid(level, pos.move(0, -1, 0)); i++) {
+                y--;
+            }
+            y--;
+        }
+        return y;
+    }
+
+    private static boolean solid(WorldGenLevel level, BlockPos pos) {
+        BlockState state = level.getBlockState(pos);
+        return !state.isAir() && !state.canBeReplaced();
     }
 
     // ---- Helpers shared by the shapes ----

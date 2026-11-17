@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "quicreate:creative_casing"
+    "quicreate:creative_casing",
+    {
+      "id": "quicreate:andesite_extruder",
+      "required": false
+    }
   ]
 }

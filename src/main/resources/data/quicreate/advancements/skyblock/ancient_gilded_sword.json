@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/ancient_metal",
+  "display": {
+    "icon": {
+      "item": "quicreate:ancient_gilded_sword"
+    },
+    "title": {
+      "text": "Ancient Gilded Sword"
+    },
+    "description": {
+      "text": "Optional Quicreate weapon"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "quicreate:ancient_gilded_sword"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -57,10 +57,16 @@ public class RepositionedStructure extends Structure {
             if (bottomY.isPresent()) {
                 target = bottomY.get().sample(context.random());
             } else if (bottomAboveSurface.isPresent()) {
-                BlockPos at = stub.position();
-                int surface = context.chunkGenerator().getBaseHeight(at.getX(), at.getZ(), Heightmap.Types.WORLD_SURFACE_WG,
-                        context.heightAccessor(), context.randomState());
-                target = surface + bottomAboveSurface.get().sample(context.random());
+                // Median ground height under the middle and the four corners, so one hill or hole doesn't decide it.
+                int[] xs = {box.getCenter().getX(), box.minX(), box.maxX(), box.minX(), box.maxX()};
+                int[] zs = {box.getCenter().getZ(), box.minZ(), box.minZ(), box.maxZ(), box.maxZ()};
+                int[] heights = new int[5];
+                for (int i = 0; i < 5; i++) {
+                    heights[i] = context.chunkGenerator().getBaseHeight(xs[i], zs[i], Heightmap.Types.WORLD_SURFACE_WG,
+                            context.heightAccessor(), context.randomState());
+                }
+                java.util.Arrays.sort(heights);
+                target = heights[2] + bottomAboveSurface.get().sample(context.random());
             } else {
                 target = box.minY();
             }

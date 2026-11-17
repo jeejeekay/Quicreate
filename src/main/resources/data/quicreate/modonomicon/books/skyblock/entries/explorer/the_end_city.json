@@ -1,0 +1,44 @@
+{
+  "category": "quicreate:explorer",
+  "name": "book.quicreate.skyblock.side.explorer.the_end_city.name",
+  "description": "book.quicreate.skyblock.side.explorer.the_end_city.desc",
+  "icon": "minecraft:purpur_block",
+  "x": -1,
+  "y": 3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.the_end_city.p.p0",
+      "title": "book.quicreate.skyblock.side.explorer.the_end_city.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.the_end_city.done.p0",
+      "title": "book.quicreate.skyblock.side.explorer.the_end_city.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/explorer/the_end_city",
+        "tooltip": "book.quicreate.skyblock.side.explorer.the_end_city.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:explorer/stage2",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:explorer/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/moon_landing",
+    "tooltip": "book.quicreate.skyblock.stage.2"
+  },
+  "show_when_any_parent_unlocked": true
+}

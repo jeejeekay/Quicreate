@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.mixer.name",
+  "description": "book.quicreate.skyblock.new_age.mixer.desc",
+  "icon": "create:mechanical_mixer",
+  "x": -6,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:mechanical_mixer"
+      },
+      "title": "book.quicreate.skyblock.new_age.mixer.spot.title",
+      "text": "book.quicreate.skyblock.new_age.mixer.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.mixer.how.p0",
+      "title": "book.quicreate.skyblock.new_age.mixer.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "create:crafting/kinetics/mechanical_mixer",
+      "text": "book.quicreate.skyblock.new_age.mixer.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.mixer.done.p0",
+      "title": "book.quicreate.skyblock.new_age.mixer.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mixer",
+        "tooltip": "book.quicreate.skyblock.new_age.mixer.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/basin"
+    },
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/basin",
+    "tooltip": "book.quicreate.skyblock.tooltip.basin"
+  },
+  "show_when_any_parent_unlocked": true
+}

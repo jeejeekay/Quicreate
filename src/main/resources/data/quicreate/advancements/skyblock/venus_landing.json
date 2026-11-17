@@ -1,0 +1,31 @@
+{
+  "parent": "quicreate:skyblock/tier_3_rocket",
+  "display": {
+    "icon": {
+      "item": "ad_astra:venus_globe"
+    },
+    "title": {
+      "text": "Acid Rain"
+    },
+    "description": {
+      "text": "Land on Venus"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "ad_astra:venus"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/heat_pipes",
+  "display": {
+    "icon": {
+      "item": "create_new_age:heat_pump"
+    },
+    "title": {
+      "text": "Heat Pumps"
+    },
+    "description": {
+      "text": "Push your heat around"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "create_new_age:heat_pump"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

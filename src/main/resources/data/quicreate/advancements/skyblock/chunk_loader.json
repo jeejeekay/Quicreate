@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/amethyst_circuit",
+  "display": {
+    "icon": {
+      "item": "create_power_loader:empty_andesite_chunk_loader"
+    },
+    "title": {
+      "text": "Chunk Loader"
+    },
+    "description": {
+      "text": "Optional automation"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create_power_loader:empty_andesite_chunk_loader"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

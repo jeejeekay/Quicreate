@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.advanced_energizer.name",
+  "description": "book.quicreate.skyblock.improvements.advanced_energizer.desc",
+  "icon": "create_new_age:advanced_energiser",
+  "x": 3,
+  "y": 6,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:advanced_energiser"
+      },
+      "title": "book.quicreate.skyblock.improvements.advanced_energizer.spot.title",
+      "text": "book.quicreate.skyblock.improvements.advanced_energizer.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.advanced_energizer.how.p0",
+      "title": "book.quicreate.skyblock.improvements.advanced_energizer.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.advanced_energizer.done.p0",
+      "title": "book.quicreate.skyblock.improvements.advanced_energizer.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/advanced_energizer",
+        "tooltip": "book.quicreate.skyblock.improvements.advanced_energizer.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/emerald_circuit"
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/emerald_circuit",
+    "tooltip": "book.quicreate.skyblock.tooltip.emerald_circuit"
+  },
+  "show_when_any_parent_unlocked": true
+}

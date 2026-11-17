@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/hand_crank",
+  "display": {
+    "icon": {
+      "item": "create:windmill_bearing"
+    },
+    "title": {
+      "text": "Windmill Bearing"
+    },
+    "description": {
+      "text": "Did you know Sails stick without glue!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create:windmill_bearing"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

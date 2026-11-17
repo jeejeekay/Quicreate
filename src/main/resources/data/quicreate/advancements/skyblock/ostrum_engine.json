@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/ancient_metal_circuit",
+  "display": {
+    "icon": {
+      "item": "ad_astra:ostrum_engine"
+    },
+    "title": {
+      "text": "Ostrum Engine"
+    },
+    "description": {
+      "text": "1 Ostrum Engine"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:ostrum_engine"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

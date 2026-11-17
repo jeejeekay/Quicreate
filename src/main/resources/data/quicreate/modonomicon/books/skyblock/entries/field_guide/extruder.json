@@ -1,0 +1,70 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.extruder.name",
+  "icon": "create_mechanical_extruder:mechanical_extruder",
+  "x": -1,
+  "y": -1,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.extruder.a.p0",
+      "title": "book.quicreate.skyblock.field.extruder.a.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "quicreate:extruder_setup",
+      "multiblock_name": "book.quicreate.skyblock.field.extruder.mb",
+      "text": "book.quicreate.skyblock.field.extruder.mbt",
+      "show_visualize_button": true
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.extruder.b.p0",
+      "title": "book.quicreate.skyblock.field.extruder.b.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.extruder.b.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.extruder.b.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.extruder.b.p3"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.extruder.c.p0",
+      "title": "book.quicreate.skyblock.field.extruder.c.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.extruder.c.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.extruder.c.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.extruder.c.p3"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mill",
+    "tooltip": "book.quicreate.skyblock.field.extruder.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

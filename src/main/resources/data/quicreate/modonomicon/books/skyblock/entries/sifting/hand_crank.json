@@ -1,0 +1,63 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.hand_crank.name",
+  "description": "book.quicreate.skyblock.sifting.hand_crank.desc",
+  "icon": "create:hand_crank",
+  "x": -9,
+  "y": -6,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:hand_crank"
+      },
+      "title": "book.quicreate.skyblock.sifting.hand_crank.spot.title",
+      "text": "book.quicreate.skyblock.sifting.hand_crank.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.hand_crank.how.p0",
+      "title": "book.quicreate.skyblock.sifting.hand_crank.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "create:crafting/kinetics/hand_crank",
+      "text": "book.quicreate.skyblock.sifting.hand_crank.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.hand_crank.done.p0",
+      "title": "book.quicreate.skyblock.sifting.hand_crank.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/hand_crank",
+        "tooltip": "book.quicreate.skyblock.sifting.hand_crank.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/andesite_casing",
+        "tooltip": "book.quicreate.skyblock.tooltip.andesite_casing"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/shafts_cogs",
+        "tooltip": "book.quicreate.skyblock.tooltip.shafts_cogs"
+      }
+    ]
+  },
+  "parents": [
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

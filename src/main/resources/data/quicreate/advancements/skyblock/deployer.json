@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/brass_casing",
+  "display": {
+    "icon": {
+      "item": "create:deployer"
+    },
+    "title": {
+      "text": "Deployer"
+    },
+    "description": {
+      "text": "Needed for circuits and sequenced assembly"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create:deployer"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

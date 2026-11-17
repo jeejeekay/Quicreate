@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=x": { "model": "quicreate:block/preview_empty" },
+    "axis=y": { "model": "quicreate:block/preview_empty" },
+    "axis=z": { "model": "quicreate:block/preview_empty" }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mars_landing",
+  "display": {
+    "icon": {
+      "item": "minecraft:ancient_debris"
+    },
+    "title": {
+      "text": "Ancient Debris"
+    },
+    "description": {
+      "text": "Buried in conglomerate"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "minecraft:ancient_debris"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

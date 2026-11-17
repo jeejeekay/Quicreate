@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "create:item_vault"
+    },
+    "title": {
+      "text": "Storage room"
+    },
+    "description": {
+      "text": "Item vaults join into one big store. Hook them to a storage terminal later."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "have": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "item": "create:item_vault",
+        "count": 8
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/workshop/storage"
+  }
+}

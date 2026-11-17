@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:skyblock/mercury_landing",
+  "display": {
+    "icon": {
+      "item": "cataclysm:monstrous_eye"
+    },
+    "title": {
+      "text": "Soul Black Smith"
+    },
+    "description": {
+      "text": "Find the Soul Black Smith"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:soul_black_smith"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

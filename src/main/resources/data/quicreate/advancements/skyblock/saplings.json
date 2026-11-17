@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/vein_mine_logs",
+  "display": {
+    "icon": {
+      "item": "minecraft:oak_sapling"
+    },
+    "title": {
+      "text": "Saplings"
+    },
+    "description": {
+      "text": "You can grow saplings quick by sneaking!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "tag": "minecraft:saplings"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

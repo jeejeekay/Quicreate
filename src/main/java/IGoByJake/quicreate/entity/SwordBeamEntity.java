@@ -1,7 +1,7 @@
 package IGoByJake.quicreate.entity;
 
 import IGoByJake.quicreate.QuicreateContent;
-import net.minecraft.core.particles.ParticleTypes;
+import IGoByJake.quicreate.client.BeamParticles;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -12,12 +12,16 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.ForgeEventFactory;
+import net.minecraftforge.fml.DistExecutor;
 
 /** The master sword's beam: no model, just a particle trail. 2 damage that ignores and grants no hit invulnerability. */
 public class SwordBeamEntity extends Projectile {
 
-    private static final int LIFETIME = 16;
+    /** Blocks per tick (was 1.6). LIFETIME keeps the range near the old ~25 blocks. */
+    public static final float SPEED = 3.0F;
+    private static final int LIFETIME = 9;
     private static final float DAMAGE = 2.0F;
 
     public SwordBeamEntity(EntityType<? extends SwordBeamEntity> type, Level level) {
@@ -48,13 +52,9 @@ public class SwordBeamEntity extends Projectile {
         }
         Vec3 motion = this.getDeltaMovement();
         if (this.level().isClientSide) {
-            for (int i = 0; i < 3; i++) {
-                double f = i / 3.0D;
-                this.level().addParticle(ParticleTypes.END_ROD, this.getX() - motion.x * f, this.getY() - motion.y * f, this.getZ() - motion.z * f, 0, 0, 0);
-            }
-            if (this.tickCount % 2 == 0) {
-                this.level().addParticle(ParticleTypes.ELECTRIC_SPARK, this.getX(), this.getY(), this.getZ(), 0, 0, 0);
-            }
+            // Short-lived trail: vanilla end rod sparkles linger for 3 seconds, these fade in a quarter second.
+            double x = this.getX(), y = this.getY(), z = this.getZ();
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> BeamParticles.trail(x, y, z, motion));
         }
         this.setPos(this.getX() + motion.x, this.getY() + motion.y, this.getZ() + motion.z);
         ProjectileUtil.rotateTowardsMovement(this, 1.0F);

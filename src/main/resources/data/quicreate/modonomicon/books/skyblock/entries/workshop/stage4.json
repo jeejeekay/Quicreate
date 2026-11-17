@@ -1,0 +1,39 @@
+{
+  "category": "quicreate:workshop",
+  "name": "book.quicreate.skyblock.side.workshop.stage4",
+  "icon": "ad_astra:venus_globe",
+  "x": 5,
+  "y": -5,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.workshop.stage4.p.p0",
+      "title": "book.quicreate.skyblock.side.workshop.stage4.p.title"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:or",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/venus_landing",
+        "tooltip": "book.quicreate.skyblock.stage.4.venus_landing"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mercury_landing",
+        "tooltip": "book.quicreate.skyblock.stage.4.mercury_landing"
+      }
+    ]
+  },
+  "parents": [
+    {
+      "entry": "quicreate:workshop/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

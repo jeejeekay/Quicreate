@@ -1,0 +1,77 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "ad_astra:glacio_globe"
+    },
+    "title": {
+      "text": "Biomes of Glacio"
+    },
+    "description": {
+      "text": "Set foot in every biome on Glacio."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "glacio_snowy_barrens": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "ad_astra:glacio_snowy_barrens"
+          }
+        }
+      }
+    },
+    "glacio_ice_peaks": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "ad_astra:glacio_ice_peaks"
+          }
+        }
+      }
+    },
+    "glacio_helix_spires": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "quicreate:glacio_helix_spires"
+          }
+        }
+      }
+    },
+    "glacian_woods": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "quicreate:glacian_woods"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "glacio_snowy_barrens"
+    ],
+    [
+      "glacio_ice_peaks"
+    ],
+    [
+      "glacio_helix_spires"
+    ],
+    [
+      "glacian_woods"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/glacio_biomes"
+  }
+}

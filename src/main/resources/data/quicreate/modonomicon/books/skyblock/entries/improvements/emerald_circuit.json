@@ -1,0 +1,78 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.emerald_circuit.name",
+  "description": "book.quicreate.skyblock.improvements.emerald_circuit.desc",
+  "icon": "quicreate:emerald_circuit",
+  "x": 3,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "quicreate:emerald_circuit"
+      },
+      "title": "book.quicreate.skyblock.improvements.emerald_circuit.spot.title",
+      "text": "book.quicreate.skyblock.improvements.emerald_circuit.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.emerald_circuit.how.p0",
+      "title": "book.quicreate.skyblock.improvements.emerald_circuit.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.emerald_circuit.done.p0",
+      "title": "book.quicreate.skyblock.improvements.emerald_circuit.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/emerald_circuit",
+        "tooltip": "book.quicreate.skyblock.improvements.emerald_circuit.donetip"
+      }
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.emerald_circuit.done.p1",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/emerald_circuit",
+        "tooltip": "book.quicreate.skyblock.improvements.emerald_circuit.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/copper_circuit"
+    },
+    {
+      "entry": "quicreate:improvements/emerald_wafer"
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/copper_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.copper_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/emerald_wafer",
+        "tooltip": "book.quicreate.skyblock.tooltip.emerald_wafer"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/electron_tube",
+        "tooltip": "book.quicreate.skyblock.tooltip.electron_tube"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,66 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.etrium.name",
+  "description": "book.quicreate.skyblock.moon.etrium.desc",
+  "icon": "ad_astra:etrium_nugget",
+  "x": 3,
+  "y": -5,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:etrium_ingot"
+      },
+      "title": "book.quicreate.skyblock.moon.etrium.spot.title",
+      "text": "book.quicreate.skyblock.moon.etrium.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.etrium.how.p0",
+      "title": "book.quicreate.skyblock.moon.etrium.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "quicreate:crafting/etrium_ingot",
+      "text": "book.quicreate.skyblock.moon.etrium.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.etrium.done.p0",
+      "title": "book.quicreate.skyblock.moon.etrium.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/etrium",
+        "tooltip": "book.quicreate.skyblock.moon.etrium.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/ice_shards"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/energizer",
+        "tooltip": "book.quicreate.skyblock.tooltip.energizer"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ice_shards",
+        "tooltip": "book.quicreate.skyblock.tooltip.ice_shards"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

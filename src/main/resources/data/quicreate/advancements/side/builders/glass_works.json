@@ -1,0 +1,100 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "create:framed_glass"
+    },
+    "title": {
+      "text": "Glass works"
+    },
+    "description": {
+      "text": "Smelt sand into glass, then craft Create's framed panes."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "glass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:glass"
+            ]
+          }
+        ]
+      }
+    },
+    "framed_glass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:framed_glass"
+            ]
+          }
+        ]
+      }
+    },
+    "tiled_glass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:tiled_glass"
+            ]
+          }
+        ]
+      }
+    },
+    "vertical_framed_glass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:vertical_framed_glass"
+            ]
+          }
+        ]
+      }
+    },
+    "horizontal_framed_glass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:horizontal_framed_glass"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "glass"
+    ],
+    [
+      "framed_glass"
+    ],
+    [
+      "tiled_glass"
+    ],
+    [
+      "vertical_framed_glass"
+    ],
+    [
+      "horizontal_framed_glass"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/builders/glass_works"
+  }
+}

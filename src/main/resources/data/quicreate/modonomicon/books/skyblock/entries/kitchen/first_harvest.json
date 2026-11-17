@@ -1,0 +1,43 @@
+{
+  "category": "quicreate:kitchen",
+  "name": "book.quicreate.skyblock.side.kitchen.first_harvest.name",
+  "description": "book.quicreate.skyblock.side.kitchen.first_harvest.desc",
+  "icon": "minecraft:wheat",
+  "x": -7,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.first_harvest.p.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.first_harvest.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.first_harvest.p.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.first_harvest.done.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.first_harvest.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/kitchen/first_harvest",
+        "tooltip": "book.quicreate.skyblock.side.kitchen.first_harvest.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:kitchen/stage0",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:kitchen/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/vein_mine_logs",
+  "display": {
+    "icon": {
+      "item": "minecraft:crafting_table"
+    },
+    "title": {
+      "text": "Get Crafting Table"
+    },
+    "description": {
+      "text": "1 Crafting Table"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "minecraft:crafting_table"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

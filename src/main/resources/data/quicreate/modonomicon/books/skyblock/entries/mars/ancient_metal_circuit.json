@@ -1,0 +1,75 @@
+{
+  "category": "quicreate:mars",
+  "name": "book.quicreate.skyblock.mars.ancient_metal_circuit.name",
+  "description": "book.quicreate.skyblock.mars.ancient_metal_circuit.desc",
+  "icon": "quicreate:ancient_metal_circuit",
+  "x": 0,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "quicreate:ancient_metal_circuit"
+      },
+      "title": "book.quicreate.skyblock.mars.ancient_metal_circuit.spot.title",
+      "text": "book.quicreate.skyblock.mars.ancient_metal_circuit.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_metal_circuit.how.p0",
+      "title": "book.quicreate.skyblock.mars.ancient_metal_circuit.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_metal_circuit.done.p0",
+      "title": "book.quicreate.skyblock.mars.ancient_metal_circuit.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ancient_metal_circuit",
+        "tooltip": "book.quicreate.skyblock.mars.ancient_metal_circuit.donetip"
+      }
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_metal_circuit.done.p1",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ancient_metal_circuit",
+        "tooltip": "book.quicreate.skyblock.mars.ancient_metal_circuit.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:mars/ancient_metal"
+    },
+    {
+      "entry": "quicreate:mars/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/etrionic_capacitor",
+        "tooltip": "book.quicreate.skyblock.tooltip.etrionic_capacitor"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/amethyst_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.amethyst_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ancient_metal",
+        "tooltip": "book.quicreate.skyblock.tooltip.ancient_metal"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,91 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_sword"
+    },
+    "title": {
+      "text": "Hunter: The Moon"
+    },
+    "description": {
+      "text": "Defeat one of every creature on The Moon."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "amethyst_crab": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:amethyst_crab"
+        }
+      }
+    },
+    "corrupted_lunarian": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "ad_astra:corrupted_lunarian"
+        }
+      }
+    },
+    "star_crawler": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "ad_astra:star_crawler"
+        }
+      }
+    },
+    "enderman": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:enderman"
+        }
+      }
+    },
+    "lunarian": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "ad_astra:lunarian"
+        }
+      }
+    },
+    "endermaptera": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:endermaptera"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "amethyst_crab"
+    ],
+    [
+      "corrupted_lunarian"
+    ],
+    [
+      "star_crawler"
+    ],
+    [
+      "enderman"
+    ],
+    [
+      "lunarian"
+    ],
+    [
+      "endermaptera"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/bestiary/moon_hunter"
+  }
+}

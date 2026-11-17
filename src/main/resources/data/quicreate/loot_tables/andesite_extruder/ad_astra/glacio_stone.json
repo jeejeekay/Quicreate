@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:glacio_stone",
+          "weight": 45
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:glacio_cobblestone",
+          "weight": 35
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:permafrost",
+          "weight": 20
+        }
+      ]
+    }
+  ]
+}

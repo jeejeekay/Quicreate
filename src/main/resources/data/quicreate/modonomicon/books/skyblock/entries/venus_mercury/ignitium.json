@@ -1,0 +1,60 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.ignitium.name",
+  "description": "book.quicreate.skyblock.venus_mercury.ignitium.desc",
+  "icon": "cataclysm:ignitium_ingot",
+  "x": 2,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:ignitium_ingot"
+      },
+      "title": "book.quicreate.skyblock.venus_mercury.ignitium.spot.title",
+      "text": "book.quicreate.skyblock.venus_mercury.ignitium.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.ignitium.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.ignitium.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.ignitium.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "cataclysm:ignitium_ingot",
+      "text": "book.quicreate.skyblock.venus_mercury.ignitium.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.ignitium.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.ignitium.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ignitium",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.ignitium.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/ignis"
+    },
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/ignis",
+    "tooltip": "book.quicreate.skyblock.tooltip.ignis"
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,51 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:map"
+    },
+    "title": {
+      "text": "Landmarks of Venus"
+    },
+    "description": {
+      "text": "Find every landmark on Venus."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "ancient_factory": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:ancient_factory"
+          }
+        }
+      }
+    },
+    "umvuthana_grove": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "mowziesmobs:umvuthana_grove"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ancient_factory"
+    ],
+    [
+      "umvuthana_grove"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/venus_landmarks"
+  }
+}

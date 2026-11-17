@@ -1,0 +1,34 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:end_stone"
+    },
+    "title": {
+      "text": "The End"
+    },
+    "description": {
+      "text": "The Moon's stronghold holds the only portal to the End."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "go": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_end"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "go"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/the_end"
+  }
+}

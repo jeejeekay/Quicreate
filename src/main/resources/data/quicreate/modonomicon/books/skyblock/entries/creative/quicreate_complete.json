@@ -1,0 +1,77 @@
+{
+  "category": "quicreate:creative",
+  "name": "book.quicreate.skyblock.creative.quicreate_complete.name",
+  "description": "book.quicreate.skyblock.creative.quicreate_complete.desc",
+  "icon": "quicreate:creative_alloy",
+  "x": 1,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "quicreate:creative_alloy"
+      },
+      "title": "book.quicreate.skyblock.creative.quicreate_complete.spot.title",
+      "text": "book.quicreate.skyblock.creative.quicreate_complete.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.quicreate_complete.how.p0",
+      "title": "book.quicreate.skyblock.creative.quicreate_complete.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.quicreate_complete.done.p0",
+      "title": "book.quicreate.skyblock.creative.quicreate_complete.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/quicreate_complete",
+        "tooltip": "book.quicreate.skyblock.creative.quicreate_complete.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:creative/creative_casing"
+    },
+    {
+      "entry": "quicreate:creative/creative_motor"
+    },
+    {
+      "entry": "quicreate:creative/creative_blaze_cake"
+    },
+    {
+      "entry": "quicreate:creative/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/creative_casing",
+        "tooltip": "book.quicreate.skyblock.tooltip.creative_casing"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/creative_motor",
+        "tooltip": "book.quicreate.skyblock.tooltip.creative_motor"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/creative_blaze_cake",
+        "tooltip": "book.quicreate.skyblock.tooltip.creative_blaze_cake"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ender_dragon",
+        "tooltip": "book.quicreate.skyblock.tooltip.ender_dragon"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

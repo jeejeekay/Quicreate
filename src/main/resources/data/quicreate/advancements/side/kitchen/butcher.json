@@ -1,0 +1,100 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:cooked_beef"
+    },
+    "title": {
+      "text": "Hearty meals"
+    },
+    "description": {
+      "text": "Animals from card packs give real food. Cook one of each."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "cooked_beef": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cooked_beef"
+            ]
+          }
+        ]
+      }
+    },
+    "cooked_porkchop": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cooked_porkchop"
+            ]
+          }
+        ]
+      }
+    },
+    "cooked_chicken": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cooked_chicken"
+            ]
+          }
+        ]
+      }
+    },
+    "cooked_mutton": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cooked_mutton"
+            ]
+          }
+        ]
+      }
+    },
+    "baked_potato": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:baked_potato"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cooked_beef"
+    ],
+    [
+      "cooked_porkchop"
+    ],
+    [
+      "cooked_chicken"
+    ],
+    [
+      "cooked_mutton"
+    ],
+    [
+      "baked_potato"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/butcher"
+  }
+}

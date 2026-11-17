@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.precision_mechanism.name",
+  "description": "book.quicreate.skyblock.new_age.precision_mechanism.desc",
+  "icon": "create:precision_mechanism",
+  "x": -5,
+  "y": 7,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:precision_mechanism"
+      },
+      "title": "book.quicreate.skyblock.new_age.precision_mechanism.spot.title",
+      "text": "book.quicreate.skyblock.new_age.precision_mechanism.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.precision_mechanism.how.p0",
+      "title": "book.quicreate.skyblock.new_age.precision_mechanism.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.precision_mechanism.done.p0",
+      "title": "book.quicreate.skyblock.new_age.precision_mechanism.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/precision_mechanism",
+        "tooltip": "book.quicreate.skyblock.new_age.precision_mechanism.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/deployer"
+    },
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/deployer",
+    "tooltip": "book.quicreate.skyblock.tooltip.deployer"
+  },
+  "show_when_any_parent_unlocked": true
+}

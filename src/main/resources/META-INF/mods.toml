@@ -176,3 +176,10 @@ side="BOTH"
 # stop your mod loading on the server for ctacompatabilitythings.
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"
+
+[[dependencies.${mod_id}]]
+modId="modonomicon"
+mandatory=false
+versionRange="[1.79,)"
+ordering="AFTER"
+side="BOTH"

@@ -1,0 +1,33 @@
+{
+  "parent": "quicreate:skyblock/ruined_citadel",
+  "display": {
+    "icon": {
+      "item": "cataclysm:gauntlet_of_guard"
+    },
+    "title": {
+      "text": "Ender Guardian"
+    },
+    "description": {
+      "text": "Optional boss"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:ender_guardian"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

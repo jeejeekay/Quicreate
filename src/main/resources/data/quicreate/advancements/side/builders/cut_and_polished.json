@@ -1,0 +1,115 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "create:cut_limestone"
+    },
+    "title": {
+      "text": "Cut & polished"
+    },
+    "description": {
+      "text": "Put a stone on a stonecutter or a mechanical saw for cut and polished blocks."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "cut_limestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:cut_limestone"
+            ]
+          }
+        ]
+      }
+    },
+    "polished_cut_limestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:polished_cut_limestone"
+            ]
+          }
+        ]
+      }
+    },
+    "cut_scoria": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:cut_scoria"
+            ]
+          }
+        ]
+      }
+    },
+    "cut_andesite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:cut_andesite"
+            ]
+          }
+        ]
+      }
+    },
+    "cut_diorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:cut_diorite"
+            ]
+          }
+        ]
+      }
+    },
+    "cut_granite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:cut_granite"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cut_limestone"
+    ],
+    [
+      "polished_cut_limestone"
+    ],
+    [
+      "cut_scoria"
+    ],
+    [
+      "cut_andesite"
+    ],
+    [
+      "cut_diorite"
+    ],
+    [
+      "cut_granite"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/builders/cut_and_polished"
+  }
+}

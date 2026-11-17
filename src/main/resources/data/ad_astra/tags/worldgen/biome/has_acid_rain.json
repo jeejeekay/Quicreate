@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "quicreate:venus_sandstone_dunes", "required": false },
+    { "id": "quicreate:venus_fungal_forest", "required": false }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:electricity",
+  "name": "book.quicreate.skyblock.electricity.blaze_powder.name",
+  "description": "book.quicreate.skyblock.electricity.blaze_powder.desc",
+  "icon": "minecraft:blaze_powder",
+  "x": 2,
+  "y": 4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:blaze_powder"
+      },
+      "title": "book.quicreate.skyblock.electricity.blaze_powder.spot.title",
+      "text": "book.quicreate.skyblock.electricity.blaze_powder.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.blaze_powder.how.p0",
+      "title": "book.quicreate.skyblock.electricity.blaze_powder.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "minecraft:blaze_powder",
+      "text": "book.quicreate.skyblock.electricity.blaze_powder.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.blaze_powder.done.p0",
+      "title": "book.quicreate.skyblock.electricity.blaze_powder.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/blaze_powder",
+        "tooltip": "book.quicreate.skyblock.electricity.blaze_powder.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:electricity/energizer"
+    },
+    {
+      "entry": "quicreate:electricity/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/energizer",
+    "tooltip": "book.quicreate.skyblock.tooltip.energizer"
+  },
+  "show_when_any_parent_unlocked": true
+}

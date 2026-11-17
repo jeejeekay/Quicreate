@@ -1,0 +1,43 @@
+{
+  "category": "quicreate:sky",
+  "name": "book.quicreate.skyblock.sky.vein_mine_logs.name",
+  "description": "book.quicreate.skyblock.sky.vein_mine_logs.desc",
+  "icon": "minecraft:oak_log",
+  "x": -1,
+  "y": -6,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "tag": "minecraft:logs"
+      },
+      "title": "book.quicreate.skyblock.sky.vein_mine_logs.spot.title",
+      "text": "book.quicreate.skyblock.sky.vein_mine_logs.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sky.vein_mine_logs.how.p0",
+      "title": "book.quicreate.skyblock.sky.vein_mine_logs.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sky.vein_mine_logs.done.p0",
+      "title": "book.quicreate.skyblock.sky.vein_mine_logs.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/vein_mine_logs",
+        "tooltip": "book.quicreate.skyblock.sky.vein_mine_logs.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sky/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,41 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.nuclear.name",
+  "icon": "create_new_age:reactor_rod",
+  "x": 2,
+  "y": 1,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.nuclear.c0.p0",
+      "title": "book.quicreate.skyblock.field.nuclear.c0.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "quicreate:reactor",
+      "multiblock_name": "book.quicreate.skyblock.field.nuclear.c1.name",
+      "text": "book.quicreate.skyblock.field.nuclear.c1.text",
+      "show_visualize_button": true
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.nuclear.c2.p0",
+      "title": "book.quicreate.skyblock.field.nuclear.c2.title"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/nuclear_fuel",
+    "tooltip": "book.quicreate.skyblock.field.nuclear.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

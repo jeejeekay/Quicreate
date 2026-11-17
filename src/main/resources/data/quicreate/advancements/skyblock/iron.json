@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mesh",
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_nugget"
+    },
+    "title": {
+      "text": "Iron"
+    },
+    "description": {
+      "text": "Sift sand with a string or andesite mesh"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 27,
+        "item": "minecraft:iron_nugget"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

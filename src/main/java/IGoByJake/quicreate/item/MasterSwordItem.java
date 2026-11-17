@@ -46,7 +46,7 @@ public class MasterSwordItem extends SwordItem {
             boolean mining = player.pick(4.5D, 0.0F, false).getType() == HitResult.Type.BLOCK;
             if (fullyCharged && fullHealth && !mining) {
                 SwordBeamEntity beam = new SwordBeamEntity(player.level(), player);
-                beam.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.6F, 0.0F);
+                beam.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, SwordBeamEntity.SPEED, 0.0F);
                 player.level().addFreshEntity(beam);
                 player.level().playSound(null, player.getX(), player.getY(), player.getZ(),
                         SoundEvents.AMETHYST_BLOCK_RESONATE, SoundSource.PLAYERS, 0.9F, 1.6F);

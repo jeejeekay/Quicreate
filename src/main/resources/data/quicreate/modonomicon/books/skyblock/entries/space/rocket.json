@@ -1,0 +1,74 @@
+{
+  "category": "quicreate:space",
+  "name": "book.quicreate.skyblock.space.rocket.name",
+  "description": "book.quicreate.skyblock.space.rocket.desc",
+  "icon": "ad_astra:tier_1_rocket",
+  "x": -1,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:tier_1_rocket"
+      },
+      "title": "book.quicreate.skyblock.space.rocket.spot.title",
+      "text": "book.quicreate.skyblock.space.rocket.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.rocket.how.p0",
+      "title": "book.quicreate.skyblock.space.rocket.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.rocket.done.p0",
+      "title": "book.quicreate.skyblock.space.rocket.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/rocket",
+        "tooltip": "book.quicreate.skyblock.space.rocket.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:space/rocket_parts"
+    },
+    {
+      "entry": "quicreate:space/steel_engine",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:space/nasa_workbench",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:space/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/rocket_parts",
+        "tooltip": "book.quicreate.skyblock.tooltip.rocket_parts"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/steel_engine",
+        "tooltip": "book.quicreate.skyblock.tooltip.steel_engine"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/nasa_workbench",
+        "tooltip": "book.quicreate.skyblock.tooltip.nasa_workbench"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,52 @@
+{
+  "category": "quicreate:electricity",
+  "name": "book.quicreate.skyblock.electricity.carbon_brush.name",
+  "description": "book.quicreate.skyblock.electricity.carbon_brush.desc",
+  "icon": "create_new_age:carbon_brushes",
+  "x": 2,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:carbon_brushes"
+      },
+      "title": "book.quicreate.skyblock.electricity.carbon_brush.spot.title",
+      "text": "book.quicreate.skyblock.electricity.carbon_brush.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.carbon_brush.how.p0",
+      "title": "book.quicreate.skyblock.electricity.carbon_brush.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.carbon_brush.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.electricity.carbon_brush.done.p0",
+      "title": "book.quicreate.skyblock.electricity.carbon_brush.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/carbon_brush",
+        "tooltip": "book.quicreate.skyblock.electricity.carbon_brush.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/sheets",
+    "tooltip": "book.quicreate.skyblock.tooltip.sheets"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:electricity/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

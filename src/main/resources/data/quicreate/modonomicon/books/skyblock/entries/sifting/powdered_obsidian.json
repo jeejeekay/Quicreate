@@ -1,0 +1,55 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.powdered_obsidian.name",
+  "description": "book.quicreate.skyblock.sifting.powdered_obsidian.desc",
+  "icon": "create:powdered_obsidian",
+  "x": 2,
+  "y": -5,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:powdered_obsidian"
+      },
+      "title": "book.quicreate.skyblock.sifting.powdered_obsidian.spot.title",
+      "text": "book.quicreate.skyblock.sifting.powdered_obsidian.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.powdered_obsidian.how.p0",
+      "title": "book.quicreate.skyblock.sifting.powdered_obsidian.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.powdered_obsidian.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.powdered_obsidian.done.p0",
+      "title": "book.quicreate.skyblock.sifting.powdered_obsidian.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/powdered_obsidian",
+        "tooltip": "book.quicreate.skyblock.sifting.powdered_obsidian.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/brass_mesh"
+    },
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/brass_mesh",
+    "tooltip": "book.quicreate.skyblock.tooltip.brass_mesh"
+  },
+  "show_when_any_parent_unlocked": true
+}

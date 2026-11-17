@@ -1,0 +1,55 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.void_core.name",
+  "description": "book.quicreate.skyblock.moon.void_core.desc",
+  "icon": "cataclysm:void_core",
+  "x": -13,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:void_core"
+      },
+      "title": "book.quicreate.skyblock.moon.void_core.spot.title",
+      "text": "book.quicreate.skyblock.moon.void_core.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.void_core.how.p0",
+      "title": "book.quicreate.skyblock.moon.void_core.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.void_core.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.void_core.done.p0",
+      "title": "book.quicreate.skyblock.moon.void_core.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/void_core",
+        "tooltip": "book.quicreate.skyblock.moon.void_core.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/ruined_citadel"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/ruined_citadel",
+    "tooltip": "book.quicreate.skyblock.tooltip.ruined_citadel"
+  },
+  "show_when_any_parent_unlocked": true
+}

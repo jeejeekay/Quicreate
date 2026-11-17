@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/heater",
+  "display": {
+    "icon": {
+      "item": "create:basin"
+    },
+    "title": {
+      "text": "Basin"
+    },
+    "description": {
+      "text": "1 Basin"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create:basin"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

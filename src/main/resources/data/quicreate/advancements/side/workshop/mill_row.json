@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "create:millstone"
+    },
+    "title": {
+      "text": "Mill row"
+    },
+    "description": {
+      "text": "One millstone is slow. Four in a row, fed by a belt, keeps the sifters busy."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "have": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "item": "create:millstone",
+        "count": 4
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/workshop/mill_row"
+  }
+}

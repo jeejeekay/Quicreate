@@ -1,0 +1,100 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "quicreate:andesite_extruder"
+    },
+    "title": {
+      "text": "Extruded stones"
+    },
+    "description": {
+      "text": "The Andesite Extruder rolls these now and then. Keep one of each."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "tuff": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:tuff"
+            ]
+          }
+        ]
+      }
+    },
+    "calcite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:calcite"
+            ]
+          }
+        ]
+      }
+    },
+    "cobbled_deepslate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobbled_deepslate"
+            ]
+          }
+        ]
+      }
+    },
+    "limestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:limestone"
+            ]
+          }
+        ]
+      }
+    },
+    "scoria": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:scoria"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tuff"
+    ],
+    [
+      "calcite"
+    ],
+    [
+      "cobbled_deepslate"
+    ],
+    [
+      "limestone"
+    ],
+    [
+      "scoria"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/builders/extruded"
+  }
+}

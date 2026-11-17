@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/connector",
+  "display": {
+    "icon": {
+      "item": "create_new_age:basic_energiser"
+    },
+    "title": {
+      "text": "Energizer"
+    },
+    "description": {
+      "text": "1 Basic Energiser"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create_new_age:basic_energiser"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

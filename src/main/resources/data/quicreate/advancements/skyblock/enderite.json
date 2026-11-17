@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/netherite",
+  "display": {
+    "icon": {
+      "item": "quicreate:enderite_ingot"
+    },
+    "title": {
+      "text": "Enderite"
+    },
+    "description": {
+      "text": "Netherite, void core and void steel"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "quicreate:enderite_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

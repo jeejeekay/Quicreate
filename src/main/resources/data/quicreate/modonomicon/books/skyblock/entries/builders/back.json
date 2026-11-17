@@ -1,0 +1,10 @@
+{
+  "category": "quicreate:builders",
+  "name": "book.quicreate.skyblock.side.back.builders",
+  "icon": "minecraft:compass",
+  "x": -10,
+  "y": -5,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category_to_open": "quicreate:side_paths"
+}

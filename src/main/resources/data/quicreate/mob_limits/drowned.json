@@ -1,0 +1,5 @@
+{
+  "entity": "minecraft:drowned",
+  "max": 3,
+  "radius": 128
+}

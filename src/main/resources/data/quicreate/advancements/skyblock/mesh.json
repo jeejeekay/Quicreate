@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/sifter",
+  "display": {
+    "icon": {
+      "item": "createsifter:string_mesh"
+    },
+    "title": {
+      "text": "Mesh"
+    },
+    "description": {
+      "text": "Different sifted blocks give different resources!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "createsifter:string_mesh"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

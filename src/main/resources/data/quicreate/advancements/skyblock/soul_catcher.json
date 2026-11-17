@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/ancient_metal_circuit",
+  "display": {
+    "icon": {
+      "item": "create_mob_spawners:empty_soul_catcher"
+    },
+    "title": {
+      "text": "Soul Catcher"
+    },
+    "description": {
+      "text": "Optional automation"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create_mob_spawners:empty_soul_catcher"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

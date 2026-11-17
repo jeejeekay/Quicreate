@@ -1,0 +1,46 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.planet_venus.name",
+  "icon": "ad_astra:venus_globe",
+  "x": 8,
+  "y": -3,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:image",
+      "images": [
+        "quicreate:textures/gui/book/planet/venus.png"
+      ],
+      "title": "book.quicreate.skyblock.field.planet_venus.ititle",
+      "text": "book.quicreate.skyblock.field.planet_venus.itext",
+      "border": true
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.planet_venus.info.p0",
+      "title": "book.quicreate.skyblock.field.planet_venus.info.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.planet_venus.info.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.planet_venus.info.p2"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/venus_landing",
+    "tooltip": "book.quicreate.skyblock.field.planet_venus.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

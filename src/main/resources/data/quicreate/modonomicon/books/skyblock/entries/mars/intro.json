@@ -1,0 +1,78 @@
+{
+  "category": "quicreate:mars",
+  "name": "book.quicreate.skyblock.mars.intro.name",
+  "description": "book.quicreate.skyblock.mars.intro.desc",
+  "icon": "minecraft:writable_book",
+  "x": -2,
+  "y": -8,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.overview.p0",
+      "title": "book.quicreate.skyblock.mars.intro.overview.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.overview.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.overview.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.tips.p0",
+      "title": "book.quicreate.skyblock.mars.intro.tips.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.tips.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.mat.p0",
+      "title": "book.quicreate.skyblock.mars.intro.mat.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.mat.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.mat.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.s0.p0",
+      "title": "book.quicreate.skyblock.mars.intro.s0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.s0.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.s1.p0",
+      "title": "book.quicreate.skyblock.mars.intro.s1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.s1.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.s1.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.s2.p0",
+      "title": "book.quicreate.skyblock.mars.intro.s2.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.intro.s2.p1"
+    }
+  ]
+}

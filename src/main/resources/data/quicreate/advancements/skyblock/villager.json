@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/card_packs",
+  "display": {
+    "icon": {
+      "item": "minecraft:villager_spawn_egg"
+    },
+    "title": {
+      "text": "Villagers"
+    },
+    "description": {
+      "text": "From rare packs"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "minecraft:villager_spawn_egg"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

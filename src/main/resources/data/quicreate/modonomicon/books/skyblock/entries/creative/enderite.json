@@ -1,0 +1,63 @@
+{
+  "category": "quicreate:creative",
+  "name": "book.quicreate.skyblock.creative.enderite.name",
+  "description": "book.quicreate.skyblock.creative.enderite.desc",
+  "icon": "quicreate:enderite_ingot",
+  "x": 6,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "quicreate:enderite_ingot"
+      },
+      "title": "book.quicreate.skyblock.creative.enderite.spot.title",
+      "text": "book.quicreate.skyblock.creative.enderite.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.enderite.how.p0",
+      "title": "book.quicreate.skyblock.creative.enderite.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.enderite.done.p0",
+      "title": "book.quicreate.skyblock.creative.enderite.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/enderite",
+        "tooltip": "book.quicreate.skyblock.creative.enderite.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/netherite",
+        "tooltip": "book.quicreate.skyblock.tooltip.netherite"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/void_core",
+        "tooltip": "book.quicreate.skyblock.tooltip.void_core"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/void_steel",
+        "tooltip": "book.quicreate.skyblock.tooltip.void_steel"
+      }
+    ]
+  },
+  "parents": [
+    {
+      "entry": "quicreate:creative/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

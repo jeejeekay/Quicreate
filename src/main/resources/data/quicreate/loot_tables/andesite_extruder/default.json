@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cobblestone",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:andesite",
+          "weight": 12
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diorite",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:granite",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:limestone",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:scoria",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tuff",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:calcite",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cobbled_deepslate",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

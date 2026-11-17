@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:venus_stone",
+          "weight": 35
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:venus_cobblestone",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:venus_sand",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:venus_sandstone",
+          "weight": 15
+        }
+      ]
+    }
+  ]
+}

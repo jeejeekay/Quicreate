@@ -1,0 +1,76 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.copper_circuit.name",
+  "description": "book.quicreate.skyblock.improvements.copper_circuit.desc",
+  "icon": "create_new_age:copper_circuit",
+  "x": 3,
+  "y": -4,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:copper_circuit"
+      },
+      "title": "book.quicreate.skyblock.improvements.copper_circuit.spot.title",
+      "text": "book.quicreate.skyblock.improvements.copper_circuit.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.copper_circuit.how.p0",
+      "title": "book.quicreate.skyblock.improvements.copper_circuit.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.copper_circuit.done.p0",
+      "title": "book.quicreate.skyblock.improvements.copper_circuit.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/copper_circuit",
+        "tooltip": "book.quicreate.skyblock.improvements.copper_circuit.donetip"
+      }
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.copper_circuit.done.p1",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/copper_circuit",
+        "tooltip": "book.quicreate.skyblock.improvements.copper_circuit.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/blank_circuit",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/blank_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.blank_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/overcharged_iron",
+        "tooltip": "book.quicreate.skyblock.tooltip.overcharged_iron"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/quartz",
+        "tooltip": "book.quicreate.skyblock.tooltip.quartz"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

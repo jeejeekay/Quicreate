@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/rocket_parts",
+  "display": {
+    "icon": {
+      "item": "ad_astra:tier_1_rocket"
+    },
+    "title": {
+      "text": "Rocket"
+    },
+    "description": {
+      "text": "Built in the NASA Workbench"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:tier_1_rocket"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

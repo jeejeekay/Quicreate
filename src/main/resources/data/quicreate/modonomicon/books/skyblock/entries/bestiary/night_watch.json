@@ -1,0 +1,39 @@
+{
+  "category": "quicreate:bestiary",
+  "name": "book.quicreate.skyblock.side.bestiary.night_watch.name",
+  "description": "book.quicreate.skyblock.side.bestiary.night_watch.desc",
+  "icon": "minecraft:zombie_head",
+  "x": -7,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.night_watch.p.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.night_watch.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.bestiary.night_watch.done.p0",
+      "title": "book.quicreate.skyblock.side.bestiary.night_watch.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/bestiary/night_watch",
+        "tooltip": "book.quicreate.skyblock.side.bestiary.night_watch.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:bestiary/stage0",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:bestiary/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

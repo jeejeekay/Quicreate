@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/amethyst_circuit",
+  "display": {
+    "icon": {
+      "item": "smartcrafter:smart_crafter"
+    },
+    "title": {
+      "text": "Smart Crafter"
+    },
+    "description": {
+      "text": "Optional automation"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "smartcrafter:smart_crafter"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "ad_astra:moon_globe"
+    },
+    "title": {
+      "text": "Biomes of The Moon"
+    },
+    "description": {
+      "text": "Set foot in every biome on The Moon."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "lunar_wastelands": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "ad_astra:lunar_wastelands"
+          }
+        }
+      }
+    },
+    "lunar_cratered_maria": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "quicreate:lunar_cratered_maria"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lunar_wastelands"
+    ],
+    [
+      "lunar_cratered_maria"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/moon_biomes"
+  }
+}

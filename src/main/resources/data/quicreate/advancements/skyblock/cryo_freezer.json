@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/glacio_landing",
+  "display": {
+    "icon": {
+      "item": "ad_astra:cryo_freezer"
+    },
+    "title": {
+      "text": "Cryo Freezer"
+    },
+    "description": {
+      "text": "Ice into cryo fuel"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:cryo_freezer"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.fuel_inserter.name",
+  "description": "book.quicreate.skyblock.improvements.fuel_inserter.desc",
+  "icon": "create_new_age:reactor_fuel_acceptor",
+  "x": 5,
+  "y": 4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:reactor_fuel_acceptor"
+      },
+      "title": "book.quicreate.skyblock.improvements.fuel_inserter.spot.title",
+      "text": "book.quicreate.skyblock.improvements.fuel_inserter.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.fuel_inserter.how.p0",
+      "title": "book.quicreate.skyblock.improvements.fuel_inserter.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.fuel_inserter.done.p0",
+      "title": "book.quicreate.skyblock.improvements.fuel_inserter.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/fuel_inserter",
+        "tooltip": "book.quicreate.skyblock.improvements.fuel_inserter.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/emerald_circuit"
+    },
+    {
+      "entry": "quicreate:improvements/reactor_case",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/emerald_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.emerald_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/reactor_case",
+        "tooltip": "book.quicreate.skyblock.tooltip.reactor_case"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

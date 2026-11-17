@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/emerald_circuit",
+  "display": {
+    "icon": {
+      "item": "quicreate:amethyst_circuit"
+    },
+    "title": {
+      "text": "Amethyst Circuit"
+    },
+    "description": {
+      "text": "Overcharged diamond wire and emerald circuits"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "quicreate:amethyst_circuit"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

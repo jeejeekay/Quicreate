@@ -1,0 +1,7 @@
+{
+  "name": "book.quicreate.skyblock.cat.workshop",
+  "icon": "create:brass_casing",
+  "sort_number": 30,
+  "show_category_button": false,
+  "background": "quicreate:textures/gui/book/tiled/andesite_casing.png"
+}

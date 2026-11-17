@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/lava",
+  "display": {
+    "icon": {
+      "item": "ad_astra:steel_ingot"
+    },
+    "title": {
+      "text": "Steel"
+    },
+    "description": {
+      "text": "Iron + coal in a superheated mixer"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 32,
+        "item": "ad_astra:steel_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

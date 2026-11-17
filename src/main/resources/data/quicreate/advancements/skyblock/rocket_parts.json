@@ -1,0 +1,42 @@
+{
+  "parent": "quicreate:skyblock/steel_plates",
+  "display": {
+    "icon": {
+      "item": "ad_astra:rocket_nose_cone"
+    },
+    "title": {
+      "text": "Nose Cone & Fins"
+    },
+    "description": {
+      "text": "1 Rocket Nose Cone, 4 Rocket Fin"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:rocket_nose_cone"
+      }
+    },
+    "task1": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "ad_astra:rocket_fin"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ],
+    [
+      "task1"
+    ]
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "book.quicreate.skyblock.name",
+  "tooltip": "book.quicreate.skyblock.tooltip",
+  "model": "modonomicon:modonomicon_blue",
+  "generate_book_item": true,
+  "default_title_color": 2832981,
+  "auto_add_read_conditions": false
+}

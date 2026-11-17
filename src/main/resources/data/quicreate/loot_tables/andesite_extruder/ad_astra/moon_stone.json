@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:moon_stone",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:moon_cobblestone",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:moon_sand",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ad_astra:moon_deepslate",
+          "weight": 10
+        }
+      ]
+    }
+  ]
+}

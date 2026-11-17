@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/motors",
+  "display": {
+    "icon": {
+      "item": "create_new_age:basic_motor_extension"
+    },
+    "title": {
+      "text": "Motor Extension"
+    },
+    "description": {
+      "text": "The motor extension will multiply the maximum SU output of a motor"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create_new_age:basic_motor_extension"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

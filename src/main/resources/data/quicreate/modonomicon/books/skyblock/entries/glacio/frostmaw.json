@@ -1,0 +1,50 @@
+{
+  "category": "quicreate:glacio",
+  "name": "book.quicreate.skyblock.glacio.frostmaw.name",
+  "description": "book.quicreate.skyblock.glacio.frostmaw.desc",
+  "icon": "mowziesmobs:music_disc_petiole",
+  "x": 2,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "mowziesmobs:frostmaw",
+      "name": "book.quicreate.skyblock.glacio.frostmaw.ename",
+      "text": "book.quicreate.skyblock.glacio.frostmaw.etext",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.frostmaw.how.p0",
+      "title": "book.quicreate.skyblock.glacio.frostmaw.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.frostmaw.done.p0",
+      "title": "book.quicreate.skyblock.glacio.frostmaw.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/frostmaw",
+        "tooltip": "book.quicreate.skyblock.glacio.frostmaw.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:glacio/glacio_landing"
+    },
+    {
+      "entry": "quicreate:glacio/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/glacio_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.glacio_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

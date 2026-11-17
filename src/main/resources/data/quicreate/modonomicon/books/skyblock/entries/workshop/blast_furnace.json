@@ -1,0 +1,62 @@
+{
+  "category": "quicreate:workshop",
+  "name": "book.quicreate.skyblock.side.workshop.blast_furnace.name",
+  "description": "book.quicreate.skyblock.side.workshop.blast_furnace.desc",
+  "icon": "ad_astra:etrionic_blast_furnace",
+  "x": 5,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:etrionic_blast_furnace"
+      },
+      "title": "book.quicreate.skyblock.side.workshop.blast_furnace.s.title",
+      "text": "book.quicreate.skyblock.side.workshop.blast_furnace.s.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.workshop.blast_furnace.l.p0",
+      "title": "book.quicreate.skyblock.side.workshop.blast_furnace.l.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.workshop.blast_furnace.done.p0",
+      "title": "book.quicreate.skyblock.side.workshop.blast_furnace.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/workshop/blast_furnace",
+        "tooltip": "book.quicreate.skyblock.side.workshop.blast_furnace.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:workshop/stage4",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:workshop/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:or",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/venus_landing",
+        "tooltip": "book.quicreate.skyblock.stage.4.venus_landing"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mercury_landing",
+        "tooltip": "book.quicreate.skyblock.stage.4.mercury_landing"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

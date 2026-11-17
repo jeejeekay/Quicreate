@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "balancedflight:flight_anchor"
+    },
+    "title": {
+      "text": "Flight Anchor"
+    },
+    "description": {
+      "text": "Creative flight near your base"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "balancedflight:flight_anchor"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/workshop/flight_anchor"
+  }
+}

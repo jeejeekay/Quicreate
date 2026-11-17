@@ -1,0 +1,52 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.heat_pipes.name",
+  "description": "book.quicreate.skyblock.new_age.heat_pipes.desc",
+  "icon": "create_new_age:heat_pipe",
+  "x": -3,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:heat_pipe"
+      },
+      "title": "book.quicreate.skyblock.new_age.heat_pipes.spot.title",
+      "text": "book.quicreate.skyblock.new_age.heat_pipes.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.heat_pipes.how.p0",
+      "title": "book.quicreate.skyblock.new_age.heat_pipes.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.heat_pipes.done.p0",
+      "title": "book.quicreate.skyblock.new_age.heat_pipes.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/heat_pipes",
+        "tooltip": "book.quicreate.skyblock.new_age.heat_pipes.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/heater",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/heater",
+    "tooltip": "book.quicreate.skyblock.tooltip.heater"
+  },
+  "show_when_any_parent_unlocked": true
+}

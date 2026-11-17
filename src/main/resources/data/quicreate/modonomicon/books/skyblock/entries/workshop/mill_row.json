@@ -1,0 +1,39 @@
+{
+  "category": "quicreate:workshop",
+  "name": "book.quicreate.skyblock.side.workshop.mill_row.name",
+  "description": "book.quicreate.skyblock.side.workshop.mill_row.desc",
+  "icon": "create:millstone",
+  "x": -7,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.workshop.mill_row.p.p0",
+      "title": "book.quicreate.skyblock.side.workshop.mill_row.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.workshop.mill_row.done.p0",
+      "title": "book.quicreate.skyblock.side.workshop.mill_row.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/workshop/mill_row",
+        "tooltip": "book.quicreate.skyblock.side.workshop.mill_row.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:workshop/stage0",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:workshop/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

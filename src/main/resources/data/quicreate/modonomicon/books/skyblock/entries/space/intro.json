@@ -1,0 +1,70 @@
+{
+  "category": "quicreate:space",
+  "name": "book.quicreate.skyblock.space.intro.name",
+  "description": "book.quicreate.skyblock.space.intro.desc",
+  "icon": "minecraft:writable_book",
+  "x": -1,
+  "y": -8,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.overview.p0",
+      "title": "book.quicreate.skyblock.space.intro.overview.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.overview.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.overview.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.tips.p0",
+      "title": "book.quicreate.skyblock.space.intro.tips.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.mat.p0",
+      "title": "book.quicreate.skyblock.space.intro.mat.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.mat.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.mat.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.s0.p0",
+      "title": "book.quicreate.skyblock.space.intro.s0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.s0.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.s1.p0",
+      "title": "book.quicreate.skyblock.space.intro.s1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.s1.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.s2.p0",
+      "title": "book.quicreate.skyblock.space.intro.s2.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.intro.s2.p1"
+    }
+  ]
+}

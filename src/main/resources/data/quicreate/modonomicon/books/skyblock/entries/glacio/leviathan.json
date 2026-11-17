@@ -1,0 +1,54 @@
+{
+  "category": "quicreate:glacio",
+  "name": "book.quicreate.skyblock.glacio.leviathan.name",
+  "description": "book.quicreate.skyblock.glacio.leviathan.desc",
+  "icon": "cataclysm:abyssal_egg",
+  "x": -6,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:the_leviathan",
+      "name": "book.quicreate.skyblock.glacio.leviathan.ename",
+      "text": "book.quicreate.skyblock.glacio.leviathan.etext",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.leviathan.how.p0",
+      "title": "book.quicreate.skyblock.glacio.leviathan.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.leviathan.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.leviathan.done.p0",
+      "title": "book.quicreate.skyblock.glacio.leviathan.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/leviathan",
+        "tooltip": "book.quicreate.skyblock.glacio.leviathan.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:glacio/sunken_city"
+    },
+    {
+      "entry": "quicreate:glacio/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/sunken_city",
+    "tooltip": "book.quicreate.skyblock.tooltip.sunken_city"
+  },
+  "show_when_any_parent_unlocked": true
+}

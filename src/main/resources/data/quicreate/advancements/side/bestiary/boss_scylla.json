@@ -1,0 +1,36 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "cataclysm:music_disc_scylla"
+    },
+    "title": {
+      "text": "Scylla"
+    },
+    "description": {
+      "text": "Boss"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "kill": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:scylla"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/bestiary/boss_scylla"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "ad_astra:etrionic_blast_furnace"
+    },
+    "title": {
+      "text": "Etrionic Blast Furnace"
+    },
+    "description": {
+      "text": "Alloying, including boss-ingot doubling"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:etrionic_blast_furnace"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/workshop/blast_furnace"
+  }
+}

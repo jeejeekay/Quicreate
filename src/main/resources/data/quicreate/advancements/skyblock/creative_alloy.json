@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/cursium",
+  "display": {
+    "icon": {
+      "item": "quicreate:creative_alloy"
+    },
+    "title": {
+      "text": "Creative Alloy"
+    },
+    "description": {
+      "text": "Cursium, ignitium, witherite and the essence of the storm"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "quicreate:creative_alloy"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

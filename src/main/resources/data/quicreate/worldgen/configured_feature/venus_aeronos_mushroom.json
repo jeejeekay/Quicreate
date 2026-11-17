@@ -1,0 +1,61 @@
+{
+  "type": "quicreate:giant_mushroom",
+  "config": {
+    "stem_height": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 8,
+        "max_inclusive": 13
+      }
+    },
+    "stem_radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 0.9,
+        "max_exclusive": 1.4
+      }
+    },
+    "bend": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 0.0,
+        "max_exclusive": 2.5
+      }
+    },
+    "cap_radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 4.0,
+        "max_exclusive": 6.5
+      }
+    },
+    "cap_height": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 3.0,
+        "max_exclusive": 4.5
+      }
+    },
+    "cap_shape": "dome",
+    "stem": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "ad_astra:aeronos_stem"
+      }
+    },
+    "cap": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "ad_astra:aeronos_cap"
+      }
+    },
+    "underside": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:shroomlight"
+      }
+    },
+    "underside_chance": 0.06,
+    "sink": 2
+  }
+}

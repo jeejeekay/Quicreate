@@ -1,0 +1,33 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "B C"
+    ],
+    [
+      "0  "
+    ]
+  ],
+  "mapping": {
+    "A": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:basic_motor[facing=west]",
+      "block": "create_new_age:basic_motor[facing=west]"
+    },
+    "B": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:electrical_connector[facing=up,mode=inert]",
+      "block": "create_new_age:electrical_connector[facing=up,mode=inert]"
+    },
+    "C": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:electrical_connector[facing=west,mode=inert]",
+      "block": "create_new_age:electrical_connector[facing=west,mode=inert]"
+    },
+    "0": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:basic_motor[facing=west]",
+      "block": "create_new_age:basic_motor[facing=west]"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:limestone",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:scoria",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:scorchia",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dripstone_block",
+          "weight": 15
+        }
+      ]
+    }
+  ]
+}

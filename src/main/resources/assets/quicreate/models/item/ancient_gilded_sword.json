@@ -2,5 +2,8 @@
   "parent": "minecraft:item/handheld",
   "textures": {
     "layer0": "quicreate:item/ancient_gilded_sword"
-  }
+  },
+  "overrides": [
+    { "predicate": { "quicreate:blocking": 1 }, "model": "quicreate:item/ancient_gilded_sword_blocking" }
+  ]
 }

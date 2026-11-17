@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/energizer",
+  "display": {
+    "icon": {
+      "item": "create_new_age:reactor_casing"
+    },
+    "title": {
+      "text": "Reactor Case"
+    },
+    "description": {
+      "text": "Energise bricks, add an iron sheet, press"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "item": "create_new_age:reactor_casing"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

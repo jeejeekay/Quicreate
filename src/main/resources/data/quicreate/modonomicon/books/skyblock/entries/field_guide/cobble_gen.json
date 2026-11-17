@@ -1,0 +1,36 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.cobble_gen.name",
+  "icon": "minecraft:cobblestone",
+  "x": -7,
+  "y": -1,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.cobble_gen.c0.p0",
+      "title": "book.quicreate.skyblock.field.cobble_gen.c0.title"
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "quicreate:cobblestone_generator",
+      "multiblock_name": "book.quicreate.skyblock.field.cobble_gen.c1.name",
+      "text": "book.quicreate.skyblock.field.cobble_gen.c1.text",
+      "show_visualize_button": true
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.cobble_gen.c2.p0",
+      "title": "book.quicreate.skyblock.field.cobble_gen.c2.title"
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

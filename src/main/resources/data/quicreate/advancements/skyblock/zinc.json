@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/andesite_mesh",
+  "display": {
+    "icon": {
+      "item": "create:zinc_nugget"
+    },
+    "title": {
+      "text": "Zinc"
+    },
+    "description": {
+      "text": "Sift sand with an andesite mesh"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 27,
+        "item": "create:zinc_nugget"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "create:crushing_wheel"
+    },
+    "title": {
+      "text": "Ore line"
+    },
+    "description": {
+      "text": "Extruder, crushing wheels and a washing fan: endless ore."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "crushing_wheel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:crushing_wheel"
+            ]
+          }
+        ]
+      }
+    },
+    "encased_fan": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:encased_fan"
+            ]
+          }
+        ]
+      }
+    },
+    "crushed_raw_iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:crushed_raw_iron"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushing_wheel"
+    ],
+    [
+      "encased_fan"
+    ],
+    [
+      "crushed_raw_iron"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/workshop/ore_line"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:bread"
+    },
+    "title": {
+      "text": "Baker"
+    },
+    "description": {
+      "text": "Bread, cookies, pie and cake."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "bread": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bread"
+            ]
+          }
+        ]
+      }
+    },
+    "cookie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cookie"
+            ]
+          }
+        ]
+      }
+    },
+    "pumpkin_pie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:pumpkin_pie"
+            ]
+          }
+        ]
+      }
+    },
+    "cake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cake"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bread"
+    ],
+    [
+      "cookie"
+    ],
+    [
+      "pumpkin_pie"
+    ],
+    [
+      "cake"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/baker"
+  }
+}

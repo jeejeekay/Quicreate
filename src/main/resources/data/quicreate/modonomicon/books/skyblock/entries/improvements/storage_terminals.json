@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.storage_terminals.name",
+  "description": "book.quicreate.skyblock.improvements.storage_terminals.desc",
+  "icon": "toms_storage:ts.storage_terminal",
+  "x": 1,
+  "y": 5,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "toms_storage:ts.storage_terminal"
+      },
+      "title": "book.quicreate.skyblock.improvements.storage_terminals.spot.title",
+      "text": "book.quicreate.skyblock.improvements.storage_terminals.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.storage_terminals.how.p0",
+      "title": "book.quicreate.skyblock.improvements.storage_terminals.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "toms_storage:storage_terminal",
+      "text": "book.quicreate.skyblock.improvements.storage_terminals.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.storage_terminals.done.p0",
+      "title": "book.quicreate.skyblock.improvements.storage_terminals.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/storage_terminals",
+        "tooltip": "book.quicreate.skyblock.improvements.storage_terminals.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/emerald_circuit"
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/emerald_circuit",
+    "tooltip": "book.quicreate.skyblock.tooltip.emerald_circuit"
+  },
+  "show_when_any_parent_unlocked": true
+}

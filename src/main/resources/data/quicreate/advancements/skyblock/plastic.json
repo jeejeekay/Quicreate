@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/blaze_powder",
+  "display": {
+    "icon": {
+      "item": "cards:plastic"
+    },
+    "title": {
+      "text": "Plastic"
+    },
+    "description": {
+      "text": "Card bits or oil, plus blaze powder"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "cards:plastic"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

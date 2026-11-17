@@ -1,0 +1,36 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "mowziesmobs:music_disc_petiole"
+    },
+    "title": {
+      "text": "Frostmaw"
+    },
+    "description": {
+      "text": "Boss"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "kill": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "mowziesmobs:frostmaw"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/bestiary/boss_frostmaw"
+  }
+}

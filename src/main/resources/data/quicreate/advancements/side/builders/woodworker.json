@@ -1,0 +1,145 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:oak_log"
+    },
+    "title": {
+      "text": "Woodworker"
+    },
+    "description": {
+      "text": "Saplings from a waterlogged sifter grow every tree. Collect a log of each."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "oak_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:oak_log"
+            ]
+          }
+        ]
+      }
+    },
+    "birch_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:birch_log"
+            ]
+          }
+        ]
+      }
+    },
+    "spruce_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:spruce_log"
+            ]
+          }
+        ]
+      }
+    },
+    "jungle_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:jungle_log"
+            ]
+          }
+        ]
+      }
+    },
+    "acacia_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:acacia_log"
+            ]
+          }
+        ]
+      }
+    },
+    "dark_oak_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dark_oak_log"
+            ]
+          }
+        ]
+      }
+    },
+    "cherry_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cherry_log"
+            ]
+          }
+        ]
+      }
+    },
+    "bamboo_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bamboo_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "oak_log"
+    ],
+    [
+      "birch_log"
+    ],
+    [
+      "spruce_log"
+    ],
+    [
+      "jungle_log"
+    ],
+    [
+      "acacia_log"
+    ],
+    [
+      "dark_oak_log"
+    ],
+    [
+      "cherry_log"
+    ],
+    [
+      "bamboo_block"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/builders/woodworker"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.planet_mars.name",
+  "icon": "ad_astra:mars_globe",
+  "x": 5,
+  "y": -1,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:image",
+      "images": [
+        "quicreate:textures/gui/book/planet/mars.png"
+      ],
+      "title": "book.quicreate.skyblock.field.planet_mars.ititle",
+      "text": "book.quicreate.skyblock.field.planet_mars.itext",
+      "border": true
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.planet_mars.info.p0",
+      "title": "book.quicreate.skyblock.field.planet_mars.info.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.planet_mars.info.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.planet_mars.info.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.planet_mars.info.p3"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mars_landing",
+    "tooltip": "book.quicreate.skyblock.field.planet_mars.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

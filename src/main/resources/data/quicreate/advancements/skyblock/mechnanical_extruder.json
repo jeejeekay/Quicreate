@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/press",
+  "display": {
+    "icon": {
+      "item": "create_mechanical_extruder:mechanical_extruder"
+    },
+    "title": {
+      "text": "Mechanical Extruder"
+    },
+    "description": {
+      "text": "Generator for Cobble and more!"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create_mechanical_extruder:mechanical_extruder"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

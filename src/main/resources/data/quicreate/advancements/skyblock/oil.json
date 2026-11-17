@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/lava",
+  "display": {
+    "icon": {
+      "item": "ad_astra:oil_bucket"
+    },
+    "title": {
+      "text": "Oil"
+    },
+    "description": {
+      "text": "Rubber balls in a superheated mixer"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:oil_bucket"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

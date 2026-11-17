@@ -1,0 +1,70 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.mechanical_crafters.name",
+  "description": "book.quicreate.skyblock.new_age.mechanical_crafters.desc",
+  "icon": "create:mechanical_crafter",
+  "x": 0,
+  "y": 4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:mechanical_crafter"
+      },
+      "title": "book.quicreate.skyblock.new_age.mechanical_crafters.spot.title",
+      "text": "book.quicreate.skyblock.new_age.mechanical_crafters.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.mechanical_crafters.how.p0",
+      "title": "book.quicreate.skyblock.new_age.mechanical_crafters.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "create:crafting/kinetics/mechanical_crafter",
+      "text": "book.quicreate.skyblock.new_age.mechanical_crafters.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.mechanical_crafters.done.p0",
+      "title": "book.quicreate.skyblock.new_age.mechanical_crafters.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/mechanical_crafters",
+        "tooltip": "book.quicreate.skyblock.new_age.mechanical_crafters.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/electron_tube"
+    },
+    {
+      "entry": "quicreate:new_age/brass_casing",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/electron_tube",
+        "tooltip": "book.quicreate.skyblock.tooltip.electron_tube"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/brass_casing",
+        "tooltip": "book.quicreate.skyblock.tooltip.brass_casing"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

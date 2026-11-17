@@ -1,0 +1,52 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.blaze_burner.name",
+  "description": "book.quicreate.skyblock.new_age.blaze_burner.desc",
+  "icon": "create:blaze_burner",
+  "x": -1,
+  "y": -6,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:empty_blaze_burner"
+      },
+      "title": "book.quicreate.skyblock.new_age.blaze_burner.spot.title",
+      "text": "book.quicreate.skyblock.new_age.blaze_burner.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.blaze_burner.how.p0",
+      "title": "book.quicreate.skyblock.new_age.blaze_burner.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.blaze_burner.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "create:crafting/kinetics/empty_blaze_burner",
+      "text": "book.quicreate.skyblock.new_age.blaze_burner.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.blaze_burner.done.p0",
+      "title": "book.quicreate.skyblock.new_age.blaze_burner.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/blaze_burner",
+        "tooltip": "book.quicreate.skyblock.new_age.blaze_burner.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

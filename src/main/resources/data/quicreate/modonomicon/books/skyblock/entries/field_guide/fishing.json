@@ -1,0 +1,33 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.fishing.name",
+  "icon": "quicreate:brass_fishing_rod",
+  "x": -1,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.fishing.a.p0",
+      "title": "book.quicreate.skyblock.field.fishing.a.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.fishing.a.p1"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/sifter",
+    "tooltip": "book.quicreate.skyblock.field.fishing.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

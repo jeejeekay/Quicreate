@@ -1,0 +1,90 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:map"
+    },
+    "title": {
+      "text": "Landmarks of The Moon"
+    },
+    "description": {
+      "text": "Find every landmark on The Moon."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "lunar_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "ad_astra:lunar_tower"
+          }
+        }
+      }
+    },
+    "lunarian_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "ad_astra:lunarian_village"
+          }
+        }
+      }
+    },
+    "moon_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "ad_astra:moon_dungeon"
+          }
+        }
+      }
+    },
+    "ruined_citadel": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:ruined_citadel"
+          }
+        }
+      }
+    },
+    "stronghold": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "minecraft:stronghold"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lunar_tower"
+    ],
+    [
+      "lunarian_village"
+    ],
+    [
+      "moon_dungeon"
+    ],
+    [
+      "ruined_citadel"
+    ],
+    [
+      "stronghold"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/moon_landmarks"
+  }
+}

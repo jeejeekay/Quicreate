@@ -1,0 +1,52 @@
+{
+  "category": "quicreate:mars",
+  "name": "book.quicreate.skyblock.mars.ancient_gilded_sword.name",
+  "description": "book.quicreate.skyblock.mars.ancient_gilded_sword.desc",
+  "icon": "quicreate:ancient_gilded_sword",
+  "x": -5,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "quicreate:ancient_gilded_sword"
+      },
+      "title": "book.quicreate.skyblock.mars.ancient_gilded_sword.spot.title",
+      "text": "book.quicreate.skyblock.mars.ancient_gilded_sword.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_gilded_sword.how.p0",
+      "title": "book.quicreate.skyblock.mars.ancient_gilded_sword.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_gilded_sword.done.p0",
+      "title": "book.quicreate.skyblock.mars.ancient_gilded_sword.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ancient_gilded_sword",
+        "tooltip": "book.quicreate.skyblock.mars.ancient_gilded_sword.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:mars/netherite",
+      "line_enabled": false
+    },
+    {
+      "entry": "quicreate:mars/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/netherite",
+    "tooltip": "book.quicreate.skyblock.tooltip.netherite"
+  },
+  "show_when_any_parent_unlocked": true
+}

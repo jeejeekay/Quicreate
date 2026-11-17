@@ -1,0 +1,60 @@
+{
+  "category": "quicreate:space",
+  "name": "book.quicreate.skyblock.space.space_boots.name",
+  "description": "book.quicreate.skyblock.space.space_boots.desc",
+  "icon": "ad_astra:space_boots",
+  "x": -8,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:space_boots"
+      },
+      "title": "book.quicreate.skyblock.space.space_boots.spot.title",
+      "text": "book.quicreate.skyblock.space.space_boots.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.space_boots.how.p0",
+      "title": "book.quicreate.skyblock.space.space_boots.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.space_boots.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "ad_astra:space_boots",
+      "text": "book.quicreate.skyblock.space.space_boots.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.space_boots.done.p0",
+      "title": "book.quicreate.skyblock.space.space_boots.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/space_boots",
+        "tooltip": "book.quicreate.skyblock.space.space_boots.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:space/steel_plates"
+    },
+    {
+      "entry": "quicreate:space/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/steel_plates",
+    "tooltip": "book.quicreate.skyblock.tooltip.steel_plates"
+  },
+  "show_when_any_parent_unlocked": true
+}

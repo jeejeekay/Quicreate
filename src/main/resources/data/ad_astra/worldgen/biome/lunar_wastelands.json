@@ -41,8 +41,8 @@
     [],
     [
       "quicreate:moon_crater_rare",
-      "quicreate:moon_aeronos_cave_mushroom",
-      "quicreate:moon_aeronos_cave_patch"
+      "quicreate:moon_strophar_cave_mushroom",
+      "quicreate:moon_strophar_cave_patch"
     ]
   ],
   "has_precipitation": false,
@@ -61,14 +61,7 @@
     }
   },
   "spawners": {
-    "ambient": [
-      {
-        "type": "cataclysm:amethyst_crab",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 1
-      }
-    ],
+    "ambient": [],
     "axolotls": [],
     "creature": [],
     "misc": [],
@@ -89,7 +82,7 @@
         "type": "cataclysm:amethyst_crab",
         "maxCount": 3,
         "minCount": 1,
-        "weight": 2
+        "weight": 6
       },
       {
         "type": "minecraft:enderman",

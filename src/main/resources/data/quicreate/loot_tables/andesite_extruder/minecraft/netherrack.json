@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherrack",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:basalt",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:blackstone",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:soul_soil",
+          "weight": 10
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/creative_alloy",
+  "display": {
+    "icon": {
+      "item": "create:creative_blaze_cake"
+    },
+    "title": {
+      "text": "Creative Blaze Cake"
+    },
+    "description": {
+      "text": "Blaze cake + creative alloy in the fusion anvil"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create:creative_blaze_cake"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

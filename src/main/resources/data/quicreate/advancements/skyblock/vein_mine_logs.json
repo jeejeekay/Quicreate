@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:oak_log"
+    },
+    "title": {
+      "text": "Logs"
+    },
+    "description": {
+      "text": "You can vein mine whole trees and leaves with ~"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "tag": "minecraft:logs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

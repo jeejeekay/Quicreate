@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "createsifter:sifter"
+    },
+    "title": {
+      "text": "Sifter line"
+    },
+    "description": {
+      "text": "Four sifters on a belt: one for each block you sift."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "have": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "item": "createsifter:sifter",
+        "count": 4
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/workshop/sifter_line"
+  }
+}

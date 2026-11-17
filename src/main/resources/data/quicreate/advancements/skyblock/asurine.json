@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mechnanical_extruder",
+  "display": {
+    "icon": {
+      "item": "create:asurine"
+    },
+    "title": {
+      "text": "Asurine"
+    },
+    "description": {
+      "text": "Sufficient Zinc (and gunpowder)"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 32,
+        "item": "create:asurine"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

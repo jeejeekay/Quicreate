@@ -1,0 +1,130 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "create:limestone"
+    },
+    "title": {
+      "text": "Create stones"
+    },
+    "description": {
+      "text": "Create's stones come from the extruder: limestone and scoria from fluids, the..."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "limestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:limestone"
+            ]
+          }
+        ]
+      }
+    },
+    "scoria": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:scoria"
+            ]
+          }
+        ]
+      }
+    },
+    "scorchia": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:scorchia"
+            ]
+          }
+        ]
+      }
+    },
+    "crimsite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:crimsite"
+            ]
+          }
+        ]
+      }
+    },
+    "veridium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:veridium"
+            ]
+          }
+        ]
+      }
+    },
+    "asurine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:asurine"
+            ]
+          }
+        ]
+      }
+    },
+    "ochrum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:ochrum"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "limestone"
+    ],
+    [
+      "scoria"
+    ],
+    [
+      "scorchia"
+    ],
+    [
+      "crimsite"
+    ],
+    [
+      "veridium"
+    ],
+    [
+      "asurine"
+    ],
+    [
+      "ochrum"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/builders/create_stones"
+  }
+}

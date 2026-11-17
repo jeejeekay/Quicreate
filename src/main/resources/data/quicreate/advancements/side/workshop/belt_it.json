@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "create:belt_connector"
+    },
+    "title": {
+      "text": "Belt it"
+    },
+    "description": {
+      "text": "Belts move everything. Build a long line from the mills to the sifters."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "have": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "item": "create:belt_connector",
+        "count": 32
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/workshop/belt_it"
+  }
+}

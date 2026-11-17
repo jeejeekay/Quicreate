@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/press",
+  "display": {
+    "icon": {
+      "item": "create:mechanical_saw"
+    },
+    "title": {
+      "text": "Mechanical Saw"
+    },
+    "description": {
+      "text": "Cuts sheets into wires"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create:mechanical_saw"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/zinc",
+  "display": {
+    "icon": {
+      "item": "createsifter:zinc_mesh"
+    },
+    "title": {
+      "text": "Zinc Mesh"
+    },
+    "description": {
+      "text": "1 Zinc Mesh"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "createsifter:zinc_mesh"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

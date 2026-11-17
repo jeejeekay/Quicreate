@@ -1,0 +1,61 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.fluxuated_magnetite.name",
+  "description": "book.quicreate.skyblock.moon.fluxuated_magnetite.desc",
+  "icon": "create_new_age:fluxuated_magnetite",
+  "x": 2,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:fluxuated_magnetite"
+      },
+      "title": "book.quicreate.skyblock.moon.fluxuated_magnetite.spot.title",
+      "text": "book.quicreate.skyblock.moon.fluxuated_magnetite.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.fluxuated_magnetite.how.p0",
+      "title": "book.quicreate.skyblock.moon.fluxuated_magnetite.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.fluxuated_magnetite.done.p0",
+      "title": "book.quicreate.skyblock.moon.fluxuated_magnetite.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/fluxuated_magnetite",
+        "tooltip": "book.quicreate.skyblock.moon.fluxuated_magnetite.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/overcharged_diamond"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/layered_magnet",
+        "tooltip": "book.quicreate.skyblock.tooltip.layered_magnet"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/overcharged_diamond",
+        "tooltip": "book.quicreate.skyblock.tooltip.overcharged_diamond"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

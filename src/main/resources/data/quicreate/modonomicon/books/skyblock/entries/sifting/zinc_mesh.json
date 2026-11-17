@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.zinc_mesh.name",
+  "description": "book.quicreate.skyblock.sifting.zinc_mesh.desc",
+  "icon": "createsifter:zinc_mesh",
+  "x": 1,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "createsifter:zinc_mesh"
+      },
+      "title": "book.quicreate.skyblock.sifting.zinc_mesh.spot.title",
+      "text": "book.quicreate.skyblock.sifting.zinc_mesh.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.zinc_mesh.how.p0",
+      "title": "book.quicreate.skyblock.sifting.zinc_mesh.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.zinc_mesh.done.p0",
+      "title": "book.quicreate.skyblock.sifting.zinc_mesh.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/zinc_mesh",
+        "tooltip": "book.quicreate.skyblock.sifting.zinc_mesh.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/andesite_mesh"
+    },
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true,
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/andesite_mesh",
+    "tooltip": "book.quicreate.skyblock.tooltip.andesite_mesh"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.welcome.name",
+  "icon": "minecraft:book",
+  "x": -7,
+  "y": -5,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.welcome.c0.p0",
+      "title": "book.quicreate.skyblock.field.welcome.c0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.welcome.c1.p0",
+      "title": "book.quicreate.skyblock.field.welcome.c1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.welcome.c2.p0",
+      "title": "book.quicreate.skyblock.field.welcome.c2.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.welcome.c3.p0",
+      "title": "book.quicreate.skyblock.field.welcome.c3.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.welcome.c4.p0",
+      "title": "book.quicreate.skyblock.field.welcome.c4.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.welcome.c5.p0",
+      "title": "book.quicreate.skyblock.field.welcome.c5.title"
+    }
+  ]
+}

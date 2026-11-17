@@ -22,7 +22,7 @@
           "biome": "quicreate:lunar_cratered_maria",
           "parameters": {
             "temperature": 0,
-            "humidity": -0.6,
+            "humidity": -0.2,
             "continentalness": 0,
             "erosion": 0,
             "weirdness": 0,

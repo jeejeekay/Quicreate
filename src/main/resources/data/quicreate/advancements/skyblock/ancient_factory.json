@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:skyblock/venus_landing",
+  "display": {
+    "icon": {
+      "item": "cataclysm:mech_eye"
+    },
+    "title": {
+      "text": "Ancient Factory"
+    },
+    "description": {
+      "text": "Find the Ancient Factory"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:ancient_factory"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

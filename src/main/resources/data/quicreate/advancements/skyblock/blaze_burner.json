@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/root",
+  "display": {
+    "icon": {
+      "item": "create:blaze_burner"
+    },
+    "title": {
+      "text": "Blaze Burner?"
+    },
+    "description": {
+      "text": "Hey you aren't breaking the intended progression are you?"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create:empty_blaze_burner"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

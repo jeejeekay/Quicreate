@@ -1,0 +1,61 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.copper.name",
+  "description": "book.quicreate.skyblock.sifting.copper.desc",
+  "icon": "create:copper_nugget",
+  "x": 0,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:copper_nugget"
+      },
+      "title": "book.quicreate.skyblock.sifting.copper.spot.title",
+      "text": "book.quicreate.skyblock.sifting.copper.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.copper.how.p0",
+      "title": "book.quicreate.skyblock.sifting.copper.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.copper.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "create:crafting/materials/copper_nugget",
+      "text": "book.quicreate.skyblock.sifting.copper.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.copper.done.p0",
+      "title": "book.quicreate.skyblock.sifting.copper.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/copper",
+        "tooltip": "book.quicreate.skyblock.sifting.copper.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/zinc_mesh",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/zinc_mesh",
+    "tooltip": "book.quicreate.skyblock.tooltip.zinc_mesh"
+  },
+  "show_when_any_parent_unlocked": true
+}

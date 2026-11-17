@@ -1,0 +1,120 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.bosses.name",
+  "icon": "cataclysm:ignitium_ingot",
+  "x": 5,
+  "y": 1,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.bosses.a.p0",
+      "title": "book.quicreate.skyblock.field.bosses.a.title"
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:ender_guardian",
+      "name": "book.quicreate.skyblock.field.bosses.cataclysm_ender_guardian.n",
+      "text": "book.quicreate.skyblock.field.bosses.cataclysm_ender_guardian.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "minecraft:ender_dragon",
+      "name": "book.quicreate.skyblock.field.bosses.minecraft_ender_dragon.n",
+      "text": "book.quicreate.skyblock.field.bosses.minecraft_ender_dragon.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:ancient_remnant",
+      "name": "book.quicreate.skyblock.field.bosses.cataclysm_ancient_remnant.n",
+      "text": "book.quicreate.skyblock.field.bosses.cataclysm_ancient_remnant.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:the_harbinger",
+      "name": "book.quicreate.skyblock.field.bosses.cataclysm_the_harbinger.n",
+      "text": "book.quicreate.skyblock.field.bosses.cataclysm_the_harbinger.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "mowziesmobs:umvuthi",
+      "name": "book.quicreate.skyblock.field.bosses.mowziesmobs_umvuthi.n",
+      "text": "book.quicreate.skyblock.field.bosses.mowziesmobs_umvuthi.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:ignis",
+      "name": "book.quicreate.skyblock.field.bosses.cataclysm_ignis.n",
+      "text": "book.quicreate.skyblock.field.bosses.cataclysm_ignis.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:netherite_monstrosity",
+      "name": "book.quicreate.skyblock.field.bosses.cataclysm_netherite_monstrosity.n",
+      "text": "book.quicreate.skyblock.field.bosses.cataclysm_netherite_monstrosity.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "mowziesmobs:frostmaw",
+      "name": "book.quicreate.skyblock.field.bosses.mowziesmobs_frostmaw.n",
+      "text": "book.quicreate.skyblock.field.bosses.mowziesmobs_frostmaw.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "mowziesmobs:ferrous_wroughtnaut",
+      "name": "book.quicreate.skyblock.field.bosses.mowziesmobs_ferrous_wroughtnaut.n",
+      "text": "book.quicreate.skyblock.field.bosses.mowziesmobs_ferrous_wroughtnaut.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:maledictus",
+      "name": "book.quicreate.skyblock.field.bosses.cataclysm_maledictus.n",
+      "text": "book.quicreate.skyblock.field.bosses.cataclysm_maledictus.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:the_leviathan",
+      "name": "book.quicreate.skyblock.field.bosses.cataclysm_the_leviathan.n",
+      "text": "book.quicreate.skyblock.field.bosses.cataclysm_the_leviathan.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:scylla",
+      "name": "book.quicreate.skyblock.field.bosses.cataclysm_scylla.n",
+      "text": "book.quicreate.skyblock.field.bosses.cataclysm_scylla.t",
+      "scale": 0.7
+    },
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "minecraft:wither",
+      "name": "book.quicreate.skyblock.field.bosses.minecraft_wither.n",
+      "text": "book.quicreate.skyblock.field.bosses.minecraft_wither.t",
+      "scale": 0.7
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/moon_landing",
+    "tooltip": "book.quicreate.skyblock.field.bosses.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.the_end.name",
+  "description": "book.quicreate.skyblock.moon.the_end.desc",
+  "icon": "minecraft:end_stone",
+  "x": -7,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:end_stone"
+      },
+      "title": "book.quicreate.skyblock.moon.the_end.spot.title",
+      "text": "book.quicreate.skyblock.moon.the_end.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.the_end.how.p0",
+      "title": "book.quicreate.skyblock.moon.the_end.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.the_end.done.p0",
+      "title": "book.quicreate.skyblock.moon.the_end.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/the_end",
+        "tooltip": "book.quicreate.skyblock.moon.the_end.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/the_stronghold"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/the_stronghold",
+    "tooltip": "book.quicreate.skyblock.tooltip.the_stronghold"
+  },
+  "show_when_any_parent_unlocked": true
+}

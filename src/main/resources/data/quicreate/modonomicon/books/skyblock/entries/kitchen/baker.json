@@ -1,0 +1,39 @@
+{
+  "category": "quicreate:kitchen",
+  "name": "book.quicreate.skyblock.side.kitchen.baker.name",
+  "description": "book.quicreate.skyblock.side.kitchen.baker.desc",
+  "icon": "minecraft:bread",
+  "x": -7,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.baker.p.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.baker.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.baker.done.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.baker.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/kitchen/baker",
+        "tooltip": "book.quicreate.skyblock.side.kitchen.baker.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:kitchen/stage0",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:kitchen/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,66 @@
+{
+  "category": "quicreate:space",
+  "name": "book.quicreate.skyblock.space.oxygen_loader.name",
+  "description": "book.quicreate.skyblock.space.oxygen_loader.desc",
+  "icon": "ad_astra:oxygen_loader",
+  "x": -6,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:oxygen_loader"
+      },
+      "title": "book.quicreate.skyblock.space.oxygen_loader.spot.title",
+      "text": "book.quicreate.skyblock.space.oxygen_loader.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.oxygen_loader.how.p0",
+      "title": "book.quicreate.skyblock.space.oxygen_loader.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.oxygen_loader.done.p0",
+      "title": "book.quicreate.skyblock.space.oxygen_loader.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/oxygen_loader",
+        "tooltip": "book.quicreate.skyblock.space.oxygen_loader.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:space/gas_tanks"
+    },
+    {
+      "entry": "quicreate:space/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/gas_tanks",
+        "tooltip": "book.quicreate.skyblock.tooltip.gas_tanks"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/nuclear_fuel",
+        "tooltip": "book.quicreate.skyblock.tooltip.nuclear_fuel"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/copper_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.copper_circuit"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,50 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.ignis.name",
+  "description": "book.quicreate.skyblock.venus_mercury.ignis.desc",
+  "icon": "cataclysm:burning_ashes",
+  "x": 2,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:ignis",
+      "name": "book.quicreate.skyblock.venus_mercury.ignis.ename",
+      "text": "book.quicreate.skyblock.venus_mercury.ignis.etext",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.ignis.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.ignis.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.ignis.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.ignis.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ignis",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.ignis.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/burning_arena"
+    },
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true,
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/burning_arena",
+    "tooltip": "book.quicreate.skyblock.tooltip.burning_arena"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "parent": "quicreate:skyblock/gold",
+  "display": {
+    "icon": {
+      "item": "create:copper_sheet"
+    },
+    "title": {
+      "text": "Sheet Metal"
+    },
+    "description": {
+      "text": "Press ingots on a depot or belt"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "create:iron_sheet"
+      }
+    },
+    "task1": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "create:copper_sheet"
+      }
+    },
+    "task2": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "create:golden_sheet"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ],
+    [
+      "task1"
+    ],
+    [
+      "task2"
+    ]
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.string.name",
+  "description": "book.quicreate.skyblock.sifting.string.desc",
+  "icon": "minecraft:string",
+  "x": -7,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:string"
+      },
+      "title": "book.quicreate.skyblock.sifting.string.spot.title",
+      "text": "book.quicreate.skyblock.sifting.string.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.string.how.p0",
+      "title": "book.quicreate.skyblock.sifting.string.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.string.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.string.how.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.string.done.p0",
+      "title": "book.quicreate.skyblock.sifting.string.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/string",
+        "tooltip": "book.quicreate.skyblock.sifting.string.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/mill"
+    },
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mill",
+    "tooltip": "book.quicreate.skyblock.tooltip.mill"
+  },
+  "show_when_any_parent_unlocked": true
+}

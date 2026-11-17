@@ -1,0 +1,63 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.emerald_wafer.name",
+  "description": "book.quicreate.skyblock.improvements.emerald_wafer.desc",
+  "icon": "quicreate:emerald_wafer",
+  "x": -5,
+  "y": 4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "quicreate:emerald_wafer"
+      },
+      "title": "book.quicreate.skyblock.improvements.emerald_wafer.spot.title",
+      "text": "book.quicreate.skyblock.improvements.emerald_wafer.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.emerald_wafer.how.p0",
+      "title": "book.quicreate.skyblock.improvements.emerald_wafer.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.emerald_wafer.done.p0",
+      "title": "book.quicreate.skyblock.improvements.emerald_wafer.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/emerald_wafer",
+        "tooltip": "book.quicreate.skyblock.improvements.emerald_wafer.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/emeralds",
+        "tooltip": "book.quicreate.skyblock.tooltip.emeralds"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/saw",
+        "tooltip": "book.quicreate.skyblock.tooltip.saw"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/energizer",
+        "tooltip": "book.quicreate.skyblock.tooltip.energizer"
+      }
+    ]
+  },
+  "parents": [
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

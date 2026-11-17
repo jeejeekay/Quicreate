@@ -1,0 +1,55 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.ancient_factory.name",
+  "description": "book.quicreate.skyblock.venus_mercury.ancient_factory.desc",
+  "icon": "cataclysm:mech_eye",
+  "x": -7,
+  "y": -4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:mech_eye"
+      },
+      "title": "book.quicreate.skyblock.venus_mercury.ancient_factory.spot.title",
+      "text": "book.quicreate.skyblock.venus_mercury.ancient_factory.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.ancient_factory.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.ancient_factory.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.ancient_factory.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.ancient_factory.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.ancient_factory.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ancient_factory",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.ancient_factory.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/venus_landing"
+    },
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/venus_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.venus_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

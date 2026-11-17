@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:glacio",
+  "name": "book.quicreate.skyblock.glacio.acropolis.name",
+  "description": "book.quicreate.skyblock.glacio.acropolis.desc",
+  "icon": "cataclysm:storm_eye",
+  "x": 0,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:storm_eye"
+      },
+      "title": "book.quicreate.skyblock.glacio.acropolis.spot.title",
+      "text": "book.quicreate.skyblock.glacio.acropolis.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.acropolis.how.p0",
+      "title": "book.quicreate.skyblock.glacio.acropolis.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.acropolis.done.p0",
+      "title": "book.quicreate.skyblock.glacio.acropolis.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/acropolis",
+        "tooltip": "book.quicreate.skyblock.glacio.acropolis.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:glacio/glacio_landing"
+    },
+    {
+      "entry": "quicreate:glacio/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/glacio_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.glacio_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

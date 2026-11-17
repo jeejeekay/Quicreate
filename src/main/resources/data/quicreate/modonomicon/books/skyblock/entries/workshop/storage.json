@@ -1,0 +1,44 @@
+{
+  "category": "quicreate:workshop",
+  "name": "book.quicreate.skyblock.side.workshop.storage.name",
+  "description": "book.quicreate.skyblock.side.workshop.storage.desc",
+  "icon": "create:item_vault",
+  "x": -4,
+  "y": 3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.workshop.storage.p.p0",
+      "title": "book.quicreate.skyblock.side.workshop.storage.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.workshop.storage.done.p0",
+      "title": "book.quicreate.skyblock.side.workshop.storage.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/workshop/storage",
+        "tooltip": "book.quicreate.skyblock.side.workshop.storage.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:workshop/stage1",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:workshop/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/sifter",
+    "tooltip": "book.quicreate.skyblock.stage.1"
+  },
+  "show_when_any_parent_unlocked": true
+}

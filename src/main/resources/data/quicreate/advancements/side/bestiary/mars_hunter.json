@@ -1,0 +1,80 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_sword"
+    },
+    "title": {
+      "text": "Hunter: Mars"
+    },
+    "description": {
+      "text": "Defeat one of every creature on Mars."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "martian_raptor": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "ad_astra:martian_raptor"
+        }
+      }
+    },
+    "koboleton": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:koboleton"
+        }
+      }
+    },
+    "wadjet": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:wadjet"
+        }
+      }
+    },
+    "bluff": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "mowziesmobs:bluff"
+        }
+      }
+    },
+    "sculptor": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "mowziesmobs:sculptor"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "martian_raptor"
+    ],
+    [
+      "koboleton"
+    ],
+    [
+      "wadjet"
+    ],
+    [
+      "bluff"
+    ],
+    [
+      "sculptor"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/bestiary/mars_hunter"
+  }
+}

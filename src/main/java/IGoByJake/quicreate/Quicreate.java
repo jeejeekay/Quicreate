@@ -1,5 +1,6 @@
 package IGoByJake.quicreate;
 
+import IGoByJake.quicreate.advancement.QuicreateTriggers;
 import IGoByJake.quicreate.command.ShapeCommand;
 import IGoByJake.quicreate.worldgen.QuicreateWorldgen;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -11,6 +12,7 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -28,6 +30,14 @@ public class Quicreate {
     ModRegistry.register(modEventBus);
     QuicreateWorldgen.register(modEventBus);
     QuicreateContent.register(modEventBus);
+    // guide book progress: the "quicreate:has_items" advancement trigger
+    QuicreateTriggers.init(modEventBus);
+    // Netherite space suit dive: client -> server message
+    IGoByJake.quicreate.dive.DiveNetwork.register();
+    // Andesite Extruder: only with Create: Mechanical Extruder present (its classes are loaded only then)
+    if (ModList.get().isLoaded("create_mechanical_extruder")) {
+      IGoByJake.quicreate.extruder.AndesiteExtruder.register(modEventBus);
+    }
     MinecraftForge.EVENT_BUS.addListener((RegisterCommandsEvent event) -> ShapeCommand.register(event.getDispatcher()));
     new ConfigManager();
     modEventBus.addListener(this::addCreative);

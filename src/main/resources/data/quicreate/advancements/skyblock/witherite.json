@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/harbinger",
+  "display": {
+    "icon": {
+      "item": "cataclysm:witherite_ingot"
+    },
+    "title": {
+      "text": "Witherite"
+    },
+    "description": {
+      "text": "4 Witherite Ingot"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "cataclysm:witherite_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

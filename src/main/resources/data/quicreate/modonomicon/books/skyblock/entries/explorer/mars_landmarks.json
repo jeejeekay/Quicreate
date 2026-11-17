@@ -1,0 +1,48 @@
+{
+  "category": "quicreate:explorer",
+  "name": "book.quicreate.skyblock.side.explorer.mars_landmarks.name",
+  "description": "book.quicreate.skyblock.side.explorer.mars_landmarks.desc",
+  "icon": "minecraft:map",
+  "x": 2,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.mars_landmarks.p.p0",
+      "title": "book.quicreate.skyblock.side.explorer.mars_landmarks.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.mars_landmarks.p.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.explorer.mars_landmarks.done.p0",
+      "title": "book.quicreate.skyblock.side.explorer.mars_landmarks.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/explorer/mars_landmarks",
+        "tooltip": "book.quicreate.skyblock.side.explorer.mars_landmarks.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:explorer/stage3",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:explorer/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mars_landing",
+    "tooltip": "book.quicreate.skyblock.stage.3"
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/ignis",
+  "display": {
+    "icon": {
+      "item": "cataclysm:ignitium_ingot"
+    },
+    "title": {
+      "text": "Ignitium"
+    },
+    "description": {
+      "text": "4 Ignitium Ingot"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "cataclysm:ignitium_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

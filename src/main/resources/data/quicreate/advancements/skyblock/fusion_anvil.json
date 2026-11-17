@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/witherite",
+  "display": {
+    "icon": {
+      "item": "cataclysm:mechanical_fusion_anvil"
+    },
+    "title": {
+      "text": "Mechanical Fusion Anvil"
+    },
+    "description": {
+      "text": "Witherite, a redstone block and an anvil"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "cataclysm:mechanical_fusion_anvil"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.motor_extension.name",
+  "description": "book.quicreate.skyblock.improvements.motor_extension.desc",
+  "icon": "create_new_age:basic_motor_extension",
+  "x": 0,
+  "y": -2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:basic_motor_extension"
+      },
+      "title": "book.quicreate.skyblock.improvements.motor_extension.spot.title",
+      "text": "book.quicreate.skyblock.improvements.motor_extension.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.motor_extension.how.p0",
+      "title": "book.quicreate.skyblock.improvements.motor_extension.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.motor_extension.done.p0",
+      "title": "book.quicreate.skyblock.improvements.motor_extension.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/motor_extension",
+        "tooltip": "book.quicreate.skyblock.improvements.motor_extension.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:improvements/motors"
+    },
+    {
+      "entry": "quicreate:improvements/copper_circuit"
+    },
+    {
+      "entry": "quicreate:improvements/redstone_magnet"
+    },
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/motors",
+        "tooltip": "book.quicreate.skyblock.tooltip.motors"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/copper_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.copper_circuit"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/redstone_magnet",
+        "tooltip": "book.quicreate.skyblock.tooltip.redstone_magnet"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

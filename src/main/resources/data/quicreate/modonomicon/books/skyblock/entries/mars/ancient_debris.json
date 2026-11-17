@@ -1,0 +1,55 @@
+{
+  "category": "quicreate:mars",
+  "name": "book.quicreate.skyblock.mars.ancient_debris.name",
+  "description": "book.quicreate.skyblock.mars.ancient_debris.desc",
+  "icon": "minecraft:ancient_debris",
+  "x": -3,
+  "y": -5,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:ancient_debris"
+      },
+      "title": "book.quicreate.skyblock.mars.ancient_debris.spot.title",
+      "text": "book.quicreate.skyblock.mars.ancient_debris.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_debris.how.p0",
+      "title": "book.quicreate.skyblock.mars.ancient_debris.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_debris.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_debris.done.p0",
+      "title": "book.quicreate.skyblock.mars.ancient_debris.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ancient_debris",
+        "tooltip": "book.quicreate.skyblock.mars.ancient_debris.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:mars/mars_landing"
+    },
+    {
+      "entry": "quicreate:mars/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mars_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.mars_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

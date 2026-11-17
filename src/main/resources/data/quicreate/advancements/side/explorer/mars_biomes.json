@@ -1,0 +1,64 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "ad_astra:mars_globe"
+    },
+    "title": {
+      "text": "Biomes of Mars"
+    },
+    "description": {
+      "text": "Set foot in every biome on Mars."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "martian_wastelands": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "ad_astra:martian_wastelands"
+          }
+        }
+      }
+    },
+    "martian_canyon_creek": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "ad_astra:martian_canyon_creek"
+          }
+        }
+      }
+    },
+    "martian_polar_caps": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "ad_astra:martian_polar_caps"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "martian_wastelands"
+    ],
+    [
+      "martian_canyon_creek"
+    ],
+    [
+      "martian_polar_caps"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/mars_biomes"
+  }
+}

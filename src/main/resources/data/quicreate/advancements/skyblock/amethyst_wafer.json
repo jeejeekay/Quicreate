@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/energizer",
+  "display": {
+    "icon": {
+      "item": "quicreate:amethyst_wafer"
+    },
+    "title": {
+      "text": "Amethyst Wafer"
+    },
+    "description": {
+      "text": "Polish, cut and energise amethyst"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "quicreate:amethyst_wafer"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

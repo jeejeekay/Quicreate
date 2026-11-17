@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/emeralds",
+  "display": {
+    "icon": {
+      "item": "quicreate:emerald_wafer"
+    },
+    "title": {
+      "text": "Emerald Wafer"
+    },
+    "description": {
+      "text": "Cut an emerald, then energise it"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 2,
+        "item": "quicreate:emerald_wafer"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

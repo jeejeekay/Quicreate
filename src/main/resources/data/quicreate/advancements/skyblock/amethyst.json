@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/moon_landing",
+  "display": {
+    "icon": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "title": {
+      "text": "Amethyst"
+    },
+    "description": {
+      "text": "Amethyst grows on giant crabs and inside geodes!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "item": "minecraft:amethyst_shard"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

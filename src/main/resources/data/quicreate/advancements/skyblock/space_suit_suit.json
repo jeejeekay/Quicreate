@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/gas_tanks",
+  "display": {
+    "icon": {
+      "item": "ad_astra:space_suit"
+    },
+    "title": {
+      "text": "Space Suit"
+    },
+    "description": {
+      "text": "Has internal tanks to hold the oxygen you need!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:space_suit"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

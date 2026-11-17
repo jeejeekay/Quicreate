@@ -1,0 +1,38 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:purpur_block"
+    },
+    "title": {
+      "text": "City in the End"
+    },
+    "description": {
+      "text": "After the dragon, end gateways lead to the end cities."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "end_city": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "minecraft:end_city"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "end_city"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/the_end_city"
+  }
+}

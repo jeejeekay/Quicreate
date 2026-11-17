@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/fuel_loader",
+  "display": {
+    "icon": {
+      "item": "ad_astra:fuel_bucket"
+    },
+    "title": {
+      "text": "Rocket Fuel"
+    },
+    "description": {
+      "text": "Bring enough fuel to get Home too! Or don't"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 3,
+        "item": "ad_astra:fuel_bucket"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "book.quicreate.skyblock.cat.space",
+  "icon": "ad_astra:tier_1_rocket",
+  "sort_number": 6,
+  "background_parallax_layers": [
+    {
+      "background": "quicreate:textures/gui/book/background/space.png",
+      "speed": 0.7,
+      "vanish": -1
+    },
+    {
+      "background": "quicreate:textures/gui/book/background/stars_far.png",
+      "speed": 1.0,
+      "vanish": -1
+    },
+    {
+      "background": "quicreate:textures/gui/book/background/stars_near.png",
+      "speed": 1.3,
+      "vanish": 0.6
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/mill",
+  "display": {
+    "icon": {
+      "item": "minecraft:string"
+    },
+    "title": {
+      "text": "String"
+    },
+    "description": {
+      "text": "Mill a sapling to get String"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "minecraft:string"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

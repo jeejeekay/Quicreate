@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/enderite",
+  "display": {
+    "icon": {
+      "item": "cataclysm:enderite_block"
+    },
+    "title": {
+      "text": "Block of Enderite"
+    },
+    "description": {
+      "text": "Compact 4 enderite ingots"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "cataclysm:enderite_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

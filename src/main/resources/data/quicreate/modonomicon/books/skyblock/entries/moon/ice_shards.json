@@ -1,0 +1,69 @@
+{
+  "category": "quicreate:moon",
+  "name": "book.quicreate.skyblock.moon.ice_shards.name",
+  "description": "book.quicreate.skyblock.moon.ice_shards.desc",
+  "icon": "ad_astra:ice_shard",
+  "x": 2,
+  "y": -6,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:ice_shard"
+      },
+      "title": "book.quicreate.skyblock.moon.ice_shards.spot.title",
+      "text": "book.quicreate.skyblock.moon.ice_shards.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.ice_shards.how.p0",
+      "title": "book.quicreate.skyblock.moon.ice_shards.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.ice_shards.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.ice_shards.how.p2"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.ice_shards.how.p3"
+    },
+    {
+      "type": "modonomicon:smelting_recipe",
+      "recipe_id_1": "ad_astra:smelting/ice_shard_from_smelting_deepslate_ice_shard_ore",
+      "text": "book.quicreate.skyblock.moon.ice_shards.rtext",
+      "recipe_id_2": "ad_astra:smelting/ice_shard_from_smelting_glacio_ice_shard_ore"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.moon.ice_shards.done.p0",
+      "title": "book.quicreate.skyblock.moon.ice_shards.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ice_shards",
+        "tooltip": "book.quicreate.skyblock.moon.ice_shards.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:moon/moon_landing"
+    },
+    {
+      "entry": "quicreate:moon/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/moon_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.moon_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

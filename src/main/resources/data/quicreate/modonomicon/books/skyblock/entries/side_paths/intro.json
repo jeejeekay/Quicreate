@@ -1,0 +1,20 @@
+{
+  "category": "quicreate:side_paths",
+  "name": "book.quicreate.skyblock.side.hub.name",
+  "icon": "minecraft:compass",
+  "x": 0,
+  "y": -3,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.hub.intro.p0",
+      "title": "book.quicreate.skyblock.side.hub.intro.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.hub.intro.p1"
+    }
+  ]
+}

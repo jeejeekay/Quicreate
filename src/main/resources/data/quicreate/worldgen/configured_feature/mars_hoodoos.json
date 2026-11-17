@@ -1,0 +1,53 @@
+{
+  "type": "quicreate:prism_spike",
+  "config": {
+    "length": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 8,
+        "max_inclusive": 22
+      }
+    },
+    "width": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 3,
+        "max_exclusive": 6.5
+      }
+    },
+    "taper": 0.55,
+    "tilt": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 0,
+        "max_exclusive": 14
+      }
+    },
+    "sink": 0.2,
+    "count": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1,
+        "max_inclusive": 4
+      }
+    },
+    "spread": 5.0,
+    "blocks": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:mars_stone"
+          },
+          "weight": 6
+        },
+        {
+          "data": {
+            "Name": "ad_astra:mars_cobblestone"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

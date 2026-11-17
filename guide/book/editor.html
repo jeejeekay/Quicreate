@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quicreate Book Editor</title>
+<style>
+  :root { --bg:#1d2027; --panel:#262a33; --panel2:#2d323c; --line:#3a3f4b; --text:#e6e6e6; --dim:#9aa0ab; --accent:#e0b33c; --bad:#e0584c; --ok:#5fbf6a; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:13px/1.4 system-ui, Segoe UI, sans-serif; background:var(--bg); color:var(--text); display:flex; flex-direction:column; height:100vh; }
+  header { display:flex; gap:6px; align-items:center; padding:7px 10px; background:var(--panel); border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  header h1 { font-size:14px; margin:0 10px 0 0; }
+  button, select, input, textarea { background:#323743; color:var(--text); border:1px solid var(--line); border-radius:4px; padding:4px 8px; font:inherit; }
+  textarea { width:100%; resize:vertical; font:12px/1.45 Consolas, monospace; }
+  button:hover:not(:disabled) { border-color:var(--accent); cursor:pointer; }
+  button.primary { background:var(--accent); color:#1d2027; border-color:var(--accent); font-weight:600; }
+  button.on { background:#4a3d18; border-color:var(--accent); }
+  button.danger:hover { border-color:var(--bad); color:var(--bad); }
+  button.small { padding:1px 6px; font-size:12px; }
+  button:disabled { opacity:.4; }
+  #status { margin-left:auto; color:var(--dim); }
+  main { flex:1; display:flex; min-height:0; }
+  #wrap { flex:1; overflow:auto; background:#14161b; }
+  canvas { display:block; }
+  aside { width:420px; background:var(--panel); border-left:1px solid var(--line); display:flex; flex-direction:column; }
+  .tabs { display:flex; border-bottom:1px solid var(--line); }
+  .tabs button { flex:1; border:0; border-radius:0; background:transparent; padding:8px; }
+  .tabs button.active { background:var(--panel2); color:var(--accent); box-shadow: inset 0 -2px var(--accent); }
+  #panel { flex:1; overflow:auto; padding:10px 12px; }
+  h2 { font-size:13px; margin:12px 0 6px; color:var(--accent); }
+  label.f { display:block; color:var(--dim); margin:8px 0 3px; }
+  input[type=text], input[type=number] { width:100%; }
+  .row { display:flex; gap:6px; align-items:center; }
+  .row > * { flex:none; }
+  .grow { flex:1 !important; }
+  .card { border:1px solid var(--line); border-radius:5px; padding:7px; margin:7px 0; background:var(--panel2); }
+  .card .hd { display:flex; gap:4px; align-items:center; margin-bottom:5px; }
+  .card .hd b { flex:1; }
+  .help { color:var(--dim); font-size:12px; }
+  .warn { color:var(--bad); font-size:12px; }
+  .preview { background:#efe3c4; color:#2a2418; border-radius:3px; padding:6px 8px; margin-top:5px; font:12px/1.35 Georgia, serif; width:248px; white-space:normal; }
+  .preview .t { font-weight:bold; text-align:center; border-bottom:1px solid #b9a77a; margin-bottom:4px; }
+  .preview a { color:#1f4e8c; text-decoration:none; }
+  .preview ul, .preview ol { margin:2px 0 2px 16px; padding:0; }
+  .preview p { margin:0 0 6px; }
+  .issues li { margin:3px 0; cursor:pointer; }
+  .issues li:hover { color:var(--accent); }
+  kbd { background:#323743; border:1px solid var(--line); border-radius:3px; padding:0 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Book Editor</h1>
+  <button id="open" class="primary">Open Quicreate folder…</button>
+  <select id="tab" disabled></select>
+  <button id="newStep" disabled title="Then click an empty cell">+ New step</button>
+  <button id="linkMode" disabled title="Click the parent, then the child">Link</button>
+  <button id="del" class="danger" disabled>Delete step</button>
+  <button id="undo" disabled title="Ctrl+Z">Undo</button>
+  <button id="save" class="primary" disabled title="Ctrl+S">Save</button>
+  <label class="row"><input type="checkbox" id="showAll" checked> hidden lines</label>
+  <span id="status">Open your Quicreate repo folder to start (Chrome or Edge).</span>
+</header>
+<main>
+  <div id="wrap"><canvas id="cv"></canvas></div>
+  <aside>
+    <div class="tabs">
+      <button data-p="step" class="active">Step</button>
+      <button data-p="pages">Pages</button>
+      <button data-p="task">Task</button>
+      <button data-p="lines">Lines</button>
+      <button data-p="problems">Problems</button>
+      <button data-p="builds">Builds</button>
+    </div>
+    <div id="panel"></div>
+  </aside>
+</main>
+<script>
+// ------------------------------------------------------------------ constants and state
+const CELL = 34, NODE = 26, PAGE_W = 122;
+const NS = 'quicreate', BOOKID = 'quicreate:skyblock';
+const BOOK = 'src/main/resources/data/quicreate/modonomicon/books/skyblock';
+const MB = 'src/main/resources/data/quicreate/modonomicon/multiblocks';
+const ADV = 'src/main/resources/data/quicreate/advancements';
+const LANG = 'src/main/resources/assets/quicreate/lang/en_us.json';
+const OVR = 'guide/book/layout_overrides.json';
+const SHAPES = { '1,0': 'Main step (grey square)', '0,1': 'Milestone (gold star)', '1,2': 'Optional (grey round)',
+                 '0,2': 'Reading (gold round)', '0,0': 'Link (gold square)', '1,1': 'Grey star' };
+const ANCHOR = /\/(intro|back|welcome)$/;
+let BP = {}, BPNS = new Set();
+let root = null, lang = {}, ovr = {}, tabs = {}, entries = {}, advs = {}, mbs = {}, dirtyM = new Set(), mbSel = null, mbLayer = 0, mbBrush = 'A';
+let dirtyE = new Set(), dirtyA = new Set(), dirtyL = new Set(), deletedE = new Set(), deletedA = new Set();
+// moves: old id -> new id; refE/refL: files rewritten only because a step moved (not saved as hand edits)
+let moves = {}, movedFiles = new Set(), refE = new Set(), refL = new Set();
+let undoStack = [], tab = null, sel = null, drag = null, mode = null, linkFrom = null, panelTab = 'step';
+let view = { ox: 0, oy: 0 };
+const $ = id => document.getElementById(id);
+const cv = $('cv'), ctx = cv.getContext('2d');
+const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+
+// ------------------------------------------------------------------ files
+async function dirOf(path, create = true) {
+  let d = root;
+  for (const part of path.split('/').filter(Boolean)) d = await d.getDirectoryHandle(part, { create });
+  return d;
+}
+async function readText(path) {
+  const parts = path.split('/'); const name = parts.pop();
+  const d = await dirOf(parts.join('/'), false);
+  return (await (await d.getFileHandle(name)).getFile()).text();
+}
+async function readJson(path, fallback) { try { return JSON.parse(await readText(path)); } catch (e) { if (fallback !== undefined) return fallback; throw e; } }
+async function writeJson(path, data) {
+  const parts = path.split('/'); const name = parts.pop();
+  const d = await dirOf(parts.join('/'));
+  const w = await (await d.getFileHandle(name, { create: true })).createWritable();
+  await w.write(JSON.stringify(data, null, 2) + '\n'); await w.close();
+}
+async function removeFile(path) {
+  const parts = path.split('/'); const name = parts.pop();
+  try { await (await dirOf(parts.join('/'), false)).removeEntry(name); } catch (e) { /* already gone */ }
+}
+async function walkJson(path, prefix, out) {
+  const d = await dirOf(path, false);
+  for await (const [n, h] of d.entries()) {
+    if (h.kind === 'directory') await walkJson(path + '/' + n, prefix + n + '/', out);
+    else if (n.endsWith('.json')) out[prefix + n.slice(0, -5)] = { file: path + '/' + n, json: JSON.parse(await (await h.getFile()).text()) };
+  }
+}
+
+// ------------------------------------------------------------------ loading
+$('open').onclick = async () => {
+  if (!window.showDirectoryPicker) { alert('This needs Chrome or Edge (folder access).'); return; }
+  root = await window.showDirectoryPicker({ mode: 'readwrite' });
+  try { await dirOf(BOOK + '/entries', false); } catch (e) { alert('Pick the Quicreate repo folder (the one with src/ and guide/).'); return; }
+  lang = await readJson(LANG, {});
+  ovr = await readJson(OVR, {});
+  if (!['layout', 'entries', 'advancements', 'lang', 'deleted', 'moved', 'multiblocks'].some(k => k in ovr) && Object.keys(ovr).length) ovr = { layout: ovr };   // old layout-only file
+  for (const k of ['layout', 'entries', 'advancements', 'lang']) ovr[k] = ovr[k] || {};
+  ovr.deleted = ovr.deleted || []; ovr.moved = ovr.moved || {}; ovr.deleted_advancements = ovr.deleted_advancements || [];
+  tabs = {}; entries = {}; advs = {};
+  const raw = {}; await walkJson(BOOK + '/entries', '', raw);
+  for (const [k, v] of Object.entries(raw)) {
+    const cat = k.split('/')[0], id = `${NS}:${k}`;
+    entries[id] = { id, cat, file: v.file, json: v.json };
+    (tabs[cat] = tabs[cat] || []).push(id);
+  }
+  BP = await readJson('guide/book/block_props.json', {}); BPNS = new Set(Object.keys(BP).map(b => b.split(':')[0]));
+  mbs = {}; try { const rawM = {}; await walkJson(MB, '', rawM); for (const [k, v] of Object.entries(rawM)) mbs[`${NS}:${k}`] = { id: `${NS}:${k}`, file: v.file, json: v.json }; } catch (e) { }
+  const rawA = {}; await walkJson(ADV, '', rawA);
+  for (const [k, v] of Object.entries(rawA)) advs[`${NS}:${k}`] = { id: `${NS}:${k}`, file: v.file, json: v.json };
+  const order = ['field_guide','sky','sifting','new_age','electricity','improvements','space','moon','mars','venus_mercury','glacio','creative',
+                 'side_paths','builders','explorer','bestiary','workshop','kitchen','cards'];
+  const s = $('tab'); s.innerHTML = '';
+  for (const c of Object.keys(tabs).sort((a, b) => ((order.indexOf(a) + 99) % 199) - ((order.indexOf(b) + 99) % 199)))
+    s.add(new Option(`${catName(c)} (${tabs[c].length})`, c));
+  for (const b of ['tab', 'newStep', 'linkMode', 'del', 'undo', 'save']) $(b).disabled = false;
+  setTab(s.value);
+  status(`Loaded ${Object.keys(entries).length} steps, ${Object.keys(advs).length} advancements.`);
+};
+function catName(c) { return lang[`book.quicreate.skyblock.cat.${c}`] || c; }
+$('tab').onchange = e => setTab(e.target.value);
+$('showAll').onchange = draw;
+function status(t) { $('status').textContent = t; }
+const T = k => (k && lang[k] !== undefined) ? lang[k] : (k || '');
+function name(e) { return T(e.json.name) || e.id.split('/').pop(); }
+
+// ------------------------------------------------------------------ undo / dirty
+function snapshot() {
+  undoStack.push(JSON.stringify({ m: mbs, dm: [...dirtyM], e: entries, a: advs, l: lang, t: tabs, de: [...deletedE], da: [...deletedA],
+                                  dE: [...dirtyE], dA: [...dirtyA], dL: [...dirtyL], mv: moves, mf: [...movedFiles], rE: [...refE], rL: [...refL] }));
+  if (undoStack.length > 60) undoStack.shift();
+}
+function undo() {
+  const s = undoStack.pop(); if (!s) return;
+  const o = JSON.parse(s); mbs = o.m || mbs; dirtyM = new Set(o.dm || []); entries = o.e; advs = o.a; lang = o.l; tabs = o.t;
+  deletedE = new Set(o.de); deletedA = new Set(o.da); dirtyE = new Set(o.dE); dirtyA = new Set(o.dA); dirtyL = new Set(o.dL);
+  moves = o.mv; movedFiles = new Set(o.mf); refE = new Set(o.rE); refL = new Set(o.rL);
+  if (sel && !entries[sel]) sel = null;
+  renderPanel(); draw();
+}
+$('undo').onclick = undo;
+const touchE = id => { dirtyE.add(id); };
+const touchA = id => { dirtyA.add(id); };
+function setLang(k, v) { lang[k] = v; dirtyL.add(k); }
+
+// ------------------------------------------------------------------ geometry (Modonomicon's line rules)
+function setTab(c) {
+  tab = c; sel = null; linkFrom = null;
+  const xs = tabs[c].map(id => entries[id].json.x), ys = tabs[c].map(id => entries[id].json.y);
+  const minx = Math.min(...xs) - 4, maxx = Math.max(...xs) + 4, miny = Math.min(...ys) - 4, maxy = Math.max(...ys) + 4;
+  view.ox = -minx; view.oy = -miny;
+  cv.width = (maxx - minx + 1) * CELL; cv.height = (maxy - miny + 1) * CELL;
+  renderPanel(); draw();
+}
+const px = x => (x + view.ox) * CELL + CELL / 2, py = y => (y + view.oy) * CELL + CELL / 2;
+function reverseBroken(p, c) { return c.x <= p.x - 2 && c.y >= p.y + 2; }
+function pathCells(p, c, rev) {
+  const out = []; const sx = c.x > p.x ? 1 : -1, sy = c.y > p.y ? 1 : -1;
+  if (!rev) {
+    if (c.x !== p.x) for (let x = p.x + sx; x !== c.x + sx; x += sx) out.push([x, p.y]);
+    if (c.y !== p.y) for (let y = p.y + sy; y !== c.y; y += sy) out.push([c.x, y]);
+  } else {
+    if (c.y !== p.y) for (let y = p.y + sy; y !== c.y + sy; y += sy) out.push([p.x, y]);
+    if (c.x !== p.x) for (let x = p.x + sx; x !== c.x; x += sx) out.push([x, c.y]);
+  }
+  return out.filter(([x, y]) => !(x === c.x && y === c.y));
+}
+function lines() {
+  const out = [];
+  for (const id of tabs[tab]) {
+    for (const p of entries[id].json.parents || []) {
+      const pe = entries[p.entry]; if (!pe || pe.cat !== tab) continue;
+      if (p.line_enabled === false && ANCHOR.test(p.entry)) continue;
+      out.push({ child: id, parent: p.entry, enabled: p.line_enabled !== false, rev: !!p.line_reversed });
+    }
+  }
+  return out;
+}
+function analyse() {
+  const occ = new Map(); for (const id of tabs[tab]) occ.set(entries[id].json.x + ',' + entries[id].json.y, id);
+  const ls = lines(), use = new Map(), issues = [];
+  for (const l of ls) {
+    if (!l.enabled) continue;
+    const a = entries[l.parent].json, b = entries[l.child].json;
+    l.cells = pathCells(a, b, l.rev);
+    const pts = [[a.x, a.y], ...l.cells, [b.x, b.y]]; l.segs = [];
+    for (let i = 1; i < pts.length; i++) l.segs.push([pts[i - 1].join(','), pts[i].join(',')].sort().join('|'));
+    for (const s of l.segs) use.set(s, (use.get(s) || 0) + 1);
+  }
+  for (const l of ls) {
+    if (!l.enabled) continue;
+    l.through = l.cells.filter(([x, y]) => occ.has(x + ',' + y)).map(([x, y]) => occ.get(x + ',' + y));
+    l.shared = l.segs.some(s => use.get(s) > 1);
+    l.broken = l.rev && reverseBroken(entries[l.parent].json, entries[l.child].json);
+    const nm = `${name(entries[l.parent])} → ${name(entries[l.child])}`;
+    if (l.broken) issues.push({ id: l.child, text: `${nm}: reversed bend draws wrong in game (untick reverse)` });
+    if (l.through.length) issues.push({ id: l.child, text: `${nm} runs through ${l.through.map(t => name(entries[t])).join(', ')}` });
+  }
+  const seen = new Map();
+  for (const id of tabs[tab]) {
+    const k = entries[id].json.x + ',' + entries[id].json.y;
+    if (seen.has(k)) issues.push({ id, text: `${name(entries[id])} sits on ${name(entries[seen.get(k)])}` });
+    seen.set(k, id);
+    for (const [i, pg] of (entries[id].json.pages || []).entries()) {
+      for (const m of T(pg.text).matchAll(/entry:\/\/([a-z_]+:[a-z_]+)\/([a-z0-9_\/]+)/g))
+        if (!entries[`${NS}:${m[2]}`]) issues.push({ id, text: `${name(entries[id])}: page ${i + 1} links to a step that doesn't exist (${m[2]})` });
+      const n = pageLines(pg); const cap = pageCap(pg);
+      if (n > cap) issues.push({ id, text: `${name(entries[id])}: page ${i + 1} is about ${n} lines, fits ${cap}` });
+    }
+  }
+  const shared = ls.filter(l => l.enabled && l.shared).length;
+  if (shared) issues.push({ id: null, text: `${shared} lines share a stretch with another line (orange)` });
+  return { ls, issues };
+}
+
+// ------------------------------------------------------------------ drawing
+function draw() {
+  if (!tab) return;
+  const { ls } = analyse();
+  ctx.fillStyle = '#14161b'; ctx.fillRect(0, 0, cv.width, cv.height);
+  ctx.strokeStyle = '#20232a'; ctx.lineWidth = 1;
+  for (let x = 0; x < cv.width; x += CELL) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, cv.height); ctx.stroke(); }
+  for (let y = 0; y < cv.height; y += CELL) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(cv.width, y); ctx.stroke(); }
+  for (const l of ls) {
+    if (!l.enabled && !$('showAll').checked) continue;
+    const a = entries[l.parent].json, b = entries[l.child].json;
+    const mid = l.rev ? [a.x, b.y] : [b.x, a.y];
+    ctx.setLineDash(l.enabled ? [] : [3, 4]);
+    ctx.strokeStyle = !l.enabled ? '#555b66' : (l.through.length || l.broken) ? '#e0584c' : l.shared ? '#e0953c' : '#c8ccd4';
+    ctx.lineWidth = (sel && (l.child === sel || l.parent === sel)) ? 3 : 1.6;
+    ctx.beginPath(); ctx.moveTo(px(a.x), py(a.y)); ctx.lineTo(px(mid[0]), py(mid[1])); ctx.lineTo(px(b.x), py(b.y)); ctx.stroke();
+    if (l.enabled) {
+      const corner = (mid[0] === b.x && mid[1] === b.y) ? [a.x, a.y] : mid;
+      const ang = Math.atan2(py(b.y) - py(corner[1]), px(b.x) - px(corner[0]));
+      const tx = px(b.x) - Math.cos(ang) * NODE / 2, ty = py(b.y) - Math.sin(ang) * NODE / 2;
+      ctx.setLineDash([]); ctx.beginPath(); ctx.moveTo(tx, ty);
+      ctx.lineTo(tx - 7 * Math.cos(ang - .45), ty - 7 * Math.sin(ang - .45));
+      ctx.lineTo(tx - 7 * Math.cos(ang + .45), ty - 7 * Math.sin(ang + .45)); ctx.closePath(); ctx.fillStyle = ctx.strokeStyle; ctx.fill();
+    }
+  }
+  ctx.setLineDash([]);
+  for (const id of tabs[tab]) {
+    const e = entries[id].json, x = px(e.x), y = py(e.y);
+    const u = e.background_u_index || 0, v = e.background_v_index || 0;
+    ctx.fillStyle = u === 0 ? '#c99a2e' : '#8d929c';
+    ctx.strokeStyle = id === sel ? '#ffffff' : id === linkFrom ? '#5fbf6a' : '#111';
+    ctx.lineWidth = (id === sel || id === linkFrom) ? 3 : 1.5;
+    ctx.beginPath();
+    if (v === 2) ctx.arc(x, y, NODE / 2, 0, Math.PI * 2);
+    else if (v === 1) { for (let i = 0; i < 10; i++) { const r = i % 2 ? NODE / 3 : NODE / 1.8, t = Math.PI / 5 * i - Math.PI / 2; ctx.lineTo(x + r * Math.cos(t), y + r * Math.sin(t)); } ctx.closePath(); }
+    else ctx.rect(x - NODE / 2, y - NODE / 2, NODE, NODE);
+    ctx.globalAlpha = e.hide_while_locked ? 0.45 : 1; ctx.fill(); ctx.globalAlpha = 1; ctx.stroke();
+    if (e.hide_while_locked) { ctx.setLineDash([3, 3]); ctx.strokeStyle = '#9ad'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(x, y, NODE * 0.75, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]); }
+    const nm = name(entries[id]);
+    ctx.fillStyle = '#111'; ctx.font = 'bold 9px system-ui'; ctx.textAlign = 'center';
+    ctx.fillText(nm.replace(/[^A-Za-z0-9]/g, '').slice(0, 3), x, y + 3);
+    ctx.fillStyle = '#d7dae0'; ctx.font = '10px system-ui';
+    ctx.fillText(nm.length > 16 ? nm.slice(0, 15) + '…' : nm, x, y + NODE / 2 + 11);
+  }
+  if (panelTab === 'problems') renderPanel();
+}
+
+// ------------------------------------------------------------------ mouse and keys
+function cellAt(ev) { const r = cv.getBoundingClientRect(); return [Math.floor((ev.clientX - r.left) / CELL) - view.ox, Math.floor((ev.clientY - r.top) / CELL) - view.oy]; }
+function hit(ev) { const [x, y] = cellAt(ev); return tabs[tab]?.find(id => entries[id].json.x === x && entries[id].json.y === y); }
+cv.onmousedown = ev => {
+  if (!tab) return;
+  const id = hit(ev);
+  if (mode === 'new') { if (!id) createStep(...cellAt(ev)); setMode(null); return; }
+  if (mode === 'link') {
+    if (!id) return;
+    if (!linkFrom) { linkFrom = id; status('Now click the child step.'); draw(); return; }
+    if (id !== linkFrom) addParent(id, linkFrom);
+    linkFrom = null; status('Linked. Click another parent, or press Link again to stop.'); return;
+  }
+  sel = id || null; if (id) { snapshot(); drag = id; }
+  renderPanel(); draw();
+};
+cv.onmousemove = ev => {
+  if (!drag) { cv.style.cursor = mode ? 'crosshair' : hit(ev) ? 'grab' : 'default'; return; }
+  const [x, y] = cellAt(ev), e = entries[drag].json;
+  if ((e.x !== x || e.y !== y) && !tabs[tab].some(id => id !== drag && entries[id].json.x === x && entries[id].json.y === y)) {
+    e.x = x; e.y = y; touchE(drag); draw();
+  }
+};
+window.onmouseup = () => { if (drag) renderPanel(); drag = null; };
+window.onkeydown = ev => {
+  const typing = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName);
+  if ((ev.ctrlKey || ev.metaKey) && ev.key === 's') { ev.preventDefault(); save(); return; }
+  if (typing) return;
+  if ((ev.ctrlKey || ev.metaKey) && ev.key === 'z') { ev.preventDefault(); undo(); }
+  if (ev.key === 'Escape') { setMode(null); }
+  if (sel && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(ev.key)) {
+    ev.preventDefault(); const e = entries[sel].json;
+    const [dx, dy] = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }[ev.key];
+    if (!tabs[tab].some(id => entries[id].json.x === e.x + dx && entries[id].json.y === e.y + dy)) { snapshot(); e.x += dx; e.y += dy; touchE(sel); renderPanel(); draw(); }
+  }
+};
+function setMode(m) {
+  mode = (mode === m) ? null : m; linkFrom = null;
+  $('newStep').classList.toggle('on', mode === 'new'); $('linkMode').classList.toggle('on', mode === 'link');
+  status(mode === 'new' ? 'Click an empty cell for the new step (Esc to cancel).' : mode === 'link' ? 'Click the parent step, then the child.' : '');
+  draw();
+}
+$('newStep').onclick = () => setMode('new');
+$('linkMode').onclick = () => setMode('link');
+$('del').onclick = () => { if (sel) deleteStep(sel); };
+
+// ------------------------------------------------------------------ step helpers
+function ownAdv(id) {
+  const e = entries[id]?.json; if (!e) return null;
+  for (const p of e.pages || []) if (p.condition?.type === 'modonomicon:advancement') return p.condition.advancement_id;
+  return null;
+}
+// the unlock condition is a list of advancements (an "and"); parents add theirs, other tabs' requirements stay
+function condAdvs(e) {
+  const c = e.condition; if (!c) return [];
+  if (c.type === 'modonomicon:advancement') return [c];
+  if (c.type === 'modonomicon:and' && c.children.every(x => x.type === 'modonomicon:advancement')) return [...c.children];
+  return null;   // something hand-written: leave it alone
+}
+function setCondAdvs(e, list) {
+  if (!list.length) delete e.condition;
+  else e.condition = list.length === 1 ? list[0] : { type: 'modonomicon:and', children: list };
+}
+function requireStep(childId, stepId) {
+  const e = entries[childId].json, a = ownAdv(stepId), list = condAdvs(e);
+  if (!a || list === null || list.some(c => c.advancement_id === a)) return;
+  const short = a.split('/').pop();
+  let k = `book.quicreate.skyblock.tooltip.${short}`;
+  if (lang[k] === undefined) { k = `book.quicreate.skyblock.custom.tip.${stepId.replace(/[:/]/g, '_')}`; if (lang[k] === undefined) setLang(k, `Finish: ${name(entries[stepId])}`); }
+  list.push({ type: 'modonomicon:advancement', advancement_id: a, tooltip: k }); setCondAdvs(e, list);
+}
+function unrequireStep(childId, stepId) {
+  const e = entries[childId].json, a = ownAdv(stepId), list = condAdvs(e);
+  if (!a || list === null) return;
+  setCondAdvs(e, list.filter(c => c.advancement_id !== a));
+}
+function stepOfAdv(a) { return Object.keys(entries).find(id => ownAdv(id) === a); }
+function addParent(child, parent) {
+  const e = entries[child].json;
+  if ((e.parents || []).some(p => p.entry === parent)) { status('Already linked.'); return; }
+  snapshot();
+  e.parents = e.parents || [];
+  e.parents.unshift({ entry: parent });
+  requireStep(child, parent); touchE(child);
+  sel = child; renderPanel(); draw();
+}
+function removeParent(child, parent) {
+  snapshot();
+  const e = entries[child].json; e.parents = (e.parents || []).filter(p => p.entry !== parent);
+  unrequireStep(child, parent); touchE(child); renderPanel(); draw();
+}
+function anchorOf(cat) { return tabs[cat].find(i => /\/intro$/.test(i)) || tabs[cat].find(i => ANCHOR.test(i)); }
+function freeCell(cat, near) {
+  const used = new Set(tabs[cat].map(i => entries[i].json.x + ',' + entries[i].json.y));
+  const xs = tabs[cat].map(i => entries[i].json.x), ys = tabs[cat].map(i => entries[i].json.y);
+  const [bx, by] = near || [Math.max(...xs) + 2, Math.min(...ys)];
+  for (let r = 0; r < 40; r++) for (let dy = 0; dy <= r; dy++) for (const [x, y] of [[bx + r, by + dy], [bx + dy, by + r]])
+    if (!used.has(x + ',' + y) && !used.has((x - 1) + ',' + y) && !used.has((x + 1) + ',' + y)) return [x, y];
+  return [bx, by];
+}
+// move a step to another tab: new id, parents in the old tab become plain requirements, links in all texts follow
+function moveStep(id, cat) {
+  const ent = entries[id]; if (!ent || ent.cat === cat) return;
+  snapshot();
+  const short = id.split('/').pop(); let nid = `${NS}:${cat}/${short}`, n = 2;
+  while (entries[nid]) nid = `${NS}:${cat}/${short}_${n++}`;
+  const e = ent.json;
+  e.category = `${NS}:${cat}`;
+  const reqs = condAdvs(e);
+  e.parents = (e.parents || []).filter(p => !ANCHOR.test(p.entry) && entries[p.entry]?.cat === cat);
+  const anc = anchorOf(cat); if (anc) e.parents.push({ entry: anc, line_enabled: false, draw_arrow: false });
+  e.show_when_any_parent_unlocked = true;
+  const near = (reqs || []).map(c => stepOfAdv(c.advancement_id)).filter(s => s && entries[s].cat === cat).map(s => entries[s].json);
+  [e.x, e.y] = freeCell(cat, near.length ? [Math.max(...near.map(q => q.x)) + 1, Math.max(...near.map(q => q.y))] : null);
+  delete entries[id]; tabs[ent.cat] = tabs[ent.cat].filter(x => x !== id);
+  entries[nid] = { id: nid, cat, file: `${BOOK}/entries/${cat}/${nid.split('/').pop()}.json`, json: e };
+  tabs[cat].push(nid);
+  // requirements already on the new tab get a line
+  for (const c of reqs || []) { const sid = stepOfAdv(c.advancement_id); if (sid && entries[sid].cat === cat && !e.parents.some(p => p.entry === sid)) e.parents.unshift({ entry: sid }); }
+  for (const o of tabs[cat]) if (o !== nid && (condAdvs(entries[o].json) || []).some(c => c.advancement_id === ownAdv(nid)) && !(entries[o].json.parents || []).some(p => p.entry === nid || p.entry === id)) {
+    entries[o].json.parents = [{ entry: nid }, ...(entries[o].json.parents || [])]; if (!dirtyE.has(o)) refE.add(o); }
+  // steps that had it as a parent: keep the line only inside one tab
+  for (const o of Object.values(entries)) {
+    if (!(o.json.parents || []).some(p => p.entry === id)) continue;
+    o.json.parents = o.json.parents.filter(p => p.entry !== id || o.cat === cat).map(p => p.entry === id ? { ...p, entry: nid } : p);
+    requireStep(o.id, nid);
+    if (!dirtyE.has(o.id)) refE.add(o.id);
+  }
+  // text links
+  const from = linkOf(id), to = linkOf(nid);
+  const pat = new RegExp(from.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&') + '(?![a-z0-9_/])', 'g');
+  for (const [k, v] of Object.entries(lang)) if (typeof v === 'string' && pat.test(v)) { pat.lastIndex = 0; lang[k] = v.replace(pat, to); if (!dirtyL.has(k)) refL.add(k); }
+  for (const [o, t] of Object.entries(moves)) if (t === id) moves[o] = nid;
+  if (!Object.values(moves).includes(nid)) moves[id] = nid;
+  if (dirtyE.has(id)) dirtyE.delete(id);
+  movedFiles.add(id); refE.delete(id); dirtyE.add(nid);
+  sel = nid; $('tab').value = cat; setTab(cat); sel = nid; renderPanel(); draw();
+  status(`Moved to ${catName(cat)} as ${nid}. Drag it where you want it.`);
+}
+function linkOf(id) { return `entry://${BOOKID}/${id.split(':')[1]}`; }
+function slug(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '') || 'step'; }
+function createStep(x, y) {
+  const title = prompt('Name of the new step:'); if (!title) return;
+  let base = slug(title), id = `${NS}:${tab}/${base}`, n = 2;
+  while (entries[id]) id = `${NS}:${tab}/${base}_${n++}`;
+  const short = id.split('/').pop(), K = `book.quicreate.skyblock.custom.${tab}.${short}`;
+  const advId = `${NS}:skyblock/custom_${tab}_${short}`;
+  snapshot();
+  setLang(`${K}.name`, title); setLang(`${K}.desc`, '');
+  setLang(`${K}.p0.title`, title); setLang(`${K}.p0.text`, '**Goal:** 1 [Book](item://minecraft:book)');
+  setLang(`${K}.done.title`, 'Done'); setLang(`${K}.done.text`, '[#](1e6b2a)**Completed!**[#]()'); setLang(`${K}.donetip`, 'Done');
+  const anchor = anchorOf(tab);
+  const e = {
+    category: `${NS}:${tab}`, name: `${K}.name`, description: `${K}.desc`, icon: 'minecraft:book', x, y,
+    background_u_index: 1, background_v_index: 0,
+    pages: [
+      { type: 'modonomicon:spotlight', item: { item: 'minecraft:book' }, title: `${K}.p0.title`, text: `${K}.p0.text` },
+      { type: 'modonomicon:text', title: `${K}.done.title`, text: `${K}.done.text`,
+        condition: { type: 'modonomicon:advancement', advancement_id: advId, tooltip: `${K}.donetip` } }],
+    parents: anchor ? [{ entry: anchor, line_enabled: false, draw_arrow: false }] : [],
+    show_when_any_parent_unlocked: true };
+  entries[id] = { id, cat: tab, file: `${BOOK}/entries/${tab}/${short}.json`, json: e };
+  tabs[tab].push(id); touchE(id);
+  const path = advId.split(':')[1];
+  advs[advId] = { id: advId, file: `${ADV}/${path}.json`, json: {
+    parent: 'quicreate:skyblock/root',
+    display: { icon: { item: 'minecraft:book' }, title: { text: title }, description: { text: '' }, frame: 'task',
+               show_toast: true, announce_to_chat: false, hidden: true },
+    criteria: { task0: { trigger: 'quicreate:has_items', conditions: { item: 'minecraft:book', count: 1 } } },
+    requirements: [['task0']] } };
+  touchA(advId);
+  sel = id; panelTab = 'step'; renderTabs(); renderPanel(); draw();
+  status(`Created ${id}. Set its icon, task and text on the right; use Link to connect it.`);
+}
+function deleteStep(id) {
+  const linkers = Object.values(entries).filter(o => o.id !== id && (o.json.pages || []).some(pg => T(pg.text).includes(linkOf(id)))).map(o => name(o));
+  if (!confirm(`Delete "${name(entries[id])}"? Other steps lose it as a parent.` +
+      (linkers.length ? `\n\nThe text of these steps links to it, fix them after (see Problems): ${linkers.join(', ')}` : ''))) return;
+  snapshot();
+  const a = ownAdv(id);
+  if (a && advs[a]) for (const o of Object.values(advs)) if (o.json.parent === a) { o.json.parent = advs[a].json.parent; touchA(o.id); }
+  // steps on other tabs that needed it (no line) stop needing it
+  if (a) for (const o of Object.values(entries)) { const l = condAdvs(o.json); if (l && l.some(c => c.advancement_id === a)) { setCondAdvs(o.json, l.filter(c => c.advancement_id !== a)); touchE(o.id); } }
+  for (const other of Object.values(entries)) {
+    if ((other.json.parents || []).some(p => p.entry === id)) {
+      other.json.parents = other.json.parents.filter(p => p.entry !== id);
+      unrequireStep(other.id, id); touchE(other.id);
+    }
+  }
+  tabs[entries[id].cat] = tabs[entries[id].cat].filter(x => x !== id);
+  deletedE.add(id); dirtyE.delete(id); delete entries[id];
+  if (a && advs[a]) { deletedA.add(a); dirtyA.delete(a); delete advs[a]; }
+  sel = null; renderPanel(); draw();
+}
+
+// ------------------------------------------------------------------ text: page size estimate and preview
+const CW = { ' ': 4, i: 2, l: 3, t: 4, I: 4, f: 5, k: 5, '.': 2, ',': 2, ':': 2, ';': 2, "'": 2, '!': 2, '|': 2, '(': 5, ')': 5, '[': 4, ']': 4, '*': 5, '<': 5, '>': 5, '"': 5, '`': 3 };
+function visible(md) { return md.replace(/\[#\]\([0-9a-fA-F]*\)/g, '').replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/\*\*|\+\+|~~/g, ''); }
+function width(s) { let w = 0; for (const c of s) w += CW[c] ?? 6; return w; }
+function countLines(md) {
+  let total = 0; const paras = md.split('\n\n');
+  paras.forEach((para, i) => {
+    if (!para.trim()) return;
+    for (let raw of para.split('\n')) {
+      let line = visible(raw.trimEnd()), indent = 0;
+      if (/^\s*([-*]|\d+\.)\s/.test(line)) { indent = 10; line = line.replace(/^\s*([-*]|\d+\.)\s/, ''); }
+      let cur = 0, n = 1;
+      for (const w of line.split(' ')) { const ww = width(w) + (cur ? 4 : 0); if (cur + ww > PAGE_W - indent && cur) { n++; cur = width(w); } else cur += ww; }
+      total += n;
+    }
+    if (i < paras.length - 1) total++;
+  });
+  return total;
+}
+function pageCap(pg) {
+  return { 'modonomicon:text': pg.title ? 10 : 13, 'modonomicon:spotlight': 6, 'modonomicon:entity': 3, 'modonomicon:image': 3, 'modonomicon:multiblock': 3 }[pg.type] ?? 3;
+}
+function pageLines(pg) { return pg.text ? countLines(T(pg.text)) : 0; }
+function mdToHtml(md) {
+  const inline = s => esc(s)
+    .replace(/\[#\]\(([0-9a-fA-F]{6})\)(.*?)\[#\]\(\)/g, '<span style="color:#$1">$2</span>')
+    .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<i>$1</i>')
+    .replace(/\[([^\]]*)\]\((item|entry):\/\/[^)]*\)/g, '<a>$1</a>');
+  return md.split('\n\n').map(p => {
+    const ls = p.split('\n').filter(l => l.trim());
+    if (ls.length && ls.every(l => /^\s*[-*]\s/.test(l))) return '<ul>' + ls.map(l => '<li>' + inline(l.replace(/^\s*[-*]\s/, '')) + '</li>').join('') + '</ul>';
+    if (ls.length && ls.every(l => /^\s*\d+\.\s/.test(l))) return '<ol>' + ls.map(l => '<li>' + inline(l.replace(/^\s*\d+\.\s/, '')) + '</li>').join('') + '</ol>';
+    return '<p>' + inline(ls.join(' ')) + '</p>';
+  }).join('');
+}
+
+// ------------------------------------------------------------------ side panel
+document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { panelTab = b.dataset.p; renderTabs(); renderPanel(); });
+function renderTabs() { document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.p === panelTab)); }
+function renderPanel() {
+  const P = $('panel');
+  if (!root) { P.innerHTML = '<p class="help">Open the Quicreate folder to start.</p>'; return; }
+  if (panelTab === 'problems') return renderProblems(P);
+  if (panelTab === 'builds') return renderBuilds(P);
+  if (!sel) {
+    P.innerHTML = `<p class="help"><b>Click</b> a step to edit it, <b>drag</b> to move it (or arrow keys).<br>
+      <b>+ New step</b>, then click an empty cell. <b>Link</b>: click a parent, then a child.<br>
+      Red lines run through a step or bend wrong in game; orange lines share a stretch.<br>
+      <kbd>Ctrl+Z</kbd> undo · <kbd>Ctrl+S</kbd> save · <kbd>Esc</kbd> cancel.<br><br>
+      Save writes the book files, the lang file and <code>guide/book/layout_overrides.json</code>, so rebuilding the book
+      keeps your edits. Rebuild the mod to see them in game.</p>`;
+    return;
+  }
+  ({ step: renderStep, pages: renderPages, task: renderTask, lines: renderLines })[panelTab](P);
+}
+function langField(label, key, multiline, onKeyMissing) {
+  const id = 'f' + Math.random().toString(36).slice(2);
+  setTimeout(() => {
+    const el = $(id); if (!el) return;
+    el.onfocus = () => snapshot();
+    el.oninput = () => { setLang(key, el.value); const pv = $(id + 'pv'); if (pv) pv.innerHTML = mdToHtml(el.value); draw(); };
+  });
+  const v = esc(T(key));
+  return `<label class="f">${label}</label>` + (multiline
+    ? `<textarea id="${id}" rows="${Math.min(14, Math.max(3, (T(key).match(/\n/g) || []).length + 3))}">${v}</textarea>`
+    : `<input type="text" id="${id}" value="${v}">`);
+}
+function renderStep(P) {
+  const ent = entries[sel], e = ent.json, shapeKey = `${e.background_u_index || 0},${e.background_v_index || 0}`;
+  P.innerHTML = `<h2>${esc(name(ent))}</h2><div class="help">${sel} · x ${e.x}, y ${e.y}</div>
+    ${langField('Name (shown on the map and as the tooltip title)', e.name)}
+    ${e.description ? langField('Tooltip line', e.description) : ''}
+    <label class="f">Icon (item id)</label><input type="text" id="icon" value="${esc(e.icon)}">
+    <label class="f">Shape</label><select id="shape">${Object.entries(SHAPES).map(([k, v]) => `<option value="${k}" ${k === shapeKey ? 'selected' : ''}>${v}</option>`).join('')}</select>
+    <label class="f">Tab</label><div class="row"><select id="moveTo" class="grow">${[...$('tab').options].map(o => `<option value="${o.value}" ${o.value === ent.cat ? 'selected' : ''}>${esc(catName(o.value))}</option>`).join('')}</select><button id="moveBtn">Move</button></div>
+    <div class="help">Moving keeps every link and requirement; lines to steps left behind become plain requirements.</div>
+    <label class="f">Unlocks when</label>
+    <div class="help">${describeCond(e.condition)}</div>
+    <label class="row" style="margin-top:8px"><input type="checkbox" id="hidden" ${e.hide_while_locked ? 'checked' : ''} ${e.condition ? '' : 'disabled'}>
+      Invisible until unlocked</label>
+    <div class="help">${e.condition ? 'The icon and its lines stay off the map until the steps it needs are done.' : 'Always open, so it can\'t be hidden.'}</div>
+    <div class="help" style="margin-top:6px">Set on the Lines tab.</div>`;
+  $('moveBtn').onclick = () => moveStep(sel, $('moveTo').value);
+  $('hidden').onchange = ev => { snapshot(); if (ev.target.checked) e.hide_while_locked = true; else delete e.hide_while_locked; touchE(sel); draw(); };
+  $('icon').onfocus = snapshot;
+  $('icon').onchange = ev => { const old = e.icon; e.icon = ev.target.value.trim();
+    for (const pg of e.pages || []) if (pg.type === 'modonomicon:spotlight' && pg.item?.item === old) pg.item = { item: e.icon }; touchE(sel); const a = advs[ownAdv(sel)]; if (a?.json.display) { a.json.display.icon.item = e.icon; touchA(a.id); } draw(); };
+  $('shape').onchange = ev => { snapshot(); const [u, v] = ev.target.value.split(',').map(Number); e.background_u_index = u; e.background_v_index = v; touchE(sel); draw(); };
+  // keep the toast title in step with the name
+  const nameInput = P.querySelector('input[type=text]');
+  nameInput.addEventListener('change', () => { const a = advs[ownAdv(sel)]; if (a?.json.display) { a.json.display.title = { text: nameInput.value }; touchA(a.id); } });
+}
+function describeCond(c) {
+  if (!c) return 'Always open.';
+  if (c.type === 'modonomicon:advancement') { const adv = advs[c.advancement_id]; return 'Done: ' + esc(adv?.json.display?.title?.text || c.advancement_id); }
+  if (c.type === 'modonomicon:and') return 'All of: ' + c.children.map(describeCond).join(' · ');
+  if (c.type === 'modonomicon:or') return 'Any of: ' + c.children.map(describeCond).join(' · ');
+  return esc(c.type);
+}
+const PAGE_NAMES = { 'modonomicon:text': 'Text', 'modonomicon:spotlight': 'Item spotlight', 'modonomicon:entity': 'Creature',
+  'modonomicon:image': 'Picture', 'modonomicon:multiblock': 'Multiblock', 'modonomicon:crafting_recipe': 'Crafting grid',
+  'modonomicon:smelting_recipe': 'Smelting', 'modonomicon:blasting_recipe': 'Blasting', 'modonomicon:smithing_recipe': 'Smithing' };
+function renderPages(P) {
+  const ent = entries[sel], e = ent.json;
+  P.innerHTML = `<h2>Pages of ${esc(name(ent))}</h2><div id="plist"></div>
+    <div class="row" style="margin-top:8px;flex-wrap:wrap">
+      <button id="addText">+ Text</button><button id="addSpot">+ Item spotlight</button>
+      <button id="addEntity">+ Creature</button><button id="addRecipe">+ Crafting grid</button><button id="addBuild">+ Build preview</button></div>
+    <p class="help">Markdown: **bold**, *italic*, lists with "- ", a blank line between paragraphs.
+      Colour: [#](1e6b2a)green text[#](). Item link: [Name](item://mod:item). Step link: [Name](entry://${BOOKID}/tab/step).</p>`;
+  const list = $('plist');
+  (e.pages || []).forEach((pg, i) => {
+    const card = document.createElement('div'); card.className = 'card';
+    const cap = pageCap(pg), n = pageLines(pg);
+    card.innerHTML = `<div class="hd"><b>${i + 1}. ${PAGE_NAMES[pg.type] || pg.type}</b>
+        ${pg.condition ? '<span class="help">shown when done</span>' : ''}
+        <button class="small" data-a="up">↑</button><button class="small" data-a="down">↓</button><button class="small danger" data-a="del">✕</button></div>
+      ${pg.title !== undefined ? langField('Title', pg.title) : ''}
+      ${pg.type === 'modonomicon:spotlight' ? `<label class="f">Item</label><input type="text" data-k="item" value="${esc(pg.item?.item || pg.item?.tag && '#' + pg.item.tag || '')}">` : ''}
+      ${pg.type === 'modonomicon:entity' ? `<label class="f">Creature id</label><input type="text" data-k="entity" value="${esc(pg.entity_id)}">` : ''}
+      ${pg.type.endsWith('_recipe') ? `<label class="f">Recipe id</label><input type="text" data-k="recipe" value="${esc(pg.recipe_id_1)}">` : ''}
+      ${pg.type === 'modonomicon:multiblock' ? `<label class="f">Build (edit it on the Builds tab)</label><select data-k="mb">${Object.keys(mbs).sort().map(m => `<option ${m === pg.multiblock_id ? 'selected' : ''}>${esc(m)}</option>`).join('')}</select>
+        ${pg.multiblock_name !== undefined ? langField('Build name', pg.multiblock_name) : ''}` : ''}
+      ${pg.text !== undefined ? langField('Text', pg.text, true) : ''}
+      ${pg.text !== undefined ? `<div class="${n > cap ? 'warn' : 'help'}">About ${n} of ${cap} lines</div>` : ''}
+      ${pg.text !== undefined ? `<div class="preview">${pg.title ? `<div class="t">${esc(T(pg.title))}</div>` : ''}<div class="pv">${mdToHtml(T(pg.text))}</div></div>` : ''}`;
+    // live preview id for the textarea
+    const ta = card.querySelector('textarea'); if (ta) card.querySelector('.pv').id = ta.id + 'pv';
+    setTimeout(() => { const t2 = card.querySelector('textarea'); if (t2) card.querySelector('.pv').id = t2.id + 'pv'; });
+    card.querySelectorAll('input[data-k], select[data-k]').forEach(inp => {
+      inp.onfocus = snapshot;
+      inp.onchange = () => {
+        const v = inp.value.trim();
+        if (inp.dataset.k === 'item') pg.item = v.startsWith('#') ? { tag: v.slice(1) } : { item: v };
+        if (inp.dataset.k === 'entity') pg.entity_id = v;
+        if (inp.dataset.k === 'recipe') pg.recipe_id_1 = v;
+        if (inp.dataset.k === 'mb') pg.multiblock_id = v;
+        touchE(sel);
+      };
+    });
+    card.querySelectorAll('button[data-a]').forEach(b => b.onclick = () => {
+      snapshot(); const a = b.dataset.a, ps = e.pages;
+      if (a === 'del') ps.splice(i, 1);
+      if (a === 'up' && i > 0) [ps[i - 1], ps[i]] = [ps[i], ps[i - 1]];
+      if (a === 'down' && i < ps.length - 1) [ps[i + 1], ps[i]] = [ps[i], ps[i + 1]];
+      touchE(sel); renderPanel(); draw();
+    });
+    list.appendChild(card);
+  });
+  const K = () => `book.quicreate.skyblock.custom.${sel.replace(/[:/]/g, '_')}.${Date.now().toString(36)}`;
+  const insert = pg => { snapshot(); const ps = e.pages; const doneAt = ps.findIndex(p => p.condition); ps.splice(doneAt < 0 ? ps.length : doneAt, 0, pg); touchE(sel); renderPanel(); draw(); };
+  $('addText').onclick = () => { const k = K(); setLang(k + '.title', 'Title'); setLang(k + '.text', 'Text'); insert({ type: 'modonomicon:text', title: k + '.title', text: k + '.text' }); };
+  $('addSpot').onclick = () => { const k = K(); setLang(k + '.title', name(ent)); setLang(k + '.text', ''); insert({ type: 'modonomicon:spotlight', item: { item: e.icon }, title: k + '.title', text: k + '.text' }); };
+  $('addEntity').onclick = () => { const k = K(); setLang(k + '.text', ''); insert({ type: 'modonomicon:entity', entity_id: 'minecraft:zombie', text: k + '.text', scale: 0.8 }); };
+  $('addBuild').onclick = () => {
+    const ids = Object.keys(mbs).sort(); if (!ids.length) { alert('Make a build on the Builds tab first.'); return; }
+    const k = K(); setLang(k + '.mbname', name(ent)); setLang(k + '.text', '');
+    insert({ type: 'modonomicon:multiblock', multiblock_id: ids[0], multiblock_name: k + '.mbname', text: k + '.text', show_visualize_button: true });
+  };
+  $('addRecipe').onclick = () => { const k = K(); setLang(k + '.text', ''); insert({ type: 'modonomicon:crafting_recipe', recipe_id_1: 'minecraft:book', text: k + '.text' }); };
+}
+function renderTask(P) {
+  const aid = ownAdv(sel), a = advs[aid];
+  if (!a) {
+    P.innerHTML = `<h2>Task</h2><p class="help">This step has no task (it's a reading page or a link).</p>
+      <button id="mk">Give it a task</button>`;
+    $('mk').onclick = () => {
+      snapshot(); const short = sel.split('/').pop(), cat = entries[sel].cat;
+      const advId = `${NS}:skyblock/custom_${cat}_${short}`, K = `book.quicreate.skyblock.custom.${cat}.${short}`;
+      advs[advId] = { id: advId, file: `${ADV}/skyblock/custom_${cat}_${short}.json`, json: { parent: 'quicreate:skyblock/root',
+        display: { icon: { item: entries[sel].json.icon }, title: { text: name(entries[sel]) }, description: { text: '' }, frame: 'task', show_toast: true, announce_to_chat: false, hidden: true },
+        criteria: { task0: { trigger: 'quicreate:has_items', conditions: { item: 'minecraft:book', count: 1 } } }, requirements: [['task0']] } };
+      setLang(`${K}.done.title`, 'Done'); setLang(`${K}.done.text`, '[#](1e6b2a)**Completed!**[#]()'); setLang(`${K}.donetip`, 'Done');
+      entries[sel].json.pages.push({ type: 'modonomicon:text', title: `${K}.done.title`, text: `${K}.done.text`,
+        condition: { type: 'modonomicon:advancement', advancement_id: advId, tooltip: `${K}.donetip` } });
+      touchA(advId); touchE(sel); renderPanel();
+    };
+    return;
+  }
+  const crit = a.json.criteria;
+  P.innerHTML = `<h2>Task: ${esc(a.json.display?.title?.text || aid)}</h2><div class="help">${aid} · finishes when <b>all</b> of these are done</div>
+    <div id="clist"></div>
+    <div class="row" style="flex-wrap:wrap"><button id="addItem">+ Have items</button><button id="addKill">+ Defeat</button><button id="addDim">+ Travel to</button><button id="addStruct">+ Find structure</button></div>
+    <label class="f">Toast description</label><input type="text" id="tdesc" value="${esc(a.json.display?.description?.text || '')}">
+    <label class="f">Toast frame</label><select id="frame">${['task', 'goal', 'challenge'].map(f => `<option ${a.json.display?.frame === f ? 'selected' : ''}>${f}</option>`).join('')}</select>
+    <p class="help">"Have items" counts the whole inventory. Use #tag for any item in a tag (for example #minecraft:logs).</p>`;
+  const list = $('clist');
+  for (const [k, c] of Object.entries(crit)) {
+    const card = document.createElement('div'); card.className = 'card';
+    const t = c.trigger, cc = c.conditions || {};
+    let body = '';
+    if (t === 'quicreate:has_items') body = `<div class="row"><input class="grow" type="text" data-f="what" value="${esc(cc.item || (cc.tag ? '#' + cc.tag : ''))}" placeholder="mod:item or #tag"><input type="number" data-f="count" value="${cc.count || 1}" min="1" style="width:70px"></div>`;
+    else if (t === 'minecraft:player_killed_entity') body = `<input type="text" data-f="entity" value="${esc(cc.entity?.type || '')}" placeholder="mod:creature">`;
+    else if (t === 'minecraft:changed_dimension') body = `<input type="text" data-f="dim" value="${esc(cc.to || '')}" placeholder="ad_astra:moon">`;
+    else if (t === 'minecraft:location' && cc.player?.location?.structure !== undefined) body = `<input type="text" data-f="struct" value="${esc(cc.player.location.structure)}" placeholder="mod:structure">`;
+    else body = `<textarea data-f="raw" rows="4">${esc(JSON.stringify(c, null, 1))}</textarea>`;
+    const label = { 'quicreate:has_items': 'Have items', 'minecraft:player_killed_entity': 'Defeat', 'minecraft:changed_dimension': 'Travel to', 'minecraft:location': 'Be at' }[t] || t;
+    card.innerHTML = `<div class="hd"><b>${label}</b><button class="small danger" data-a="del">✕</button></div>${body}`;
+    card.querySelectorAll('[data-f]').forEach(inp => {
+      inp.onfocus = snapshot;
+      inp.onchange = () => {
+        const v = inp.value.trim(), f = inp.dataset.f;
+        if (f === 'what') { delete cc.item; delete cc.tag; if (v.startsWith('#')) cc.tag = v.slice(1); else cc.item = v; }
+        if (f === 'count') cc.count = Math.max(1, parseInt(v) || 1);
+        if (f === 'entity') c.conditions = { entity: { type: v } };
+        if (f === 'dim') c.conditions = { to: v };
+        if (f === 'struct') c.conditions = { player: { location: { structure: v } } };
+        if (f === 'raw') { try { crit[k] = JSON.parse(v); inp.style.borderColor = ''; } catch (err) { inp.style.borderColor = 'var(--bad)'; return; } }
+        if (t === 'quicreate:has_items') c.conditions = cc;
+        touchA(aid);
+      };
+    });
+    card.querySelector('[data-a=del]').onclick = () => {
+      if (Object.keys(crit).length === 1) { alert('A task needs at least one goal.'); return; }
+      snapshot(); delete crit[k]; a.json.requirements = Object.keys(crit).map(x => [x]); touchA(aid); renderPanel();
+    };
+    list.appendChild(card);
+  }
+  const add = c => { snapshot(); let i = 0; while (crit['task' + i]) i++; crit['task' + i] = c; a.json.requirements = Object.keys(crit).map(x => [x]); touchA(aid); renderPanel(); };
+  $('addItem').onclick = () => add({ trigger: 'quicreate:has_items', conditions: { item: 'minecraft:book', count: 1 } });
+  $('addKill').onclick = () => add({ trigger: 'minecraft:player_killed_entity', conditions: { entity: { type: 'minecraft:zombie' } } });
+  $('addDim').onclick = () => add({ trigger: 'minecraft:changed_dimension', conditions: { to: 'ad_astra:moon' } });
+  $('addStruct').onclick = () => add({ trigger: 'minecraft:location', conditions: { player: { location: { structure: 'minecraft:village_plains' } } } });
+  $('tdesc').onfocus = snapshot; $('tdesc').onchange = ev => { a.json.display.description = { text: ev.target.value }; touchA(aid); };
+  $('frame').onchange = ev => { snapshot(); a.json.display.frame = ev.target.value; touchA(aid); };
+}
+function renderLines(P) {
+  const ent = entries[sel], e = ent.json;
+  const ps = (e.parents || []).filter(p => !ANCHOR.test(p.entry) || p.line_enabled !== false);
+  const myAdv = ownAdv(sel);
+  const kids = Object.values(entries).filter(o => o.id !== sel && ((o.json.parents || []).some(p => p.entry === sel) || (myAdv && (condAdvs(o.json) || []).some(c => c.advancement_id === myAdv))));
+  P.innerHTML = `<h2>Parents of ${esc(name(ent))}</h2><div id="pars"></div>
+    <p class="help">Use <b>Link</b> in the toolbar to add a parent (click parent, then child). The step unlocks when every
+    parent with a task is done.</p>
+    <h2>Also requires</h2><div id="reqs"></div>
+    <div class="row"><input type="text" id="reqAdd" class="grow" list="allSteps" placeholder="Step from any tab…"><button id="reqBtn">Add</button></div>
+    <datalist id="allSteps">${Object.values(entries).filter(o => ownAdv(o.id) && o.id !== sel).map(o => `<option value="${esc(o.id)}">${esc(name(o))} (${esc(catName(o.cat))})</option>`).join('')}</datalist>
+    <p class="help">Steps that must be done first but get no line, usually because they're on another tab.</p>
+    <h2>Unlocks</h2><div class="help">${kids.map(k => esc(name(k)) + (k.cat !== tab ? ` <i>(${catName(k.cat)})</i>` : '')).join(', ') || 'Nothing.'}</div>`;
+  const list = condAdvs(e), parentAdvs = new Set((e.parents || []).map(p => ownAdv(p.entry)).filter(Boolean));
+  const rb = $('reqs');
+  if (list === null) rb.innerHTML = '<p class="help">Hand-written condition: edit the JSON file.</p>';
+  else {
+    const extra = list.filter(c => !parentAdvs.has(c.advancement_id));
+    if (!extra.length) rb.innerHTML = '<p class="help">Nothing else.</p>';
+    for (const c of extra) {
+      const sid = stepOfAdv(c.advancement_id), card = document.createElement('div'); card.className = 'card';
+      card.innerHTML = `<div class="hd"><b>${sid ? esc(name(entries[sid])) : esc(c.advancement_id)}${sid ? ` <i class="help">(${esc(catName(entries[sid].cat))})</i>` : ''}</b><button class="small danger">remove</button></div>`;
+      card.querySelector('button').onclick = () => { snapshot(); setCondAdvs(e, condAdvs(e).filter(x => x.advancement_id !== c.advancement_id)); touchE(sel); renderPanel(); };
+      rb.appendChild(card);
+    }
+  }
+  $('reqBtn').onclick = () => {
+    const v = $('reqAdd').value.trim(); if (!entries[v]) { status('Pick a step from the list.'); return; }
+    snapshot(); requireStep(sel, v); touchE(sel); renderPanel();
+  };
+  const box = $('pars');
+  if (!ps.length) box.innerHTML = '<p class="help">No parents: always open.</p>';
+  for (const p of ps) {
+    const pe = entries[p.entry], card = document.createElement('div'); card.className = 'card';
+    const broken = pe && reverseBroken(pe.json, e) && !p.line_reversed;
+    const other = pe && pe.cat !== tab;
+    card.innerHTML = `<div class="hd"><b>${pe ? esc(name(pe)) : p.entry}${other ? ` <i class="help">(${catName(pe.cat)})</i>` : ''}</b>
+        <button class="small danger" data-a="rm">remove</button></div>
+      ${other ? '<div class="help">Other tab: no line is drawn.</div>' : `
+      <label class="row"><input type="checkbox" ${p.line_enabled !== false ? 'checked' : ''} data-k="line_enabled"> draw line</label>
+      <label class="row" ${broken ? 'title="Modonomicon draws this bend wrong when the step is down and to the left of its parent"' : ''}>
+        <input type="checkbox" ${p.line_reversed ? 'checked' : ''} ${broken ? 'disabled' : ''} data-k="line_reversed"> reverse bend (column first)</label>
+      <label class="row"><input type="checkbox" ${p.draw_arrow !== false ? 'checked' : ''} data-k="draw_arrow"> arrow</label>`}`;
+    card.querySelectorAll('input').forEach(cb => cb.onchange = () => {
+      snapshot(); const k = cb.dataset.k;
+      if (k === 'line_reversed') { if (cb.checked) p.line_reversed = true; else delete p.line_reversed; }
+      else { if (cb.checked) delete p[k]; else p[k] = false; }
+      touchE(sel); draw();
+    });
+    card.querySelector('[data-a=rm]').onclick = () => removeParent(sel, p.entry);
+    box.appendChild(card);
+  }
+}
+function renderProblems(P) {
+  if (!tab) return;
+  const { issues } = analyse();
+  P.innerHTML = `<h2>Problems in ${esc(catName(tab))}</h2><ul class="issues" id="iss"></ul>`;
+  const ul = $('iss');
+  if (!issues.length) ul.innerHTML = '<li style="color:var(--ok)">Nothing to fix.</li>';
+  for (const is of issues) { const li = document.createElement('li'); li.textContent = is.text; if (is.id) li.onclick = () => { sel = is.id; panelTab = 'step'; renderTabs(); renderPanel(); draw(); }; ul.appendChild(li); }
+}
+
+// ------------------------------------------------------------------ builds (Modonomicon multiblocks)
+const MB_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789';
+function mbDims(j) { const L = j.pattern; return { h: L.length, d: L[0]?.length || 1, w: Math.max(1, ...L.flatMap(l => l.map(r => r.length))) }; }
+function mbResize(j, w, d, h) {
+  const old = j.pattern, out = [];
+  for (let y = 0; y < h; y++) { const layer = []; for (let z = 0; z < d; z++) { let row = (old[y]?.[z] || ''); row = (row + ' '.repeat(w)).slice(0, w); layer.push(row); } out.push(layer); }
+  j.pattern = out;
+}
+function mbState(m) { return m ? (m.block || m.display || '') : ''; }
+function mbColour(st) { let h = 0; for (const c of st.split('[')[0]) h = (h * 31 + c.charCodeAt(0)) >>> 0; return `hsl(${Math.round((h % 1000) * 137.5) % 360} 45% ${45 + (h >> 11) % 20}%)`; }
+// Modonomicon crashes the whole game if a build names a block property that doesn't exist, so check them
+// against block_props.json (made from the installed mods by dump_block_props.py). Vanilla blocks aren't listed.
+function mbCheckState(st) {
+  if (!st) return 'no block set';
+  const m = st.match(/^([a-z0-9_.-]+:[a-z0-9_/.-]+)(?:\[(.*)\])?$/); if (!m) return `"${st}" isn't a block id`;
+  const [, b, props] = m, ns = b.split(':')[0];
+  if (!BPNS.has(ns)) return null;
+  if (!BP[b]) return `${b} isn't a block in the installed mods`;
+  for (const kv of (props || '').split(',').filter(Boolean)) {
+    const [k, v] = kv.split('=');
+    if (k === 'waterlogged' && (v === 'true' || v === 'false')) continue;
+    if (!BP[b][k]) return `${b} has no "${k}" (it has: ${Object.keys(BP[b]).join(', ') || 'nothing'})`;
+    if (!BP[b][k].includes(v)) return `${b} ${k} can't be "${v}" (use ${BP[b][k].join(' / ')})`;
+  }
+  return null;
+}
+function mbProblems(j) {
+  const out = [];
+  if (j.type !== 'modonomicon:dense') return out;
+  const chars = new Set(j.pattern.flatMap(l => l.join('').split('')));
+  const zeros = j.pattern.flat().join('').split('0').length - 1;
+  if (zeros !== 1) out.push(`needs exactly one centre "0" (has ${zeros})`);
+  for (const c of chars) if (c !== ' ' && c !== '_' && !j.mapping[c]) out.push(`"${c}" is painted but has no block`);
+  for (const [c, mp] of Object.entries(j.mapping)) { const e = mbCheckState(mbState(mp)); if (e) out.push(`${c}: ${e}`); }
+  return out;
+}
+function renderBuilds(P) {
+  const ids = Object.keys(mbs).sort();
+  if (!mbSel || !mbs[mbSel]) mbSel = ids[0] || null;
+  P.innerHTML = `<h2>Builds</h2><div class="row"><select id="mbPick" class="grow">${ids.map(i => `<option ${i === mbSel ? 'selected' : ''}>${esc(i)}</option>`).join('')}</select>
+    <button id="mbNew">+ New</button><button id="mbCopy" title="Copy this build">Copy</button></div>
+    <p class="help">A build is a 3D preview for a "Build preview" page (Pages tab). Players can turn it and press Visualize to see it ghosted in the world.</p>
+    <div id="mbBody"></div>`;
+  $('mbPick').onchange = ev => { mbSel = ev.target.value; mbLayer = 0; renderPanel(); };
+  const make = (json) => { const nm = slug(prompt('Name for the build (letters, numbers, _):') || ''); if (!nm || nm === 'step') return;
+    const id = `${NS}:${nm}`; if (mbs[id]) { alert('That name is taken.'); return; }
+    mbs[id] = { id, file: `${MB}/${nm}.json`, json }; dirtyM.add(id); mbSel = id; mbLayer = 0; renderPanel(); };
+  $('mbNew').onclick = () => make({ type: 'modonomicon:dense', pattern: [['   ', ' 0 ', '   ']], mapping: { '0': { type: 'modonomicon:block', block: 'minecraft:stone' } } });
+  $('mbCopy').onclick = () => { if (mbSel) make(JSON.parse(JSON.stringify(mbs[mbSel].json))); };
+  if (!mbSel) return;
+  const m = mbs[mbSel], j = m.json;
+  if (j.type !== 'modonomicon:dense' || !Array.isArray(j.pattern)) { $('mbBody').innerHTML = '<p class="help">This build is not a layered pattern; edit its JSON file by hand.</p>'; return; }
+  const { w, d, h } = mbDims(j); mbLayer = Math.min(mbLayer, h - 1);
+  const used = new Set(j.pattern.flatMap(l => l.join('').split('')));
+  const keys = Object.keys(j.mapping);
+  const B = $('mbBody');
+  const probs = mbProblems(j);
+  B.innerHTML = (probs.length ? `<div style="background:#4a1d1d;border:1px solid #b44;border-radius:4px;padding:6px 8px;margin-bottom:6px">
+      <b>Won't save until fixed (it would crash the game):</b><br>${probs.map(esc).join('<br>')}</div>` : '') + `<canvas id="mbCv" width="380" height="230" style="background:#14161b;border-radius:4px;width:100%"></canvas>
+    <div class="row" style="margin-top:6px"><span class="help">Size</span>
+      <input type="number" id="mbW" min="1" max="32" value="${w}" style="width:56px" title="width (x)"> ×
+      <input type="number" id="mbD" min="1" max="32" value="${d}" style="width:56px" title="depth (z)"> ×
+      <input type="number" id="mbH" min="1" max="32" value="${h}" style="width:56px" title="layers (y)"></div>
+    <div class="row" style="margin-top:6px"><button id="mbUp" class="small">▲</button><b class="grow">Layer ${h - mbLayer} of ${h} ${mbLayer === 0 ? '(top)' : mbLayer === h - 1 ? '(bottom)' : ''}</b><button id="mbDown" class="small">▼</button></div>
+    <div id="mbGrid" style="display:grid;grid-template-columns:repeat(${w},22px);gap:1px;margin:6px 0;user-select:none"></div>
+    <div class="help">Click to paint with the chosen block, right-click to clear. "0" is the centre (exactly one).</div>
+    <h2>Blocks</h2><div id="mbPal"></div>
+    <div class="row"><button id="mbAdd">+ Block</button></div>
+    <p class="help">Block state, e.g. <code>create:shaft[axis=x]</code>. "Look only" blocks show in the preview but aren't checked when the player builds it.</p>`;
+  const grid = $('mbGrid');
+  const paint = (z, x, ch) => {
+    snapshotM();
+    if (ch === '0') j.pattern = j.pattern.map(l => l.map(r => r.replace(/0/g, ' ')));
+    const row = j.pattern[mbLayer][z]; j.pattern[mbLayer][z] = row.slice(0, x) + ch + row.slice(x + 1);
+    dirtyM.add(mbSel); renderPanel();
+  };
+  for (let z = 0; z < d; z++) for (let x = 0; x < w; x++) {
+    const ch = j.pattern[mbLayer][z][x] || ' ', cell = document.createElement('div');
+    const st = mbState(j.mapping[ch]);
+    cell.style.cssText = `width:22px;height:22px;border:1px solid #3a3f4b;font:11px monospace;display:flex;align-items:center;justify-content:center;cursor:pointer;background:${ch === ' ' ? '#1d2027' : mbColour(st)};color:#111`;
+    cell.textContent = ch === ' ' ? '' : ch; cell.title = ch === ' ' ? 'empty (anything)' : `${ch}: ${st}`;
+    cell.onmousedown = ev => { ev.preventDefault(); paint(z, x, ev.button === 2 ? ' ' : mbBrush); };
+    cell.oncontextmenu = ev => ev.preventDefault();
+    grid.appendChild(cell);
+  }
+  const pal = $('mbPal');
+  for (const ch of keys) {
+    const mp = j.mapping[ch], row = document.createElement('div'); row.className = 'row'; row.style.margin = '3px 0';
+    row.innerHTML = `<button class="small ${mbBrush === ch ? 'on' : ''}" style="width:28px;background:${mbColour(mbState(mp))};color:#111">${esc(ch)}</button>
+      <input type="text" class="grow" value="${esc(mbState(mp))}">
+      <label class="row help" title="shown, not checked"><input type="checkbox" ${mp.type === 'modonomicon:display' ? 'checked' : ''}>look only</label>
+      <button class="small danger" ${used.has(ch) || ch === '0' ? 'disabled title="still used"' : ''}>✕</button>`;
+    const [btn, inp, , del] = row.querySelectorAll('button, input[type=text], label, button');
+    const look = row.querySelector('input[type=checkbox]');
+    row.querySelector('button').onclick = () => { mbBrush = ch; renderPanel(); };
+    const apply = () => { snapshotM(); const v = inp.value.trim();
+      j.mapping[ch] = look.checked ? { type: 'modonomicon:display', display: v }
+        : v.includes('[') ? { type: 'modonomicon:blockstate', display: v, block: v } : { type: 'modonomicon:block', block: v };
+      // Blocks Create animates are invisible in the book; show Quicreate's stand-in, still check the real block.
+      const stand = { 'create_new_age:generator_coil': 'quicreate:preview_generator_coil' }[v.split('[')[0]];
+      if (stand && !look.checked) { const ax = (v.match(/axis=(\w)/) || [, 'y'])[1];
+        j.mapping[ch] = { type: 'modonomicon:blockstate', display: `${stand}[axis=${ax}]`, block: v.includes('[') ? v : `${v}[axis=${ax}]` }; }
+      dirtyM.add(mbSel); renderPanel(); };
+    inp.onchange = apply; look.onchange = apply;
+    row.querySelectorAll('button')[1].onclick = () => { snapshotM(); delete j.mapping[ch]; dirtyM.add(mbSel); renderPanel(); };
+    pal.appendChild(row);
+  }
+  $('mbAdd').onclick = () => { const ch = [...MB_CHARS].find(c => !j.mapping[c]); if (!ch) return; snapshotM();
+    j.mapping[ch] = { type: 'modonomicon:block', block: 'minecraft:stone' }; mbBrush = ch; dirtyM.add(mbSel); renderPanel(); };
+  $('mbUp').onclick = () => { mbLayer = Math.max(0, mbLayer - 1); renderPanel(); };
+  $('mbDown').onclick = () => { mbLayer = Math.min(h - 1, mbLayer + 1); renderPanel(); };
+  const resize = () => { snapshotM(); mbResize(j, +$('mbW').value || 1, +$('mbD').value || 1, +$('mbH').value || 1); dirtyM.add(mbSel); renderPanel(); };
+  $('mbW').onchange = resize; $('mbD').onchange = resize; $('mbH').onchange = resize;
+  drawBuild($('mbCv'), j);
+}
+function snapshotM() { snapshot(); }
+function drawBuild(cv, j) {
+  const c = cv.getContext('2d'), { w, d, h } = mbDims(j);
+  const s = Math.min(cv.width / (w + d + 2), cv.height / ((w + d) / 2 + h + 2)) ;
+  const ox = cv.width / 2 + (d - w) * s / 2, oy = s * 1.2;
+  c.clearRect(0, 0, cv.width, cv.height);
+  const cells = [];
+  j.pattern.forEach((layer, li) => layer.forEach((row, z) => [...row].forEach((ch, x) => { if (ch !== ' ' && ch !== '_') cells.push([x, h - 1 - li, z, ch]); })));
+  cells.sort((a, b) => (a[0] + a[2]) - (b[0] + b[2]) || a[1] - b[1]);
+  const poly = (pts, col) => { c.beginPath(); c.moveTo(...pts[0]); pts.slice(1).forEach(p => c.lineTo(...p)); c.closePath(); c.fillStyle = col; c.fill(); c.strokeStyle = 'rgba(0,0,0,.35)'; c.stroke(); };
+  { const fy = oy + h * s, P = (x, z) => [ox + (x - z) * s, fy + (x + z) * s / 2];   // footprint on the floor
+    c.strokeStyle = 'rgba(255,255,255,.12)'; c.beginPath();
+    for (let x = 0; x <= w; x++) { c.moveTo(...P(x, 0)); c.lineTo(...P(x, d)); }
+    for (let z = 0; z <= d; z++) { c.moveTo(...P(0, z)); c.lineTo(...P(w, z)); }
+    c.stroke(); }
+  for (const [x, y, z, ch] of cells) {
+    const u = ox + (x - z) * s, v = oy + (x + z) * s / 2 + (h - 1 - y) * s, col = mbColour(mbState(j.mapping[ch]));
+    poly([[u, v], [u + s, v + s / 2], [u, v + s], [u - s, v + s / 2]], col);
+    poly([[u - s, v + s / 2], [u, v + s], [u, v + 2 * s], [u - s, v + 1.5 * s]], `color-mix(in srgb, ${col} 75%, black)`);
+    poly([[u, v + s], [u + s, v + s / 2], [u + s, v + 1.5 * s], [u, v + 2 * s]], `color-mix(in srgb, ${col} 55%, black)`);
+    if (ch === '0') { c.fillStyle = '#fff'; c.font = '10px monospace'; c.fillText('0', u - 3, v + s * 0.65); }
+  }
+}
+
+// ------------------------------------------------------------------ save
+async function save() {
+  if (!root) return;
+  const n = dirtyE.size + dirtyA.size + dirtyL.size + deletedE.size + deletedA.size + refE.size + movedFiles.size + dirtyM.size;
+  if (!n) { status('Nothing to save.'); return; }
+  ovr.moved = ovr.moved || {};
+  for (const [o, t] of Object.entries(moves)) {
+    for (const [a, b] of Object.entries(ovr.moved)) if (b === o) ovr.moved[a] = t;   // chain earlier moves
+    if (!Object.values(ovr.moved).includes(t)) ovr.moved[o] = t;
+    for (const sec of ['entries', 'layout']) if (ovr[sec][o]) { if (sec === 'entries') ovr.entries[t] = ovr.entries[o]; delete ovr[sec][o]; }
+  }
+  for (const [a, b] of Object.entries(ovr.moved)) if (a === b) delete ovr.moved[a];
+  for (const id of movedFiles) await removeFile(`${BOOK}/entries/${id.split(':')[1]}.json`);
+  for (const id of refE) if (entries[id] && !dirtyE.has(id)) await writeJson(entries[id].file, entries[id].json);
+  for (const id of dirtyE) {
+    if (!entries[id]) continue;
+    await writeJson(entries[id].file, entries[id].json);
+    ovr.entries[id] = entries[id].json; delete ovr.layout[id];
+  }
+  for (const id of deletedE) {
+    await removeFile(`${BOOK}/entries/${id.split(':')[1]}.json`);
+    delete ovr.entries[id]; delete ovr.layout[id]; if (!ovr.deleted.includes(id)) ovr.deleted.push(id);
+  }
+  ovr.multiblocks = ovr.multiblocks || {};
+  const badM = [...dirtyM].filter(id => mbs[id] && mbProblems(mbs[id].json).length);
+  if (badM.length) alert(`Not saving these builds until their problems are fixed (Builds tab): ${badM.join(', ')}`);
+  for (const id of dirtyM) { if (!mbs[id] || badM.includes(id)) continue; await writeJson(mbs[id].file, mbs[id].json); ovr.multiblocks[id] = mbs[id].json; }
+  dirtyM = new Set(badM);
+  for (const id of dirtyA) { if (!advs[id]) continue; await writeJson(advs[id].file, advs[id].json); ovr.advancements[id] = advs[id].json; }
+  for (const id of deletedA) {
+    await removeFile(`${ADV}/${id.split(':')[1]}.json`);
+    delete ovr.advancements[id]; if (!ovr.deleted_advancements.includes(id)) ovr.deleted_advancements.push(id);
+  }
+  if (dirtyL.size) {
+    const fileLang = await readJson(LANG, {});
+    for (const k of dirtyL) { fileLang[k] = lang[k]; ovr.lang[k] = lang[k]; }
+  }
+  if (refL.size) {
+    const fileLang = await readJson(LANG, {});
+    for (const k of refL) { fileLang[k] = lang[k]; if (k in ovr.lang) ovr.lang[k] = lang[k]; }
+    await writeJson(LANG, fileLang);
+  }
+  await writeJson(OVR, ovr);
+  dirtyE.clear(); dirtyA.clear(); dirtyL.clear(); deletedE.clear(); deletedA.clear();
+  moves = {}; movedFiles.clear(); refE.clear(); refL.clear();
+  status(`Saved ${n} changes. Rebuild the mod (build-and-install.ps1) to see them in game.`);
+}
+$('save').onclick = save;
+window.onbeforeunload = e => { if (dirtyM.size + dirtyE.size + dirtyA.size + dirtyL.size + deletedE.size + deletedA.size + refE.size + movedFiles.size) { e.preventDefault(); e.returnValue = ''; } };
+renderPanel();
+</script>
+</body>
+</html>

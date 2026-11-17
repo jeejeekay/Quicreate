@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/andesite_casing",
+  "display": {
+    "icon": {
+      "item": "create:hand_crank"
+    },
+    "title": {
+      "text": "Hand Crank"
+    },
+    "description": {
+      "text": "Your first rotation"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create:hand_crank"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

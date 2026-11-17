@@ -1,0 +1,60 @@
+{
+  "category": "quicreate:glacio",
+  "name": "book.quicreate.skyblock.glacio.cursium.name",
+  "description": "book.quicreate.skyblock.glacio.cursium.desc",
+  "icon": "cataclysm:cursium_ingot",
+  "x": -2,
+  "y": 4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:cursium_ingot"
+      },
+      "title": "book.quicreate.skyblock.glacio.cursium.spot.title",
+      "text": "book.quicreate.skyblock.glacio.cursium.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.cursium.how.p0",
+      "title": "book.quicreate.skyblock.glacio.cursium.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.cursium.how.p1"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "cataclysm:cursium_ingot",
+      "text": "book.quicreate.skyblock.glacio.cursium.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.cursium.done.p0",
+      "title": "book.quicreate.skyblock.glacio.cursium.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/cursium",
+        "tooltip": "book.quicreate.skyblock.glacio.cursium.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:glacio/maledictus"
+    },
+    {
+      "entry": "quicreate:glacio/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/maledictus",
+    "tooltip": "book.quicreate.skyblock.tooltip.maledictus"
+  },
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,71 @@
+{
+  "category": "quicreate:space",
+  "name": "book.quicreate.skyblock.space.fuel_loader.name",
+  "description": "book.quicreate.skyblock.space.fuel_loader.desc",
+  "icon": "ad_astra:fuel_refinery",
+  "x": 5,
+  "y": -4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "ad_astra:fuel_refinery"
+      },
+      "title": "book.quicreate.skyblock.space.fuel_loader.spot.title",
+      "text": "book.quicreate.skyblock.space.fuel_loader.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.fuel_loader.how.p0",
+      "title": "book.quicreate.skyblock.space.fuel_loader.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.space.fuel_loader.done.p0",
+      "title": "book.quicreate.skyblock.space.fuel_loader.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/fuel_loader",
+        "tooltip": "book.quicreate.skyblock.space.fuel_loader.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:space/oil"
+    },
+    {
+      "entry": "quicreate:space/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/oil",
+        "tooltip": "book.quicreate.skyblock.tooltip.oil"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/reactor_case",
+        "tooltip": "book.quicreate.skyblock.tooltip.reactor_case"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/nuclear_fuel",
+        "tooltip": "book.quicreate.skyblock.tooltip.nuclear_fuel"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/copper_circuit",
+        "tooltip": "book.quicreate.skyblock.tooltip.copper_circuit"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

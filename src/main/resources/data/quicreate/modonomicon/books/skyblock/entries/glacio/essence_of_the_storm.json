@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:glacio",
+  "name": "book.quicreate.skyblock.glacio.essence_of_the_storm.name",
+  "description": "book.quicreate.skyblock.glacio.essence_of_the_storm.desc",
+  "icon": "cataclysm:essence_of_the_storm",
+  "x": 0,
+  "y": 4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:essence_of_the_storm"
+      },
+      "title": "book.quicreate.skyblock.glacio.essence_of_the_storm.spot.title",
+      "text": "book.quicreate.skyblock.glacio.essence_of_the_storm.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.essence_of_the_storm.how.p0",
+      "title": "book.quicreate.skyblock.glacio.essence_of_the_storm.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.essence_of_the_storm.done.p0",
+      "title": "book.quicreate.skyblock.glacio.essence_of_the_storm.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/essence_of_the_storm",
+        "tooltip": "book.quicreate.skyblock.glacio.essence_of_the_storm.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:glacio/scylla"
+    },
+    {
+      "entry": "quicreate:glacio/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/scylla",
+    "tooltip": "book.quicreate.skyblock.tooltip.scylla"
+  },
+  "show_when_any_parent_unlocked": true
+}

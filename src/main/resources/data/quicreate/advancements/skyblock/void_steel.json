@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/black_steel",
+  "display": {
+    "icon": {
+      "item": "createutilities:void_steel_ingot"
+    },
+    "title": {
+      "text": "Void Steel"
+    },
+    "description": {
+      "text": "Black steel + ender pearl, superheated"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "createutilities:void_steel_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

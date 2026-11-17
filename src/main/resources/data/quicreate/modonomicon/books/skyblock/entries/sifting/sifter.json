@@ -1,0 +1,48 @@
+{
+  "category": "quicreate:sifting",
+  "name": "book.quicreate.skyblock.sifting.sifter.name",
+  "description": "book.quicreate.skyblock.sifting.sifter.desc",
+  "icon": "createsifter:sifter",
+  "x": -4,
+  "y": -4,
+  "background_u_index": 0,
+  "background_v_index": 1,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "createsifter:sifter"
+      },
+      "title": "book.quicreate.skyblock.sifting.sifter.spot.title",
+      "text": "book.quicreate.skyblock.sifting.sifter.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.sifter.how.p0",
+      "title": "book.quicreate.skyblock.sifting.sifter.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "createsifter:sifter",
+      "text": "book.quicreate.skyblock.sifting.sifter.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sifting.sifter.done.p0",
+      "title": "book.quicreate.skyblock.sifting.sifter.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/sifter",
+        "tooltip": "book.quicreate.skyblock.sifting.sifter.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sifting/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:sky",
+  "name": "book.quicreate.skyblock.sky.get_crafting_table.name",
+  "description": "book.quicreate.skyblock.sky.get_crafting_table.desc",
+  "icon": "minecraft:crafting_table",
+  "x": 1,
+  "y": -6,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "minecraft:crafting_table"
+      },
+      "title": "book.quicreate.skyblock.sky.get_crafting_table.spot.title",
+      "text": "book.quicreate.skyblock.sky.get_crafting_table.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sky.get_crafting_table.how.p0",
+      "title": "book.quicreate.skyblock.sky.get_crafting_table.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "minecraft:crafting_table",
+      "text": "book.quicreate.skyblock.sky.get_crafting_table.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.sky.get_crafting_table.done.p0",
+      "title": "book.quicreate.skyblock.sky.get_crafting_table.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/get_crafting_table",
+        "tooltip": "book.quicreate.skyblock.sky.get_crafting_table.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:sky/vein_mine_logs"
+    },
+    {
+      "entry": "quicreate:sky/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/vein_mine_logs",
+    "tooltip": "book.quicreate.skyblock.tooltip.vein_mine_logs"
+  },
+  "show_when_any_parent_unlocked": true
+}

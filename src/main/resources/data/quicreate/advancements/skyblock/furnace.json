@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/cobblestone",
+  "display": {
+    "icon": {
+      "item": "minecraft:furnace"
+    },
+    "title": {
+      "text": "furnace"
+    },
+    "description": {
+      "text": "1 Furnace"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "minecraft:furnace"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "category": "quicreate:creative",
+  "name": "book.quicreate.skyblock.creative.creative_casing.name",
+  "description": "book.quicreate.skyblock.creative.creative_casing.desc",
+  "icon": "quicreate:creative_casing",
+  "x": 4,
+  "y": 3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "quicreate:creative_casing"
+      },
+      "title": "book.quicreate.skyblock.creative.creative_casing.spot.title",
+      "text": "book.quicreate.skyblock.creative.creative_casing.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.creative_casing.how.p0",
+      "title": "book.quicreate.skyblock.creative.creative_casing.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.creative_casing.done.p0",
+      "title": "book.quicreate.skyblock.creative.creative_casing.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/creative_casing",
+        "tooltip": "book.quicreate.skyblock.creative.creative_casing.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:creative/creative_sheet"
+    },
+    {
+      "entry": "quicreate:creative/enderite_block"
+    },
+    {
+      "entry": "quicreate:creative/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/creative_sheet",
+        "tooltip": "book.quicreate.skyblock.tooltip.creative_sheet"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/enderite_block",
+        "tooltip": "book.quicreate.skyblock.tooltip.enderite_block"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

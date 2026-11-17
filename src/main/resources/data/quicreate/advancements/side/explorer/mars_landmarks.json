@@ -1,0 +1,129 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:map"
+    },
+    "title": {
+      "text": "Landmarks of Mars"
+    },
+    "description": {
+      "text": "Find every landmark on Mars."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "mars_temple": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "ad_astra:mars_temple"
+          }
+        }
+      }
+    },
+    "cursed_pyramid": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:cursed_pyramid"
+          }
+        }
+      }
+    },
+    "desert_occupied_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:desert_occupied_village"
+          }
+        }
+      }
+    },
+    "desert_site": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:desert_site"
+          }
+        }
+      }
+    },
+    "monastery": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "mowziesmobs:monastery"
+          }
+        }
+      }
+    },
+    "mars_fossil": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "quicreate:mars_fossil"
+          }
+        }
+      }
+    },
+    "mars_meteor_crater": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "quicreate:mars_meteor_crater"
+          }
+        }
+      }
+    },
+    "mars_quake_wedges": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "quicreate:mars_quake_wedges"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mars_temple"
+    ],
+    [
+      "cursed_pyramid"
+    ],
+    [
+      "desert_occupied_village"
+    ],
+    [
+      "desert_site"
+    ],
+    [
+      "monastery"
+    ],
+    [
+      "mars_fossil"
+    ],
+    [
+      "mars_meteor_crater"
+    ],
+    [
+      "mars_quake_wedges"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/mars_landmarks"
+  }
+}

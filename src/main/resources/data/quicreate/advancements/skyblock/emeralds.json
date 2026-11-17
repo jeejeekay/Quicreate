@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/brass_mesh",
+  "display": {
+    "icon": {
+      "item": "minecraft:emerald"
+    },
+    "title": {
+      "text": "Emeralds"
+    },
+    "description": {
+      "text": "Sift sand with a brass mesh (1%)"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "minecraft:emerald"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

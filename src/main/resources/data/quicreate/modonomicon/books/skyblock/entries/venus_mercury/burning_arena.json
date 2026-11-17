@@ -1,0 +1,51 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.burning_arena.name",
+  "description": "book.quicreate.skyblock.venus_mercury.burning_arena.desc",
+  "icon": "cataclysm:flame_eye",
+  "x": 2,
+  "y": -4,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cataclysm:flame_eye"
+      },
+      "title": "book.quicreate.skyblock.venus_mercury.burning_arena.spot.title",
+      "text": "book.quicreate.skyblock.venus_mercury.burning_arena.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.burning_arena.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.burning_arena.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.burning_arena.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.burning_arena.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/burning_arena",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.burning_arena.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/mercury_landing"
+    },
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mercury_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.mercury_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

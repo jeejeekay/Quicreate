@@ -1,0 +1,48 @@
+{
+  "category": "quicreate:cards",
+  "name": "book.quicreate.skyblock.cards.card_packs.name",
+  "description": "book.quicreate.skyblock.cards.card_packs.desc",
+  "icon": "cards:common_card_pack",
+  "x": -7,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "tag": "cards:card_packs"
+      },
+      "title": "book.quicreate.skyblock.cards.card_packs.spot.title",
+      "text": "book.quicreate.skyblock.cards.card_packs.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.card_packs.how.p0",
+      "title": "book.quicreate.skyblock.cards.card_packs.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.card_packs.done.p0",
+      "title": "book.quicreate.skyblock.cards.card_packs.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/card_packs",
+        "tooltip": "book.quicreate.skyblock.cards.card_packs.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/sifter",
+    "tooltip": "book.quicreate.skyblock.tooltip.sifter"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:cards/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

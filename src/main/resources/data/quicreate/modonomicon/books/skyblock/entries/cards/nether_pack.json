@@ -1,0 +1,61 @@
+{
+  "category": "quicreate:cards",
+  "name": "book.quicreate.skyblock.cards.nether_pack.name",
+  "description": "book.quicreate.skyblock.cards.nether_pack.desc",
+  "icon": "cards:nether_card_pack",
+  "x": -3,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cards:nether_card_pack"
+      },
+      "title": "book.quicreate.skyblock.cards.nether_pack.spot.title",
+      "text": "book.quicreate.skyblock.cards.nether_pack.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.nether_pack.how.p0",
+      "title": "book.quicreate.skyblock.cards.nether_pack.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.nether_pack.done.p0",
+      "title": "book.quicreate.skyblock.cards.nether_pack.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/nether_pack",
+        "tooltip": "book.quicreate.skyblock.cards.nether_pack.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:cards/card_packs"
+    },
+    {
+      "entry": "quicreate:cards/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/card_packs",
+        "tooltip": "book.quicreate.skyblock.tooltip.card_packs"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/furnace",
+        "tooltip": "book.quicreate.skyblock.tooltip.furnace"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

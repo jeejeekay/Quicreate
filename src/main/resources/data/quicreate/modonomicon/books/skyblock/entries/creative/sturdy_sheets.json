@@ -1,0 +1,58 @@
+{
+  "category": "quicreate:creative",
+  "name": "book.quicreate.skyblock.creative.sturdy_sheets.name",
+  "description": "book.quicreate.skyblock.creative.sturdy_sheets.desc",
+  "icon": "create:sturdy_sheet",
+  "x": 2,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:sturdy_sheet"
+      },
+      "title": "book.quicreate.skyblock.creative.sturdy_sheets.spot.title",
+      "text": "book.quicreate.skyblock.creative.sturdy_sheets.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.sturdy_sheets.how.p0",
+      "title": "book.quicreate.skyblock.creative.sturdy_sheets.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.creative.sturdy_sheets.done.p0",
+      "title": "book.quicreate.skyblock.creative.sturdy_sheets.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/sturdy_sheets",
+        "tooltip": "book.quicreate.skyblock.creative.sturdy_sheets.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/powdered_obsidian",
+        "tooltip": "book.quicreate.skyblock.tooltip.powdered_obsidian"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/lava",
+        "tooltip": "book.quicreate.skyblock.tooltip.lava"
+      }
+    ]
+  },
+  "parents": [
+    {
+      "entry": "quicreate:creative/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

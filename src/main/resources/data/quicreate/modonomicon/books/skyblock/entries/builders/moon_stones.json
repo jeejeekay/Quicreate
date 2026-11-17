@@ -1,0 +1,48 @@
+{
+  "category": "quicreate:builders",
+  "name": "book.quicreate.skyblock.side.builders.moon_stones.name",
+  "description": "book.quicreate.skyblock.side.builders.moon_stones.desc",
+  "icon": "ad_astra:moon_stone_bricks",
+  "x": -1,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.builders.moon_stones.p.p0",
+      "title": "book.quicreate.skyblock.side.builders.moon_stones.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.builders.moon_stones.p.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.builders.moon_stones.done.p0",
+      "title": "book.quicreate.skyblock.side.builders.moon_stones.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/builders/moon_stones",
+        "tooltip": "book.quicreate.skyblock.side.builders.moon_stones.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:builders/stage2",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:builders/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/moon_landing",
+    "tooltip": "book.quicreate.skyblock.stage.2"
+  },
+  "show_when_any_parent_unlocked": true
+}

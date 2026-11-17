@@ -1,0 +1,130 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:stone"
+    },
+    "title": {
+      "text": "Stonemason"
+    },
+    "description": {
+      "text": "The basic stones. Andesite and diorite come from the extruder too."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone"
+            ]
+          }
+        ]
+      }
+    },
+    "cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobblestone"
+            ]
+          }
+        ]
+      }
+    },
+    "andesite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:andesite"
+            ]
+          }
+        ]
+      }
+    },
+    "diorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diorite"
+            ]
+          }
+        ]
+      }
+    },
+    "granite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:granite"
+            ]
+          }
+        ]
+      }
+    },
+    "smooth_stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:smooth_stone"
+            ]
+          }
+        ]
+      }
+    },
+    "stone_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone_bricks"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "stone"
+    ],
+    [
+      "cobblestone"
+    ],
+    [
+      "andesite"
+    ],
+    [
+      "diorite"
+    ],
+    [
+      "granite"
+    ],
+    [
+      "smooth_stone"
+    ],
+    [
+      "stone_bricks"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/builders/stonemason"
+  }
+}

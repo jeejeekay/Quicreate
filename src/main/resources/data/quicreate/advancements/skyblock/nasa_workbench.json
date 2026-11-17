@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/steel_plates",
+  "display": {
+    "icon": {
+      "item": "ad_astra:nasa_workbench"
+    },
+    "title": {
+      "text": "Nasa Workbench"
+    },
+    "description": {
+      "text": "Used to craft the rocket"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "ad_astra:nasa_workbench"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

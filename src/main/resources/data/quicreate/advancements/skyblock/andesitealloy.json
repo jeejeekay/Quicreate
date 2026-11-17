@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/charcoal",
+  "display": {
+    "icon": {
+      "item": "create:andesite_alloy"
+    },
+    "title": {
+      "text": "Andesite Alloy"
+    },
+    "description": {
+      "text": "Charcoal and Andesite"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 16,
+        "item": "create:andesite_alloy"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

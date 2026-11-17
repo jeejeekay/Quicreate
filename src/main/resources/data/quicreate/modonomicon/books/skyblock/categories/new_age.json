@@ -1,0 +1,6 @@
+{
+  "name": "book.quicreate.skyblock.cat.new_age",
+  "icon": "create_new_age:heater",
+  "sort_number": 3,
+  "background": "quicreate:textures/gui/book/tiled/iron_block.png"
+}

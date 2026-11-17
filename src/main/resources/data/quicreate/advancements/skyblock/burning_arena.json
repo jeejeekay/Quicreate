@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:skyblock/mercury_landing",
+  "display": {
+    "icon": {
+      "item": "cataclysm:flame_eye"
+    },
+    "title": {
+      "text": "Burning Arena"
+    },
+    "description": {
+      "text": "Find the Burning Arena"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "cataclysm:burning_arena"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

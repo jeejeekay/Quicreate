@@ -1,0 +1,112 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "     ",
+      "  M  ",
+      "  M  ",
+      "  M  ",
+      "     "
+    ],
+    [
+      "  M  ",
+      "     ",
+      "     ",
+      "     ",
+      "  M  "
+    ],
+    [
+      "  M  ",
+      "     ",
+      "  0I ",
+      "     ",
+      "  M  "
+    ],
+    [
+      "  M  ",
+      "     ",
+      "   I ",
+      "     ",
+      "  M  "
+    ],
+    [
+      "     ",
+      "  M  ",
+      "  M  ",
+      "  M  ",
+      "     "
+    ]
+  ],
+  "mapping": {
+    "0": {
+      "type": "modonomicon:blockstate",
+      "display": "quicreate:preview_generator_coil[axis=z]",
+      "block": "create_new_age:generator_coil[axis=z]"
+    },
+    "A": {
+      "type": "modonomicon:blockstate",
+      "display": "create:large_cogwheel[axis=x,waterlogged=false]",
+      "block": "create:large_cogwheel[axis=x,waterlogged=false]"
+    },
+    "B": {
+      "type": "modonomicon:blockstate",
+      "display": "create:metal_girder[axis=x,bottom=true,top=false,waterlogged=false,x=true,z=false]",
+      "block": "create:metal_girder[axis=x,bottom=true,top=false,waterlogged=false,x=true,z=false]"
+    },
+    "C": {
+      "type": "modonomicon:blockstate",
+      "display": "create:metal_girder[axis=y,bottom=true,top=true,waterlogged=false,x=false,z=false]",
+      "block": "create:metal_girder[axis=y,bottom=true,top=true,waterlogged=false,x=false,z=false]"
+    },
+    "D": {
+      "type": "modonomicon:blockstate",
+      "display": "create:metal_girder[axis=y,bottom=true,top=true,waterlogged=false,x=true,z=false]",
+      "block": "create:metal_girder[axis=y,bottom=true,top=true,waterlogged=false,x=true,z=false]"
+    },
+    "E": {
+      "type": "modonomicon:blockstate",
+      "display": "create:metal_girder_encased_shaft[axis=z,bottom=false,top=false,waterlogged=false]",
+      "block": "create:metal_girder_encased_shaft[axis=z,bottom=false,top=false,waterlogged=false]"
+    },
+    "F": {
+      "type": "modonomicon:blockstate",
+      "display": "create:shaft[axis=x,waterlogged=false]",
+      "block": "create:shaft[axis=x,waterlogged=false]"
+    },
+    "G": {
+      "type": "modonomicon:blockstate",
+      "display": "create:stressometer[axis_along_first=false,facing=east]",
+      "block": "create:stressometer[axis_along_first=false,facing=east]"
+    },
+    "H": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:basic_motor[facing=east]",
+      "block": "create_new_age:basic_motor[facing=east]"
+    },
+    "I": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:carbon_brushes[facing=north]",
+      "block": "create_new_age:carbon_brushes[facing=north]"
+    },
+    "J": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:electrical_connector[facing=down]",
+      "block": "create_new_age:electrical_connector[facing=down]"
+    },
+    "K": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:electrical_connector[facing=up]",
+      "block": "create_new_age:electrical_connector[facing=up]"
+    },
+    "L": {
+      "type": "modonomicon:blockstate",
+      "display": "quicreate:preview_generator_coil[axis=z]",
+      "block": "create_new_age:generator_coil[axis=z]"
+    },
+    "M": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:magnetite_block",
+      "block": "create_new_age:magnetite_block"
+    }
+  }
+}

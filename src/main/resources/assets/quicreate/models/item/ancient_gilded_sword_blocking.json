@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "quicreate:item/ancient_gilded_sword"
+  },
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [ -15.1, -11.9, 101.5 ],
+      "translation": [ -4.81, 2.62, 0.14 ],
+      "scale": [ 0.68, 0.68, 0.68 ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [ -15.1, 11.9, -101.5 ],
+      "translation": [ -4.81, 2.62, 0.14 ],
+      "scale": [ 0.68, 0.68, 0.68 ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [ -119.4, -11.9, -85.4 ],
+      "translation": [ 2.92, 2.06, 1.15 ],
+      "scale": [ 0.85, 0.85, 0.85 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ -119.4, 11.9, 85.4 ],
+      "translation": [ 2.92, 2.06, 1.15 ],
+      "scale": [ 0.85, 0.85, 0.85 ]
+    }
+  }
+}

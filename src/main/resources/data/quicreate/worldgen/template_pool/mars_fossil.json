@@ -1,0 +1,78 @@
+{
+  "name": "quicreate:mars_fossil",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:fossil/spine_1",
+        "processors": "minecraft:fossil_rot",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:fossil/spine_2",
+        "processors": "minecraft:fossil_rot",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:fossil/spine_3",
+        "processors": "minecraft:fossil_rot",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:fossil/spine_4",
+        "processors": "minecraft:fossil_rot",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:fossil/skull_1",
+        "processors": "minecraft:fossil_rot",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:fossil/skull_2",
+        "processors": "minecraft:fossil_rot",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:fossil/skull_3",
+        "processors": "minecraft:fossil_rot",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:fossil/skull_4",
+        "processors": "minecraft:fossil_rot",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

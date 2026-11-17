@@ -1,0 +1,70 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "     ",
+      "   EE",
+      "   EE",
+      "   EE",
+      "     "
+    ],
+    [
+      "   EE",
+      "     ",
+      "     ",
+      "     ",
+      "   EE"
+    ],
+    [
+      "   EE",
+      "C B  ",
+      "  A0D",
+      "     ",
+      "   EE"
+    ],
+    [
+      "   EE",
+      "F    ",
+      "     ",
+      "     ",
+      "   EE"
+    ]
+  ],
+  "mapping": {
+    "A": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:carbon_brushes[facing=west]",
+      "block": "create_new_age:carbon_brushes[facing=west]"
+    },
+    "B": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:electrical_connector[facing=north,mode=inert]",
+      "block": "create_new_age:electrical_connector[facing=north,mode=inert]"
+    },
+    "C": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:electrical_connector[facing=up,mode=inert]",
+      "block": "create_new_age:electrical_connector[facing=up,mode=inert]"
+    },
+    "D": {
+      "type": "modonomicon:blockstate",
+      "display": "quicreate:preview_generator_coil[axis=x]",
+      "block": "create_new_age:generator_coil[axis=x]"
+    },
+    "E": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:magnetite_block",
+      "block": "create_new_age:magnetite_block"
+    },
+    "F": {
+      "type": "modonomicon:blockstate",
+      "display": "create_new_age:reinforced_motor[facing=north]",
+      "block": "create_new_age:reinforced_motor[facing=north]"
+    },
+    "0": {
+      "type": "modonomicon:blockstate",
+      "display": "quicreate:preview_generator_coil[axis=x]",
+      "block": "create_new_age:generator_coil[axis=x]"
+    }
+  }
+}

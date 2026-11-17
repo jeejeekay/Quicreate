@@ -1,0 +1,48 @@
+{
+  "category": "quicreate:builders",
+  "name": "book.quicreate.skyblock.side.builders.create_stones.name",
+  "description": "book.quicreate.skyblock.side.builders.create_stones.desc",
+  "icon": "create:limestone",
+  "x": -4,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.builders.create_stones.p.p0",
+      "title": "book.quicreate.skyblock.side.builders.create_stones.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.builders.create_stones.p.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.builders.create_stones.done.p0",
+      "title": "book.quicreate.skyblock.side.builders.create_stones.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/builders/create_stones",
+        "tooltip": "book.quicreate.skyblock.side.builders.create_stones.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:builders/stage1",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:builders/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/sifter",
+    "tooltip": "book.quicreate.skyblock.stage.1"
+  },
+  "show_when_any_parent_unlocked": true
+}

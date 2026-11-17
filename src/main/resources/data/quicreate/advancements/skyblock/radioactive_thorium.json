@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/thorium",
+  "display": {
+    "icon": {
+      "item": "create_new_age:radioactive_thorium"
+    },
+    "title": {
+      "text": "Nuclear Heat"
+    },
+    "description": {
+      "text": "Crushed Thorium can provide Radioactive Thorium"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "create_new_age:radioactive_thorium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

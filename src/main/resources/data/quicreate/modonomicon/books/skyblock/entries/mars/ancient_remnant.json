@@ -1,0 +1,54 @@
+{
+  "category": "quicreate:mars",
+  "name": "book.quicreate.skyblock.mars.ancient_remnant.name",
+  "description": "book.quicreate.skyblock.mars.ancient_remnant.desc",
+  "icon": "cataclysm:remnant_skull",
+  "x": 2,
+  "y": -5,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:ancient_remnant",
+      "name": "book.quicreate.skyblock.mars.ancient_remnant.ename",
+      "text": "book.quicreate.skyblock.mars.ancient_remnant.etext",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_remnant.how.p0",
+      "title": "book.quicreate.skyblock.mars.ancient_remnant.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_remnant.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.mars.ancient_remnant.done.p0",
+      "title": "book.quicreate.skyblock.mars.ancient_remnant.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/ancient_remnant",
+        "tooltip": "book.quicreate.skyblock.mars.ancient_remnant.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:mars/cursed_pyramid"
+    },
+    {
+      "entry": "quicreate:mars/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/cursed_pyramid",
+    "tooltip": "book.quicreate.skyblock.tooltip.cursed_pyramid"
+  },
+  "show_when_any_parent_unlocked": true
+}

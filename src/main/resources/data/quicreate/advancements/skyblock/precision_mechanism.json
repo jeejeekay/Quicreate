@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/deployer",
+  "display": {
+    "icon": {
+      "item": "create:precision_mechanism"
+    },
+    "title": {
+      "text": "Precision Mechanism"
+    },
+    "description": {
+      "text": "Sequenced assembly on a golden sheet"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 4,
+        "item": "create:precision_mechanism"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

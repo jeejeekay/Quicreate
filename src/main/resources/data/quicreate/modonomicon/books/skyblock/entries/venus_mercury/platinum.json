@@ -1,0 +1,56 @@
+{
+  "category": "quicreate:venus_mercury",
+  "name": "book.quicreate.skyblock.venus_mercury.platinum.name",
+  "description": "book.quicreate.skyblock.venus_mercury.platinum.desc",
+  "icon": "cards:platinum_ingot",
+  "x": 7,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "cards:platinum_ingot"
+      },
+      "title": "book.quicreate.skyblock.venus_mercury.platinum.spot.title",
+      "text": "book.quicreate.skyblock.venus_mercury.platinum.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.platinum.how.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.platinum.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "cards:platinum_block_ore_recipe",
+      "text": "book.quicreate.skyblock.venus_mercury.platinum.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.venus_mercury.platinum.done.p0",
+      "title": "book.quicreate.skyblock.venus_mercury.platinum.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/platinum",
+        "tooltip": "book.quicreate.skyblock.venus_mercury.platinum.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:venus_mercury/mercury_landing"
+    },
+    {
+      "entry": "quicreate:venus_mercury/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mercury_landing",
+    "tooltip": "book.quicreate.skyblock.tooltip.mercury_landing"
+  },
+  "show_when_any_parent_unlocked": true
+}

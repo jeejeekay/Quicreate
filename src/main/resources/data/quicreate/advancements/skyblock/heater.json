@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/boiler",
+  "display": {
+    "icon": {
+      "item": "create_new_age:heater"
+    },
+    "title": {
+      "text": "Heater"
+    },
+    "description": {
+      "text": "Whats a Blaze Burner!"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 1,
+        "item": "create_new_age:heater"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.asurine.name",
+  "description": "book.quicreate.skyblock.new_age.asurine.desc",
+  "icon": "create:asurine",
+  "x": 9,
+  "y": 2,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:asurine"
+      },
+      "title": "book.quicreate.skyblock.new_age.asurine.spot.title",
+      "text": "book.quicreate.skyblock.new_age.asurine.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.asurine.how.p0",
+      "title": "book.quicreate.skyblock.new_age.asurine.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.asurine.how.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.asurine.done.p0",
+      "title": "book.quicreate.skyblock.new_age.asurine.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/asurine",
+        "tooltip": "book.quicreate.skyblock.new_age.asurine.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/mechnanical_extruder"
+    },
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mechnanical_extruder",
+    "tooltip": "book.quicreate.skyblock.tooltip.mechnanical_extruder"
+  },
+  "show_when_any_parent_unlocked": true
+}

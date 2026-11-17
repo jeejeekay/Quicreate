@@ -1,0 +1,50 @@
+{
+  "category": "quicreate:glacio",
+  "name": "book.quicreate.skyblock.glacio.maledictus.name",
+  "description": "book.quicreate.skyblock.glacio.maledictus.desc",
+  "icon": "cataclysm:music_disc_maledictus",
+  "x": -2,
+  "y": 1,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "cataclysm:maledictus",
+      "name": "book.quicreate.skyblock.glacio.maledictus.ename",
+      "text": "book.quicreate.skyblock.glacio.maledictus.etext",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.maledictus.how.p0",
+      "title": "book.quicreate.skyblock.glacio.maledictus.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.glacio.maledictus.done.p0",
+      "title": "book.quicreate.skyblock.glacio.maledictus.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/maledictus",
+        "tooltip": "book.quicreate.skyblock.glacio.maledictus.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:glacio/frosted_prison"
+    },
+    {
+      "entry": "quicreate:glacio/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/frosted_prison",
+    "tooltip": "book.quicreate.skyblock.tooltip.frosted_prison"
+  },
+  "show_when_any_parent_unlocked": true
+}

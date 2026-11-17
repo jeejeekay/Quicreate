@@ -1,0 +1,34 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:netherrack"
+    },
+    "title": {
+      "text": "Into the Nether"
+    },
+    "description": {
+      "text": "Build a nether portal. The Nether has its own small island."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "go": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "go"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/explorer/nether"
+  }
+}

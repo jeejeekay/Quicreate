@@ -1,0 +1,58 @@
+{
+  "category": "quicreate:improvements",
+  "name": "book.quicreate.skyblock.improvements.radioactive_thorium.name",
+  "description": "book.quicreate.skyblock.improvements.radioactive_thorium.desc",
+  "icon": "create_new_age:radioactive_thorium",
+  "x": 7,
+  "y": -3,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create_new_age:radioactive_thorium"
+      },
+      "title": "book.quicreate.skyblock.improvements.radioactive_thorium.spot.title",
+      "text": "book.quicreate.skyblock.improvements.radioactive_thorium.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.radioactive_thorium.how.p0",
+      "title": "book.quicreate.skyblock.improvements.radioactive_thorium.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.improvements.radioactive_thorium.done.p0",
+      "title": "book.quicreate.skyblock.improvements.radioactive_thorium.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/radioactive_thorium",
+        "tooltip": "book.quicreate.skyblock.improvements.radioactive_thorium.donetip"
+      }
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/thorium",
+        "tooltip": "book.quicreate.skyblock.tooltip.thorium"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/crushing_wheels",
+        "tooltip": "book.quicreate.skyblock.tooltip.crushing_wheels"
+      }
+    ]
+  },
+  "parents": [
+    {
+      "entry": "quicreate:improvements/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

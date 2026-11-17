@@ -1,0 +1,32 @@
+{
+  "parent": "quicreate:skyblock/quartz",
+  "display": {
+    "icon": {
+      "item": "create:electron_tube"
+    },
+    "title": {
+      "text": "Electron Tubes"
+    },
+    "description": {
+      "text": "Rose quartz, polished, on an iron sheet"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task0": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "count": 8,
+        "item": "create:electron_tube"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task0"
+    ]
+  ]
+}

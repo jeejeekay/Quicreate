@@ -1,0 +1,70 @@
+{
+  "category": "quicreate:new_age",
+  "name": "book.quicreate.skyblock.new_age.deployer.name",
+  "description": "book.quicreate.skyblock.new_age.deployer.desc",
+  "icon": "create:deployer",
+  "x": -7,
+  "y": 7,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "create:deployer"
+      },
+      "title": "book.quicreate.skyblock.new_age.deployer.spot.title",
+      "text": "book.quicreate.skyblock.new_age.deployer.spot.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.deployer.how.p0",
+      "title": "book.quicreate.skyblock.new_age.deployer.how.title"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "create:crafting/kinetics/deployer",
+      "text": "book.quicreate.skyblock.new_age.deployer.rtext"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.new_age.deployer.done.p0",
+      "title": "book.quicreate.skyblock.new_age.deployer.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/deployer",
+        "tooltip": "book.quicreate.skyblock.new_age.deployer.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:new_age/brass_casing"
+    },
+    {
+      "entry": "quicreate:new_age/electron_tube",
+      "line_reversed": true
+    },
+    {
+      "entry": "quicreate:new_age/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:and",
+    "children": [
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/brass_casing",
+        "tooltip": "book.quicreate.skyblock.tooltip.brass_casing"
+      },
+      {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/electron_tube",
+        "tooltip": "book.quicreate.skyblock.tooltip.electron_tube"
+      }
+    ]
+  },
+  "show_when_any_parent_unlocked": true
+}

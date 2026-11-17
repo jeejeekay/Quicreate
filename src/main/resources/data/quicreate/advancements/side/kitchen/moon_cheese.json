@@ -1,0 +1,35 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "ad_astra:cheese"
+    },
+    "title": {
+      "text": "Moon cheese"
+    },
+    "description": {
+      "text": "The Moon really is made of cheese. Mine cheese ore."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "have": {
+      "trigger": "quicreate:has_items",
+      "conditions": {
+        "item": "ad_astra:cheese",
+        "count": 16
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/moon_cheese"
+  }
+}

@@ -49,11 +49,14 @@ public class ShapePiece extends StructurePiece {
 
     /** Builds the shape once to size the piece; null if it came out empty. */
     static ShapePiece create(ResourceLocation featureId, ConfiguredFeature<?, ?> feature, long seed, BlockPos origin, ShapedFeature.Ground ground) {
-        Shape shape = build(feature, seed, ground);
+        boolean chunked = clipSafe(feature);
+        Shape shape = chunked ? buildInto(feature, seed, ground, Shape.measuring()) : build(feature, seed, ground);
         if (shape == null || shape.isEmpty()) {
             return null;
         }
-        remember(featureId, seed, origin, shape);
+        if (!chunked) {
+            remember(featureId, seed, origin, shape);
+        }
         BoundingBox box = new BoundingBox(origin.getX() + shape.minX(), origin.getY() + shape.minY(), origin.getZ() + shape.minZ(),
                 origin.getX() + shape.maxX(), origin.getY() + shape.maxY(), origin.getZ() + shape.maxZ());
         return new ShapePiece(featureId, feature, seed, origin, box);
@@ -80,6 +83,14 @@ public class ShapePiece extends StructurePiece {
         if (feature == null) {
             return; // the shape was removed from the data pack
         }
+        if (clipSafe(feature)) {
+            // Build only this chunk's part: a giant shape is never held in memory whole.
+            Shape part = Shape.clipped(chunkBox.minX() - origin.getX(), chunkBox.maxX() - origin.getX(),
+                    chunkBox.minZ() - origin.getZ(), chunkBox.maxZ() - origin.getZ());
+            buildInto(feature, seed, ShapeStructure.ground(generator, level, level.getLevel().getChunkSource().randomState(), origin), part);
+            ShapedFeature.writeFiltered(part, level, origin, chunkBox::isInside, random);
+            return;
+        }
         Shape shape = recall(featureId, seed, origin);
         if (shape == null) {
             shape = build(feature, seed, ShapeStructure.ground(generator, level, level.getLevel().getChunkSource().randomState(), origin));
@@ -96,6 +107,23 @@ public class ShapePiece extends StructurePiece {
             return buildWith(shaped, feature.config(), seed, ground);
         }
         return null;
+    }
+
+    private static boolean clipSafe(ConfiguredFeature<?, ?> feature) {
+        return feature.feature() instanceof ShapedFeature<?> shaped && shaped.clipSafe();
+    }
+
+    private static Shape buildInto(ConfiguredFeature<?, ?> feature, long seed, ShapedFeature.Ground ground, Shape into) {
+        if (feature.feature() instanceof ShapedFeature<?> shaped) {
+            return buildIntoWith(shaped, feature.config(), seed, ground, into);
+        }
+        return into;
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <C extends FeatureConfiguration> Shape buildIntoWith(ShapedFeature<C> shaped, FeatureConfiguration config, long seed,
+                                                                        ShapedFeature.Ground ground, Shape into) {
+        return shaped.buildInto((C) config, seed, ground, into);
     }
 
     @SuppressWarnings("unchecked")

@@ -1,0 +1,65 @@
+{
+  "type": "quicreate:wedge",
+  "config": {
+    "length": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 50,
+        "max_inclusive": 66
+      }
+    },
+    "width": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 49,
+        "max_exclusive": 61
+      }
+    },
+    "thickness": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 15,
+        "max_exclusive": 21
+      }
+    },
+    "rise": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 23,
+        "max_exclusive": 29
+      }
+    },
+    "taper": 0.55,
+    "ridge": 0.0,
+    "sweep": 0.35,
+    "lip": 0.7,
+    "roughness": 0.75,
+    "rift_depth": 0,
+    "count": 4,
+    "chasm": 0.35,
+    "blocks": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "ad_astra:mars_stone"
+          },
+          "weight": 8
+        },
+        {
+          "data": {
+            "Name": "ad_astra:mars_cobblestone"
+          },
+          "weight": 1
+        }
+      ]
+    },
+    "top": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "ad_astra:mars_sand"
+      }
+    },
+    "top_depth": 5
+  }
+}

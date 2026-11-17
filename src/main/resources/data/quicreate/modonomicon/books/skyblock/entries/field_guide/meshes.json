@@ -1,0 +1,74 @@
+{
+  "category": "quicreate:field_guide",
+  "name": "book.quicreate.skyblock.field.meshes.name",
+  "icon": "createsifter:brass_mesh",
+  "x": -1,
+  "y": -3,
+  "background_u_index": 0,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.a.p0",
+      "title": "book.quicreate.skyblock.field.meshes.a.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.m0.p0",
+      "title": "book.quicreate.skyblock.field.meshes.m0.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.m1.p0",
+      "title": "book.quicreate.skyblock.field.meshes.m1.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.m1.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.m2.p0",
+      "title": "book.quicreate.skyblock.field.meshes.m2.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.m2.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.m3.p0",
+      "title": "book.quicreate.skyblock.field.meshes.m3.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.m3.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.m4.p0",
+      "title": "book.quicreate.skyblock.field.meshes.m4.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.m4.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.meshes.m4.p2"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/mesh",
+    "tooltip": "book.quicreate.skyblock.field.meshes.gate"
+  },
+  "parents": [
+    {
+      "entry": "quicreate:field_guide/welcome",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "show_when_any_parent_unlocked": true
+}

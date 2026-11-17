@@ -1,0 +1,50 @@
+{
+  "category": "quicreate:cards",
+  "name": "book.quicreate.skyblock.cards.wither.name",
+  "description": "book.quicreate.skyblock.cards.wither.desc",
+  "icon": "minecraft:nether_star",
+  "x": 3,
+  "y": 0,
+  "background_u_index": 1,
+  "background_v_index": 0,
+  "pages": [
+    {
+      "type": "modonomicon:entity",
+      "entity_id": "minecraft:wither",
+      "name": "book.quicreate.skyblock.cards.wither.ename",
+      "text": "book.quicreate.skyblock.cards.wither.etext",
+      "scale": 0.8
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.wither.how.p0",
+      "title": "book.quicreate.skyblock.cards.wither.how.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.cards.wither.done.p0",
+      "title": "book.quicreate.skyblock.cards.wither.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:skyblock/wither",
+        "tooltip": "book.quicreate.skyblock.cards.wither.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:cards/wither_skeleton"
+    },
+    {
+      "entry": "quicreate:cards/intro",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/wither_skeleton",
+    "tooltip": "book.quicreate.skyblock.tooltip.wither_skeleton"
+  },
+  "show_when_any_parent_unlocked": true
+}
