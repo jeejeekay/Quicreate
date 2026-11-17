@@ -3506,5 +3506,7 @@
   "book.quicreate.skyblock.venus_mercury.witherite.spot.title": "Witherite",
   "item.quicreate.obsidian_fishing_rod": "Obsidian Fishing Rod",
   "item.quicreate.obsidian_fishing_rod.desc": "Fishes in lava. Line a Nether lava pool to choose your catch",
-  "entity.quicreate.lava_fishing_hook": "Lava Bobber"
+  "entity.quicreate.lava_fishing_hook": "Lava Bobber",
+  "entity.quicreate.pelican": "Pelican",
+  "item.quicreate.pelican_spawn_egg": "Pelican Spawn Egg"
 }

@@ -42,6 +42,13 @@ public final class QuicreateContent {
                     .updateInterval(5)
                     .build("lava_fishing_hook"));
 
+    /** The island's pelican: circles the player, brings the first string and the odd gift in its pouch (see pelican.Pelican). */
+    public static final RegistryObject<EntityType<IGoByJake.quicreate.pelican.Pelican>> PELICAN = ENTITIES.register("pelican",
+            () -> EntityType.Builder.<IGoByJake.quicreate.pelican.Pelican>of(IGoByJake.quicreate.pelican.Pelican::new, MobCategory.AMBIENT)
+                    .sized(0.9F, 0.9F)
+                    .clientTrackingRange(10)
+                    .build("pelican"));
+
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Quicreate.MODID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Quicreate.MODID);
 

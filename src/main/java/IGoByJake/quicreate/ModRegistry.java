@@ -107,6 +107,9 @@ public class ModRegistry {
   public static final RegistryObject<Item> OBSIDIAN_FISHING_ROD =
           ITEMS.register("obsidian_fishing_rod", () -> new IGoByJake.quicreate.item.ObsidianFishingRodItem(new Item.Properties().durability(128).fireResistant()));
 
+  public static final RegistryObject<Item> PELICAN_SPAWN_EGG =
+          ITEMS.register("pelican_spawn_egg", () -> new net.minecraftforge.common.ForgeSpawnEggItem(QuicreateContent.PELICAN, 0xF3F1EC, 0xF0B44C, new Item.Properties()));
+
   public static final RegistryObject<Item> CREATIVE_CASING_ITEM = ITEMS.register("creative_casing", () -> new BlockItem(CREATIVE_CASING.get(), new Item.Properties()));
 
   public static void register(IEventBus eventbus){

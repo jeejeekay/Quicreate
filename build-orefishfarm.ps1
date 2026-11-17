@@ -16,7 +16,23 @@ $log = Join-Path $PSScriptRoot 'orefishfarm-build-log.txt'
 if (Test-Path $zip) {
     Write-Host "1/4 Unpacking into $dest ..." -ForegroundColor Cyan
     New-Item -ItemType Directory -Force -Path $dest | Out-Null
+    # Files the update removes are listed in _delete.txt inside the zip (paths from the project folder).
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    $zf = [System.IO.Compression.ZipFile]::OpenRead($zip)
+    $del = $zf.Entries | Where-Object { $_.FullName -eq '_delete.txt' } | Select-Object -First 1
+    if ($del) {
+        $reader = New-Object System.IO.StreamReader($del.Open())
+        $lines = $reader.ReadToEnd() -split "`r?`n" | Where-Object { $_.Trim() -ne '' }
+        $reader.Close()
+        foreach ($l in $lines) {
+            $p = Join-Path $dest ($l.Trim() -replace '/', '\')
+            if (Test-Path $p) { Remove-Item -Recurse -Force $p }
+        }
+    }
+    $zf.Dispose()
     Expand-Archive -Path $zip -DestinationPath $dest -Force
+    $d = Join-Path $dest '_delete.txt'
+    if (Test-Path $d) { Remove-Item -Force $d }
 } elseif (-not (Test-Path (Join-Path $dest 'build.gradle'))) {
     throw "orefishfarm-project.zip not found and $dest has no project"
 }

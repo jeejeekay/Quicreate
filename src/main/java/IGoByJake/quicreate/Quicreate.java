@@ -54,6 +54,9 @@ public class Quicreate {
         event.accept(list.get(0));
       }
     }
+    if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS){
+      event.accept(ModRegistry.PELICAN_SPAWN_EGG);
+    }
     if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
       event.accept(ModRegistry.CREATIVE_ALLOY);
       event.accept(ModRegistry.CREATIVE_SHEET);

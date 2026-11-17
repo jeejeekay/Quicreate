@@ -30,8 +30,14 @@ public final class QuicreateClient {
         event.registerEntityRenderer(QuicreateContent.SWORD_BEAM.get(), NoopRenderer::new);
         // The lava bobber is a FishingHook, so vanilla's bobber-and-line renderer draws it.
         event.registerEntityRenderer(QuicreateContent.LAVA_FISHING_HOOK.get(), net.minecraft.client.renderer.entity.FishingHookRenderer::new);
+        event.registerEntityRenderer(QuicreateContent.PELICAN.get(), IGoByJake.quicreate.pelican.PelicanRenderer::new);
         // Field Guide build previews: draws blocks Create animates (e.g. the generator coil) from their item model.
         event.registerBlockEntityRenderer(QuicreateContent.PREVIEW_ITEM_BE.get(), PreviewItemRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void onLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(IGoByJake.quicreate.pelican.PelicanModel.LAYER, IGoByJake.quicreate.pelican.PelicanModel::createLayer);
     }
 
     @SubscribeEvent
