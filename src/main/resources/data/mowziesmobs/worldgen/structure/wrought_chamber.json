@@ -5,7 +5,8 @@
     "ad_astra:glacio_ice_peaks",
     "quicreate:glacio_helix_spires",
     "ad_astra:glacio_snowy_barrens",
-    "quicreate:glacian_woods"
+    "quicreate:glacian_woods",
+    "quicreate:glacio_wild_jungle"
   ],
   "spawn_overrides": {},
   "step": "surface_structures",

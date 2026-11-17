@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "quicreate:item/amethyst_crab_omelette"
+  }
+}

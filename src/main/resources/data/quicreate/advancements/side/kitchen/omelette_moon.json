@@ -1,0 +1,70 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "quicreate:blessed_amethyst_crab_omelette"
+    },
+    "title": {
+      "text": "Moon omelettes"
+    },
+    "description": {
+      "text": "Crab meat from Moon amethyst crabs, Moon cheese ore, three eggs each. Bless a..."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "amethyst_crab_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quicreate:amethyst_crab_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "blessed_amethyst_crab_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quicreate:blessed_amethyst_crab_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "moon_cheese_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "quicreate:moon_cheese_omelette"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "amethyst_crab_omelette"
+    ],
+    [
+      "blessed_amethyst_crab_omelette"
+    ],
+    [
+      "moon_cheese_omelette"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/omelette_moon"
+  }
+}

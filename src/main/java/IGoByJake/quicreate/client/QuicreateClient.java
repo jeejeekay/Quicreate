@@ -28,6 +28,8 @@ public final class QuicreateClient {
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         // The sword beam is drawn entirely with particles.
         event.registerEntityRenderer(QuicreateContent.SWORD_BEAM.get(), NoopRenderer::new);
+        // The lava bobber is a FishingHook, so vanilla's bobber-and-line renderer draws it.
+        event.registerEntityRenderer(QuicreateContent.LAVA_FISHING_HOOK.get(), net.minecraft.client.renderer.entity.FishingHookRenderer::new);
         // Field Guide build previews: draws blocks Create animates (e.g. the generator coil) from their item model.
         event.registerBlockEntityRenderer(QuicreateContent.PREVIEW_ITEM_BE.get(), PreviewItemRenderer::new);
     }
@@ -39,7 +41,7 @@ public final class QuicreateClient {
             ItemProperties.register(ModRegistry.ANCIENT_GILDED_SWORD.get(), new ResourceLocation(Quicreate.MODID, "blocking"),
                     (stack, level, entity, seed) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F);
             // Same "cast" switch vanilla gives its fishing rod, so the line disappears while fishing.
-            for (RegistryObject<Item> rod : List.of(ModRegistry.BRASS_FISHING_ROD, ModRegistry.DESH_FISHING_ROD, ModRegistry.OSTRUM_FISHING_ROD)) {
+            for (RegistryObject<Item> rod : List.of(ModRegistry.BRASS_FISHING_ROD, ModRegistry.DESH_FISHING_ROD, ModRegistry.OSTRUM_FISHING_ROD, ModRegistry.OBSIDIAN_FISHING_ROD)) {
                 ItemProperties.register(rod.get(), new ResourceLocation("cast"), (stack, level, entity, seed) -> {
                     if (!(entity instanceof Player player) || player.fishing == null) {
                         return 0.0F;

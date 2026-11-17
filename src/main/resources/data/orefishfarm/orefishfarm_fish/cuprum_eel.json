@@ -1,0 +1,10 @@
+{
+  "fish": "orefishfarm:cuprum_eel",
+  "product": {
+    "item": "orefishfarm:copper_tooth",
+    "count": 1
+  },
+  "product_chance": 0.25,
+  "breed_chance": 0.06,
+  "power": 5
+}

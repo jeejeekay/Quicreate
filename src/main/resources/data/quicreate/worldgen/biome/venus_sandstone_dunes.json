@@ -44,7 +44,8 @@
     [],
     [
       "quicreate:venus_small_spires",
-      "quicreate:venus_sandstone_boulder"
+      "quicreate:venus_sandstone_boulder",
+      "quicreate:venus_warped_patch_rare"
     ]
   ],
   "has_precipitation": true,

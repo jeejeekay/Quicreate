@@ -42,7 +42,8 @@
     [
       "quicreate:moon_crater_rare",
       "quicreate:moon_strophar_cave_mushroom",
-      "quicreate:moon_strophar_cave_patch"
+      "quicreate:moon_strophar_cave_patch",
+      "quicreate:moon_mushroom_patch"
     ]
   ],
   "has_precipitation": false,

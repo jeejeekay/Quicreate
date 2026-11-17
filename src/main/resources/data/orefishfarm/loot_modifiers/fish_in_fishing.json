@@ -1,0 +1,15 @@
+{
+  "type": "orefishfarm:add_fish",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:gameplay/fishing"
+    }
+  ],
+  "fish": [
+    {
+      "item": "orefishfarm:obsidian_fish",
+      "chance": 0.06
+    }
+  ]
+}

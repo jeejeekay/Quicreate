@@ -1,0 +1,44 @@
+{
+  "category": "quicreate:kitchen",
+  "name": "book.quicreate.skyblock.side.kitchen.omelette_chorus.name",
+  "description": "book.quicreate.skyblock.side.kitchen.omelette_chorus.desc",
+  "icon": "neopianomelettes:chorus_omelette",
+  "x": -1,
+  "y": -1,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.omelette_chorus.p.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.omelette_chorus.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.omelette_chorus.done.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.omelette_chorus.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/kitchen/omelette_chorus",
+        "tooltip": "book.quicreate.skyblock.side.kitchen.omelette_chorus.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:kitchen/stage2",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:kitchen/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/moon_landing",
+    "tooltip": "book.quicreate.skyblock.stage.2"
+  },
+  "show_when_any_parent_unlocked": true
+}

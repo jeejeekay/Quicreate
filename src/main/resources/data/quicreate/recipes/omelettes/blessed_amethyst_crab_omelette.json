@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "neopianomelettes:plain_omelette",
+  "ingredients": [
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "cataclysm:blessed_amethyst_crab_meat"
+    }
+  ],
+  "result": {
+    "item": "quicreate:blessed_amethyst_crab_omelette",
+    "count": 1
+  }
+}

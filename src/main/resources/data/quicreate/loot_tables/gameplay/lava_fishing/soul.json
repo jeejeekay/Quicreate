@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "orefishfarm:zincray",
+          "weight": 55
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "quicreate:gameplay/lava_fishing/nether",
+          "weight": 45
+        }
+      ]
+    }
+  ],
+  "random_sequence": "quicreate:gameplay/lava_fishing/soul"
+}

@@ -1,0 +1,100 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "neopianomelettes:meat_feast_omelette"
+    },
+    "title": {
+      "text": "Feast omelettes"
+    },
+    "description": {
+      "text": "Two or three meats at once. The rabbit omelette needs a carrot too."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "sausage_ham_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:sausage_ham_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "steak_sausage_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:steak_sausage_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "steak_ham_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:steak_ham_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "meat_feast_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:meat_feast_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "rabbit_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:rabbit_omelette"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sausage_ham_omelette"
+    ],
+    [
+      "steak_sausage_omelette"
+    ],
+    [
+      "steak_ham_omelette"
+    ],
+    [
+      "meat_feast_omelette"
+    ],
+    [
+      "rabbit_omelette"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/omelette_feast"
+  }
+}

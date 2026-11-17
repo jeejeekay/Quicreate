@@ -103,6 +103,10 @@ public class ModRegistry {
   public static final RegistryObject<Item> OSTRUM_FISHING_ROD =
           ITEMS.register("ostrum_fishing_rod", () -> new TieredFishingRodItem(3, new Item.Properties().durability(512)));
 
+  /** Lava fishing rod: a fishing rod wrapped in obsidian scales from Jake's Ore Fish Farm. Fireproof. */
+  public static final RegistryObject<Item> OBSIDIAN_FISHING_ROD =
+          ITEMS.register("obsidian_fishing_rod", () -> new IGoByJake.quicreate.item.ObsidianFishingRodItem(new Item.Properties().durability(128).fireResistant()));
+
   public static final RegistryObject<Item> CREATIVE_CASING_ITEM = ITEMS.register("creative_casing", () -> new BlockItem(CREATIVE_CASING.get(), new Item.Properties()));
 
   public static void register(IEventBus eventbus){

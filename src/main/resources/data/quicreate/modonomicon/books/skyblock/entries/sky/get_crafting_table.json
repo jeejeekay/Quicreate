@@ -4,7 +4,7 @@
   "description": "book.quicreate.skyblock.sky.get_crafting_table.desc",
   "icon": "minecraft:crafting_table",
   "x": 1,
-  "y": -6,
+  "y": -3,
   "background_u_index": 1,
   "background_v_index": 0,
   "pages": [

@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "orefishfarm"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SRS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "orefishfarm:obsidian_scale"
+    },
+    "R": {
+      "item": "minecraft:fishing_rod"
+    }
+  },
+  "result": {
+    "item": "quicreate:obsidian_fishing_rod"
+  }
+}

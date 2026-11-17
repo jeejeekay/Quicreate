@@ -30,6 +30,8 @@ public class Quicreate {
     ModRegistry.register(modEventBus);
     QuicreateWorldgen.register(modEventBus);
     QuicreateContent.register(modEventBus);
+    // Quicreate omelettes (amethyst crab, blessed crab, moon cheese)
+    IGoByJake.quicreate.food.QuicreateFoods.register(modEventBus);
     // guide book progress: the "quicreate:has_items" advancement trigger
     QuicreateTriggers.init(modEventBus);
     // Netherite space suit dive: client -> server message
@@ -46,6 +48,12 @@ public class Quicreate {
   }
 
   private void addCreative(BuildCreativeModeTabContentsEvent event){
+    if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
+      for (var list : java.util.List.of(IGoByJake.quicreate.food.QuicreateFoods.CRAB_OMELETTE,
+              IGoByJake.quicreate.food.QuicreateFoods.BLESSED_CRAB_OMELETTE, IGoByJake.quicreate.food.QuicreateFoods.MOON_CHEESE_OMELETTE)) {
+        event.accept(list.get(0));
+      }
+    }
     if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
       event.accept(ModRegistry.CREATIVE_ALLOY);
       event.accept(ModRegistry.CREATIVE_SHEET);
@@ -77,6 +85,7 @@ public class Quicreate {
       event.accept(ModRegistry.BRASS_FISHING_ROD);
       event.accept(ModRegistry.DESH_FISHING_ROD);
       event.accept(ModRegistry.OSTRUM_FISHING_ROD);
+      event.accept(ModRegistry.OBSIDIAN_FISHING_ROD);
       event.accept(ModRegistry.LIGHT_KELPY_BALL);
       event.accept(ModRegistry.MEDIUM_KELPY_BALL);
       event.accept(ModRegistry.HEAVY_KELPY_BALL);

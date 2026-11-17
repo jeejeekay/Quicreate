@@ -32,67 +32,67 @@
         }
       }
     },
-    "aptrgangr": {
+    "walker": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "cataclysm:aptrgangr"
+          "type": "wan_ancient_beasts:walker"
         }
       }
     },
-    "draugr": {
+    "charger": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "cataclysm:draugr"
+          "type": "wan_ancient_beasts:charger"
         }
       }
     },
-    "elite_draugr": {
+    "snatcher": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "cataclysm:elite_draugr"
+          "type": "wan_ancient_beasts:snatcher"
         }
       }
     },
-    "royal_draugr": {
+    "glider": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "cataclysm:royal_draugr"
+          "type": "wan_ancient_beasts:glider"
         }
       }
     },
-    "cindaria": {
+    "soarer": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "cataclysm:cindaria"
+          "type": "wan_ancient_beasts:soarer"
         }
       }
     },
-    "clawdian": {
+    "raider": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "cataclysm:clawdian"
+          "type": "wan_ancient_beasts:raider"
         }
       }
     },
-    "drowned_host": {
+    "crusher": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "cataclysm:drowned_host"
+          "type": "wan_ancient_beasts:crusher"
         }
       }
     },
-    "hippocamtus": {
+    "eater": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "cataclysm:hippocamtus"
+          "type": "wan_ancient_beasts:eater"
         }
       }
     }
@@ -105,28 +105,28 @@
       "elokosa_follower_howler"
     ],
     [
-      "aptrgangr"
+      "walker"
     ],
     [
-      "draugr"
+      "charger"
     ],
     [
-      "elite_draugr"
+      "snatcher"
     ],
     [
-      "royal_draugr"
+      "glider"
     ],
     [
-      "cindaria"
+      "soarer"
     ],
     [
-      "clawdian"
+      "raider"
     ],
     [
-      "drowned_host"
+      "crusher"
     ],
     [
-      "hippocamtus"
+      "eater"
     ]
   ],
   "rewards": {

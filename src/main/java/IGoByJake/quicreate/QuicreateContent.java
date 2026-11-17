@@ -31,6 +31,17 @@ public final class QuicreateContent {
                     .updateInterval(2)
                     .build("sword_beam"));
 
+    /** The obsidian rod's bobber: floats on lava, doesn't burn (see LavaFishingHook). */
+    public static final RegistryObject<EntityType<IGoByJake.quicreate.entity.LavaFishingHook>> LAVA_FISHING_HOOK = ENTITIES.register("lava_fishing_hook",
+            () -> EntityType.Builder.<IGoByJake.quicreate.entity.LavaFishingHook>of(IGoByJake.quicreate.entity.LavaFishingHook::new, MobCategory.MISC)
+                    .noSave()
+                    .noSummon()
+                    .fireImmune()
+                    .sized(0.25F, 0.25F)
+                    .clientTrackingRange(4)
+                    .updateInterval(5)
+                    .build("lava_fishing_hook"));
+
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Quicreate.MODID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Quicreate.MODID);
 

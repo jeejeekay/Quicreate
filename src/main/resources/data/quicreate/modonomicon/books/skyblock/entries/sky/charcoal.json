@@ -4,7 +4,7 @@
   "description": "book.quicreate.skyblock.sky.charcoal.desc",
   "icon": "minecraft:charcoal",
   "x": 3,
-  "y": -1,
+  "y": 2,
   "background_u_index": 1,
   "background_v_index": 0,
   "pages": [

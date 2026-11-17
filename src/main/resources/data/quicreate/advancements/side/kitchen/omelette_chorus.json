@@ -1,0 +1,40 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "neopianomelettes:chorus_omelette"
+    },
+    "title": {
+      "text": "Chorus omelette"
+    },
+    "description": {
+      "text": "Chorus fruit grows in the Moon's ruined citadels, or sift crushed end stone."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "chorus_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:chorus_omelette"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "chorus_omelette"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/omelette_chorus"
+  }
+}

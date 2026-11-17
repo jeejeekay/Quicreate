@@ -1,0 +1,48 @@
+{
+  "category": "quicreate:kitchen",
+  "name": "book.quicreate.skyblock.side.kitchen.omelette_basics.name",
+  "description": "book.quicreate.skyblock.side.kitchen.omelette_basics.desc",
+  "icon": "neopianomelettes:plain_omelette",
+  "x": -4,
+  "y": 5,
+  "background_u_index": 1,
+  "background_v_index": 2,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.omelette_basics.p.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.omelette_basics.p.title"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.omelette_basics.p.p1"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.side.kitchen.omelette_basics.done.p0",
+      "title": "book.quicreate.skyblock.side.kitchen.omelette_basics.done.title",
+      "condition": {
+        "type": "modonomicon:advancement",
+        "advancement_id": "quicreate:side/kitchen/omelette_basics",
+        "tooltip": "book.quicreate.skyblock.side.kitchen.omelette_basics.donetip"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "entry": "quicreate:kitchen/stage1",
+      "draw_arrow": false
+    },
+    {
+      "entry": "quicreate:kitchen/back",
+      "line_enabled": false,
+      "draw_arrow": false
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "quicreate:skyblock/sifter",
+    "tooltip": "book.quicreate.skyblock.stage.1"
+  },
+  "show_when_any_parent_unlocked": true
+}

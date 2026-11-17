@@ -32,6 +32,14 @@
     {
       "type": "modonomicon:text",
       "text": "book.quicreate.skyblock.field.planet_glacio.info.p3"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.planet_glacio.info.p4"
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "book.quicreate.skyblock.field.planet_glacio.info.p5"
     }
   ],
   "condition": {

@@ -1,0 +1,55 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "neopianomelettes:glow_omelette"
+    },
+    "title": {
+      "text": "Berry omelettes"
+    },
+    "description": {
+      "text": "Sweet berries grow in Glacio's woods; glow berries hang from vines in its cav..."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "sweet_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:sweet_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "glow_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:glow_omelette"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sweet_omelette"
+    ],
+    [
+      "glow_omelette"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/omelette_berries"
+  }
+}

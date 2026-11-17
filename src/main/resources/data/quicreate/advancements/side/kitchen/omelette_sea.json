@@ -1,0 +1,55 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "neopianomelettes:fishy_omelette"
+    },
+    "title": {
+      "text": "Sea omelettes"
+    },
+    "description": {
+      "text": "Any fish, or dried kelp from the smoker."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "fishy_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:fishy_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "kelp_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:kelp_omelette"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "fishy_omelette"
+    ],
+    [
+      "kelp_omelette"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/omelette_sea"
+  }
+}

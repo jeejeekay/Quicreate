@@ -1,0 +1,40 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "neopianomelettes:nether_shroom_omelette"
+    },
+    "title": {
+      "text": "Nether fungus omelette"
+    },
+    "description": {
+      "text": "Crimson and warped fungus grow on nylium patches on Venus, thickest in the Fu..."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "nether_shroom_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:nether_shroom_omelette"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nether_shroom_omelette"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/omelette_nether"
+  }
+}

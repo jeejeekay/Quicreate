@@ -4,7 +4,7 @@
   "description": "book.quicreate.skyblock.sky.intro.desc",
   "icon": "minecraft:writable_book",
   "x": 3,
-  "y": -8,
+  "y": -5,
   "background_u_index": 0,
   "background_v_index": 1,
   "pages": [

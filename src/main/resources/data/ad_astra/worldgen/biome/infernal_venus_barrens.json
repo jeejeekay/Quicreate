@@ -51,7 +51,8 @@
     ],
     [],
     [
-      "quicreate:venus_infernal_spires_dense"
+      "quicreate:venus_infernal_spires_dense",
+      "quicreate:venus_crimson_patch_rare"
     ]
   ],
   "has_precipitation": true,

@@ -1,0 +1,69 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Java: 17.0.21, JVM: 17.0.21+9 (Eclipse Adoptium), Arch: amd64
+
+> Task :compileJava
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\data\FishData.java:57: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    public static final TagKey<Item> TANK_FISH = ItemTags.create(new ResourceLocation(OreFishFarm.MODID, "tank_fish"));
+                                                                 ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\data\FishData.java:58: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    public static final TagKey<Item> FISH_FOOD = ItemTags.create(new ResourceLocation(OreFishFarm.MODID, "fish_food"));
+                                                                 ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\client\TankScreen.java:22: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    protected static final ResourceLocation TEX = new ResourceLocation(OreFishFarm.MODID, "textures/gui/tank.png");
+                                                  ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\client\FishRender.java:51: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            event.register(new ResourceLocation(file.getNamespace(), path));
+                           ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\client\FishRender.java:65: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            BakedModel body = models.getModel(new ResourceLocation(k.getNamespace(), "fish/" + k.getPath()));
+                                              ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\client\FishRender.java:67: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            BakedModel tail = models.getModel(new ResourceLocation(k.getNamespace(), "fish/" + k.getPath() + "_tail"));
+                                              ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\client\SeagullModel.java:18: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    public static final ModelLayerLocation LAYER = new ModelLayerLocation(new ResourceLocation(OreFishFarm.MODID, "seagull"), "main");
+                                                                          ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\entity\Seagull.java:51: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    public static final ResourceLocation GIFT = new ResourceLocation(OreFishFarm.MODID, "gameplay/seagull/gift");
+                                                ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\entity\Seagull.java:52: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    public static final ResourceLocation FIRST_GIFT = new ResourceLocation(OreFishFarm.MODID, "gameplay/seagull/first_gift");
+                                                      ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\entity\Seagull.java:53: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    public static final ResourceLocation FISH = new ResourceLocation(OreFishFarm.MODID, "gameplay/seagull/fish");
+                                                ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\client\SeagullRenderer.java:18: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    private static final ResourceLocation TEX = new ResourceLocation(OreFishFarm.MODID, "textures/entity/seagull.png");
+                                                ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\OreFishFarm.java:22: warning: [removal] get() in FMLJavaModLoadingContext has been deprecated and marked for removal
+        IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
+                                                   ^
+C:\Users\Owner\Desktop\MODS\Minecraft\Forge Modding\JakesOreFishFarm\src\main\java\IGoByJake\orefishfarm\OreFishFarm.java:24: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+                         ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+13 warnings
+
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :downloadMcpConfig
+> Task :extractSrg UP-TO-DATE
+> Task :createMcpToSrg UP-TO-DATE
+> Task :reobfJar
+> Task :jarJar SKIPPED
+> Task :reobfJarJar SKIPPED
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
+
+BUILD SUCCESSFUL in 47s
+7 actionable tasks: 5 executed, 2 up-to-date

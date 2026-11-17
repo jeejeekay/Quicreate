@@ -4,7 +4,7 @@
   "description": "book.quicreate.skyblock.sky.andesitealloy.desc",
   "icon": "create:andesite_alloy",
   "x": 5,
-  "y": -1,
+  "y": 2,
   "background_u_index": 0,
   "background_v_index": 1,
   "pages": [

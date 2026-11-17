@@ -45,7 +45,9 @@
     [
       "quicreate:venus_aeronos_mushroom_large",
       "quicreate:venus_aeronos_mushroom",
-      "quicreate:venus_aeronos_patch"
+      "quicreate:venus_aeronos_patch",
+      "quicreate:venus_crimson_patch",
+      "quicreate:venus_warped_patch"
     ]
   ],
   "has_precipitation": true,

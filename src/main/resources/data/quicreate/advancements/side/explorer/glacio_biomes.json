@@ -55,6 +55,16 @@
           }
         }
       }
+    },
+    "glacio_wild_jungle": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "quicreate:glacio_wild_jungle"
+          }
+        }
+      }
     }
   },
   "requirements": [
@@ -69,6 +79,9 @@
     ],
     [
       "glacian_woods"
+    ],
+    [
+      "glacio_wild_jungle"
     ]
   ],
   "rewards": {

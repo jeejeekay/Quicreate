@@ -1,0 +1,143 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.9,
+  "effects": {
+    "fog_color": 11594732,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 10146298,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "grass_color": 7254932,
+    "foliage_color": 6342812
+  },
+  "features": [
+    [],
+    [
+      "quicreate:glacio_jungle_pond"
+    ],
+    [
+      "minecraft:amethyst_geode"
+    ],
+    [],
+    [],
+    [],
+    [
+      "ad_astra:glacio_coal_ore",
+      "ad_astra:glacio_copper_ore",
+      "ad_astra:glacio_ice_shard_ore",
+      "ad_astra:glacio_iron_ore",
+      "ad_astra:glacio_lapis_ore",
+      "ad_astra:glacio_deepslate_coal_ore",
+      "ad_astra:glacio_deepslate_copper_ore",
+      "ad_astra:glacio_deepslate_iron_ore",
+      "ad_astra:glacio_deepslate_lapis_ore",
+      "quicreate:glacio_jungle_ice_sheet"
+    ],
+    [],
+    [],
+    [
+      "minecraft:glow_lichen",
+      "quicreate:glacio_wild_jungle_trees",
+      "minecraft:patch_grass_jungle",
+      "minecraft:vines",
+      "quicreate:glacio_jungle_berry_bushes",
+      "quicreate:glacio_sweet_berries",
+      "quicreate:glacio_glow_berry_vines"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "ad_astra:glacian_ram",
+        "weight": 4,
+        "minCount": 2,
+        "maxCount": 3
+      },
+      {
+        "type": "wan_ancient_beasts:eater",
+        "weight": 3,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "wan_ancient_beasts:raider",
+        "weight": 6,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "wan_ancient_beasts:snatcher",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "wan_ancient_beasts:walker",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "wan_ancient_beasts:crusher",
+        "weight": 4,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "wan_ancient_beasts:glider",
+        "weight": 6,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "wan_ancient_beasts:charger",
+        "weight": 3,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:sniffer",
+        "weight": 6,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": [
+      {
+        "type": "wan_ancient_beasts:surfer",
+        "weight": 6,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "wan_ancient_beasts:toxlacanth",
+        "weight": 8,
+        "minCount": 2,
+        "maxCount": 4
+      }
+    ]
+  },
+  "temperature": -0.5
+}

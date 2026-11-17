@@ -1,0 +1,16 @@
+{
+  "type": "cataclysm:amethyst_bless",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "cataclysm"
+    }
+  ],
+  "ingredients": {
+    "item": "quicreate:amethyst_crab_omelette"
+  },
+  "result": {
+    "item": "quicreate:blessed_amethyst_crab_omelette"
+  },
+  "time": 120
+}

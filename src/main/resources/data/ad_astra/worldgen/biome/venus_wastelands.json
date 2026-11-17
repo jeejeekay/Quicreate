@@ -40,6 +40,11 @@
     ],
     [
       "minecraft:spring_lava"
+    ],
+    [],
+    [
+      "quicreate:venus_crimson_patch_rare",
+      "quicreate:venus_warped_patch_rare"
     ]
   ],
   "has_precipitation": true,

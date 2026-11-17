@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.3,
+        "feature": {
+          "feature": "quicreate:glacio_jungle_giant",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.45,
+        "feature": {
+          "feature": "quicreate:glacio_jungle_tree",
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": "quicreate:glacio_jungle_bush",
+      "placement": []
+    }
+  }
+}

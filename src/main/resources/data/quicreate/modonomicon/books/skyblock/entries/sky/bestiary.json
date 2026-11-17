@@ -4,7 +4,7 @@
   "description": "book.quicreate.skyblock.side.hub.bestiary.desc",
   "icon": "minecraft:skeleton_skull",
   "x": -3,
-  "y": 1,
+  "y": 4,
   "background_u_index": 0,
   "background_v_index": 0,
   "category_to_open": "quicreate:bestiary",

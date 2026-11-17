@@ -4,7 +4,7 @@
   "description": "book.quicreate.skyblock.side.hub.cards.desc",
   "icon": "cards:common_card_pack",
   "x": -1,
-  "y": 1,
+  "y": 4,
   "background_u_index": 0,
   "background_v_index": 0,
   "category_to_open": "quicreate:cards",

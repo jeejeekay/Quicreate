@@ -1,0 +1,115 @@
+{
+  "parent": "quicreate:side/root",
+  "display": {
+    "icon": {
+      "item": "neopianomelettes:plain_omelette"
+    },
+    "title": {
+      "text": "Omelette basics"
+    },
+    "description": {
+      "text": "Eggs from card-pack chickens. Add pork, beef, mutton, beetroot or a mushroom."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "plain_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:plain_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "bacon_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:bacon_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "steak_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:steak_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "sausage_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:sausage_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "beet_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:beet_omelette"
+            ]
+          }
+        ]
+      }
+    },
+    "mushroom_omelette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neopianomelettes:mushroom_omelette"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "plain_omelette"
+    ],
+    [
+      "bacon_omelette"
+    ],
+    [
+      "steak_omelette"
+    ],
+    [
+      "sausage_omelette"
+    ],
+    [
+      "beet_omelette"
+    ],
+    [
+      "mushroom_omelette"
+    ]
+  ],
+  "rewards": {
+    "function": "quicreate:rewards/kitchen/omelette_basics"
+  }
+}
